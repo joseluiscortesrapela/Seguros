@@ -1,6 +1,4 @@
-﻿
-
-using Seguros.Conexion;
+﻿using Seguros.Conexion;
 using System;
 using System.Windows.Forms;
 
@@ -33,7 +31,6 @@ namespace Seguros
                 var login = new Login();
                 // Muesstro la ventana
                 login.Show();
-
             }
 
         }
