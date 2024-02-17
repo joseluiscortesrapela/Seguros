@@ -42,11 +42,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
-            this.tbUsuario = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.panelLogin = new System.Windows.Forms.Panel();
             this.lebel0 = new System.Windows.Forms.Label();
             this.lbMostrarPanelRegistro = new System.Windows.Forms.Label();
-            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.tbCorreo = new System.Windows.Forms.TextBox();
             this.tbContraseña = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.labelMensajeLogin = new System.Windows.Forms.Label();
@@ -92,7 +92,7 @@
             this.panelRegistro.Controls.Add(this.label10);
             this.panelRegistro.Controls.Add(this.label11);
             this.panelRegistro.Controls.Add(this.tbPassword);
-            this.panelRegistro.Controls.Add(this.tbUsuario);
+            this.panelRegistro.Controls.Add(this.tbEmail);
             this.panelRegistro.Location = new System.Drawing.Point(0, 0);
             this.panelRegistro.Name = "panelRegistro";
             this.panelRegistro.Size = new System.Drawing.Size(224, 463);
@@ -213,26 +213,26 @@
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbPassword.UseSystemPasswordChar = true;
             // 
-            // tbUsuario
+            // tbEmail
             // 
-            this.tbUsuario.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tbUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUsuario.ForeColor = System.Drawing.Color.Wheat;
-            this.tbUsuario.Location = new System.Drawing.Point(16, 149);
-            this.tbUsuario.MaxLength = 12;
-            this.tbUsuario.Name = "tbUsuario";
-            this.tbUsuario.Size = new System.Drawing.Size(165, 32);
-            this.tbUsuario.TabIndex = 24;
-            this.tbUsuario.TabStop = false;
-            this.tbUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbEmail.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.ForeColor = System.Drawing.Color.Wheat;
+            this.tbEmail.Location = new System.Drawing.Point(16, 149);
+            this.tbEmail.MaxLength = 50;
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(165, 32);
+            this.tbEmail.TabIndex = 24;
+            this.tbEmail.TabStop = false;
+            this.tbEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panelLogin
             // 
             this.panelLogin.BackColor = System.Drawing.Color.Transparent;
             this.panelLogin.Controls.Add(this.lebel0);
             this.panelLogin.Controls.Add(this.lbMostrarPanelRegistro);
-            this.panelLogin.Controls.Add(this.tbNombre);
+            this.panelLogin.Controls.Add(this.tbCorreo);
             this.panelLogin.Controls.Add(this.tbContraseña);
             this.panelLogin.Controls.Add(this.label3);
             this.panelLogin.Controls.Add(this.labelMensajeLogin);
@@ -270,20 +270,20 @@
             this.lbMostrarPanelRegistro.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.lbMostrarPanelRegistro.Click += new System.EventHandler(this.lbMostrarPanelRegistro_Click);
             // 
-            // tbNombre
+            // tbCorreo
             // 
-            this.tbNombre.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombre.ForeColor = System.Drawing.Color.Wheat;
-            this.tbNombre.Location = new System.Drawing.Point(14, 146);
-            this.tbNombre.MaxLength = 12;
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(165, 32);
-            this.tbNombre.TabIndex = 11;
-            this.tbNombre.TabStop = false;
-            this.tbNombre.Text = "admin";
-            this.tbNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbCorreo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tbCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCorreo.ForeColor = System.Drawing.Color.Wheat;
+            this.tbCorreo.Location = new System.Drawing.Point(14, 146);
+            this.tbCorreo.MaxLength = 50;
+            this.tbCorreo.Name = "tbCorreo";
+            this.tbCorreo.Size = new System.Drawing.Size(165, 32);
+            this.tbCorreo.TabIndex = 11;
+            this.tbCorreo.TabStop = false;
+            this.tbCorreo.Text = "admin";
+            this.tbCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbContraseña
             // 
@@ -337,7 +337,7 @@
             this.buttonLogin.TabIndex = 15;
             this.buttonLogin.Text = "Aceptar";
             this.buttonLogin.UseVisualStyleBackColor = false;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.buttonLogin.Click += new System.EventHandler(this.login_Click);
             // 
             // label1
             // 
@@ -371,7 +371,7 @@
             this.panelContenedor.Controls.Add(this.panelLogin);
             this.panelContenedor.Location = new System.Drawing.Point(332, 12);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(626, 488);
+            this.panelContenedor.Size = new System.Drawing.Size(626, 478);
             this.panelContenedor.TabIndex = 21;
             // 
             // pictureBox2
@@ -423,11 +423,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tbPassword;
-        private System.Windows.Forms.TextBox tbUsuario;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Panel panelLogin;
         private System.Windows.Forms.Label lebel0;
         private System.Windows.Forms.Label lbMostrarPanelRegistro;
-        private System.Windows.Forms.TextBox tbNombre;
+        private System.Windows.Forms.TextBox tbCorreo;
         private System.Windows.Forms.TextBox tbContraseña;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelMensajeLogin;

@@ -27,6 +27,7 @@ namespace Seguros
             // Si ha conectado 
             if (conexion.testConexion())
             {
+                this.Hide();
                 // Muestro el formulario principal, se inicia el programa tras realizar la conexion
                 var login = new Login();
                 // Muesstro la ventana
