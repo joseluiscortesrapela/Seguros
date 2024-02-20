@@ -123,6 +123,7 @@
     <Compile Include="Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AdminModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

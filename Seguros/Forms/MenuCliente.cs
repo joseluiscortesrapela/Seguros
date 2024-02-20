@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Seguros.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace Seguros.Forms
 {
     public partial class MenuCliente : Form
     {
+        private int idCliente;
+
         public MenuCliente()
         {
             InitializeComponent();
@@ -47,7 +50,9 @@ namespace Seguros.Forms
         private void MenuCliente_Load(object sender, EventArgs e)
         {
             // Obtengo los datos de la sesion 
-
+            // Guardo id cliente
+            idCliente = SesionUsuario.Id;
+            // Muestro los apellidos
             lbApellidos.Text = SesionUsuario.Apellidos;
             // Muestro nombre usuario
             lbUsuario.Text = SesionUsuario.Nombre;
@@ -59,6 +64,25 @@ namespace Seguros.Forms
         private void pbExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnMisPolizas_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Muestro las polizas del cliente con id: " + idCliente);
+
+            // Muestro panel 
+            panelPolizas.Visible = true;
+            // Muestro las polizas del cliente.
+            dgvPolizas.DataSource =  AdminModel.getPolizdas(idCliente);
+        }
+
+        // Muestro panel principal
+        private void pbInicio_Click(object sender, EventArgs e)
+        {   
+            // Oculto las polizas
+            panelPolizas.Visible = false;
+            // Oculto buscador
+            panelBuscador.Visible = false;
         }
     }
 }
