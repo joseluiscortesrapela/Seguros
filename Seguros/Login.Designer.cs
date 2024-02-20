@@ -282,7 +282,7 @@
             this.tbCorreo.Size = new System.Drawing.Size(165, 32);
             this.tbCorreo.TabIndex = 11;
             this.tbCorreo.TabStop = false;
-            this.tbCorreo.Text = "admin";
+            this.tbCorreo.Text = "admin@hotmail.es";
             this.tbCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbContraseña
@@ -367,8 +367,8 @@
             this.panelContenedor.BackColor = System.Drawing.Color.Transparent;
             this.panelContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelContenedor.Controls.Add(this.pictureBox2);
-            this.panelContenedor.Controls.Add(this.panelRegistro);
             this.panelContenedor.Controls.Add(this.panelLogin);
+            this.panelContenedor.Controls.Add(this.panelRegistro);
             this.panelContenedor.Location = new System.Drawing.Point(332, 12);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(626, 478);

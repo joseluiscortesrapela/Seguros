@@ -42,15 +42,15 @@ namespace Seguros
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnConectar = new System.Windows.Forms.Button();
-            this.tbDatabase = new System.Windows.Forms.TextBox();
-            this.tbServer = new System.Windows.Forms.TextBox();
-            this.tbPassword = new System.Windows.Forms.TextBox();
-            this.tbUser = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tbUser = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.tbServer = new System.Windows.Forms.TextBox();
+            this.tbDatabase = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -89,58 +89,6 @@ namespace Seguros
             this.btnConectar.Text = "Conectar";
             this.btnConectar.UseVisualStyleBackColor = false;
             this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
-            // 
-            // tbDatabase
-            // 
-            this.tbDatabase.BackColor = System.Drawing.SystemColors.Desktop;
-            this.tbDatabase.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbDatabase.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Bold);
-            this.tbDatabase.ForeColor = System.Drawing.Color.Lime;
-            this.tbDatabase.Location = new System.Drawing.Point(265, 220);
-            this.tbDatabase.Name = "tbDatabase";
-            this.tbDatabase.Size = new System.Drawing.Size(134, 28);
-            this.tbDatabase.TabIndex = 18;
-            this.tbDatabase.Text = "seguros";
-            this.tbDatabase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbServer
-            // 
-            this.tbServer.BackColor = System.Drawing.SystemColors.Desktop;
-            this.tbServer.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbServer.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Bold);
-            this.tbServer.ForeColor = System.Drawing.Color.Lime;
-            this.tbServer.Location = new System.Drawing.Point(83, 220);
-            this.tbServer.Name = "tbServer";
-            this.tbServer.Size = new System.Drawing.Size(134, 28);
-            this.tbServer.TabIndex = 17;
-            this.tbServer.Text = "localhost";
-            this.tbServer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbPassword
-            // 
-            this.tbPassword.BackColor = System.Drawing.SystemColors.Desktop;
-            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPassword.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Bold);
-            this.tbPassword.ForeColor = System.Drawing.Color.Lime;
-            this.tbPassword.Location = new System.Drawing.Point(630, 220);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(134, 28);
-            this.tbPassword.TabIndex = 16;
-            this.tbPassword.Text = "1234";
-            this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbUser
-            // 
-            this.tbUser.BackColor = System.Drawing.SystemColors.ControlText;
-            this.tbUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbUser.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Bold);
-            this.tbUser.ForeColor = System.Drawing.Color.Lime;
-            this.tbUser.Location = new System.Drawing.Point(450, 220);
-            this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(134, 28);
-            this.tbUser.TabIndex = 15;
-            this.tbUser.Text = "root";
-            this.tbUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -201,6 +149,58 @@ namespace Seguros
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.cerrar);
             // 
+            // tbUser
+            // 
+            this.tbUser.BackColor = System.Drawing.SystemColors.Desktop;
+            this.tbUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbUser.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Bold);
+            this.tbUser.ForeColor = System.Drawing.Color.Lime;
+            this.tbUser.Location = new System.Drawing.Point(450, 220);
+            this.tbUser.Name = "tbUser";
+            this.tbUser.Size = new System.Drawing.Size(134, 28);
+            this.tbUser.TabIndex = 22;
+            this.tbUser.Text = "1234";
+            this.tbUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.BackColor = System.Drawing.SystemColors.Desktop;
+            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPassword.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Bold);
+            this.tbPassword.ForeColor = System.Drawing.Color.Lime;
+            this.tbPassword.Location = new System.Drawing.Point(630, 220);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(134, 28);
+            this.tbPassword.TabIndex = 23;
+            this.tbPassword.Text = "1234";
+            this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbServer
+            // 
+            this.tbServer.BackColor = System.Drawing.SystemColors.Desktop;
+            this.tbServer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbServer.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Bold);
+            this.tbServer.ForeColor = System.Drawing.Color.Lime;
+            this.tbServer.Location = new System.Drawing.Point(87, 220);
+            this.tbServer.Name = "tbServer";
+            this.tbServer.Size = new System.Drawing.Size(134, 28);
+            this.tbServer.TabIndex = 24;
+            this.tbServer.Text = "localhost";
+            this.tbServer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbDatabase
+            // 
+            this.tbDatabase.BackColor = System.Drawing.SystemColors.Desktop;
+            this.tbDatabase.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDatabase.Font = new System.Drawing.Font("SimSun", 18F, System.Drawing.FontStyle.Bold);
+            this.tbDatabase.ForeColor = System.Drawing.Color.Lime;
+            this.tbDatabase.Location = new System.Drawing.Point(266, 218);
+            this.tbDatabase.Name = "tbDatabase";
+            this.tbDatabase.Size = new System.Drawing.Size(134, 28);
+            this.tbDatabase.TabIndex = 25;
+            this.tbDatabase.Text = "seguros";
+            this.tbDatabase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FormularioConexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,13 +208,13 @@ namespace Seguros
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(858, 473);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.tbDatabase);
             this.Controls.Add(this.tbServer);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUser);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -236,14 +236,14 @@ namespace Seguros
         private PictureBox pictureBox1;
         private Label label5;
         private Button btnConectar;
-        private TextBox tbDatabase;
-        private TextBox tbServer;
-        private TextBox tbPassword;
-        private TextBox tbUser;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label1;
         private PictureBox pictureBox2;
+        private TextBox tbUser;
+        private TextBox tbPassword;
+        private TextBox tbServer;
+        private TextBox tbDatabase;
     }
 }

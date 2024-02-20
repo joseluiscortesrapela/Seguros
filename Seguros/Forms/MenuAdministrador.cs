@@ -16,5 +16,41 @@ namespace Seguros.Forms
         {
             InitializeComponent();
         }
+
+        private void salir(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // Salimos del programa
+        private void pbMostrarBuscador_Click(object sender, EventArgs e)
+        {
+            if ( panelBuscador.Visible )
+            {
+                 panelBuscador.Visible = false;
+            }
+            else
+            {
+                panelBuscador.Visible = true;
+            }
+            
+
+        }
+
+        // Cierra la sesion actual
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            // Oculto ventana menu jugador
+            this.Hide();
+            // Instancio la clase
+            Login login = new Login();
+            // Muestro la vengana de login/registro
+            login.Show();
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
