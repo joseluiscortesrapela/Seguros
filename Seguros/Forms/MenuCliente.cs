@@ -15,19 +15,24 @@ namespace Seguros.Forms
     {
         private int idCliente;
 
+        // Constructor
         public MenuCliente()
         {
             InitializeComponent();
         }
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        // Autoload
+        private void MenuCliente_Load(object sender, EventArgs e)
         {
-            // Oculto ventana menu jugador
-            this.Hide();
-            // Instancio la clase
-            Login login = new Login();
-            // Muestro la vengana de login/registro
-            login.Show();
+            // Obtengo los datos de la sesion 
+            // Guardo id cliente
+            idCliente = SesionUsuario.Id;
+            // Muestro los apellidos
+            lbApellidos.Text = SesionUsuario.Apellidos;
+            // Muestro nombre usuario
+            lbUsuario.Text = SesionUsuario.Nombre;
+            // Muestro tipo o rol del usuario.
+            lbTipo.Text = SesionUsuario.Tipo;
         }
 
 
@@ -47,25 +52,6 @@ namespace Seguros.Forms
         }
 
 
-        private void MenuCliente_Load(object sender, EventArgs e)
-        {
-            // Obtengo los datos de la sesion 
-            // Guardo id cliente
-            idCliente = SesionUsuario.Id;
-            // Muestro los apellidos
-            lbApellidos.Text = SesionUsuario.Apellidos;
-            // Muestro nombre usuario
-            lbUsuario.Text = SesionUsuario.Nombre;
-            // Muestro tipo o rol del usuario.
-            lbTipo.Text = SesionUsuario.Tipo;
-        }
-
-        // Se cierra el programa
-        private void pbExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnMisPolizas_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Muestro las polizas del cliente con id: " + idCliente);
@@ -73,16 +59,35 @@ namespace Seguros.Forms
             // Muestro panel 
             panelPolizas.Visible = true;
             // Muestro las polizas del cliente.
-            dgvPolizas.DataSource =  AdminModel.getPolizdas(idCliente);
+            dgvPolizas.DataSource = AdminModel.getLasPolizasDelCliente(idCliente);
         }
 
         // Muestro panel principal
         private void pbInicio_Click(object sender, EventArgs e)
-        {   
+        {
             // Oculto las polizas
             panelPolizas.Visible = false;
             // Oculto buscador
             panelBuscador.Visible = false;
         }
+
+        // Cierro sesion 
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            // Oculto ventana menu jugador
+            this.Hide();
+            // Instancio la clase
+            Login login = new Login();
+            // Muestro la vengana de login/registro
+            login.Show();
+        }
+
+
+        // Se cierra el programa
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }

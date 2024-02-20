@@ -50,9 +50,10 @@ namespace Seguros
                     } // Si quien se logea es un administrador
                     else if (tipo == "agentes")
                     {
-                        Console.WriteLine("Es un agente");
+                        var menuAgente = new MenuAgentes();
+                        menuAgente.Show();
                     }
-                    else if (tipo == "clientes")
+                    else
                     {
                         var menuCliente = new MenuCliente();
                         menuCliente.Show();

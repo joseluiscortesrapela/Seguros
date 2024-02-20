@@ -31,12 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuCliente));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.lbApellidos = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbUsuario = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbTipo = new System.Windows.Forms.Label();
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelBuscador = new System.Windows.Forms.Panel();
@@ -51,8 +45,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvPolizas = new System.Windows.Forms.DataGridView();
-            this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.lbApellidos = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbUsuario = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbTipo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelBuscador.SuspendLayout();
@@ -63,6 +61,8 @@
             this.paneLaterallNavegacion.SuspendLayout();
             this.panelPolizas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).BeginInit();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -75,72 +75,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(319, 19);
             this.textBox1.TabIndex = 3;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.lbApellidos);
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Controls.Add(this.lbUsuario);
-            this.panelLogo.Controls.Add(this.label1);
-            this.panelLogo.Controls.Add(this.lbTipo);
-            this.panelLogo.Location = new System.Drawing.Point(3, 3);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(239, 155);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // lbApellidos
-            // 
-            this.lbApellidos.AutoSize = true;
-            this.lbApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbApellidos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbApellidos.Location = new System.Drawing.Point(79, 31);
-            this.lbApellidos.Name = "lbApellidos";
-            this.lbApellidos.Size = new System.Drawing.Size(92, 25);
-            this.lbApellidos.TabIndex = 11;
-            this.lbApellidos.Text = "Apellidos";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 74);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lbUsuario
-            // 
-            this.lbUsuario.AutoSize = true;
-            this.lbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsuario.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbUsuario.Location = new System.Drawing.Point(79, 57);
-            this.lbUsuario.Name = "lbUsuario";
-            this.lbUsuario.Size = new System.Drawing.Size(79, 25);
-            this.lbUsuario.TabIndex = 8;
-            this.lbUsuario.Text = "Usuario";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label1.Location = new System.Drawing.Point(72, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 31);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Bienvenido/a";
-            // 
-            // lbTipo
-            // 
-            this.lbTipo.AutoSize = true;
-            this.lbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTipo.ForeColor = System.Drawing.Color.Orange;
-            this.lbTipo.Location = new System.Drawing.Point(9, 92);
-            this.lbTipo.Name = "lbTipo";
-            this.lbTipo.Size = new System.Drawing.Size(71, 13);
-            this.lbTipo.TabIndex = 10;
-            this.lbTipo.Text = "Tipo: Clientes";
             // 
             // pbExit
             // 
@@ -226,7 +160,7 @@
             this.btnMisPolizas.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnMisPolizas.Image = ((System.Drawing.Image)(resources.GetObject("btnMisPolizas.Image")));
             this.btnMisPolizas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMisPolizas.Location = new System.Drawing.Point(3, 191);
+            this.btnMisPolizas.Location = new System.Drawing.Point(3, 146);
             this.btnMisPolizas.Name = "btnMisPolizas";
             this.btnMisPolizas.Size = new System.Drawing.Size(239, 45);
             this.btnMisPolizas.TabIndex = 16;
@@ -241,7 +175,7 @@
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.DarkGray;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 609);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 564);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 370, 3, 3);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(239, 83);
@@ -280,7 +214,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 566);
+            this.label3.Location = new System.Drawing.Point(9, 589);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(205, 20);
             this.label3.TabIndex = 2;
@@ -290,7 +224,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 81);
+            this.label2.Location = new System.Drawing.Point(11, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(203, 20);
             this.label2.TabIndex = 1;
@@ -305,12 +239,78 @@
             this.dgvPolizas.AllowUserToResizeRows = false;
             this.dgvPolizas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPolizas.Location = new System.Drawing.Point(31, 105);
+            this.dgvPolizas.Location = new System.Drawing.Point(13, 50);
             this.dgvPolizas.Name = "dgvPolizas";
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPolizas.Size = new System.Drawing.Size(1060, 458);
+            this.dgvPolizas.Size = new System.Drawing.Size(1078, 536);
             this.dgvPolizas.TabIndex = 0;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.lbApellidos);
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Controls.Add(this.lbUsuario);
+            this.panelLogo.Controls.Add(this.label1);
+            this.panelLogo.Controls.Add(this.lbTipo);
+            this.panelLogo.Location = new System.Drawing.Point(3, 3);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(239, 110);
+            this.panelLogo.TabIndex = 17;
+            // 
+            // lbApellidos
+            // 
+            this.lbApellidos.AutoSize = true;
+            this.lbApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbApellidos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbApellidos.Location = new System.Drawing.Point(75, 39);
+            this.lbApellidos.Name = "lbApellidos";
+            this.lbApellidos.Size = new System.Drawing.Size(92, 25);
+            this.lbApellidos.TabIndex = 12;
+            this.lbApellidos.Text = "Apellidos";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(65, 74);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lbUsuario
+            // 
+            this.lbUsuario.AutoSize = true;
+            this.lbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsuario.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbUsuario.Location = new System.Drawing.Point(75, 62);
+            this.lbUsuario.Name = "lbUsuario";
+            this.lbUsuario.Size = new System.Drawing.Size(79, 25);
+            this.lbUsuario.TabIndex = 8;
+            this.lbUsuario.Text = "Usuario";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Menu;
+            this.label1.Location = new System.Drawing.Point(74, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 31);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Bienvenido/a";
+            // 
+            // lbTipo
+            // 
+            this.lbTipo.AutoSize = true;
+            this.lbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTipo.ForeColor = System.Drawing.Color.Orange;
+            this.lbTipo.Location = new System.Drawing.Point(5, 90);
+            this.lbTipo.Name = "lbTipo";
+            this.lbTipo.Size = new System.Drawing.Size(73, 13);
+            this.lbTipo.TabIndex = 10;
+            this.lbTipo.Text = "Tipo: Agentes";
             // 
             // MenuCliente
             // 
@@ -326,9 +326,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuCliente";
             this.Load += new System.EventHandler(this.MenuCliente_Load);
-            this.panelLogo.ResumeLayout(false);
-            this.panelLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panelBuscador.ResumeLayout(false);
@@ -341,6 +338,9 @@
             this.panelPolizas.ResumeLayout(false);
             this.panelPolizas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).EndInit();
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -348,11 +348,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbUsuario;
-        private System.Windows.Forms.Label lbTipo;
         private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelBuscador;
@@ -363,10 +358,15 @@
         private System.Windows.Forms.Button btnMisPolizas;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.FlowLayoutPanel paneLaterallNavegacion;
-        private System.Windows.Forms.Label lbApellidos;
         private System.Windows.Forms.Panel panelPolizas;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvPolizas;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Label lbApellidos;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbUsuario;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbTipo;
     }
 }

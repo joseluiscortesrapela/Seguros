@@ -14,13 +14,13 @@ namespace Seguros.Models
     {
 
         // Obtengo las polias del cliente
-        public static DataTable getPolizdas(int idUsuario)
+        public static DataTable getLasPolizasDelCliente(int idCliente)
         {
             MySqlConnection conexion = ConexionBaseDatos.getConexion();
             // la abro.
             conexion.Open();
             // Consulta sql
-            string sql = "SELECT * FROM polizas WHERE idCliente = " + idUsuario;
+            string sql = "SELECT * FROM polizas WHERE idCliente = " + idCliente;
 
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conexion);
             DataTable table = new DataTable();
@@ -38,5 +38,36 @@ namespace Seguros.Models
 
             return table;
         }
+
+        // Obtengo las polias del cliente
+        public static DataTable getCarteraClientes(int idAgente)
+        {
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+            // Consulta sql
+            string sql = "SELECT * FROM clientes WHERE idAgente = " + idAgente;
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conexion);
+            DataTable table = new DataTable();
+
+            try
+            {
+                adapter.Fill(table);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+            return table;
+        }
+
+
+
+
+
     }
 }

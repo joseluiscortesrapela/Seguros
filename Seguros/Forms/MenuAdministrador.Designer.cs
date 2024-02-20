@@ -31,9 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAdministrador));
             this.paneLaterallNavegacion = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.lbApellidos = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.lbUsuario = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbTipo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.panelBuscador = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lbApellidos = new System.Windows.Forms.Label();
             this.paneLaterallNavegacion.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +89,17 @@
             this.panelLogo.Size = new System.Drawing.Size(239, 155);
             this.panelLogo.TabIndex = 0;
             // 
+            // lbApellidos
+            // 
+            this.lbApellidos.AutoSize = true;
+            this.lbApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbApellidos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbApellidos.Location = new System.Drawing.Point(75, 39);
+            this.lbApellidos.Name = "lbApellidos";
+            this.lbApellidos.Size = new System.Drawing.Size(92, 25);
+            this.lbApellidos.TabIndex = 12;
+            this.lbApellidos.Text = "Apellidos";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -97,17 +108,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(65, 74);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label1.Location = new System.Drawing.Point(74, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 31);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Bienvenido/a";
             // 
             // lbUsuario
             // 
@@ -119,6 +119,17 @@
             this.lbUsuario.Size = new System.Drawing.Size(79, 25);
             this.lbUsuario.TabIndex = 8;
             this.lbUsuario.Text = "Usuario";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Menu;
+            this.label1.Location = new System.Drawing.Point(74, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 31);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Bienvenido/a";
             // 
             // lbTipo
             // 
@@ -198,8 +209,8 @@
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.DarkGray;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 592);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 200, 3, 3);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 602);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 210, 3, 3);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(239, 82);
             this.btnCerrarSesion.TabIndex = 15;
@@ -293,17 +304,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(319, 19);
             this.textBox1.TabIndex = 3;
-            // 
-            // lbApellidos
-            // 
-            this.lbApellidos.AutoSize = true;
-            this.lbApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbApellidos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbApellidos.Location = new System.Drawing.Point(75, 39);
-            this.lbApellidos.Name = "lbApellidos";
-            this.lbApellidos.Size = new System.Drawing.Size(92, 25);
-            this.lbApellidos.TabIndex = 12;
-            this.lbApellidos.Text = "Apellidos";
             // 
             // MenuAdministrador
             // 
