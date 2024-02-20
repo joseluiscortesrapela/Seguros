@@ -159,7 +159,7 @@ namespace Seguros
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(134, 28);
             this.tbUser.TabIndex = 22;
-            this.tbUser.Text = "1234";
+            this.tbUser.Text = "root";
             this.tbUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbPassword

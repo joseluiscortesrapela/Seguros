@@ -48,6 +48,7 @@
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.panelBuscador = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbApellidos = new System.Windows.Forms.Label();
             this.paneLaterallNavegacion.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,9 +78,10 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.lbApellidos);
             this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Controls.Add(this.label1);
             this.panelLogo.Controls.Add(this.lbUsuario);
+            this.panelLogo.Controls.Add(this.label1);
             this.panelLogo.Controls.Add(this.lbTipo);
             this.panelLogo.Location = new System.Drawing.Point(3, 3);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
@@ -101,7 +103,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label1.Location = new System.Drawing.Point(70, 21);
+            this.label1.Location = new System.Drawing.Point(74, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 31);
             this.label1.TabIndex = 6;
@@ -110,24 +112,24 @@
             // lbUsuario
             // 
             this.lbUsuario.AutoSize = true;
-            this.lbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsuario.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbUsuario.Location = new System.Drawing.Point(71, 52);
+            this.lbUsuario.Location = new System.Drawing.Point(75, 62);
             this.lbUsuario.Name = "lbUsuario";
-            this.lbUsuario.Size = new System.Drawing.Size(96, 29);
+            this.lbUsuario.Size = new System.Drawing.Size(79, 25);
             this.lbUsuario.TabIndex = 8;
             this.lbUsuario.Text = "Usuario";
             // 
             // lbTipo
             // 
             this.lbTipo.AutoSize = true;
-            this.lbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTipo.ForeColor = System.Drawing.Color.OliveDrab;
-            this.lbTipo.Location = new System.Drawing.Point(20, 86);
+            this.lbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTipo.ForeColor = System.Drawing.Color.Orange;
+            this.lbTipo.Location = new System.Drawing.Point(5, 90);
             this.lbTipo.Name = "lbTipo";
-            this.lbTipo.Size = new System.Drawing.Size(53, 26);
+            this.lbTipo.Size = new System.Drawing.Size(97, 13);
             this.lbTipo.TabIndex = 10;
-            this.lbTipo.Text = "Tipo";
+            this.lbTipo.Text = "Tipo: Administrador";
             // 
             // button1
             // 
@@ -199,7 +201,7 @@
             this.btnCerrarSesion.Location = new System.Drawing.Point(3, 592);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 200, 3, 3);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(239, 78);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(239, 82);
             this.btnCerrarSesion.TabIndex = 15;
             this.btnCerrarSesion.Text = "Cerrar sesión";
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -265,7 +267,7 @@
             this.pbExit.Image = ((System.Drawing.Image)(resources.GetObject("pbExit.Image")));
             this.pbExit.Location = new System.Drawing.Point(1081, 9);
             this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(33, 30);
+            this.pbExit.Size = new System.Drawing.Size(21, 21);
             this.pbExit.TabIndex = 5;
             this.pbExit.TabStop = false;
             this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
@@ -292,6 +294,17 @@
             this.textBox1.Size = new System.Drawing.Size(319, 19);
             this.textBox1.TabIndex = 3;
             // 
+            // lbApellidos
+            // 
+            this.lbApellidos.AutoSize = true;
+            this.lbApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbApellidos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbApellidos.Location = new System.Drawing.Point(75, 39);
+            this.lbApellidos.Name = "lbApellidos";
+            this.lbApellidos.Size = new System.Drawing.Size(92, 25);
+            this.lbApellidos.TabIndex = 12;
+            this.lbApellidos.Text = "Apellidos";
+            // 
             // MenuAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,6 +317,7 @@
             this.Name = "MenuAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuAdministrador";
+            this.Load += new System.EventHandler(this.MenuAdministrador_Load);
             this.paneLaterallNavegacion.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
@@ -341,5 +355,6 @@
         private System.Windows.Forms.Panel panelBuscador;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pbExit;
+        private System.Windows.Forms.Label lbApellidos;
     }
 }

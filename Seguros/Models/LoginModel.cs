@@ -131,7 +131,8 @@ namespace Seguros.Models
 
                 // Creo la sesion con los datos basico del usaurio que se acaba de logear con exito.
                 SesionUsuario.Id = id;
-                SesionUsuario.Usuario = nombre;
+                SesionUsuario.Nombre = nombre;
+                SesionUsuario.Apellidos = apellidos;
                 SesionUsuario.Tipo = tipo;
 
             }

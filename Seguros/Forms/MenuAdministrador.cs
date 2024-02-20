@@ -25,15 +25,15 @@ namespace Seguros.Forms
         // Salimos del programa
         private void pbMostrarBuscador_Click(object sender, EventArgs e)
         {
-            if ( panelBuscador.Visible )
+            if (panelBuscador.Visible)
             {
-                 panelBuscador.Visible = false;
+                panelBuscador.Visible = false;
             }
             else
             {
                 panelBuscador.Visible = true;
             }
-            
+
 
         }
 
@@ -48,6 +48,19 @@ namespace Seguros.Forms
             login.Show();
         }
 
+
+        // Auto load ventana
+        private void MenuAdministrador_Load(object sender, EventArgs e)
+        {
+            // Obtengo los datos de la sesion 
+            
+            // Muestro nombre usuario
+            lbUsuario.Text = SesionUsuario.Nombre;
+            // Muestro tipo o rol del usuario.
+            lbTipo.Text = SesionUsuario.Tipo;
+        }
+
+        // Cierro la aplicacion
         private void pbExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
