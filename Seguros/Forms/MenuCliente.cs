@@ -59,7 +59,7 @@ namespace Seguros.Forms
             // Muestro panel 
             panelPolizas.Visible = true;
             // Muestro las polizas del cliente.
-            dgvPolizas.DataSource = AdminModel.getLasPolizasDelCliente(idCliente);
+            dgvPolizas.DataSource = AdminModel.getPolizasByClientID(idCliente);
         }
 
         // Muestro panel principal

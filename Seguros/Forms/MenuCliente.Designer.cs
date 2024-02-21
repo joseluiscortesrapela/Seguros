@@ -41,16 +41,15 @@
             this.btnMisPolizas = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.paneLaterallNavegacion = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelPolizas = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dgvPolizas = new System.Windows.Forms.DataGridView();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.lbApellidos = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbTipo = new System.Windows.Forms.Label();
+            this.panelPolizas = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dgvPolizas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelBuscador.SuspendLayout();
@@ -59,10 +58,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
             this.panelFlSuperior.SuspendLayout();
             this.paneLaterallNavegacion.SuspendLayout();
-            this.panelPolizas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).BeginInit();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelPolizas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -197,55 +196,6 @@
             this.paneLaterallNavegacion.Size = new System.Drawing.Size(253, 704);
             this.paneLaterallNavegacion.TabIndex = 5;
             // 
-            // panelPolizas
-            // 
-            this.panelPolizas.BackColor = System.Drawing.Color.Transparent;
-            this.panelPolizas.Controls.Add(this.label3);
-            this.panelPolizas.Controls.Add(this.label2);
-            this.panelPolizas.Controls.Add(this.dgvPolizas);
-            this.panelPolizas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPolizas.Location = new System.Drawing.Point(253, 86);
-            this.panelPolizas.Name = "panelPolizas";
-            this.panelPolizas.Size = new System.Drawing.Size(1120, 618);
-            this.panelPolizas.TabIndex = 7;
-            this.panelPolizas.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 589);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nombre del agente seguros";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Listada polizas contratadas";
-            // 
-            // dgvPolizas
-            // 
-            this.dgvPolizas.AllowUserToAddRows = false;
-            this.dgvPolizas.AllowUserToDeleteRows = false;
-            this.dgvPolizas.AllowUserToOrderColumns = true;
-            this.dgvPolizas.AllowUserToResizeColumns = false;
-            this.dgvPolizas.AllowUserToResizeRows = false;
-            this.dgvPolizas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPolizas.Location = new System.Drawing.Point(13, 50);
-            this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPolizas.Size = new System.Drawing.Size(1078, 536);
-            this.dgvPolizas.TabIndex = 0;
-            // 
             // panelLogo
             // 
             this.panelLogo.Controls.Add(this.lbApellidos);
@@ -312,6 +262,45 @@
             this.lbTipo.TabIndex = 10;
             this.lbTipo.Text = "Tipo: Agentes";
             // 
+            // panelPolizas
+            // 
+            this.panelPolizas.BackColor = System.Drawing.Color.Transparent;
+            this.panelPolizas.Controls.Add(this.label2);
+            this.panelPolizas.Controls.Add(this.dgvPolizas);
+            this.panelPolizas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPolizas.Location = new System.Drawing.Point(253, 86);
+            this.panelPolizas.Name = "panelPolizas";
+            this.panelPolizas.Size = new System.Drawing.Size(1120, 618);
+            this.panelPolizas.TabIndex = 7;
+            this.panelPolizas.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(203, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Listada polizas contratadas";
+            // 
+            // dgvPolizas
+            // 
+            this.dgvPolizas.AllowUserToAddRows = false;
+            this.dgvPolizas.AllowUserToDeleteRows = false;
+            this.dgvPolizas.AllowUserToOrderColumns = true;
+            this.dgvPolizas.AllowUserToResizeColumns = false;
+            this.dgvPolizas.AllowUserToResizeRows = false;
+            this.dgvPolizas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPolizas.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPolizas.Location = new System.Drawing.Point(13, 50);
+            this.dgvPolizas.Name = "dgvPolizas";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPolizas.Size = new System.Drawing.Size(1078, 536);
+            this.dgvPolizas.TabIndex = 0;
+            // 
             // MenuCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,12 +324,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).EndInit();
             this.panelFlSuperior.ResumeLayout(false);
             this.paneLaterallNavegacion.ResumeLayout(false);
-            this.panelPolizas.ResumeLayout(false);
-            this.panelPolizas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).EndInit();
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelPolizas.ResumeLayout(false);
+            this.panelPolizas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,7 +350,6 @@
         private System.Windows.Forms.Panel panelPolizas;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvPolizas;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Label lbApellidos;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -56,8 +56,8 @@ namespace Seguros.Forms
             panelContenedor.Visible = false;
             // Oculto buscador
             panelBuscador.Visible = false;
-            // Oculto dgvPolizas
-            dgvPolizas.Visible = false;
+            // Oculto el dgv de con las polias
+            panelPolizas.Visible = false;
         }
 
         // Obtengo cliente seleccionado
@@ -70,7 +70,7 @@ namespace Seguros.Forms
                 // Obtengo el id del cliente
                 int idCliente = int.Parse(filaCliente.Cells["idCliente"].Value.ToString());
                 // Obtengo las polizas del cliente
-                dgvPolizas.DataSource = AdminModel.getLasPolizasDelCliente(idCliente);
+                dgvPolizas.DataSource = AdminModel.getPolizasByClientID(idCliente);
                 // Muestro el panel
                 panelPolizas.Visible = true;
             }

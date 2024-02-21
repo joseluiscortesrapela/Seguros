@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAgentes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.lbApellidos = new System.Windows.Forms.Label();
@@ -49,12 +49,12 @@
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.paneLaterallNavegacion = new System.Windows.Forms.FlowLayoutPanel();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.panelClientes = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.panelPolizas = new System.Windows.Forms.Panel();
             this.dgvPolizas = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.panelClientes = new System.Windows.Forms.Panel();
-            this.panelPolizas = new System.Windows.Forms.Panel();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
@@ -66,10 +66,10 @@
             this.panelFlSuperior.SuspendLayout();
             this.paneLaterallNavegacion.SuspendLayout();
             this.panelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).BeginInit();
             this.panelClientes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.panelPolizas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -185,7 +185,7 @@
             // pbBuscador
             // 
             this.pbBuscador.Image = ((System.Drawing.Image)(resources.GetObject("pbBuscador.Image")));
-            this.pbBuscador.Location = new System.Drawing.Point(10, 19);
+            this.pbBuscador.Location = new System.Drawing.Point(10, 12);
             this.pbBuscador.Margin = new System.Windows.Forms.Padding(0);
             this.pbBuscador.Name = "pbBuscador";
             this.pbBuscador.Size = new System.Drawing.Size(409, 63);
@@ -219,10 +219,10 @@
             this.panelFlSuperior.BackColor = System.Drawing.Color.Transparent;
             this.panelFlSuperior.Controls.Add(this.panel1);
             this.panelFlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFlSuperior.Location = new System.Drawing.Point(246, 0);
+            this.panelFlSuperior.Location = new System.Drawing.Point(250, 0);
             this.panelFlSuperior.Name = "panelFlSuperior";
             this.panelFlSuperior.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panelFlSuperior.Size = new System.Drawing.Size(1127, 86);
+            this.panelFlSuperior.Size = new System.Drawing.Size(1123, 86);
             this.panelFlSuperior.TabIndex = 6;
             // 
             // btnClientes
@@ -267,20 +267,39 @@
             this.paneLaterallNavegacion.Dock = System.Windows.Forms.DockStyle.Left;
             this.paneLaterallNavegacion.Location = new System.Drawing.Point(0, 0);
             this.paneLaterallNavegacion.Name = "paneLaterallNavegacion";
-            this.paneLaterallNavegacion.Size = new System.Drawing.Size(246, 704);
+            this.paneLaterallNavegacion.Size = new System.Drawing.Size(250, 704);
             this.paneLaterallNavegacion.TabIndex = 5;
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.Snow;
-            this.panelContenedor.Controls.Add(this.panelPolizas);
+            this.panelContenedor.BackColor = System.Drawing.Color.SeaShell;
             this.panelContenedor.Controls.Add(this.panelClientes);
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(246, 86);
+            this.panelContenedor.Controls.Add(this.panelPolizas);
+            this.panelContenedor.Location = new System.Drawing.Point(250, 86);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1127, 618);
+            this.panelContenedor.Size = new System.Drawing.Size(1123, 618);
             this.panelContenedor.TabIndex = 7;
             this.panelContenedor.Visible = false;
+            // 
+            // panelClientes
+            // 
+            this.panelClientes.BackColor = System.Drawing.Color.Tan;
+            this.panelClientes.Controls.Add(this.label3);
+            this.panelClientes.Controls.Add(this.dgvClientes);
+            this.panelClientes.Location = new System.Drawing.Point(13, 6);
+            this.panelClientes.Name = "panelClientes";
+            this.panelClientes.Size = new System.Drawing.Size(1098, 279);
+            this.panelClientes.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(159, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Mi cartera de clientes";
             // 
             // dgvClientes
             // 
@@ -292,23 +311,24 @@
             this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClientes.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(18, 23);
+            this.dgvClientes.Location = new System.Drawing.Point(3, 23);
             this.dgvClientes.Name = "dgvClientes";
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvClientes.Size = new System.Drawing.Size(1042, 221);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvClientes.Size = new System.Drawing.Size(1057, 201);
             this.dgvClientes.TabIndex = 3;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
-            // label3
+            // panelPolizas
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Mi cartera de clientes";
+            this.panelPolizas.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelPolizas.Controls.Add(this.dgvPolizas);
+            this.panelPolizas.Controls.Add(this.label2);
+            this.panelPolizas.Location = new System.Drawing.Point(13, 317);
+            this.panelPolizas.Name = "panelPolizas";
+            this.panelPolizas.Size = new System.Drawing.Size(1102, 275);
+            this.panelPolizas.TabIndex = 7;
+            this.panelPolizas.Visible = false;
             // 
             // dgvPolizas
             // 
@@ -322,8 +342,8 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(18, 41);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPolizas.Size = new System.Drawing.Size(1042, 218);
             this.dgvPolizas.TabIndex = 4;
             // 
@@ -336,28 +356,6 @@
             this.label2.Size = new System.Drawing.Size(90, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Sus polizas";
-            // 
-            // panelClientes
-            // 
-            this.panelClientes.BackColor = System.Drawing.Color.SpringGreen;
-            this.panelClientes.Controls.Add(this.label3);
-            this.panelClientes.Controls.Add(this.dgvClientes);
-            this.panelClientes.Location = new System.Drawing.Point(13, 27);
-            this.panelClientes.Name = "panelClientes";
-            this.panelClientes.Size = new System.Drawing.Size(1102, 265);
-            this.panelClientes.TabIndex = 6;
-            this.panelClientes.Visible = false;
-            // 
-            // panelPolizas
-            // 
-            this.panelPolizas.BackColor = System.Drawing.Color.SteelBlue;
-            this.panelPolizas.Controls.Add(this.dgvPolizas);
-            this.panelPolizas.Controls.Add(this.label2);
-            this.panelPolizas.Location = new System.Drawing.Point(13, 317);
-            this.panelPolizas.Name = "panelPolizas";
-            this.panelPolizas.Size = new System.Drawing.Size(1102, 275);
-            this.panelPolizas.TabIndex = 7;
-            this.panelPolizas.Visible = false;
             // 
             // MenuAgentes
             // 
@@ -386,12 +384,12 @@
             this.panelFlSuperior.ResumeLayout(false);
             this.paneLaterallNavegacion.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).EndInit();
             this.panelClientes.ResumeLayout(false);
             this.panelClientes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.panelPolizas.ResumeLayout(false);
             this.panelPolizas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -420,7 +418,7 @@
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.DataGridView dgvPolizas;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panelClientes;
         private System.Windows.Forms.Panel panelPolizas;
+        private System.Windows.Forms.FlowLayoutPanel panelClientes;
     }
 }
