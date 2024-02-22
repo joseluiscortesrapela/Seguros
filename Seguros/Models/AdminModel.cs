@@ -92,7 +92,7 @@ namespace Seguros.Models
         }
 
 
-        public static DataTable getAllAdministradores()
+        public static DataTable getAdministrators()
         {
             MySqlConnection conexion = ConexionBaseDatos.getConexion();
             // la abro.

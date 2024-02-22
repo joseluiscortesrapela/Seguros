@@ -1,4 +1,5 @@
 ﻿using Seguros.Models;
+using Seguros.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,83 +62,29 @@ namespace Seguros.Forms
             lbTipo.Text = SesionUsuario.Tipo;
         }
 
-        // Cierro la aplicacion
-        private void pbExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         // Muestra las polizas
         private void btnPolizas_Click(object sender, EventArgs e)
-        {   // Obtengo todas las polizas
-            dgvTodasLasPolizas.DataSource = AdminModel.getAllPolizas();
-            // Muestro el panel
-            mostrarPanel("polizas");
+        {
+            MostrarUserControl(new UC_CurdPolizas());
         }
 
         // Muestro los clietnes
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            //Obtegno la cartera de clientes del agente de seguros.
-            dgvClientes.DataSource = AdminModel.getAllClients();
-            // Muestro el panel
-            mostrarPanel("clientes");
+
         }
 
-        // Muestra el conenido del panel que se ha seleccionado desdel el menu de navegacion
-        private void mostrarPanel(string panel)
-        {
-            switch (panel)
-            {
-                case "administradores":
-                    panelAdministradores.Visible = true;
-                    panelPolizas.Visible = false;
-                    panelClientes.Visible = false;
-                    panelAgenetes.Visible = true;
-                    Console.WriteLine("Muestro panel administradores");
-                    break;
-
-                case "agentes":
-                    panelAdministradores.Visible = false;
-                    panelAgenetes.Visible = true;
-                    panelClientes.Visible = false;
-                    panelPolizas.Visible = false;
-                    Console.WriteLine("Muestro panel agentes");
-                    break;
-
-                case "clientes":
-                    panelAdministradores.Visible = false;
-                    panelAgenetes.Visible = false;
-                    panelClientes.Visible = true;
-                    panelPolizas.Visible = false;
-                    Console.WriteLine("Muestro panel clientes");
-                    break;
-                case "polizas":
-                    panelAdministradores.Visible = false;
-                    panelAgenetes.Visible = false;
-                    panelClientes.Visible = false;
-                    panelPolizas.Visible = true;
-                    Console.WriteLine("Muestro panel polizas");
-                    break;
-
-            }
-
-            // Muestro el contenedor principal
-            panelContenedor.Visible = true;
-        }
 
         // Muestro todos los administradores
         private void btnAdministradores_Click(object sender, EventArgs e)
         {
-            // Obtengo los administradores y los cargo en el dgv
-            dgvAdministradores.DataSource = AdminModel.getAllAdministradores();
-            mostrarPanel("administradores");
+            MostrarUserControl(new UC_CrudAdministradores());
         }
+
 
         private void btnAgentes_Click(object sender, EventArgs e)
         {
-            dgvTodosLosAgentes.DataSource = AdminModel.getAllAgentes();
-            mostrarPanel("agentes");
+
         }
 
         // Regreso al inico o home
@@ -145,5 +92,25 @@ namespace Seguros.Forms
         {
             panelContenedor.Visible = false;
         }
+
+        // Método para mostrar un UserControl en el panel contenedor
+        private void MostrarUserControl(UserControl userControl)
+        {
+            // Limpiar el panel contenedor antes de agregar un nuevo control
+            panelContenedor.Controls.Clear();
+            // Muestro el panel
+            panelContenedor.Visible = true;
+            // Ajustar el tamaño del UserControl al tamaño del panel contenedor
+            userControl.Dock = DockStyle.Fill;
+            // Agregar el UserControl al panel contenedor
+            panelContenedor.Controls.Add(userControl);
+        }
+
+        // Cierro la aplicacion
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }
