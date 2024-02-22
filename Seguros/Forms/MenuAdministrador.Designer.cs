@@ -94,7 +94,7 @@
             this.panelLogo.Location = new System.Drawing.Point(3, 3);
             this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(239, 155);
+            this.panelLogo.Size = new System.Drawing.Size(239, 113);
             this.panelLogo.TabIndex = 0;
             // 
             // lbApellidos
@@ -102,7 +102,7 @@
             this.lbApellidos.AutoSize = true;
             this.lbApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbApellidos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbApellidos.Location = new System.Drawing.Point(75, 39);
+            this.lbApellidos.Location = new System.Drawing.Point(9, 83);
             this.lbApellidos.Name = "lbApellidos";
             this.lbApellidos.Size = new System.Drawing.Size(92, 25);
             this.lbApellidos.TabIndex = 12;
@@ -113,7 +113,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(8, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(57, 78);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -122,7 +122,7 @@
             this.lbUsuario.AutoSize = true;
             this.lbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsuario.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbUsuario.Location = new System.Drawing.Point(75, 62);
+            this.lbUsuario.Location = new System.Drawing.Point(71, 52);
             this.lbUsuario.Name = "lbUsuario";
             this.lbUsuario.Size = new System.Drawing.Size(79, 25);
             this.lbUsuario.TabIndex = 8;
@@ -133,7 +133,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label1.Location = new System.Drawing.Point(74, 6);
+            this.label1.Location = new System.Drawing.Point(65, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 31);
             this.label1.TabIndex = 6;
@@ -144,7 +144,7 @@
             this.lbTipo.AutoSize = true;
             this.lbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTipo.ForeColor = System.Drawing.Color.Orange;
-            this.lbTipo.Location = new System.Drawing.Point(5, 90);
+            this.lbTipo.Location = new System.Drawing.Point(68, 9);
             this.lbTipo.Name = "lbTipo";
             this.lbTipo.Size = new System.Drawing.Size(97, 13);
             this.lbTipo.TabIndex = 10;
@@ -158,7 +158,7 @@
             this.btnAdministradores.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnAdministradores.Image = ((System.Drawing.Image)(resources.GetObject("btnAdministradores.Image")));
             this.btnAdministradores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdministradores.Location = new System.Drawing.Point(3, 191);
+            this.btnAdministradores.Location = new System.Drawing.Point(3, 149);
             this.btnAdministradores.Name = "btnAdministradores";
             this.btnAdministradores.Size = new System.Drawing.Size(239, 45);
             this.btnAdministradores.TabIndex = 12;
@@ -174,7 +174,7 @@
             this.btnAgentes.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnAgentes.Image = ((System.Drawing.Image)(resources.GetObject("btnAgentes.Image")));
             this.btnAgentes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgentes.Location = new System.Drawing.Point(3, 242);
+            this.btnAgentes.Location = new System.Drawing.Point(3, 200);
             this.btnAgentes.Name = "btnAgentes";
             this.btnAgentes.Size = new System.Drawing.Size(239, 45);
             this.btnAgentes.TabIndex = 13;
@@ -190,7 +190,7 @@
             this.btnClientes.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(3, 293);
+            this.btnClientes.Location = new System.Drawing.Point(3, 251);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(239, 45);
             this.btnClientes.TabIndex = 14;
@@ -206,7 +206,7 @@
             this.btnPolizas.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnPolizas.Image = ((System.Drawing.Image)(resources.GetObject("btnPolizas.Image")));
             this.btnPolizas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPolizas.Location = new System.Drawing.Point(3, 344);
+            this.btnPolizas.Location = new System.Drawing.Point(3, 302);
             this.btnPolizas.Name = "btnPolizas";
             this.btnPolizas.Size = new System.Drawing.Size(239, 45);
             this.btnPolizas.TabIndex = 16;
@@ -221,8 +221,8 @@
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.DarkGray;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 602);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 210, 3, 20);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 600);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 250, 3, 20);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(239, 82);
             this.btnCerrarSesion.TabIndex = 15;
@@ -235,7 +235,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(3, 707);
+            this.panel2.Location = new System.Drawing.Point(3, 705);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1127, 618);
             this.panel2.TabIndex = 1;

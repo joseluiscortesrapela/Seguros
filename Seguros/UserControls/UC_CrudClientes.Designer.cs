@@ -1,0 +1,145 @@
+﻿namespace Seguros.UserControls
+{
+    partial class UC_CrudClientes
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudClientes));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.lbMensaje = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pbEditar = new System.Windows.Forms.PictureBox();
+            this.pbEliminar = new System.Windows.Forms.PictureBox();
+            this.pbCrear = new System.Windows.Forms.PictureBox();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCrear)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // lbMensaje
+            // 
+            this.lbMensaje.AutoSize = true;
+            this.lbMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMensaje.Location = new System.Drawing.Point(483, 439);
+            this.lbMensaje.Name = "lbMensaje";
+            this.lbMensaje.Size = new System.Drawing.Size(0, 17);
+            this.lbMensaje.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(34, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 17);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Clientes";
+            // 
+            // pbEditar
+            // 
+            this.pbEditar.Image = ((System.Drawing.Image)(resources.GetObject("pbEditar.Image")));
+            this.pbEditar.Location = new System.Drawing.Point(1090, 71);
+            this.pbEditar.Name = "pbEditar";
+            this.pbEditar.Size = new System.Drawing.Size(34, 38);
+            this.pbEditar.TabIndex = 11;
+            this.pbEditar.TabStop = false;
+            this.pbEditar.Visible = false;
+            this.pbEditar.Click += new System.EventHandler(this.pbEditar_Click);
+            // 
+            // pbEliminar
+            // 
+            this.pbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("pbEliminar.Image")));
+            this.pbEliminar.Location = new System.Drawing.Point(1090, 115);
+            this.pbEliminar.Name = "pbEliminar";
+            this.pbEliminar.Size = new System.Drawing.Size(34, 36);
+            this.pbEliminar.TabIndex = 10;
+            this.pbEliminar.TabStop = false;
+            this.pbEliminar.Visible = false;
+            this.pbEliminar.Click += new System.EventHandler(this.pbEliminar_Click);
+            // 
+            // pbCrear
+            // 
+            this.pbCrear.Image = ((System.Drawing.Image)(resources.GetObject("pbCrear.Image")));
+            this.pbCrear.Location = new System.Drawing.Point(1049, 3);
+            this.pbCrear.Name = "pbCrear";
+            this.pbCrear.Size = new System.Drawing.Size(35, 35);
+            this.pbCrear.TabIndex = 9;
+            this.pbCrear.TabStop = false;
+            this.pbCrear.Click += new System.EventHandler(this.pbCrear_Click);
+            // 
+            // dgvClientes
+            // 
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.AllowUserToOrderColumns = true;
+            this.dgvClientes.AllowUserToResizeColumns = false;
+            this.dgvClientes.AllowUserToResizeRows = false;
+            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvClientes.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Location = new System.Drawing.Point(37, 43);
+            this.dgvClientes.Name = "dgvClientes";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvClientes.Size = new System.Drawing.Size(1047, 233);
+            this.dgvClientes.TabIndex = 8;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
+            // 
+            // UC_CrudClientes
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbMensaje);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pbEditar);
+            this.Controls.Add(this.pbEliminar);
+            this.Controls.Add(this.pbCrear);
+            this.Controls.Add(this.dgvClientes);
+            this.Name = "UC_CrudClientes";
+            this.Size = new System.Drawing.Size(1127, 618);
+            ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCrear)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label lbMensaje;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pbEditar;
+        private System.Windows.Forms.PictureBox pbEliminar;
+        private System.Windows.Forms.PictureBox pbCrear;
+        private System.Windows.Forms.DataGridView dgvClientes;
+    }
+}

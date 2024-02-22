@@ -65,20 +65,20 @@ namespace Seguros.Forms
         // Muestra las polizas
         private void btnPolizas_Click(object sender, EventArgs e)
         {
-            MostrarUserControl(new UC_CurdPolizas());
+            mostrarUserControl(new UC_CurdPolizas());
         }
 
         // Muestro los clietnes
         private void btnClientes_Click(object sender, EventArgs e)
         {
-
+            mostrarUserControl( new UC_CrudClientes());
         }
 
 
         // Muestro todos los administradores
         private void btnAdministradores_Click(object sender, EventArgs e)
         {
-            MostrarUserControl(new UC_CrudAdministradores());
+            mostrarUserControl(new UC_CrudAdministradores());
         }
 
 
@@ -94,7 +94,7 @@ namespace Seguros.Forms
         }
 
         // Método para mostrar un UserControl en el panel contenedor
-        private void MostrarUserControl(UserControl userControl)
+        private void mostrarUserControl(UserControl userControl)
         {
             // Limpiar el panel contenedor antes de agregar un nuevo control
             panelContenedor.Controls.Clear();

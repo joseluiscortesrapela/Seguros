@@ -13,7 +13,8 @@ namespace Seguros.UserControls
 {
     public partial class UC_CurdPolizas : UserControl
     {
-        private int idCliente;
+        private int idCliente, idPoliza;
+        private DataGridViewRow filaPoliza;
 
         // Constructor
         public UC_CurdPolizas()
@@ -45,5 +46,73 @@ namespace Seguros.UserControls
         {
             Console.WriteLine("Eliminar poliza");
         }
+
+        // Obtengo la poliza que ha sido seleccionada
+        private void dgvPolizas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Obtengo la fila que ha sido seleccionada en el dataGridView
+            if (e.RowIndex >= 0)
+            {   // Obtengo la que ha sido seleccionada en el dgv
+                filaPoliza = dgvPolizas.Rows[e.RowIndex];
+                // Obtengo el id del usuario.
+                idPoliza = int.Parse(filaPoliza.Cells["idPoliza"].Value.ToString());
+                // Muestro botones de accion
+                mostrarBotonesAccion();
+            }
+        }
+
+        // Estado de las polizas por colores, cambia el color de fondo de la fila segun su estado.
+        private void CambiarColorFilas()
+        {
+            foreach (DataGridViewRow row in dgvPolizas.Rows)
+            {
+                if (row.Cells["estado"].Value != null)
+                {
+                    string estado = row.Cells["estado"].Value.ToString();
+
+                    Console.WriteLine("estado: " + estado);
+
+                    switch (estado)
+                    {
+                        case "Cobrada":
+                            row.DefaultCellStyle.BackColor = Color.LightSkyBlue;
+                         
+                            break;
+                        case "A cuenta":
+                            row.DefaultCellStyle.BackColor = Color.LightGreen;
+                 
+                            break;
+                        case "Liquidada":
+                            row.DefaultCellStyle.BackColor = Color.LightGray;
+                       
+                            break;
+                        case "Pre anulada":
+                            row.DefaultCellStyle.BackColor = Color.LightCyan;
+                     
+                            Console.WriteLine("preanulada ");
+                            break;
+                        case "Anulada":
+                            row.DefaultCellStyle.BackColor = Color.LightSalmon;
+                            break;
+                         
+                    }
+                }
+            }
+        }
+
+ 
+
+        private void UC_CurdPolizas_Load(object sender, EventArgs e)
+        {
+            CambiarColorFilas();
+        }
+
+        // Muestra botones de accion
+        private void mostrarBotonesAccion()
+        {
+            pbEditar.Visible = true;
+            pbEliminar.Visible = true;
+        }
+
     }
 }

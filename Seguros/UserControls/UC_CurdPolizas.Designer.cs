@@ -46,7 +46,7 @@
             // 
             this.lbMensaje.AutoSize = true;
             this.lbMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMensaje.Location = new System.Drawing.Point(467, 525);
+            this.lbMensaje.Location = new System.Drawing.Point(467, 495);
             this.lbMensaje.Name = "lbMensaje";
             this.lbMensaje.Size = new System.Drawing.Size(0, 17);
             this.lbMensaje.TabIndex = 13;
@@ -55,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 50);
+            this.label1.Location = new System.Drawing.Point(32, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 12;
@@ -64,9 +64,9 @@
             // pbCrear
             // 
             this.pbCrear.Image = ((System.Drawing.Image)(resources.GetObject("pbCrear.Image")));
-            this.pbCrear.Location = new System.Drawing.Point(1045, 32);
+            this.pbCrear.Location = new System.Drawing.Point(1049, 3);
             this.pbCrear.Name = "pbCrear";
-            this.pbCrear.Size = new System.Drawing.Size(38, 35);
+            this.pbCrear.Size = new System.Drawing.Size(35, 35);
             this.pbCrear.TabIndex = 9;
             this.pbCrear.TabStop = false;
             this.pbCrear.Click += new System.EventHandler(this.pbCrear_Click);
@@ -74,21 +74,23 @@
             // pbEliminar
             // 
             this.pbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("pbEliminar.Image")));
-            this.pbEliminar.Location = new System.Drawing.Point(1089, 139);
+            this.pbEliminar.Location = new System.Drawing.Point(1089, 109);
             this.pbEliminar.Name = "pbEliminar";
             this.pbEliminar.Size = new System.Drawing.Size(35, 34);
             this.pbEliminar.TabIndex = 10;
             this.pbEliminar.TabStop = false;
+            this.pbEliminar.Visible = false;
             this.pbEliminar.Click += new System.EventHandler(this.pbEliminar_Click);
             // 
             // pbEditar
             // 
             this.pbEditar.Image = ((System.Drawing.Image)(resources.GetObject("pbEditar.Image")));
-            this.pbEditar.Location = new System.Drawing.Point(1089, 95);
+            this.pbEditar.Location = new System.Drawing.Point(1089, 65);
             this.pbEditar.Name = "pbEditar";
             this.pbEditar.Size = new System.Drawing.Size(35, 38);
             this.pbEditar.TabIndex = 11;
             this.pbEditar.TabStop = false;
+            this.pbEditar.Visible = false;
             this.pbEditar.Click += new System.EventHandler(this.pbEditar_Click);
             // 
             // dgvPolizas
@@ -100,13 +102,15 @@
             this.dgvPolizas.AllowUserToResizeRows = false;
             this.dgvPolizas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPolizas.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvPolizas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPolizas.Location = new System.Drawing.Point(3, 73);
+            this.dgvPolizas.Location = new System.Drawing.Point(35, 43);
             this.dgvPolizas.Name = "dgvPolizas";
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPolizas.Size = new System.Drawing.Size(1080, 233);
+            this.dgvPolizas.Size = new System.Drawing.Size(1048, 552);
             this.dgvPolizas.TabIndex = 8;
+            this.dgvPolizas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPolizas_CellClick);
             // 
             // UC_CurdPolizas
             // 
@@ -121,6 +125,7 @@
             this.Controls.Add(this.dgvPolizas);
             this.Name = "UC_CurdPolizas";
             this.Size = new System.Drawing.Size(1127, 618);
+            this.Load += new System.EventHandler(this.UC_CurdPolizas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCrear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).EndInit();

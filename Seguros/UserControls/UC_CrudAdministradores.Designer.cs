@@ -51,18 +51,19 @@
             this.dgvAdministradores.AllowUserToResizeRows = false;
             this.dgvAdministradores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAdministradores.BackgroundColor = System.Drawing.Color.Snow;
+            this.dgvAdministradores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAdministradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAdministradores.Location = new System.Drawing.Point(3, 75);
+            this.dgvAdministradores.Location = new System.Drawing.Point(38, 43);
             this.dgvAdministradores.Name = "dgvAdministradores";
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvAdministradores.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAdministradores.Size = new System.Drawing.Size(1081, 233);
+            this.dgvAdministradores.Size = new System.Drawing.Size(1046, 233);
             this.dgvAdministradores.TabIndex = 2;
             // 
             // pbCrear
             // 
             this.pbCrear.Image = ((System.Drawing.Image)(resources.GetObject("pbCrear.Image")));
-            this.pbCrear.Location = new System.Drawing.Point(1049, 34);
+            this.pbCrear.Location = new System.Drawing.Point(1049, 2);
             this.pbCrear.Name = "pbCrear";
             this.pbCrear.Size = new System.Drawing.Size(35, 35);
             this.pbCrear.TabIndex = 3;
@@ -72,7 +73,7 @@
             // pbEliminar
             // 
             this.pbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("pbEliminar.Image")));
-            this.pbEliminar.Location = new System.Drawing.Point(1090, 147);
+            this.pbEliminar.Location = new System.Drawing.Point(1090, 115);
             this.pbEliminar.Name = "pbEliminar";
             this.pbEliminar.Size = new System.Drawing.Size(34, 36);
             this.pbEliminar.TabIndex = 4;
@@ -82,7 +83,7 @@
             // pbEditar
             // 
             this.pbEditar.Image = ((System.Drawing.Image)(resources.GetObject("pbEditar.Image")));
-            this.pbEditar.Location = new System.Drawing.Point(1090, 103);
+            this.pbEditar.Location = new System.Drawing.Point(1090, 71);
             this.pbEditar.Name = "pbEditar";
             this.pbEditar.Size = new System.Drawing.Size(34, 38);
             this.pbEditar.TabIndex = 5;
@@ -93,7 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 52);
+            this.label1.Location = new System.Drawing.Point(35, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 17);
             this.label1.TabIndex = 6;
@@ -103,7 +104,7 @@
             // 
             this.lbMensaje.AutoSize = true;
             this.lbMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMensaje.Location = new System.Drawing.Point(483, 471);
+            this.lbMensaje.Location = new System.Drawing.Point(483, 439);
             this.lbMensaje.Name = "lbMensaje";
             this.lbMensaje.Size = new System.Drawing.Size(0, 17);
             this.lbMensaje.TabIndex = 7;
