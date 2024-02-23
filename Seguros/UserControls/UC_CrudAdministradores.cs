@@ -22,7 +22,7 @@ namespace Seguros.UserControls
         // Autoload
         private void UC_CrudAdministradores_Load(object sender, EventArgs e)
         {
-            dgvAdministradores.DataSource = AdminModel.getAdministrators();
+            dgvAdministradores.DataSource = AdminModel.getAdministradores();
         }
 
         private void pbCrear_Click(object sender, EventArgs e)

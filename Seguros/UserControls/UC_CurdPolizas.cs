@@ -21,7 +21,7 @@ namespace Seguros.UserControls
         {
             InitializeComponent();
             // Obtengo todas las polizas y las muestro en el dgv
-            dgvPolizas.DataSource = AdminModel.getAllPolizas();
+            dgvPolizas.DataSource = AdminModel.getPolizas();
         }
 
         // Sobrecarga del constructor, recibe el id del cliente

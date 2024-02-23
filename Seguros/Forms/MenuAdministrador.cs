@@ -19,11 +19,7 @@ namespace Seguros.Forms
             InitializeComponent();
         }
 
-        private void salir(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+       
         // Salimos del programa
         private void pbMostrarBuscador_Click(object sender, EventArgs e)
         {
@@ -37,17 +33,6 @@ namespace Seguros.Forms
             }
 
 
-        }
-
-        // Cierra la sesion actual
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
-        {
-            // Oculto ventana menu jugador
-            this.Hide();
-            // Instancio la clase
-            Login login = new Login();
-            // Muestro la vengana de login/registro
-            login.Show();
         }
 
 
@@ -75,16 +60,16 @@ namespace Seguros.Forms
         }
 
 
-        // Muestro todos los administradores
+        // Muestro la venana con los administradores
         private void btnAdministradores_Click(object sender, EventArgs e)
         {
             mostrarUserControl(new UC_CrudAdministradores());
         }
 
-
+        // Muestro ventana con los agentes
         private void btnAgentes_Click(object sender, EventArgs e)
         {
-
+            mostrarUserControl( new UC_CrudAgentes() );
         }
 
         // Regreso al inico o home
@@ -105,6 +90,18 @@ namespace Seguros.Forms
             // Agregar el UserControl al panel contenedor
             panelContenedor.Controls.Add(userControl);
         }
+
+        // Cierra la sesion actual
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            // Oculto ventana menu jugador
+            this.Hide();
+            // Instancio la clase
+            Login login = new Login();
+            // Muestro la vengana de login/registro
+            login.Show();
+        }
+
 
         // Cierro la aplicacion
         private void pbExit_Click(object sender, EventArgs e)

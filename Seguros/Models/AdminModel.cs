@@ -14,7 +14,7 @@ namespace Seguros.Models
     {
 
         // Obtengo todas las polizas
-        public static DataTable getAllPolizas()
+        public static DataTable getPolizas()
         {
             MySqlConnection conexion = ConexionBaseDatos.getConexion();
             // la abro.
@@ -66,7 +66,7 @@ namespace Seguros.Models
         }
 
         // Obtengo todos los clientes
-        public static DataTable getAllClients()
+        public static DataTable getClientes()
         {
             MySqlConnection conexion = ConexionBaseDatos.getConexion();
             // la abro.
@@ -92,7 +92,7 @@ namespace Seguros.Models
         }
 
 
-        public static DataTable getAdministrators()
+        public static DataTable getAdministradores()
         {
             MySqlConnection conexion = ConexionBaseDatos.getConexion();
             // la abro.
@@ -117,7 +117,7 @@ namespace Seguros.Models
             return table;
         }
 
-        public static DataTable getAllAgentes()
+        public static DataTable getAgentes()
         {
             MySqlConnection conexion = ConexionBaseDatos.getConexion();
             // la abro.

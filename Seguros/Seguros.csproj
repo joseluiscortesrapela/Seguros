@@ -140,6 +140,12 @@
     <Compile Include="UserControls\UC_CrudAdministradores.Designer.cs">
       <DependentUpon>UC_CrudAdministradores.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_CrudAgentes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_CrudAgentes.Designer.cs">
+      <DependentUpon>UC_CrudAgentes.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_CrudClientes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\UC_CrudAdministradores.resx">
       <DependentUpon>UC_CrudAdministradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_CrudAgentes.resx">
+      <DependentUpon>UC_CrudAgentes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_CrudClientes.resx">
       <DependentUpon>UC_CrudClientes.cs</DependentUpon>

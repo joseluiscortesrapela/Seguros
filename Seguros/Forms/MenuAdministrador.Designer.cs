@@ -51,8 +51,6 @@
             this.pbBuscador = new System.Windows.Forms.PictureBox();
             this.pbMostrarBuscador = new System.Windows.Forms.PictureBox();
             this.pbInicio = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.paneLaterallNavegacion.SuspendLayout();
             this.panelLogo.SuspendLayout();
@@ -65,7 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrarBuscador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // paneLaterallNavegacion
@@ -254,12 +251,11 @@
             // 
             this.panelFlSuperior.BackColor = System.Drawing.Color.Transparent;
             this.panelFlSuperior.Controls.Add(this.panelNavegacionSuperior);
-            this.panelFlSuperior.Controls.Add(this.panel3);
             this.panelFlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFlSuperior.Location = new System.Drawing.Point(246, 0);
             this.panelFlSuperior.Name = "panelFlSuperior";
             this.panelFlSuperior.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panelFlSuperior.Size = new System.Drawing.Size(1127, 86);
+            this.panelFlSuperior.Size = new System.Drawing.Size(1127, 55);
             this.panelFlSuperior.TabIndex = 4;
             // 
             // panelNavegacionSuperior
@@ -271,13 +267,13 @@
             this.panelNavegacionSuperior.Controls.Add(this.pbInicio);
             this.panelNavegacionSuperior.Location = new System.Drawing.Point(13, 3);
             this.panelNavegacionSuperior.Name = "panelNavegacionSuperior";
-            this.panelNavegacionSuperior.Size = new System.Drawing.Size(1114, 83);
+            this.panelNavegacionSuperior.Size = new System.Drawing.Size(1100, 52);
             this.panelNavegacionSuperior.TabIndex = 5;
             // 
             // pbExit
             // 
             this.pbExit.Image = ((System.Drawing.Image)(resources.GetObject("pbExit.Image")));
-            this.pbExit.Location = new System.Drawing.Point(1081, 9);
+            this.pbExit.Location = new System.Drawing.Point(1079, 5);
             this.pbExit.Name = "pbExit";
             this.pbExit.Size = new System.Drawing.Size(21, 21);
             this.pbExit.TabIndex = 5;
@@ -291,7 +287,7 @@
             this.panelBuscador.Controls.Add(this.pbBuscador);
             this.panelBuscador.Location = new System.Drawing.Point(325, 5);
             this.panelBuscador.Name = "panelBuscador";
-            this.panelBuscador.Size = new System.Drawing.Size(431, 79);
+            this.panelBuscador.Size = new System.Drawing.Size(431, 47);
             this.panelBuscador.TabIndex = 6;
             this.panelBuscador.Visible = false;
             // 
@@ -301,7 +297,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.BlueViolet;
-            this.textBox1.Location = new System.Drawing.Point(35, 39);
+            this.textBox1.Location = new System.Drawing.Point(34, 16);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(319, 19);
             this.textBox1.TabIndex = 3;
@@ -309,10 +305,10 @@
             // pbBuscador
             // 
             this.pbBuscador.Image = ((System.Drawing.Image)(resources.GetObject("pbBuscador.Image")));
-            this.pbBuscador.Location = new System.Drawing.Point(10, 19);
+            this.pbBuscador.Location = new System.Drawing.Point(10, 5);
             this.pbBuscador.Margin = new System.Windows.Forms.Padding(0);
             this.pbBuscador.Name = "pbBuscador";
-            this.pbBuscador.Size = new System.Drawing.Size(409, 63);
+            this.pbBuscador.Size = new System.Drawing.Size(409, 43);
             this.pbBuscador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbBuscador.TabIndex = 2;
             this.pbBuscador.TabStop = false;
@@ -320,9 +316,9 @@
             // pbMostrarBuscador
             // 
             this.pbMostrarBuscador.Image = ((System.Drawing.Image)(resources.GetObject("pbMostrarBuscador.Image")));
-            this.pbMostrarBuscador.Location = new System.Drawing.Point(1012, 39);
+            this.pbMostrarBuscador.Location = new System.Drawing.Point(1018, 15);
             this.pbMostrarBuscador.Name = "pbMostrarBuscador";
-            this.pbMostrarBuscador.Size = new System.Drawing.Size(36, 38);
+            this.pbMostrarBuscador.Size = new System.Drawing.Size(36, 37);
             this.pbMostrarBuscador.TabIndex = 4;
             this.pbMostrarBuscador.TabStop = false;
             this.pbMostrarBuscador.Click += new System.EventHandler(this.pbMostrarBuscador_Click);
@@ -330,7 +326,7 @@
             // pbInicio
             // 
             this.pbInicio.Image = global::Seguros.Properties.Resources.inicio;
-            this.pbInicio.Location = new System.Drawing.Point(18, 36);
+            this.pbInicio.Location = new System.Drawing.Point(19, 15);
             this.pbInicio.Margin = new System.Windows.Forms.Padding(3, 3, 400, 3);
             this.pbInicio.Name = "pbInicio";
             this.pbInicio.Size = new System.Drawing.Size(41, 36);
@@ -338,33 +334,13 @@
             this.pbInicio.TabStop = false;
             this.pbInicio.Click += new System.EventHandler(this.pbInicio_Click);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.SlateBlue;
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(13, 92);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1140, 600);
-            this.panel3.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(401, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(283, 31);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Panel administradores";
-            // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.Transparent;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(246, 86);
+            this.panelContenedor.Location = new System.Drawing.Point(246, 55);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1127, 618);
+            this.panelContenedor.Size = new System.Drawing.Size(1127, 649);
             this.panelContenedor.TabIndex = 5;
             // 
             // MenuAdministrador
@@ -395,8 +371,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrarBuscador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -425,8 +399,6 @@
         private System.Windows.Forms.Label lbApellidos;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panelContenedor;
     }
 }

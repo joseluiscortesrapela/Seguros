@@ -21,7 +21,7 @@ namespace Seguros.UserControls
         {
             InitializeComponent();
             // Obtengo todos los clientes  y los guardo en el dgv
-            dgvClientes.DataSource = AdminModel.getAllClients();
+            dgvClientes.DataSource = AdminModel.getClientes();
         }
 
 
