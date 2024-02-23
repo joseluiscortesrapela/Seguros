@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAdministrador));
             this.paneLaterallNavegacion = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.lbApellidos = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -83,7 +82,6 @@
             // 
             // panelLogo
             // 
-            this.panelLogo.Controls.Add(this.lbApellidos);
             this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Controls.Add(this.lbUsuario);
             this.panelLogo.Controls.Add(this.label1);
@@ -94,23 +92,12 @@
             this.panelLogo.Size = new System.Drawing.Size(239, 113);
             this.panelLogo.TabIndex = 0;
             // 
-            // lbApellidos
-            // 
-            this.lbApellidos.AutoSize = true;
-            this.lbApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbApellidos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbApellidos.Location = new System.Drawing.Point(9, 83);
-            this.lbApellidos.Name = "lbApellidos";
-            this.lbApellidos.Size = new System.Drawing.Size(92, 25);
-            this.lbApellidos.TabIndex = 12;
-            this.lbApellidos.Text = "Apellidos";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(8, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 78);
+            this.pictureBox1.Size = new System.Drawing.Size(57, 70);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -119,7 +106,7 @@
             this.lbUsuario.AutoSize = true;
             this.lbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsuario.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbUsuario.Location = new System.Drawing.Point(71, 52);
+            this.lbUsuario.Location = new System.Drawing.Point(69, 41);
             this.lbUsuario.Name = "lbUsuario";
             this.lbUsuario.Size = new System.Drawing.Size(79, 25);
             this.lbUsuario.TabIndex = 8;
@@ -130,7 +117,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label1.Location = new System.Drawing.Point(65, 21);
+            this.label1.Location = new System.Drawing.Point(66, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 31);
             this.label1.TabIndex = 6;
@@ -141,11 +128,11 @@
             this.lbTipo.AutoSize = true;
             this.lbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTipo.ForeColor = System.Drawing.Color.Orange;
-            this.lbTipo.Location = new System.Drawing.Point(68, 9);
+            this.lbTipo.Location = new System.Drawing.Point(146, 50);
             this.lbTipo.Name = "lbTipo";
-            this.lbTipo.Size = new System.Drawing.Size(97, 13);
+            this.lbTipo.Size = new System.Drawing.Size(34, 13);
             this.lbTipo.TabIndex = 10;
-            this.lbTipo.Text = "Tipo: Administrador";
+            this.lbTipo.Text = "Tipo: ";
             // 
             // btnAdministradores
             // 
@@ -295,11 +282,11 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.Snow;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.BlueViolet;
-            this.textBox1.Location = new System.Drawing.Point(34, 16);
+            this.textBox1.Location = new System.Drawing.Point(76, 14);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(319, 19);
+            this.textBox1.Size = new System.Drawing.Size(248, 19);
             this.textBox1.TabIndex = 3;
             // 
             // pbBuscador
@@ -308,7 +295,7 @@
             this.pbBuscador.Location = new System.Drawing.Point(10, 5);
             this.pbBuscador.Margin = new System.Windows.Forms.Padding(0);
             this.pbBuscador.Name = "pbBuscador";
-            this.pbBuscador.Size = new System.Drawing.Size(409, 43);
+            this.pbBuscador.Size = new System.Drawing.Size(409, 39);
             this.pbBuscador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbBuscador.TabIndex = 2;
             this.pbBuscador.TabStop = false;
@@ -396,7 +383,6 @@
         private System.Windows.Forms.Panel panelBuscador;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pbExit;
-        private System.Windows.Forms.Label lbApellidos;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panelContenedor;

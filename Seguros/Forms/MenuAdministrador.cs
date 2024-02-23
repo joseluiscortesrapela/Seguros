@@ -39,8 +39,6 @@ namespace Seguros.Forms
         // Auto load ventana
         private void MenuAdministrador_Load(object sender, EventArgs e)
         {
-            // Obtengo los datos de la sesion 
-
             // Muestro nombre usuario
             lbUsuario.Text = SesionUsuario.Nombre;
             // Muestro tipo o rol del usuario.
@@ -50,7 +48,7 @@ namespace Seguros.Forms
         // Muestra las polizas
         private void btnPolizas_Click(object sender, EventArgs e)
         {
-            mostrarUserControl(new UC_CurdPolizas());
+            mostrarUserControl(new UC_CrudPolizas());
         }
 
         // Muestro los clietnes

@@ -1,5 +1,7 @@
-﻿using Seguros.Models;
+﻿using Seguros.Helper;
+using Seguros.Models;
 using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace Seguros.UserControls
@@ -32,28 +34,71 @@ namespace Seguros.UserControls
                 // Si quiere ver clientes y polizas
                 if (estado)
                 {
-                    // Obtengo la cartera de clientes del agente y los gaurdo en un dgv.
-                    dgvClientes.DataSource = AdminModel.getCarteraClientes(idAgente);
-            
-                    // Obtengo el nombre del agente
-                    string nombre = filaAgente.Cells["nombre"].Value.ToString();
-                    // Obtengo los apellidos del agente
-                    string apellido = filaAgente.Cells["apellidos"].Value.ToString();
-                    // Concateno nombre y apellidos y los muestro
-                    lbNombreAgente.Text = apellido + ", " + nombre;
-                    // Muestro panel
-                    panelCarteraClientes.Visible = true;
+                    // Obtengo los clientes del agente y los guardo temporalmente en un objeto datatable.
+                    DataTable tablaClientes = AdminModel.getCarteraClientes(idAgente);
+
+                    // Compruebo que no este vacio
+                    if (tablaClientes.Rows.Count >= 1)
+                    {
+                        // Obtengo la cartera de clientes del agente y los gaurdo en un dgv.
+                        dgvClientes.DataSource = tablaClientes;
+                        // Obtengo el nombre del agente
+                        string nombre = filaAgente.Cells["nombre"].Value.ToString();
+                        // Obtengo los apellidos del agente
+                        string apellido = filaAgente.Cells["apellidos"].Value.ToString();
+                        // Concateno nombre y apellidos y los muestro
+                        lbNombreAgente.Text = apellido + ", " + nombre;
+                        // Muestro panel
+                        panelCarteraClientes.Visible = true;
+                    }
 
                 }
 
+
+                limpiarDgvPolizas();
                 // Muestro botones de accion
                 mostrarBotonesAccion();
             }
         }
 
+        // Obtengo el cliente que ha sido seleccionado en el dgv
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Si no esta vacia
+            if (e.RowIndex >= 0)
+            {   // Obtengo la fila y la guardo
+                filaCliente = dgvClientes.Rows[e.RowIndex];
+                // Obtengo el id del usuario.
+                int idCliente = int.Parse(filaCliente.Cells["idCliente"].Value.ToString());
+                // Muestro el nombre 
+                lbNombreCliente.Text = filaCliente.Cells["nombre"].Value.ToString();
+
+                // Obtengo las polizas del cliente y las guardo temporalmente en un obtejo DataTable
+                DataTable tablaPolizas = AdminModel.getPolizasByClientID(idCliente);
+
+                // Si no esta vacio
+                if (tablaPolizas.Rows.Count >= 1)
+                {
+                    // Guardo el contenido de la tabla en el dgv
+                    dgvPolizas.DataSource = tablaPolizas;
+                    // Cambio color a las filas segun su estado
+                    GestorInterfaz.CambiarColorFilas(dgvPolizas);
+                }
+                else
+                {
+                    limpiarDgvPolizas();
+                }
 
 
+                Console.WriteLine("mostrar polizas del cliente id " + idCliente);
+            }
+        }
 
+        private void limpiarDgvPolizas()
+        {
+            dgvPolizas.DataSource = null;
+            lbNombreCliente.Text = "";
+        }
 
         // Muestra botones de accion
         private void mostrarBotonesAccion()
@@ -81,17 +126,15 @@ namespace Seguros.UserControls
             Console.WriteLine("Eliminar agente");
         }
 
-
         private void pbMostrarCarterClientes_Click(object sender, EventArgs e)
         {
             estado = true;
             pbOn.Visible = false;
             pbOff.Visible = true;
             panelCarteraClientes.Visible = true;
-            lbEstado.Text = "Acabas de activar el enlazado de datos dinamico";
+            lbEstado.Text = "Acabas de activar el enlazado de datos dinamico, ahora seleccione un agente";
             Console.WriteLine("On");
         }
-
 
         private void pbOcultarCarteraClientes_Click(object sender, EventArgs e)
         {
@@ -100,29 +143,12 @@ namespace Seguros.UserControls
             pbOff.Visible = false;
             panelCarteraClientes.Visible = false;
             lbEstado.Text = "Acabas de destivar el enlazado de datos dinamico";
+            dgvClientes.DataSource = null;
+            dgvPolizas.DataSource = null;
             Console.WriteLine("off");
         }
 
-        // Obtengo el cliente que ha sido seleccionado en el dgv
 
-        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Si no esta vacia
-            if (e.RowIndex >= 0)
-            {   // Obtengo la fila y la guardo
-                filaCliente = dgvClientes.Rows[e.RowIndex];
-                // Obtengo el id del usuario.
-                int idCliente = int.Parse(filaCliente.Cells["idCliente"].Value.ToString());
-                // Muestro el nombre 
-                lbNombreCliente.Text = filaCliente.Cells["nombre"].Value.ToString();
-                // Obtengo las polizas del cliente y las muestro en el dgv
-                dgvPolizas.DataSource = AdminModel.getPolizasByClientID(idCliente);
-
-                Console.WriteLine("mostrar polizas del cliente id " + idCliente);
-                // Muestro botones de accion
-                // mostrarBotonesAccion();
-            }
-        }
 
     }
 }

@@ -123,6 +123,7 @@
     <Compile Include="FormularioConexion.designer.cs">
       <DependentUpon>FormularioConexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\GestorInterfaz.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,11 +153,11 @@
     <Compile Include="UserControls\UC_CrudClientes.Designer.cs">
       <DependentUpon>UC_CrudClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_CurdPolizas.cs">
+    <Compile Include="UserControls\UC_CrudPolizas.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_CurdPolizas.Designer.cs">
-      <DependentUpon>UC_CurdPolizas.cs</DependentUpon>
+    <Compile Include="UserControls\UC_CrudPolizas.Designer.cs">
+      <DependentUpon>UC_CrudPolizas.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\MenuAdministrador.resx">
       <DependentUpon>MenuAdministrador.cs</DependentUpon>
@@ -192,8 +193,8 @@
     <EmbeddedResource Include="UserControls\UC_CrudClientes.resx">
       <DependentUpon>UC_CrudClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_CurdPolizas.resx">
-      <DependentUpon>UC_CurdPolizas.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UC_CrudPolizas.resx">
+      <DependentUpon>UC_CrudPolizas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
