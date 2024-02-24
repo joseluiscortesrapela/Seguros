@@ -1,6 +1,6 @@
 ﻿namespace Seguros.Forms
 {
-    partial class MenuAdministrador
+    partial class MenuPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAdministrador));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.paneLaterallNavegacion = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,9 +39,9 @@
             this.btnAgentes = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnPolizas = new System.Windows.Forms.Button();
+            this.btnMisPolizas = new System.Windows.Forms.Button();
+            this.btnMisClientes = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panelFlSuperior = new System.Windows.Forms.FlowLayoutPanel();
             this.panelNavegacionSuperior = new System.Windows.Forms.Panel();
             this.pbExit = new System.Windows.Forms.PictureBox();
@@ -54,7 +54,6 @@
             this.paneLaterallNavegacion.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panelFlSuperior.SuspendLayout();
             this.panelNavegacionSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
@@ -71,9 +70,10 @@
             this.paneLaterallNavegacion.Controls.Add(this.btnAdministradores);
             this.paneLaterallNavegacion.Controls.Add(this.btnAgentes);
             this.paneLaterallNavegacion.Controls.Add(this.btnClientes);
+            this.paneLaterallNavegacion.Controls.Add(this.btnMisClientes);
             this.paneLaterallNavegacion.Controls.Add(this.btnPolizas);
+            this.paneLaterallNavegacion.Controls.Add(this.btnMisPolizas);
             this.paneLaterallNavegacion.Controls.Add(this.btnCerrarSesion);
-            this.paneLaterallNavegacion.Controls.Add(this.panel2);
             this.paneLaterallNavegacion.Dock = System.Windows.Forms.DockStyle.Left;
             this.paneLaterallNavegacion.Location = new System.Drawing.Point(0, 0);
             this.paneLaterallNavegacion.Name = "paneLaterallNavegacion";
@@ -106,7 +106,7 @@
             this.lbUsuario.AutoSize = true;
             this.lbUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsuario.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lbUsuario.Location = new System.Drawing.Point(69, 41);
+            this.lbUsuario.Location = new System.Drawing.Point(67, 50);
             this.lbUsuario.Name = "lbUsuario";
             this.lbUsuario.Size = new System.Drawing.Size(79, 25);
             this.lbUsuario.TabIndex = 8;
@@ -117,7 +117,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label1.Location = new System.Drawing.Point(66, 10);
+            this.label1.Location = new System.Drawing.Point(65, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 31);
             this.label1.TabIndex = 6;
@@ -128,7 +128,7 @@
             this.lbTipo.AutoSize = true;
             this.lbTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTipo.ForeColor = System.Drawing.Color.Orange;
-            this.lbTipo.Location = new System.Drawing.Point(146, 50);
+            this.lbTipo.Location = new System.Drawing.Point(71, 6);
             this.lbTipo.Name = "lbTipo";
             this.lbTipo.Size = new System.Drawing.Size(34, 13);
             this.lbTipo.TabIndex = 10;
@@ -148,6 +148,7 @@
             this.btnAdministradores.TabIndex = 12;
             this.btnAdministradores.Text = "Administradores";
             this.btnAdministradores.UseVisualStyleBackColor = true;
+            this.btnAdministradores.Visible = false;
             this.btnAdministradores.Click += new System.EventHandler(this.btnAdministradores_Click);
             // 
             // btnAgentes
@@ -164,6 +165,7 @@
             this.btnAgentes.TabIndex = 13;
             this.btnAgentes.Text = "Agentes";
             this.btnAgentes.UseVisualStyleBackColor = true;
+            this.btnAgentes.Visible = false;
             this.btnAgentes.Click += new System.EventHandler(this.btnAgentes_Click);
             // 
             // btnClientes
@@ -180,6 +182,7 @@
             this.btnClientes.TabIndex = 14;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Visible = false;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnPolizas
@@ -190,53 +193,71 @@
             this.btnPolizas.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnPolizas.Image = ((System.Drawing.Image)(resources.GetObject("btnPolizas.Image")));
             this.btnPolizas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPolizas.Location = new System.Drawing.Point(3, 302);
+            this.btnPolizas.Location = new System.Drawing.Point(3, 353);
             this.btnPolizas.Name = "btnPolizas";
             this.btnPolizas.Size = new System.Drawing.Size(239, 45);
             this.btnPolizas.TabIndex = 16;
             this.btnPolizas.Text = "Polizas";
             this.btnPolizas.UseVisualStyleBackColor = true;
+            this.btnPolizas.Visible = false;
             this.btnPolizas.Click += new System.EventHandler(this.btnPolizas_Click);
+            // 
+            // btnMisPolizas
+            // 
+            this.btnMisPolizas.FlatAppearance.BorderSize = 0;
+            this.btnMisPolizas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMisPolizas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMisPolizas.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnMisPolizas.Image = ((System.Drawing.Image)(resources.GetObject("btnMisPolizas.Image")));
+            this.btnMisPolizas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMisPolizas.Location = new System.Drawing.Point(3, 404);
+            this.btnMisPolizas.Name = "btnMisPolizas";
+            this.btnMisPolizas.Size = new System.Drawing.Size(239, 45);
+            this.btnMisPolizas.TabIndex = 17;
+            this.btnMisPolizas.Text = "Mis polizas";
+            this.btnMisPolizas.UseVisualStyleBackColor = true;
+            this.btnMisPolizas.Visible = false;
+            this.btnMisPolizas.Click += new System.EventHandler(this.btnMisPolizas_Click);
+            // 
+            // btnMisClientes
+            // 
+            this.btnMisClientes.FlatAppearance.BorderSize = 0;
+            this.btnMisClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMisClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMisClientes.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnMisClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnMisClientes.Image")));
+            this.btnMisClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMisClientes.Location = new System.Drawing.Point(3, 302);
+            this.btnMisClientes.Name = "btnMisClientes";
+            this.btnMisClientes.Size = new System.Drawing.Size(239, 45);
+            this.btnMisClientes.TabIndex = 18;
+            this.btnMisClientes.Text = "Mis clientes";
+            this.btnMisClientes.UseVisualStyleBackColor = true;
+            this.btnMisClientes.Visible = false;
+            this.btnMisClientes.Click += new System.EventHandler(this.btnMisClientes_Click);
             // 
             // btnCerrarSesion
             // 
+            this.btnCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.Black;
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.DarkGray;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 600);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 250, 3, 20);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 622);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 170, 3, 20);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(239, 82);
             this.btnCerrarSesion.TabIndex = 15;
             this.btnCerrarSesion.Text = "Cerrar sesión";
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(3, 705);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1127, 618);
-            this.panel2.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(443, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 31);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Panel clientes";
             // 
             // panelFlSuperior
             // 
-            this.panelFlSuperior.BackColor = System.Drawing.Color.Transparent;
+            this.panelFlSuperior.BackColor = System.Drawing.Color.Snow;
             this.panelFlSuperior.Controls.Add(this.panelNavegacionSuperior);
             this.panelFlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFlSuperior.Location = new System.Drawing.Point(246, 0);
@@ -247,7 +268,7 @@
             // 
             // panelNavegacionSuperior
             // 
-            this.panelNavegacionSuperior.BackColor = System.Drawing.Color.Transparent;
+            this.panelNavegacionSuperior.BackColor = System.Drawing.Color.Snow;
             this.panelNavegacionSuperior.Controls.Add(this.pbExit);
             this.panelNavegacionSuperior.Controls.Add(this.panelBuscador);
             this.panelNavegacionSuperior.Controls.Add(this.pbMostrarBuscador);
@@ -323,14 +344,14 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.Transparent;
+            this.panelContenedor.BackColor = System.Drawing.Color.Snow;
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(246, 55);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1127, 649);
             this.panelContenedor.TabIndex = 5;
             // 
-            // MenuAdministrador
+            // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -340,7 +361,7 @@
             this.Controls.Add(this.panelFlSuperior);
             this.Controls.Add(this.paneLaterallNavegacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MenuAdministrador";
+            this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuAdministrador";
             this.Load += new System.EventHandler(this.MenuAdministrador_Load);
@@ -348,8 +369,6 @@
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panelFlSuperior.ResumeLayout(false);
             this.panelNavegacionSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
@@ -383,8 +402,8 @@
         private System.Windows.Forms.Panel panelBuscador;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pbExit;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.Button btnMisClientes;
+        private System.Windows.Forms.Button btnMisPolizas;
     }
 }

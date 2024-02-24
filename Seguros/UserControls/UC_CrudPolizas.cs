@@ -27,7 +27,9 @@ namespace Seguros.UserControls
 
         // Sobrecarga del constructor, recibe el id del cliente
         public UC_CrudPolizas(int idCliente)
-        {   // Guardo el id
+        {   
+            InitializeComponent();
+            // Guardo el id
             this.idCliente = idCliente;
             // Obtengo solo las polizas del cliente y las muestro en el dgv
             dgvPolizas.DataSource = AdminModel.getPolizasByClientID(idCliente);

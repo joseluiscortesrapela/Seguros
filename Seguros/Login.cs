@@ -38,26 +38,8 @@ namespace Seguros
                 {
                     // Oculto la ventana de login
                     this.Hide();
-                    // Obtengo el usuario logeado
-                    string tipo = Seguros.SesionUsuario.Tipo;
-
-                    if (tipo == "administradores")
-                    {
-                        // Intancia
-                        var menuAdministrador = new MenuAdministrador();
-                        // Muestro la ventana del jugador
-                        menuAdministrador.Show();
-                    } // Si quien se logea es un administrador
-                    else if (tipo == "agentes")
-                    {
-                        var menuAgente = new MenuAgentes();
-                        menuAgente.Show();
-                    }
-                    else
-                    {
-                        var menuCliente = new MenuCliente();
-                        menuCliente.Show();
-                    }
+                    var menuPrincipal = new MenuPrincipal();
+                    menuPrincipal.Show();
                 }
                 else
                 {

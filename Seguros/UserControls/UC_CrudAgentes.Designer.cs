@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudAgentes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbMensaje = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pbEditar = new System.Windows.Forms.PictureBox();
@@ -46,7 +46,7 @@
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.pbOff = new System.Windows.Forms.PictureBox();
-            this.lbEstado = new System.Windows.Forms.Label();
+            this.lbMensajeEstado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCrear)).BeginInit();
@@ -122,8 +122,8 @@
             this.dgvAgentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAgentes.Location = new System.Drawing.Point(38, 42);
             this.dgvAgentes.Name = "dgvAgentes";
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAgentes.RowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAgentes.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAgentes.Size = new System.Drawing.Size(1047, 133);
             this.dgvAgentes.TabIndex = 14;
             this.dgvAgentes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgentes_CellClick);
@@ -131,7 +131,7 @@
             // pbOn
             // 
             this.pbOn.Image = ((System.Drawing.Image)(resources.GetObject("pbOn.Image")));
-            this.pbOn.Location = new System.Drawing.Point(630, 16);
+            this.pbOn.Location = new System.Drawing.Point(645, 16);
             this.pbOn.Name = "pbOn";
             this.pbOn.Size = new System.Drawing.Size(48, 23);
             this.pbOn.TabIndex = 20;
@@ -173,8 +173,8 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(35, 246);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPolizas.Size = new System.Drawing.Size(1047, 165);
             this.dgvPolizas.TabIndex = 25;
             // 
@@ -200,8 +200,8 @@
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Location = new System.Drawing.Point(35, 22);
             this.dgvClientes.Name = "dgvClientes";
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClientes.Size = new System.Drawing.Size(1047, 195);
             this.dgvClientes.TabIndex = 23;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
@@ -209,39 +209,41 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(453, 22);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(444, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(167, 17);
+            this.label4.Size = new System.Drawing.Size(193, 17);
             this.label4.TabIndex = 23;
             this.label4.Text = "Mostrar clientes y polizas";
             // 
             // pbOff
             // 
             this.pbOff.Image = ((System.Drawing.Image)(resources.GetObject("pbOff.Image")));
-            this.pbOff.Location = new System.Drawing.Point(630, 16);
+            this.pbOff.Location = new System.Drawing.Point(645, 14);
             this.pbOff.Name = "pbOff";
             this.pbOff.Size = new System.Drawing.Size(39, 23);
             this.pbOff.TabIndex = 21;
             this.pbOff.TabStop = false;
             this.pbOff.Click += new System.EventHandler(this.pbOcultarCarteraClientes_Click);
             // 
-            // lbEstado
+            // lbMensajeEstado
             // 
-            this.lbEstado.AutoSize = true;
-            this.lbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEstado.Location = new System.Drawing.Point(431, 184);
-            this.lbEstado.Name = "lbEstado";
-            this.lbEstado.Size = new System.Drawing.Size(266, 17);
-            this.lbEstado.TabIndex = 28;
-            this.lbEstado.Text = "Enlazado de datos dinamico desactivado";
+            this.lbMensajeEstado.AutoSize = true;
+            this.lbMensajeEstado.BackColor = System.Drawing.Color.Snow;
+            this.lbMensajeEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMensajeEstado.ForeColor = System.Drawing.Color.DarkGray;
+            this.lbMensajeEstado.Location = new System.Drawing.Point(431, 184);
+            this.lbMensajeEstado.Name = "lbMensajeEstado";
+            this.lbMensajeEstado.Size = new System.Drawing.Size(271, 17);
+            this.lbMensajeEstado.TabIndex = 28;
+            this.lbMensajeEstado.Text = "Desactivado enlazado de datos dinamico.";
             // 
             // UC_CrudAgentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.Controls.Add(this.lbEstado);
+            this.Controls.Add(this.lbMensajeEstado);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panelCarteraClientes);
             this.Controls.Add(this.pbOn);
@@ -285,6 +287,6 @@
         private System.Windows.Forms.Label lbNombreCliente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pbOff;
-        private System.Windows.Forms.Label lbEstado;
+        private System.Windows.Forms.Label lbMensajeEstado;
     }
 }

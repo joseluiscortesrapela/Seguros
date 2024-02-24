@@ -89,7 +89,6 @@ namespace Seguros.UserControls
                     limpiarDgvPolizas();
                 }
 
-
                 Console.WriteLine("mostrar polizas del cliente id " + idCliente);
             }
         }
@@ -126,23 +125,27 @@ namespace Seguros.UserControls
             Console.WriteLine("Eliminar agente");
         }
 
+        // Habilito la posibilidad de mostrar los clientes y sus polias.
         private void pbMostrarCarterClientes_Click(object sender, EventArgs e)
         {
             estado = true;
             pbOn.Visible = false;
             pbOff.Visible = true;
             panelCarteraClientes.Visible = true;
-            lbEstado.Text = "Acabas de activar el enlazado de datos dinamico, ahora seleccione un agente";
+            lbMensajeEstado.Text = "Acabas de activar el enlazado de datos dinamico, ahora seleccione un agente";
+            lbNombreCliente.Text = "";
+            lbNombreAgente.Text = "";
             Console.WriteLine("On");
         }
 
+        // Desactivo la posibilidad de mostrar los clientes y sus polias.
         private void pbOcultarCarteraClientes_Click(object sender, EventArgs e)
         {
             estado = false;
             pbOn.Visible = true;
             pbOff.Visible = false;
             panelCarteraClientes.Visible = false;
-            lbEstado.Text = "Acabas de destivar el enlazado de datos dinamico";
+            lbMensajeEstado.Text = "Acabas de destivar el enlazado de datos dinamico";
             dgvClientes.DataSource = null;
             dgvPolizas.DataSource = null;
             Console.WriteLine("off");

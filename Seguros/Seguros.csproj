@@ -99,23 +99,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\ConexionBaseDatos.cs" />
-    <Compile Include="Forms\MenuAdministrador.cs">
+    <Compile Include="Forms\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MenuAdministrador.Designer.cs">
-      <DependentUpon>MenuAdministrador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MenuAgentes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MenuAgentes.Designer.cs">
-      <DependentUpon>MenuAgentes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MenuCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MenuCliente.Designer.cs">
-      <DependentUpon>MenuCliente.cs</DependentUpon>
+    <Compile Include="Forms\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="FormularioConexion.cs">
       <SubType>Form</SubType>
@@ -159,14 +147,8 @@
     <Compile Include="UserControls\UC_CrudPolizas.Designer.cs">
       <DependentUpon>UC_CrudPolizas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\MenuAdministrador.resx">
-      <DependentUpon>MenuAdministrador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MenuAgentes.resx">
-      <DependentUpon>MenuAgentes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MenuCliente.resx">
-      <DependentUpon>MenuCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioConexion.resx">
       <DependentUpon>FormularioConexion.cs</DependentUpon>

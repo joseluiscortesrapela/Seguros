@@ -1,4 +1,5 @@
 ﻿using Seguros.Forms;
+using Seguros.Helper;
 using Seguros.Models;
 using System;
 using System.Collections.Generic;
@@ -15,13 +16,65 @@ namespace Seguros.UserControls
     public partial class UC_CrudClientes : UserControl
     {
         private DataGridViewRow filaCliente;
-        private int idCliente;
+        private bool estado;
 
+        // Contruc por por defecto,
         public UC_CrudClientes()
         {
             InitializeComponent();
             // Obtengo todos los clientes  y los guardo en el dgv
             dgvClientes.DataSource = AdminModel.getClientes();
+        }
+
+        // Constructor que recibe el id del agente
+        public UC_CrudClientes(int idAgente)
+        {
+            InitializeComponent();
+            // Obtengo solo los clientes del agente de seguros
+            dgvClientes.DataSource = AdminModel.getCarteraClientes(idAgente);
+        }
+
+
+        // Obtengo el cliente seleccionado.
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Obtengo la fila que ha sido seleccionada en el dataGridView
+            if (e.RowIndex >= 0)
+            {
+                // Obtengo la que ha sido seleccionada en el dgv
+                filaCliente = dgvClientes.Rows[e.RowIndex];
+                // Obtengo el id del usuario.
+                int idCliente = int.Parse(filaCliente.Cells["idCliente"].Value.ToString());
+                // Obtengo nombre cliente
+                string nombre = filaCliente.Cells["nombre"].Value.ToString();
+                // Muestro botones de accion del crud clientes.
+                mostrarBotonesAccion();
+
+                // si se ha habilitado
+                if (estado)
+                {
+                    // Obtengo las polizas de los clietnes
+                    DataTable tablaPolizas = AdminModel.getPolizasByClientID(idCliente);
+
+                    // Compruebo que no este vacio
+                    if (tablaPolizas.Rows.Count >= 1)
+                    {
+                        // Muestro las polizas del clietne en el dgv
+                        dgvPolizas.DataSource = tablaPolizas;
+                        // Cambio color a las filas segun su estado
+                        GestorInterfaz.CambiarColorFilas(dgvPolizas);
+                        // Muestro nombre cliente
+                        lbNombreCliente.Text = nombre;
+                    }
+                    else
+                    {
+                        limpiarDgvPolizas();
+                    }
+                }
+
+
+            }
+
         }
 
 
@@ -40,30 +93,42 @@ namespace Seguros.UserControls
             Console.WriteLine("Eliminar cliente");
         }
 
-        // Obtengo el cliente seleccionado.
-        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+
+
+        private void limpiarDgvPolizas()
         {
-            // Obtengo la fila que ha sido seleccionada en el dataGridView
-            if (e.RowIndex >= 0)
-            {   // Obtengo la que ha sido seleccionada en el dgv
-                filaCliente = dgvClientes.Rows[e.RowIndex];
-                // Obtengo el id del usuario.
-                idCliente = int.Parse(filaCliente.Cells["idCliente"].Value.ToString());
-                // Muestro botones de accion
-                mostrarBotonesAccion();
-            }
-
+            dgvPolizas.DataSource = null;
+            lbNombreCliente.Text = "";
         }
-
 
 
         // Muestra botones de accion
         private void mostrarBotonesAccion()
-        {   
-            pbEditar.Visible = true; 
-            pbEliminar.Visible = true;  
+        {
+            pbEditar.Visible = true;
+            pbEliminar.Visible = true;
         }
 
+        // Habilito la posibilidad de mostrar los clientes y sus polias.
+        private void pbMostrarPolizasCliente_Click(object sender, EventArgs e)
+        {
+            estado = true;
+            pbOn.Visible = false;
+            pbOff.Visible = true;
+            lbMensajeEstado.Text = "Acabas de activar el enlazado de datos dinamico, ahora seleccione un cliente";
+            Console.WriteLine("On");
+        }
+
+        // Desactivo la posibilidad de mostrar los clientes y sus polias.
+        private void pbOcultarPolizasCliente_Click(object sender, EventArgs e)
+        {
+            estado = false;
+            pbOn.Visible = true;
+            pbOff.Visible = false;
+            dgvPolizas.DataSource = null;
+            lbMensajeEstado.Text = "Acabas de deshabilitar el enlazado de datos dinamico";
+            Console.WriteLine("off");
+        }
 
 
     }
