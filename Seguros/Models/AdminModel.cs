@@ -143,6 +143,31 @@ namespace Seguros.Models
         }
 
 
+        // Obtengo los pagos efectuados para cada poliza.
+        public static DataTable getPagosByPoliza(int idPoliza)
+        {
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+            // Consulta sql
+            string sql = "SELECT * FROM pagos WHERE idPoliza =" + idPoliza;
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conexion);
+            DataTable table = new DataTable();
+
+            try
+            {
+                adapter.Fill(table);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+            return table;
+        }
 
 
         // Obtengo las polias del cliente

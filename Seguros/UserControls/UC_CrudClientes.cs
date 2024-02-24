@@ -109,7 +109,7 @@ namespace Seguros.UserControls
             pbEliminar.Visible = true;
         }
 
-        // Habilito la posibilidad de mostrar los clientes y sus polias.
+        // Habilito la posibilidad de mostrar los pagos por poliza.
         private void pbMostrarPolizasCliente_Click(object sender, EventArgs e)
         {
             estado = true;
@@ -119,7 +119,7 @@ namespace Seguros.UserControls
             Console.WriteLine("On");
         }
 
-        // Desactivo la posibilidad de mostrar los clientes y sus polias.
+        // Desactivo la posibilidad de mostrar los pagos de cada poliza
         private void pbOcultarPolizasCliente_Click(object sender, EventArgs e)
         {
             estado = false;
