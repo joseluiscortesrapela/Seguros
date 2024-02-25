@@ -1,13 +1,8 @@
 ﻿using Seguros.Helper;
 using Seguros.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Seguros.UserControls
@@ -16,7 +11,7 @@ namespace Seguros.UserControls
     {
         private int idPoliza;
         private DataGridViewRow filaPoliza;
-        private bool estado;
+        private bool enlazadoDatos;
 
         // Constructor
         public UC_CrudPolizas()
@@ -66,24 +61,40 @@ namespace Seguros.UserControls
                 filaPoliza = dgvPolizas.Rows[e.RowIndex];
                 // Obtengo el id del usuario.
                 idPoliza = int.Parse(filaPoliza.Cells["idPoliza"].Value.ToString());
+                // Obtengo estado 
+                string estado = filaPoliza.Cells["estado"].Value.ToString();
+
                 // Muestro botones de accion
                 mostrarBotonesAccion();
 
                 // si se ha habilitado
-                if (estado)
+                if (enlazadoDatos)
                 {
+
                     // Obtengo los pagos de la poliza
                     DataTable tablaPagos = AdminModel.getPagosByPoliza(idPoliza);
 
                     // Compruebo que no este vacio
                     if (tablaPagos.Rows.Count >= 1)
                     {
-                        // Muestro mensaje
-                        lbPago.Text = "Pagos asociados a la poliza " + idPoliza;
                         // Muestro las polizas del clietne en el dgv
                         dgvPagos.DataSource = tablaPagos;
                     }
-                    
+
+                    if (estado == "A cuenta")
+                    {
+                        lbPago.Text = "La poliza nº " + idPoliza + " pendiente de pago. PASAR POR CAJA";
+                        // Muestro panel para ingreso
+                    }
+                    else
+                    {
+                        lbPago.Text = "La poliza nº " + idPoliza + " al encontrarse " + estado +  " no require ningun pago adicional.";
+                    }
+
+
+
+
+
                 }
             }
 
@@ -111,21 +122,24 @@ namespace Seguros.UserControls
 
         private void pbOn_Click(object sender, EventArgs e)
         {
-            estado = true;
+            enlazadoDatos = true;
             pbOn.Visible = false;
             pbOff.Visible = true;
             lbMensajeEstado.Text = "Acabas de activar el enlazado de datos dinamico, ahora seleccione una poliza";
-            Console.WriteLine("On mostrar pagos");
         }
 
         private void pbOff_Click(object sender, EventArgs e)
         {
-            estado = false;
+            enlazadoDatos = false;
             pbOn.Visible = true;
             pbOff.Visible = false;
-            dgvPolizas.DataSource = null;
             lbMensajeEstado.Text = "Acabas de deshabilitar el enlazado de datos dinamico";
-            Console.WriteLine("off no muestra pagos");
+        }
+
+        // Muestro formulario para ingresar dinero 
+        private void pbMostrarPanelRealizarPago_Click(object sender, EventArgs e)
+        {
+            panelRealizarPago.Visible = true;
         }
     }
 }

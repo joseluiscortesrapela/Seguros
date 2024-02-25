@@ -12,7 +12,7 @@ namespace Seguros.Helper
     {
 
 
-        public static DataGridView CambiarColorFilas( DataGridView dgvPolizas)
+        public static DataGridView CambiarColorFilas(DataGridView dgvPolizas)
         {
             foreach (DataGridViewRow row in dgvPolizas.Rows)
             {
@@ -20,26 +20,16 @@ namespace Seguros.Helper
                 {
                     string estado = row.Cells["estado"].Value.ToString();
 
-                    Console.WriteLine("estado: " + estado);
-
                     switch (estado)
                     {
                         case "Cobrada":
-                            row.DefaultCellStyle.BackColor = Color.LightSkyBlue;
-
+                            row.DefaultCellStyle.BackColor = Color.LightGreen;
                             break;
                         case "A cuenta":
                             row.DefaultCellStyle.BackColor = Color.LightGreen;
-
                             break;
                         case "Liquidada":
                             row.DefaultCellStyle.BackColor = Color.LightGray;
-
-                            break;
-                        case "Pre anulada":
-                            row.DefaultCellStyle.BackColor = Color.LightCyan;
-
-                            Console.WriteLine("preanulada ");
                             break;
                         case "Anulada":
                             row.DefaultCellStyle.BackColor = Color.LightSalmon;
