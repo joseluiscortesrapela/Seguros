@@ -197,6 +197,40 @@ namespace Seguros.Models
         }
 
 
+        // Registra un nuevo usuario
+        public static int registrarPagoPoliza(decimal pago, int idPoliza )
+        {
+            // Creo la conexion con la base de datos.
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+
+            // Consulta sql
+            string sql = "INSERT INTO pagos ( pagado, idPoliza ) VALUES ( @pago, @idPoliza )";
+            // Preparo la consulta
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            // Le paso el pago
+            comando.Parameters.AddWithValue("@pago", pago);
+            // Le paso como parametro el id de la poliza
+            comando.Parameters.AddWithValue("@idPoliza", idPoliza);
+  
+
+            int creado;
+
+            try
+            {
+                // Return value is the number of rows affected by the SQL statement.
+                creado = comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                creado = 0;
+                MessageBox.Show(ex.Message);
+            }
+
+            return creado;
+
+        }
 
 
 

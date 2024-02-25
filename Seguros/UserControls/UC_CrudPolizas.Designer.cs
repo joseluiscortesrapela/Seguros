@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudPolizas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.pbCrearPoliza = new System.Windows.Forms.PictureBox();
             this.pbEliminarPoliza = new System.Windows.Forms.PictureBox();
@@ -41,33 +41,30 @@
             this.pbOn = new System.Windows.Forms.PictureBox();
             this.pbOff = new System.Windows.Forms.PictureBox();
             this.lbMensajeEstado = new System.Windows.Forms.Label();
-            this.pbMostrarPanelRealizarPago = new System.Windows.Forms.PictureBox();
-            this.lbMensajePago = new System.Windows.Forms.Label();
-            this.panelRealizarPago = new System.Windows.Forms.Panel();
-            this.tbIngresao = new System.Windows.Forms.TextBox();
+            this.panelPago = new System.Windows.Forms.Panel();
+            this.pbPagar = new System.Windows.Forms.PictureBox();
+            this.tbPago = new System.Windows.Forms.TextBox();
             this.dgvPagos = new System.Windows.Forms.DataGridView();
             this.lbMensaje = new System.Windows.Forms.Label();
             this.lbPagos = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCrearPoliza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminarPoliza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditarPoliza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOff)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMostrarPanelRealizarPago)).BeginInit();
-            this.panelRealizarPago.SuspendLayout();
+            this.panelPago.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPagar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 35);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(34, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 17);
+            this.label1.Size = new System.Drawing.Size(59, 20);
             this.label1.TabIndex = 12;
             this.label1.Text = "Polizas";
             // 
@@ -116,8 +113,8 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(35, 55);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPolizas.Size = new System.Drawing.Size(1048, 310);
             this.dgvPolizas.TabIndex = 8;
             this.dgvPolizas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPolizas_CellClick);
@@ -125,26 +122,27 @@
             // lbPago
             // 
             this.lbPago.AutoSize = true;
-            this.lbPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPago.Location = new System.Drawing.Point(34, 385);
             this.lbPago.Name = "lbPago";
-            this.lbPago.Size = new System.Drawing.Size(0, 17);
+            this.lbPago.Size = new System.Drawing.Size(53, 20);
             this.lbPago.TabIndex = 15;
+            this.lbPago.Text = "pagos";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(467, 35);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(466, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 17);
+            this.label4.Size = new System.Drawing.Size(124, 20);
             this.label4.TabIndex = 32;
             this.label4.Text = "Mostrar pagos";
             // 
             // pbOn
             // 
             this.pbOn.Image = ((System.Drawing.Image)(resources.GetObject("pbOn.Image")));
-            this.pbOn.Location = new System.Drawing.Point(606, 29);
+            this.pbOn.Location = new System.Drawing.Point(598, 29);
             this.pbOn.Name = "pbOn";
             this.pbOn.Size = new System.Drawing.Size(48, 23);
             this.pbOn.TabIndex = 30;
@@ -154,7 +152,7 @@
             // pbOff
             // 
             this.pbOff.Image = ((System.Drawing.Image)(resources.GetObject("pbOff.Image")));
-            this.pbOff.Location = new System.Drawing.Point(606, 29);
+            this.pbOff.Location = new System.Drawing.Point(598, 29);
             this.pbOff.Name = "pbOff";
             this.pbOff.Size = new System.Drawing.Size(39, 23);
             this.pbOff.TabIndex = 31;
@@ -166,48 +164,39 @@
             this.lbMensajeEstado.AutoSize = true;
             this.lbMensajeEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMensajeEstado.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbMensajeEstado.Location = new System.Drawing.Point(660, 35);
+            this.lbMensajeEstado.Location = new System.Drawing.Point(652, 35);
             this.lbMensajeEstado.Name = "lbMensajeEstado";
             this.lbMensajeEstado.Size = new System.Drawing.Size(260, 17);
             this.lbMensajeEstado.TabIndex = 33;
             this.lbMensajeEstado.Text = "Deactivado enlazado de datos dinamico";
             // 
-            // pbMostrarPanelRealizarPago
+            // panelPago
             // 
-            this.pbMostrarPanelRealizarPago.Image = ((System.Drawing.Image)(resources.GetObject("pbMostrarPanelRealizarPago.Image")));
-            this.pbMostrarPanelRealizarPago.Location = new System.Drawing.Point(815, 381);
-            this.pbMostrarPanelRealizarPago.Name = "pbMostrarPanelRealizarPago";
-            this.pbMostrarPanelRealizarPago.Size = new System.Drawing.Size(29, 25);
-            this.pbMostrarPanelRealizarPago.TabIndex = 34;
-            this.pbMostrarPanelRealizarPago.TabStop = false;
-            this.pbMostrarPanelRealizarPago.Click += new System.EventHandler(this.pbMostrarPanelRealizarPago_Click);
+            this.panelPago.Controls.Add(this.pbPagar);
+            this.panelPago.Controls.Add(this.tbPago);
+            this.panelPago.Location = new System.Drawing.Point(878, 379);
+            this.panelPago.Name = "panelPago";
+            this.panelPago.Size = new System.Drawing.Size(205, 26);
+            this.panelPago.TabIndex = 36;
+            this.panelPago.Visible = false;
             // 
-            // lbMensajePago
+            // pbPagar
             // 
-            this.lbMensajePago.AutoSize = true;
-            this.lbMensajePago.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMensajePago.Location = new System.Drawing.Point(713, 385);
-            this.lbMensajePago.Name = "lbMensajePago";
-            this.lbMensajePago.Size = new System.Drawing.Size(90, 17);
-            this.lbMensajePago.TabIndex = 35;
-            this.lbMensajePago.Text = " pagar ahora";
+            this.pbPagar.Image = ((System.Drawing.Image)(resources.GetObject("pbPagar.Image")));
+            this.pbPagar.Location = new System.Drawing.Point(178, 0);
+            this.pbPagar.Name = "pbPagar";
+            this.pbPagar.Size = new System.Drawing.Size(29, 26);
+            this.pbPagar.TabIndex = 38;
+            this.pbPagar.TabStop = false;
+            this.pbPagar.Click += new System.EventHandler(this.pbPagar_Click);
             // 
-            // panelRealizarPago
+            // tbPago
             // 
-            this.panelRealizarPago.Controls.Add(this.tbIngresao);
-            this.panelRealizarPago.Location = new System.Drawing.Point(862, 376);
-            this.panelRealizarPago.Name = "panelRealizarPago";
-            this.panelRealizarPago.Size = new System.Drawing.Size(173, 26);
-            this.panelRealizarPago.TabIndex = 36;
-            this.panelRealizarPago.Visible = false;
-            // 
-            // tbIngresao
-            // 
-            this.tbIngresao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbIngresao.Location = new System.Drawing.Point(18, 0);
-            this.tbIngresao.Name = "tbIngresao";
-            this.tbIngresao.Size = new System.Drawing.Size(108, 26);
-            this.tbIngresao.TabIndex = 1;
+            this.tbPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPago.Location = new System.Drawing.Point(12, 0);
+            this.tbPago.Name = "tbPago";
+            this.tbPago.Size = new System.Drawing.Size(160, 26);
+            this.tbPago.TabIndex = 1;
             // 
             // dgvPagos
             // 
@@ -222,8 +211,8 @@
             this.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPagos.Location = new System.Drawing.Point(35, 417);
             this.dgvPagos.Name = "dgvPagos";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPagos.Size = new System.Drawing.Size(1048, 140);
             this.dgvPagos.TabIndex = 14;
             // 
@@ -245,25 +234,13 @@
             this.lbPagos.Size = new System.Drawing.Size(0, 17);
             this.lbPagos.TabIndex = 37;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1041, 376);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 30);
-            this.pictureBox1.TabIndex = 38;
-            this.pictureBox1.TabStop = false;
-            // 
             // UC_CrudPolizas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbPagos);
-            this.Controls.Add(this.panelRealizarPago);
-            this.Controls.Add(this.lbMensajePago);
-            this.Controls.Add(this.pbMostrarPanelRealizarPago);
+            this.Controls.Add(this.panelPago);
             this.Controls.Add(this.lbMensajeEstado);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pbOn);
@@ -285,11 +262,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOff)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMostrarPanelRealizarPago)).EndInit();
-            this.panelRealizarPago.ResumeLayout(false);
-            this.panelRealizarPago.PerformLayout();
+            this.panelPago.ResumeLayout(false);
+            this.panelPago.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPagar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,13 +282,11 @@
         private System.Windows.Forms.PictureBox pbOn;
         private System.Windows.Forms.PictureBox pbOff;
         private System.Windows.Forms.Label lbMensajeEstado;
-        private System.Windows.Forms.PictureBox pbMostrarPanelRealizarPago;
-        private System.Windows.Forms.Label lbMensajePago;
-        private System.Windows.Forms.Panel panelRealizarPago;
-        private System.Windows.Forms.TextBox tbIngresao;
+        private System.Windows.Forms.Panel panelPago;
+        private System.Windows.Forms.TextBox tbPago;
         private System.Windows.Forms.DataGridView dgvPagos;
         private System.Windows.Forms.Label lbMensaje;
         private System.Windows.Forms.Label lbPagos;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbPagar;
     }
 }

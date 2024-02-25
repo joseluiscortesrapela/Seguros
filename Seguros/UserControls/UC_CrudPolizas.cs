@@ -12,6 +12,7 @@ namespace Seguros.UserControls
         private int idPoliza;
         private DataGridViewRow filaPoliza;
         private bool enlazadoDatos;
+        private decimal importe, totalPagado, deboPagar;
 
         // Constructor
         public UC_CrudPolizas()
@@ -63,6 +64,10 @@ namespace Seguros.UserControls
                 idPoliza = int.Parse(filaPoliza.Cells["idPoliza"].Value.ToString());
                 // Obtengo estado 
                 string estado = filaPoliza.Cells["estado"].Value.ToString();
+                // Obtengo el importe 
+                importe = decimal.Parse(filaPoliza.Cells["importe"].Value.ToString());
+
+                Console.WriteLine("total a pagar: " + importe);
 
                 // Muestro botones de accion
                 mostrarBotonesAccion();
@@ -70,29 +75,46 @@ namespace Seguros.UserControls
                 // si se ha habilitado
                 if (enlazadoDatos)
                 {
-
                     // Obtengo los pagos de la poliza
                     DataTable tablaPagos = AdminModel.getPagosByPoliza(idPoliza);
 
-                    // Compruebo que no este vacio
+                    // Si almemnos e ha realizado un pago
                     if (tablaPagos.Rows.Count >= 1)
                     {
-                        // Muestro las polizas del clietne en el dgv
+                        // Muestro los pagos en el dgv
                         dgvPagos.DataSource = tablaPagos;
-                    }
-
-                    if (estado == "A cuenta")
-                    {
-                        lbPago.Text = "La poliza nº " + idPoliza + " pendiente de pago. PASAR POR CAJA";
-                        // Muestro panel para ingreso
                     }
                     else
                     {
-                        lbPago.Text = "La poliza nº " + idPoliza + " al encontrarse " + estado +  " no require ningun pago adicional.";
+                        // no hay filas no muestro el dgv.
+                        limpiarDgvPagos();
                     }
 
+                    // Si aun queda por pagar
+                    if (estado == "A cuenta")
+                    {
+                        // Calculo lo que se ha pagado
+                        totalPagado = calcularTotalPagado();
+                        // Calculo el importe total que debo
+                        deboPagar = importe - totalPagado;
+                        // Muestro mensaje al usuario del total que ha pagado hasta el momento
+                        lbPago.Text = "La póliza nº " + idPoliza + " lleva pagados " + totalPagado +
+                            " Se le recomienda efectuar el pago restante de " + deboPagar + " € para completar el importe total";
+                        // Cargo en en campo de texto lo que debo 
+                        tbPago.Text = deboPagar.ToString();
+                        // Muestro formulario
+                        panelPago.Visible = true;
+                        // Muestro mensaje por consola
+                        Console.WriteLine("Debo: " + deboPagar + " pagado: " + totalPagado + " importe total: " + importe);
 
-
+                    }
+                    else
+                    {
+                        // Muestro mensaje al usuario de que no es necesario pago alguno.
+                        lbPago.Text = "La poliza nº " + idPoliza + " al encontrarse " + estado + " no require ningun pago adicional.";
+                        // Oculto panel de pago
+                        panelPago.Visible = false;
+                    }
 
 
                 }
@@ -100,6 +122,29 @@ namespace Seguros.UserControls
 
         }
 
+        // Calcula lo que se ha pagado
+        private decimal calcularTotalPagado()
+        {
+            decimal total = 0;
+
+            // Recorro el dgv
+            foreach (DataGridViewRow row in dgvPagos.Rows)
+            {   // Si es la fila vacia por defecto para añadir la salto
+                if (row.IsNewRow) continue; // Ignorar la fila de nueva entrada, si está presente
+                // Obtengo el valor de la columna pagado, lo convierto a numero y lo voy concatenando.
+                total += Convert.ToDecimal(row.Cells["pagado"].Value);
+            }
+
+            // Devuelvo el total 
+            return total;
+        }
+
+
+        private void limpiarDgvPagos()
+        {
+            dgvPagos.DataSource = null;
+            lbPago.Text = "";
+        }
 
         // Estado de las polizas por colores, cambia el color de fondo de la fila segun su estado.
         private void CambiarColorFilas()
@@ -128,6 +173,21 @@ namespace Seguros.UserControls
             lbMensajeEstado.Text = "Acabas de activar el enlazado de datos dinamico, ahora seleccione una poliza";
         }
 
+        // Realiza el pago
+        private void pbPagar_Click(object sender, EventArgs e)
+        {
+            // Obtengo la cantidad a pagar
+            decimal pago = decimal.Parse(tbPago.Text.ToString());
+
+            // Si el pago se ha podigo guardar en la base de datos
+            if ( AdminModel.registrarPagoPoliza(pago, idPoliza) == 1 )
+            {
+                // Refresco el dgv de polizas
+                Console.WriteLine("Pago registrado, ahora actualiza el dgv de las polizas segun tipo de usurio");
+            }
+
+        }
+
         private void pbOff_Click(object sender, EventArgs e)
         {
             enlazadoDatos = false;
@@ -139,7 +199,7 @@ namespace Seguros.UserControls
         // Muestro formulario para ingresar dinero 
         private void pbMostrarPanelRealizarPago_Click(object sender, EventArgs e)
         {
-            panelRealizarPago.Visible = true;
+            panelPago.Visible = true;
         }
     }
 }
