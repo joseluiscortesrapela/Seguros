@@ -20,7 +20,7 @@ namespace Seguros.Models
             // la abro.
             conexion.Open();
             // Consulta sql
-            string sql = "SELECT * FROM polizas";
+            string sql = "SELECT * FROM polizas ORDER BY fecha DESC";
 
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conexion);
             DataTable table = new DataTable();
@@ -46,7 +46,7 @@ namespace Seguros.Models
             // la abro.
             conexion.Open();
             // Consulta sql
-            string sql = "SELECT * FROM polizas WHERE idCliente = " + idCliente;
+            string sql = "SELECT * FROM polizas WHERE idCliente = " + idCliente + " ORDER BY fecha DESC";
 
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conexion);
             DataTable table = new DataTable();
@@ -91,6 +91,30 @@ namespace Seguros.Models
             return table;
         }
 
+        public static DataTable getClienteById( int idCliente)
+        {
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+            // Consulta sql
+            string sql = "SELECT * FROM clientes where idCliente = " + idCliente;
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conexion);
+            DataTable table = new DataTable();
+
+            try
+            {
+                adapter.Fill(table);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+            return table;
+        }
 
         public static DataTable getAdministradores()
         {

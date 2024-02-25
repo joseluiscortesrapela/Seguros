@@ -23,7 +23,7 @@ namespace Seguros.Helper
                     switch (estado)
                     {
                         case "Cobrada":
-                            row.DefaultCellStyle.BackColor = Color.LightGreen;
+                            row.DefaultCellStyle.BackColor = Color.LightBlue;
                             break;
                         case "A cuenta":
                             row.DefaultCellStyle.BackColor = Color.LightGreen;
