@@ -204,7 +204,7 @@
             // tbIngresao
             // 
             this.tbIngresao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbIngresao.Location = new System.Drawing.Point(12, 0);
+            this.tbIngresao.Location = new System.Drawing.Point(18, 0);
             this.tbIngresao.Name = "tbIngresao";
             this.tbIngresao.Size = new System.Drawing.Size(108, 26);
             this.tbIngresao.TabIndex = 1;
