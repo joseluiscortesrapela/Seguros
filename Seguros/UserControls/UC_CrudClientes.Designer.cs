@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudClientes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.pbEditar = new System.Windows.Forms.PictureBox();
             this.pbEliminar = new System.Windows.Forms.PictureBox();
@@ -42,6 +42,14 @@
             this.pbOff = new System.Windows.Forms.PictureBox();
             this.lbNombreCliente = new System.Windows.Forms.Label();
             this.lbMensajeEstado = new System.Windows.Forms.Label();
+            this.panelFlSuperior = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelNavegacionSuperior = new System.Windows.Forms.Panel();
+            this.pbExit = new System.Windows.Forms.PictureBox();
+            this.panelBuscador = new System.Windows.Forms.Panel();
+            this.tbBuscar = new System.Windows.Forms.TextBox();
+            this.pbBuscador = new System.Windows.Forms.PictureBox();
+            this.pbMostrarBuscador = new System.Windows.Forms.PictureBox();
+            this.pbInicio = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCrear)).BeginInit();
@@ -49,13 +57,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOff)).BeginInit();
+            this.panelFlSuperior.SuspendLayout();
+            this.panelNavegacionSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
+            this.panelBuscador.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBuscador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMostrarBuscador)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 20);
+            this.label1.Location = new System.Drawing.Point(33, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 12;
@@ -64,7 +79,7 @@
             // pbEditar
             // 
             this.pbEditar.Image = ((System.Drawing.Image)(resources.GetObject("pbEditar.Image")));
-            this.pbEditar.Location = new System.Drawing.Point(1093, 81);
+            this.pbEditar.Location = new System.Drawing.Point(1089, 183);
             this.pbEditar.Name = "pbEditar";
             this.pbEditar.Size = new System.Drawing.Size(34, 38);
             this.pbEditar.TabIndex = 11;
@@ -75,7 +90,7 @@
             // pbEliminar
             // 
             this.pbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("pbEliminar.Image")));
-            this.pbEliminar.Location = new System.Drawing.Point(1093, 125);
+            this.pbEliminar.Location = new System.Drawing.Point(1089, 227);
             this.pbEliminar.Name = "pbEliminar";
             this.pbEliminar.Size = new System.Drawing.Size(34, 36);
             this.pbEliminar.TabIndex = 10;
@@ -86,7 +101,7 @@
             // pbCrear
             // 
             this.pbCrear.Image = ((System.Drawing.Image)(resources.GetObject("pbCrear.Image")));
-            this.pbCrear.Location = new System.Drawing.Point(1092, 40);
+            this.pbCrear.Location = new System.Drawing.Point(1088, 142);
             this.pbCrear.Name = "pbCrear";
             this.pbCrear.Size = new System.Drawing.Size(35, 35);
             this.pbCrear.TabIndex = 9;
@@ -104,10 +119,10 @@
             this.dgvClientes.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(40, 40);
+            this.dgvClientes.Location = new System.Drawing.Point(36, 142);
             this.dgvClientes.Name = "dgvClientes";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClientes.Size = new System.Drawing.Size(1047, 295);
             this.dgvClientes.TabIndex = 8;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
@@ -123,10 +138,10 @@
             this.dgvPolizas.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvPolizas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPolizas.Location = new System.Drawing.Point(40, 387);
+            this.dgvPolizas.Location = new System.Drawing.Point(36, 489);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPolizas.Size = new System.Drawing.Size(1047, 217);
             this.dgvPolizas.TabIndex = 26;
             // 
@@ -134,7 +149,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(454, 20);
+            this.label4.Location = new System.Drawing.Point(450, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 17);
             this.label4.TabIndex = 29;
@@ -143,7 +158,7 @@
             // pbOn
             // 
             this.pbOn.Image = ((System.Drawing.Image)(resources.GetObject("pbOn.Image")));
-            this.pbOn.Location = new System.Drawing.Point(641, 14);
+            this.pbOn.Location = new System.Drawing.Point(637, 116);
             this.pbOn.Name = "pbOn";
             this.pbOn.Size = new System.Drawing.Size(48, 23);
             this.pbOn.TabIndex = 27;
@@ -153,7 +168,7 @@
             // pbOff
             // 
             this.pbOff.Image = ((System.Drawing.Image)(resources.GetObject("pbOff.Image")));
-            this.pbOff.Location = new System.Drawing.Point(641, 14);
+            this.pbOff.Location = new System.Drawing.Point(637, 116);
             this.pbOff.Name = "pbOff";
             this.pbOff.Size = new System.Drawing.Size(39, 23);
             this.pbOff.TabIndex = 28;
@@ -164,7 +179,7 @@
             // 
             this.lbNombreCliente.AutoSize = true;
             this.lbNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombreCliente.Location = new System.Drawing.Point(25, 367);
+            this.lbNombreCliente.Location = new System.Drawing.Point(21, 469);
             this.lbNombreCliente.Name = "lbNombreCliente";
             this.lbNombreCliente.Size = new System.Drawing.Size(0, 17);
             this.lbNombreCliente.TabIndex = 30;
@@ -174,17 +189,106 @@
             this.lbMensajeEstado.AutoSize = true;
             this.lbMensajeEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMensajeEstado.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbMensajeEstado.Location = new System.Drawing.Point(414, 341);
+            this.lbMensajeEstado.Location = new System.Drawing.Point(410, 443);
             this.lbMensajeEstado.Name = "lbMensajeEstado";
             this.lbMensajeEstado.Size = new System.Drawing.Size(260, 17);
             this.lbMensajeEstado.TabIndex = 31;
             this.lbMensajeEstado.Text = "Deactivado enlazado de datos dinamico";
+            // 
+            // panelFlSuperior
+            // 
+            this.panelFlSuperior.BackColor = System.Drawing.Color.Snow;
+            this.panelFlSuperior.Controls.Add(this.panelNavegacionSuperior);
+            this.panelFlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelFlSuperior.Location = new System.Drawing.Point(0, 0);
+            this.panelFlSuperior.Name = "panelFlSuperior";
+            this.panelFlSuperior.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panelFlSuperior.Size = new System.Drawing.Size(1127, 55);
+            this.panelFlSuperior.TabIndex = 32;
+            // 
+            // panelNavegacionSuperior
+            // 
+            this.panelNavegacionSuperior.BackColor = System.Drawing.Color.Snow;
+            this.panelNavegacionSuperior.Controls.Add(this.pbExit);
+            this.panelNavegacionSuperior.Controls.Add(this.panelBuscador);
+            this.panelNavegacionSuperior.Controls.Add(this.pbMostrarBuscador);
+            this.panelNavegacionSuperior.Controls.Add(this.pbInicio);
+            this.panelNavegacionSuperior.Location = new System.Drawing.Point(13, 3);
+            this.panelNavegacionSuperior.Name = "panelNavegacionSuperior";
+            this.panelNavegacionSuperior.Size = new System.Drawing.Size(1114, 52);
+            this.panelNavegacionSuperior.TabIndex = 5;
+            // 
+            // pbExit
+            // 
+            this.pbExit.Image = ((System.Drawing.Image)(resources.GetObject("pbExit.Image")));
+            this.pbExit.Location = new System.Drawing.Point(1090, 3);
+            this.pbExit.Name = "pbExit";
+            this.pbExit.Size = new System.Drawing.Size(21, 21);
+            this.pbExit.TabIndex = 7;
+            this.pbExit.TabStop = false;
+            // 
+            // panelBuscador
+            // 
+            this.panelBuscador.BackColor = System.Drawing.Color.Transparent;
+            this.panelBuscador.Controls.Add(this.tbBuscar);
+            this.panelBuscador.Controls.Add(this.pbBuscador);
+            this.panelBuscador.Location = new System.Drawing.Point(325, 5);
+            this.panelBuscador.Name = "panelBuscador";
+            this.panelBuscador.Size = new System.Drawing.Size(431, 47);
+            this.panelBuscador.TabIndex = 6;
+            this.panelBuscador.Visible = false;
+            // 
+            // tbBuscar
+            // 
+            this.tbBuscar.BackColor = System.Drawing.Color.Snow;
+            this.tbBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBuscar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tbBuscar.Location = new System.Drawing.Point(76, 14);
+            this.tbBuscar.Name = "tbBuscar";
+            this.tbBuscar.Size = new System.Drawing.Size(248, 19);
+            this.tbBuscar.TabIndex = 3;
+            this.tbBuscar.Text = "Buscar clientes...";
+            this.tbBuscar.Click += new System.EventHandler(this.limpiaPlaceholderBuscador);
+            this.tbBuscar.TextChanged += new System.EventHandler(this.buscarClientes);
+            // 
+            // pbBuscador
+            // 
+            this.pbBuscador.Image = ((System.Drawing.Image)(resources.GetObject("pbBuscador.Image")));
+            this.pbBuscador.Location = new System.Drawing.Point(10, 5);
+            this.pbBuscador.Margin = new System.Windows.Forms.Padding(0);
+            this.pbBuscador.Name = "pbBuscador";
+            this.pbBuscador.Size = new System.Drawing.Size(409, 39);
+            this.pbBuscador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbBuscador.TabIndex = 2;
+            this.pbBuscador.TabStop = false;
+            // 
+            // pbMostrarBuscador
+            // 
+            this.pbMostrarBuscador.Image = ((System.Drawing.Image)(resources.GetObject("pbMostrarBuscador.Image")));
+            this.pbMostrarBuscador.Location = new System.Drawing.Point(1018, 15);
+            this.pbMostrarBuscador.Name = "pbMostrarBuscador";
+            this.pbMostrarBuscador.Size = new System.Drawing.Size(36, 37);
+            this.pbMostrarBuscador.TabIndex = 4;
+            this.pbMostrarBuscador.TabStop = false;
+            this.pbMostrarBuscador.Click += new System.EventHandler(this.pbMostrarBuscador_Click);
+            // 
+            // pbInicio
+            // 
+            this.pbInicio.Image = global::Seguros.Properties.Resources.inicio;
+            this.pbInicio.Location = new System.Drawing.Point(23, 13);
+            this.pbInicio.Margin = new System.Windows.Forms.Padding(3, 3, 400, 3);
+            this.pbInicio.Name = "pbInicio";
+            this.pbInicio.Size = new System.Drawing.Size(41, 36);
+            this.pbInicio.TabIndex = 1;
+            this.pbInicio.TabStop = false;
             // 
             // UC_CrudClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
+            this.Controls.Add(this.panelFlSuperior);
             this.Controls.Add(this.lbMensajeEstado);
             this.Controls.Add(this.lbNombreCliente);
             this.Controls.Add(this.label4);
@@ -197,7 +301,7 @@
             this.Controls.Add(this.pbCrear);
             this.Controls.Add(this.dgvClientes);
             this.Name = "UC_CrudClientes";
-            this.Size = new System.Drawing.Size(1127, 618);
+            this.Size = new System.Drawing.Size(1127, 713);
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCrear)).EndInit();
@@ -205,6 +309,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOff)).EndInit();
+            this.panelFlSuperior.ResumeLayout(false);
+            this.panelNavegacionSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
+            this.panelBuscador.ResumeLayout(false);
+            this.panelBuscador.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBuscador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMostrarBuscador)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +334,13 @@
         private System.Windows.Forms.PictureBox pbOff;
         private System.Windows.Forms.Label lbNombreCliente;
         private System.Windows.Forms.Label lbMensajeEstado;
+        private System.Windows.Forms.FlowLayoutPanel panelFlSuperior;
+        private System.Windows.Forms.Panel panelNavegacionSuperior;
+        private System.Windows.Forms.Panel panelBuscador;
+        private System.Windows.Forms.TextBox tbBuscar;
+        private System.Windows.Forms.PictureBox pbBuscador;
+        private System.Windows.Forms.PictureBox pbMostrarBuscador;
+        private System.Windows.Forms.PictureBox pbInicio;
+        private System.Windows.Forms.PictureBox pbExit;
     }
 }

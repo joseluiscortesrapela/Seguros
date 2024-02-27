@@ -23,7 +23,7 @@ namespace Seguros.UserControls
         {
             InitializeComponent();
             // Obtengo todos los clientes  y los guardo en el dgv
-            dgvClientes.DataSource = AdminModel.getClientes();
+            dgvClientes.DataSource = AdminModel.getClientes();        
         }
 
         // Constructor que recibe el id del agente
@@ -130,7 +130,34 @@ namespace Seguros.UserControls
             Console.WriteLine("off");
         }
 
+        private void pbMostrarBuscador_Click(object sender, EventArgs e)
+        {
 
+            if (panelBuscador.Visible)
+            {
+                panelBuscador.Visible = false;
+            }
+            else
+            {
+                panelBuscador.Visible = true;
+            }
+
+        }
+
+        // Realiza la busqueda un cliente  por nombre, apellidos o correo.
+        private void buscarClientes(object sender, EventArgs e)
+        {
+            // Obtengo lo que ha escrito en el buscador
+            string texto = tbBuscar.Text;
+            // Obtengo los clientes que coincidan por los criterios de busqueda.
+            dgvClientes.DataSource = AdminModel.buscar("clientes", texto);
+        }
+
+        // Limpia contendio del campo de texto del buscador, mensaje placeholder
+        private void limpiaPlaceholderBuscador(object sender, EventArgs e)
+        {
+            tbBuscar.Text = "";
+        }
     }
 
 

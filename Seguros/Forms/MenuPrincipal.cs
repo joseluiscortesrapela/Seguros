@@ -1,4 +1,6 @@
 ﻿using MySqlX.XDevAPI;
+using Seguros.Models;
+using Seguros.Sesion;
 using Seguros.UserControls;
 using System;
 using System.Runtime.InteropServices;
@@ -19,20 +21,21 @@ namespace Seguros.Forms
             // Obtengo el tipo o rol
             tipo = SesionUsuario.Tipo;
             // Muestro el menu principal segun tipo usuario.
-            prepararInterfazUsuario( tipo );
+            prepararInterfazUsuario(tipo);
+
         }
 
         // Prepara interfaz del usuaqrio dependiendo del tipo o rol 
-        private void prepararInterfazUsuario( string tipo )
+        private void prepararInterfazUsuario(string tipo)
         {
-           // Tipo usuario
+            // Tipo usuario
             switch (tipo)
             {
                 case "administradores":
                     btnAdministradores.Visible = true;
                     btnAgentes.Visible = true;
                     btnClientes.Visible = true;
-                    btnPolizas.Visible = true;                 
+                    btnPolizas.Visible = true;
                     break;
                 case "agentes":
                     btnMisClientes.Visible = true;
@@ -44,20 +47,7 @@ namespace Seguros.Forms
 
         }
 
-        // Salimos del programa
-        private void pbMostrarBuscador_Click(object sender, EventArgs e)
-        {
-            if (panelBuscador.Visible)
-            {
-                panelBuscador.Visible = false;
-            }
-            else
-            {
-                panelBuscador.Visible = true;
-            }
-
-
-        }
+ 
 
 
         // Auto load ventana
@@ -78,19 +68,22 @@ namespace Seguros.Forms
         // Muestro los clietnes
         private void btnClientes_Click(object sender, EventArgs e)
         {
+            // Muestro la vengana 
             mostrarUserControl(new UC_CrudClientes());
         }
 
 
         // Muestro la venana con los administradores
         private void btnAdministradores_Click(object sender, EventArgs e)
-        {
+        {          
+            // Muestro la ventana 
             mostrarUserControl(new UC_CrudAdministradores());
         }
 
         // Muestro ventana con los agentes
         private void btnAgentes_Click(object sender, EventArgs e)
         {
+            // Muestro la ventana
             mostrarUserControl(new UC_CrudAgentes());
         }
 
@@ -99,6 +92,8 @@ namespace Seguros.Forms
         {
             panelContenedor.Visible = false;
         }
+ 
+
 
         // Método para mostrar un UserControl en el panel contenedor
         private void mostrarUserControl(UserControl userControl)
@@ -124,23 +119,21 @@ namespace Seguros.Forms
             login.Show();
         }
 
-
-        // Cierro la aplicacion
-        private void pbExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         // Muestra las polizas de un cliente
         private void btnMisPolizas_Click(object sender, EventArgs e)
         {
-            mostrarUserControl(new UC_CrudPolizas( idUsuario ));
+            mostrarUserControl(new UC_CrudPolizas(idUsuario));
         }
 
         private void btnMisClientes_Click(object sender, EventArgs e)
         {
             mostrarUserControl(new UC_CrudClientes(idUsuario));
 
+        }
+
+        private void pbExit_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

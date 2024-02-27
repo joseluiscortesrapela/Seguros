@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudPolizas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.pbCrearPoliza = new System.Windows.Forms.PictureBox();
             this.pbEliminarPoliza = new System.Windows.Forms.PictureBox();
@@ -45,6 +45,9 @@
             this.lbMensaje = new System.Windows.Forms.Label();
             this.lbPagos = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panelNavegacionSuperior = new System.Windows.Forms.Panel();
+            this.pbExit = new System.Windows.Forms.PictureBox();
+            this.pbInicio = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCrearPoliza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminarPoliza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditarPoliza)).BeginInit();
@@ -53,22 +56,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbPagar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
+            this.panelNavegacionSuperior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 35);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(27, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "Polizas";
             // 
             // pbCrearPoliza
             // 
             this.pbCrearPoliza.Image = ((System.Drawing.Image)(resources.GetObject("pbCrearPoliza.Image")));
-            this.pbCrearPoliza.Location = new System.Drawing.Point(1089, 57);
+            this.pbCrearPoliza.Location = new System.Drawing.Point(1082, 132);
             this.pbCrearPoliza.Name = "pbCrearPoliza";
             this.pbCrearPoliza.Size = new System.Drawing.Size(35, 35);
             this.pbCrearPoliza.TabIndex = 9;
@@ -78,7 +84,7 @@
             // pbEliminarPoliza
             // 
             this.pbEliminarPoliza.Image = ((System.Drawing.Image)(resources.GetObject("pbEliminarPoliza.Image")));
-            this.pbEliminarPoliza.Location = new System.Drawing.Point(1089, 142);
+            this.pbEliminarPoliza.Location = new System.Drawing.Point(1082, 217);
             this.pbEliminarPoliza.Name = "pbEliminarPoliza";
             this.pbEliminarPoliza.Size = new System.Drawing.Size(35, 34);
             this.pbEliminarPoliza.TabIndex = 10;
@@ -89,7 +95,7 @@
             // pbEditarPoliza
             // 
             this.pbEditarPoliza.Image = ((System.Drawing.Image)(resources.GetObject("pbEditarPoliza.Image")));
-            this.pbEditarPoliza.Location = new System.Drawing.Point(1089, 98);
+            this.pbEditarPoliza.Location = new System.Drawing.Point(1082, 173);
             this.pbEditarPoliza.Name = "pbEditarPoliza";
             this.pbEditarPoliza.Size = new System.Drawing.Size(35, 38);
             this.pbEditarPoliza.TabIndex = 11;
@@ -108,11 +114,11 @@
             this.dgvPolizas.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvPolizas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPolizas.Location = new System.Drawing.Point(35, 55);
+            this.dgvPolizas.Location = new System.Drawing.Point(31, 130);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvPolizas.Size = new System.Drawing.Size(1048, 310);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPolizas.Size = new System.Drawing.Size(1045, 310);
             this.dgvPolizas.TabIndex = 8;
             this.dgvPolizas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPolizas_CellClick);
             // 
@@ -120,7 +126,7 @@
             // 
             this.lbPago.AutoSize = true;
             this.lbPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPago.Location = new System.Drawing.Point(34, 385);
+            this.lbPago.Location = new System.Drawing.Point(27, 460);
             this.lbPago.Name = "lbPago";
             this.lbPago.Size = new System.Drawing.Size(0, 20);
             this.lbPago.TabIndex = 15;
@@ -129,7 +135,7 @@
             // 
             this.panelPago.Controls.Add(this.pbPagar);
             this.panelPago.Controls.Add(this.tbPago);
-            this.panelPago.Location = new System.Drawing.Point(878, 379);
+            this.panelPago.Location = new System.Drawing.Point(871, 454);
             this.panelPago.Name = "panelPago";
             this.panelPago.Size = new System.Drawing.Size(205, 26);
             this.panelPago.TabIndex = 36;
@@ -138,7 +144,7 @@
             // pbPagar
             // 
             this.pbPagar.Image = ((System.Drawing.Image)(resources.GetObject("pbPagar.Image")));
-            this.pbPagar.Location = new System.Drawing.Point(178, 0);
+            this.pbPagar.Location = new System.Drawing.Point(178, -4);
             this.pbPagar.Name = "pbPagar";
             this.pbPagar.Size = new System.Drawing.Size(29, 26);
             this.pbPagar.TabIndex = 38;
@@ -148,7 +154,7 @@
             // tbPago
             // 
             this.tbPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPago.Location = new System.Drawing.Point(12, 0);
+            this.tbPago.Location = new System.Drawing.Point(12, -4);
             this.tbPago.Name = "tbPago";
             this.tbPago.Size = new System.Drawing.Size(132, 26);
             this.tbPago.TabIndex = 1;
@@ -164,18 +170,18 @@
             this.dgvPagos.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvPagos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPagos.Location = new System.Drawing.Point(35, 417);
+            this.dgvPagos.Location = new System.Drawing.Point(36, 492);
             this.dgvPagos.Name = "dgvPagos";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvPagos.Size = new System.Drawing.Size(1048, 140);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPagos.Size = new System.Drawing.Size(1040, 140);
             this.dgvPagos.TabIndex = 14;
             // 
             // lbMensaje
             // 
             this.lbMensaje.AutoSize = true;
             this.lbMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMensaje.Location = new System.Drawing.Point(464, 580);
+            this.lbMensaje.Location = new System.Drawing.Point(457, 683);
             this.lbMensaje.Name = "lbMensaje";
             this.lbMensaje.Size = new System.Drawing.Size(0, 17);
             this.lbMensaje.TabIndex = 13;
@@ -184,7 +190,7 @@
             // 
             this.lbPagos.AutoSize = true;
             this.lbPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPagos.Location = new System.Drawing.Point(-601, 394);
+            this.lbPagos.Location = new System.Drawing.Point(-608, 497);
             this.lbPagos.Name = "lbPagos";
             this.lbPagos.Size = new System.Drawing.Size(0, 17);
             this.lbPagos.TabIndex = 37;
@@ -194,11 +200,42 @@
             this.error.ContainerControl = this;
             this.error.Icon = ((System.Drawing.Icon)(resources.GetObject("error.Icon")));
             // 
+            // panelNavegacionSuperior
+            // 
+            this.panelNavegacionSuperior.BackColor = System.Drawing.Color.Snow;
+            this.panelNavegacionSuperior.Controls.Add(this.pbExit);
+            this.panelNavegacionSuperior.Controls.Add(this.pbInicio);
+            this.panelNavegacionSuperior.Location = new System.Drawing.Point(31, 3);
+            this.panelNavegacionSuperior.Name = "panelNavegacionSuperior";
+            this.panelNavegacionSuperior.Size = new System.Drawing.Size(1093, 52);
+            this.panelNavegacionSuperior.TabIndex = 38;
+            // 
+            // pbExit
+            // 
+            this.pbExit.Image = ((System.Drawing.Image)(resources.GetObject("pbExit.Image")));
+            this.pbExit.Location = new System.Drawing.Point(1072, 3);
+            this.pbExit.Name = "pbExit";
+            this.pbExit.Size = new System.Drawing.Size(21, 21);
+            this.pbExit.TabIndex = 7;
+            this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
+            // 
+            // pbInicio
+            // 
+            this.pbInicio.Image = global::Seguros.Properties.Resources.inicio;
+            this.pbInicio.Location = new System.Drawing.Point(5, 13);
+            this.pbInicio.Margin = new System.Windows.Forms.Padding(3, 3, 400, 3);
+            this.pbInicio.Name = "pbInicio";
+            this.pbInicio.Size = new System.Drawing.Size(41, 36);
+            this.pbInicio.TabIndex = 1;
+            this.pbInicio.TabStop = false;
+            // 
             // UC_CrudPolizas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
+            this.Controls.Add(this.panelNavegacionSuperior);
             this.Controls.Add(this.lbPagos);
             this.Controls.Add(this.panelPago);
             this.Controls.Add(this.lbPago);
@@ -210,7 +247,7 @@
             this.Controls.Add(this.pbCrearPoliza);
             this.Controls.Add(this.dgvPolizas);
             this.Name = "UC_CrudPolizas";
-            this.Size = new System.Drawing.Size(1127, 618);
+            this.Size = new System.Drawing.Size(1127, 732);
             this.Load += new System.EventHandler(this.UC_CurdPolizas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCrearPoliza)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminarPoliza)).EndInit();
@@ -221,6 +258,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbPagar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
+            this.panelNavegacionSuperior.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,5 +280,8 @@
         private System.Windows.Forms.Label lbPagos;
         private System.Windows.Forms.PictureBox pbPagar;
         private System.Windows.Forms.ErrorProvider error;
+        private System.Windows.Forms.Panel panelNavegacionSuperior;
+        private System.Windows.Forms.PictureBox pbInicio;
+        private System.Windows.Forms.PictureBox pbExit;
     }
 }

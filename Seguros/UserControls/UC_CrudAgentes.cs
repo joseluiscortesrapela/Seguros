@@ -151,7 +151,41 @@ namespace Seguros.UserControls
             Console.WriteLine("off");
         }
 
+   
+        // Salimos del programa
+        private void pbMostrarBuscador_Click(object sender, EventArgs e)
+        {
 
+            if (panelBuscador.Visible)
+            {
+                panelBuscador.Visible = false;
+            }
+            else
+            {
+                panelBuscador.Visible = true;
+            }
+
+        }
+     
+        // Busca un agente por diferentes criterios de busqueda
+        private void buscarAgentes(object sender, EventArgs e)
+        {
+            // Obtengo lo que ha escrito en el buscador
+            string texto = tbBuscar.Text;
+            // Obtengo los clientes que coincidan por los criterios de busqueda.
+            dgvAgentes.DataSource = AdminModel.buscar("agentes", texto);
+        }
+
+        // Limpia el placeholder del buscador.
+        private void limpiaPlaceholderBuscador(object sender, EventArgs e)
+        {
+            tbBuscar.Text = "";
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
     }
 }

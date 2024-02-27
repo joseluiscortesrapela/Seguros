@@ -40,6 +40,39 @@ namespace Seguros.UserControls
             Console.WriteLine("Eliminar administrador");
         }
 
-        
+        // Salimos del programa
+        private void pbMostrarBuscador_Click(object sender, EventArgs e)
+        {
+
+            if (panelBuscador.Visible)
+            {
+                panelBuscador.Visible = false;
+            }
+            else
+            {
+                panelBuscador.Visible = true;
+            }
+
+
+        }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buscarAdministradores(object sender, EventArgs e)
+        {
+            // Obtengo lo que ha escrito en el buscador
+            string texto = tbBuscar.Text;
+            // Obtengo los clientes que coincidan por los criterios de busqueda.
+            dgvAdministradores.DataSource = AdminModel.buscar("administradores", texto);
+        }
+
+        // Quita el placeholder del buscador
+        private void limpiaPlaceholderBuscador(object sender, EventArgs e)
+        {
+            tbBuscar.Text = "";
+        }
     }
 }

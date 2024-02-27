@@ -91,7 +91,7 @@ namespace Seguros.Models
             return table;
         }
 
-        public static DataTable getClienteById( int idCliente)
+        public static DataTable getClienteById(int idCliente)
         {
             MySqlConnection conexion = ConexionBaseDatos.getConexion();
             // la abro.
@@ -105,6 +105,38 @@ namespace Seguros.Models
             try
             {
                 adapter.Fill(table);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+            return table;
+        }
+
+        // Filtra la busqueda de los jugadores que coincidan por nombre.
+        public static DataTable buscar(string tabla, string texto)
+        {
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+            // Mi consulta 
+            string sql = $"SELECT * FROM {tabla} WHERE nombre LIKE @texto OR apellidos LIKE @texto OR correo LIKE @texto";
+
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@texto", "%" + texto + "%");
+
+            // creo el adaptador
+            MySqlDataAdapter adapter = new MySqlDataAdapter(comando);
+
+            // Instancio una tabla vacia. 
+            DataTable table = new DataTable();
+
+            try
+            {
+                adapter.Fill(table); // Relleno la tabla con el resulatado de la consulta.
 
             }
             catch (Exception ex)
@@ -222,7 +254,7 @@ namespace Seguros.Models
 
 
         // Registra un nuevo usuario
-        public static int registrarPagoPoliza(decimal pago, int idPoliza )
+        public static int registrarPagoPoliza(decimal pago, int idPoliza)
         {
             // Creo la conexion con la base de datos.
             MySqlConnection conexion = ConexionBaseDatos.getConexion();
@@ -237,7 +269,7 @@ namespace Seguros.Models
             comando.Parameters.AddWithValue("@pago", pago);
             // Le paso como parametro el id de la poliza
             comando.Parameters.AddWithValue("@idPoliza", idPoliza);
-  
+
 
             int creado;
 

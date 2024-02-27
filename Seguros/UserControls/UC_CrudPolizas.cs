@@ -143,6 +143,7 @@ namespace Seguros.UserControls
             CambiarColorFilas();
         }
 
+
         // Muestra botones de accion
         private void mostrarBotonesAccion()
         {
@@ -164,8 +165,6 @@ namespace Seguros.UserControls
                 if (AdminModel.registrarPagoPoliza(pago, idPoliza) == 1)
                 {
                     lbMensaje.Text = "El pago se ha realizado con exito";
-
-
                 }
             }
             else
@@ -173,11 +172,13 @@ namespace Seguros.UserControls
                 error.SetError(tbPago, "La cantidad introducida es mayor que lo que debe");
             }
 
-
-
-
         }
 
+        // Cierro la aplicacion
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 
