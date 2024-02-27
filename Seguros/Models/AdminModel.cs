@@ -198,7 +198,6 @@ namespace Seguros.Models
             return table;
         }
 
-
         // Obtengo los pagos efectuados para cada poliza.
         public static DataTable getPagosByPoliza(int idPoliza)
         {
@@ -224,7 +223,6 @@ namespace Seguros.Models
 
             return table;
         }
-
 
         // Obtengo las polias del cliente
         public static DataTable getCarteraClientes(int idAgente)
@@ -252,9 +250,8 @@ namespace Seguros.Models
             return table;
         }
 
-
         // Registra un nuevo usuario
-        public static int registrarPagoPoliza(decimal pago, int idPoliza)
+        public static int pagarPoliza(decimal pago, int idPoliza)
         {
             // Creo la conexion con la base de datos.
             MySqlConnection conexion = ConexionBaseDatos.getConexion();
@@ -288,7 +285,39 @@ namespace Seguros.Models
 
         }
 
+        // Actualiza estado de la poliza
+        public static int actualizarEstadoPoliza(int idPoliza, string estado)
+        {
+            // Creo la conexion con la base de datos.
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
 
+            // Consulta sql
+            string sql = "UPDATE polizas SET estado = @estado WHERE idPoliza = @idPoliza";
+            // Preparo la consulta
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            // Estado de la poliza
+            comando.Parameters.AddWithValue("@estado", estado);
+            // Id de la poliza 
+            comando.Parameters.AddWithValue("@idPoliza", idPoliza);
+
+
+            int actualizado;
+
+            try
+            {
+                actualizado = comando.ExecuteNonQuery(); // Return value is the number of rows affected by the SQL statement.
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                actualizado = 0;
+            }
+
+            return actualizado;
+
+        }
 
     }
 }

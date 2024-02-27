@@ -65,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 110);
+            this.label1.Location = new System.Drawing.Point(42, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 12;
@@ -107,18 +107,17 @@
             // 
             this.dgvPolizas.AllowUserToAddRows = false;
             this.dgvPolizas.AllowUserToDeleteRows = false;
-            this.dgvPolizas.AllowUserToOrderColumns = true;
             this.dgvPolizas.AllowUserToResizeColumns = false;
             this.dgvPolizas.AllowUserToResizeRows = false;
             this.dgvPolizas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPolizas.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvPolizas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPolizas.Location = new System.Drawing.Point(31, 130);
+            this.dgvPolizas.Location = new System.Drawing.Point(45, 130);
             this.dgvPolizas.Name = "dgvPolizas";
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPolizas.Size = new System.Drawing.Size(1045, 310);
+            this.dgvPolizas.Size = new System.Drawing.Size(1031, 310);
             this.dgvPolizas.TabIndex = 8;
             this.dgvPolizas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPolizas_CellClick);
             // 
@@ -135,16 +134,16 @@
             // 
             this.panelPago.Controls.Add(this.pbPagar);
             this.panelPago.Controls.Add(this.tbPago);
-            this.panelPago.Location = new System.Drawing.Point(871, 454);
+            this.panelPago.Location = new System.Drawing.Point(880, 446);
             this.panelPago.Name = "panelPago";
-            this.panelPago.Size = new System.Drawing.Size(205, 26);
+            this.panelPago.Size = new System.Drawing.Size(211, 34);
             this.panelPago.TabIndex = 36;
             this.panelPago.Visible = false;
             // 
             // pbPagar
             // 
             this.pbPagar.Image = ((System.Drawing.Image)(resources.GetObject("pbPagar.Image")));
-            this.pbPagar.Location = new System.Drawing.Point(178, -4);
+            this.pbPagar.Location = new System.Drawing.Point(176, 3);
             this.pbPagar.Name = "pbPagar";
             this.pbPagar.Size = new System.Drawing.Size(29, 26);
             this.pbPagar.TabIndex = 38;
@@ -154,9 +153,9 @@
             // tbPago
             // 
             this.tbPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPago.Location = new System.Drawing.Point(12, -4);
+            this.tbPago.Location = new System.Drawing.Point(27, 3);
             this.tbPago.Name = "tbPago";
-            this.tbPago.Size = new System.Drawing.Size(132, 26);
+            this.tbPago.Size = new System.Drawing.Size(122, 26);
             this.tbPago.TabIndex = 1;
             // 
             // dgvPagos
@@ -170,11 +169,11 @@
             this.dgvPagos.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvPagos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPagos.Location = new System.Drawing.Point(36, 492);
+            this.dgvPagos.Location = new System.Drawing.Point(45, 492);
             this.dgvPagos.Name = "dgvPagos";
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPagos.Size = new System.Drawing.Size(1040, 140);
+            this.dgvPagos.Size = new System.Drawing.Size(1031, 140);
             this.dgvPagos.TabIndex = 14;
             // 
             // lbMensaje
@@ -248,7 +247,7 @@
             this.Controls.Add(this.dgvPolizas);
             this.Name = "UC_CrudPolizas";
             this.Size = new System.Drawing.Size(1127, 732);
-            this.Load += new System.EventHandler(this.UC_CurdPolizas_Load);
+            this.Load += new System.EventHandler(this.UC_CrudPolizas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCrearPoliza)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminarPoliza)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditarPoliza)).EndInit();

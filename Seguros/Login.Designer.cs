@@ -95,7 +95,7 @@
             this.panelRegistro.Controls.Add(this.tbEmail);
             this.panelRegistro.Location = new System.Drawing.Point(0, 0);
             this.panelRegistro.Name = "panelRegistro";
-            this.panelRegistro.Size = new System.Drawing.Size(224, 463);
+            this.panelRegistro.Size = new System.Drawing.Size(576, 463);
             this.panelRegistro.TabIndex = 23;
             this.panelRegistro.Visible = false;
             // 
@@ -105,7 +105,7 @@
             this.lbVolverLogin.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbVolverLogin.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbVolverLogin.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lbVolverLogin.Location = new System.Drawing.Point(54, 444);
+            this.lbVolverLogin.Location = new System.Drawing.Point(123, 448);
             this.lbVolverLogin.Name = "lbVolverLogin";
             this.lbVolverLogin.Size = new System.Drawing.Size(93, 15);
             this.lbVolverLogin.TabIndex = 34;
@@ -154,7 +154,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label9.Location = new System.Drawing.Point(53, 106);
+            this.label9.Location = new System.Drawing.Point(110, 121);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 22);
             this.label9.TabIndex = 28;
@@ -166,7 +166,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.DarkGray;
-            this.btnRegistrar.Location = new System.Drawing.Point(16, 388);
+            this.btnRegistrar.Location = new System.Drawing.Point(85, 392);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(165, 43);
             this.btnRegistrar.TabIndex = 27;
@@ -180,7 +180,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label10.Location = new System.Drawing.Point(8, 33);
+            this.label10.Location = new System.Drawing.Point(76, 18);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(190, 50);
             this.label10.TabIndex = 26;
@@ -192,7 +192,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label11.Location = new System.Drawing.Point(39, 217);
+            this.label11.Location = new System.Drawing.Point(99, 228);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(120, 22);
             this.label11.TabIndex = 25;
@@ -200,14 +200,14 @@
             // 
             // tbPassword
             // 
-            this.tbPassword.BackColor = System.Drawing.SystemColors.WindowText;
+            this.tbPassword.BackColor = System.Drawing.Color.Beige;
             this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.ForeColor = System.Drawing.Color.Wheat;
-            this.tbPassword.Location = new System.Drawing.Point(16, 256);
+            this.tbPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbPassword.Location = new System.Drawing.Point(16, 253);
             this.tbPassword.MaxLength = 12;
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(165, 32);
+            this.tbPassword.Size = new System.Drawing.Size(296, 32);
             this.tbPassword.TabIndex = 23;
             this.tbPassword.TabStop = false;
             this.tbPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -215,14 +215,14 @@
             // 
             // tbEmail
             // 
-            this.tbEmail.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tbEmail.BackColor = System.Drawing.Color.Beige;
             this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.ForeColor = System.Drawing.Color.Wheat;
+            this.tbEmail.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbEmail.Location = new System.Drawing.Point(16, 149);
             this.tbEmail.MaxLength = 50;
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(165, 32);
+            this.tbEmail.Size = new System.Drawing.Size(296, 32);
             this.tbEmail.TabIndex = 24;
             this.tbEmail.TabStop = false;
             this.tbEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -239,9 +239,9 @@
             this.panelLogin.Controls.Add(this.buttonLogin);
             this.panelLogin.Controls.Add(this.label1);
             this.panelLogin.Controls.Add(this.label8);
-            this.panelLogin.Location = new System.Drawing.Point(3, 0);
+            this.panelLogin.Location = new System.Drawing.Point(332, 11);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(221, 464);
+            this.panelLogin.Size = new System.Drawing.Size(576, 464);
             this.panelLogin.TabIndex = 32;
             // 
             // lebel0
@@ -250,7 +250,7 @@
             this.lebel0.BackColor = System.Drawing.Color.Transparent;
             this.lebel0.Font = new System.Drawing.Font("Mongolian Baiti", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lebel0.ForeColor = System.Drawing.Color.AliceBlue;
-            this.lebel0.Location = new System.Drawing.Point(32, 28);
+            this.lebel0.Location = new System.Drawing.Point(104, 23);
             this.lebel0.Name = "lebel0";
             this.lebel0.Size = new System.Drawing.Size(141, 50);
             this.lebel0.TabIndex = 14;
@@ -262,7 +262,7 @@
             this.lbMostrarPanelRegistro.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbMostrarPanelRegistro.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMostrarPanelRegistro.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lbMostrarPanelRegistro.Location = new System.Drawing.Point(38, 441);
+            this.lbMostrarPanelRegistro.Location = new System.Drawing.Point(110, 445);
             this.lbMostrarPanelRegistro.Name = "lbMostrarPanelRegistro";
             this.lbMostrarPanelRegistro.Size = new System.Drawing.Size(114, 15);
             this.lbMostrarPanelRegistro.TabIndex = 33;
@@ -272,14 +272,13 @@
             // 
             // tbCorreo
             // 
-            this.tbCorreo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tbCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCorreo.BackColor = System.Drawing.Color.Beige;
             this.tbCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCorreo.ForeColor = System.Drawing.Color.Wheat;
-            this.tbCorreo.Location = new System.Drawing.Point(14, 146);
+            this.tbCorreo.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbCorreo.Location = new System.Drawing.Point(22, 147);
             this.tbCorreo.MaxLength = 50;
             this.tbCorreo.Name = "tbCorreo";
-            this.tbCorreo.Size = new System.Drawing.Size(165, 32);
+            this.tbCorreo.Size = new System.Drawing.Size(296, 32);
             this.tbCorreo.TabIndex = 11;
             this.tbCorreo.TabStop = false;
             this.tbCorreo.Text = "admin@hotmail.es";
@@ -287,14 +286,14 @@
             // 
             // tbContraseña
             // 
-            this.tbContraseña.BackColor = System.Drawing.SystemColors.WindowText;
+            this.tbContraseña.BackColor = System.Drawing.Color.Beige;
             this.tbContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbContraseña.ForeColor = System.Drawing.Color.Wheat;
-            this.tbContraseña.Location = new System.Drawing.Point(14, 253);
+            this.tbContraseña.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbContraseña.Location = new System.Drawing.Point(22, 254);
             this.tbContraseña.MaxLength = 12;
             this.tbContraseña.Name = "tbContraseña";
-            this.tbContraseña.Size = new System.Drawing.Size(165, 32);
+            this.tbContraseña.Size = new System.Drawing.Size(296, 32);
             this.tbContraseña.TabIndex = 10;
             this.tbContraseña.TabStop = false;
             this.tbContraseña.Text = "1234";
@@ -307,7 +306,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Location = new System.Drawing.Point(37, 214);
+            this.label3.Location = new System.Drawing.Point(115, 229);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 22);
             this.label3.TabIndex = 13;
@@ -331,7 +330,7 @@
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.DarkGray;
-            this.buttonLogin.Location = new System.Drawing.Point(14, 385);
+            this.buttonLogin.Location = new System.Drawing.Point(86, 389);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(165, 43);
             this.buttonLogin.TabIndex = 15;
@@ -344,7 +343,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label1.Location = new System.Drawing.Point(42, 298);
+            this.label1.Location = new System.Drawing.Point(50, 299);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 21;
@@ -356,7 +355,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label8.Location = new System.Drawing.Point(51, 103);
+            this.label8.Location = new System.Drawing.Point(127, 122);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 22);
             this.label8.TabIndex = 17;
@@ -367,7 +366,6 @@
             this.panelContenedor.BackColor = System.Drawing.Color.Transparent;
             this.panelContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelContenedor.Controls.Add(this.pictureBox2);
-            this.panelContenedor.Controls.Add(this.panelLogin);
             this.panelContenedor.Controls.Add(this.panelRegistro);
             this.panelContenedor.Location = new System.Drawing.Point(332, 12);
             this.panelContenedor.Name = "panelContenedor";
@@ -392,6 +390,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(964, 490);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.panelLogin);
             this.Controls.Add(this.panelContenedor);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
