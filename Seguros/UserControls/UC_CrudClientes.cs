@@ -10,7 +10,9 @@ namespace Seguros.UserControls
     public partial class UC_CrudClientes : UserControl
     {
         private DataGridViewRow filaCliente;
+        private Cliente cliente;
         private bool estado;
+        
 
         // Contruc por por defecto,
         public UC_CrudClientes()
@@ -41,6 +43,26 @@ namespace Seguros.UserControls
                 int idCliente = int.Parse(filaCliente.Cells["idCliente"].Value.ToString());
                 // Obtengo nombre cliente
                 string nombre = filaCliente.Cells["nombre"].Value.ToString();
+                // Obtengo los apellidos
+                string apellidos = filaCliente.Cells["apellidos"].Value.ToString();
+                // Obtengo el dni
+                string dni = filaCliente.Cells["dni"].Value.ToString();
+                // Obtengo el telefono
+                string telefono = filaCliente.Cells["telefono"].Value.ToString();
+                // Obtengo el correo 
+                string correo = filaCliente.Cells["correo"].Value.ToString();
+                // Obtengo la contraseña 
+                string contraseña = filaCliente.Cells["contraseña"].Value.ToString();
+                // Obtengo el id de la provincia
+                int idProvincia = int.Parse(filaCliente.Cells["provincia"].Value.ToString());
+                // Obtengo el id del municipio
+                int idMunicipio = int.Parse(filaCliente.Cells["municipio"].Value.ToString());
+                // Obtengo el tipo 
+                string tipo = filaCliente.Cells["tipo"].Value.ToString();
+
+                // Instancio e inicializo un nuevo objeto de tipo Cliente
+                cliente = new Cliente(nombre, apellidos, dni, telefono, correo, contraseña, idProvincia, idMunicipio, tipo);
+               
                 // Muestro botones de accion del crud clientes.
                 mostrarBotonesAccion();
 
@@ -76,7 +98,7 @@ namespace Seguros.UserControls
         private void pbMostrarPanelCrear_Click(object sender, EventArgs e)
         {
             // Oculto los paneles
-            panelCrud.Visible = false;
+            panelCrudClientes.Visible = false;
             panelEditar.Visible = false;
             panelDetalle.Visible = false;
 
@@ -94,16 +116,25 @@ namespace Seguros.UserControls
         // Muestra formulario con los datos del cliente
         private void pbMostrarPanelDetalle_Click(object sender, EventArgs e)
         {
-            panelCrud.Visible = false;
+            // Oculto paneles
+            panelCrudClientes.Visible = false;
             panelCrear.Visible = false;
             panelEditar.Visible = false;
 
-            tbNombreDetalle.Text = "Rocio";
-            tbApellidosDetalle.Text = "Canales";
-            tbTelefonoDetalle.Text = "999665544";
-            tbDniDetalle.Text = "48556677T";
-            tbCorreoDetalle.Text = "rocio@hotmail.com";
+            // Cargo el formulario con los datos del cliente
+            tbNombreDetalle.Text = cliente.Nombre;
+            tbApellidosDetalle.Text = cliente.Apellidos;
+            tbDniDetalle.Text = cliente.Dni;
+            tbTelefonoDetalle.Text = cliente.Telefono; 
+            tbCorreoDetalle.Text = cliente.Correo;
+            tbContraseñaDetalle.Text = cliente.Contraseña;
+            cbTipoDetalle.Text = cliente.Tipo;
+            // Obtengo de la base de datos el nombre de la provincia y lo guardo en el campo de texto
+            tbProvincia.Text = AdminModel.getNombresProvincia( cliente.IdProvincia );
+            // Obtengo de la base de datos el nombre del municipio y lo guardo en el campo de texto
+            tbMunicipio.Text = AdminModel.getNombresMunicipio(cliente.IdMuncipio );
 
+            // Muestro el panel que contiene el formulario
             panelDetalle.Visible = true;
 
             Console.WriteLine("Muestro panel detalle cliente");
@@ -113,7 +144,7 @@ namespace Seguros.UserControls
         // Muestra formulario para editar cliente
         private void pbMostrarPanelEditar_Click(object sender, EventArgs e)
         {
-            panelCrud.Visible = false;
+            panelCrudClientes.Visible = false;
             panelCrear.Visible = false;
             panelDetalle.Visible = false;
 
@@ -145,10 +176,10 @@ namespace Seguros.UserControls
             lbNombreCliente.Text = "";
         }
 
-
-        // Muestra botones de accion
+        // Muestra botones de accion ver, editar y elimianr
         private void mostrarBotonesAccion()
         {
+            pbDetalle.Visible = true;
             pbEditar.Visible = true;
             pbEliminar.Visible = true;
         }
@@ -226,7 +257,7 @@ namespace Seguros.UserControls
             panelEditar.Visible = false;
             panelCrear.Visible = false;
             panelDetalle.Visible = false;
-            panelCrud.Visible = true;
+            panelCrudClientes.Visible = true;
         }
 
         // Creo un nuevo cliente

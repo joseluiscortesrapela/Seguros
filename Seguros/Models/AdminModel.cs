@@ -387,6 +387,8 @@ namespace Seguros.Models
             return table;
         }
 
+
+
         // Obtengo los muncipios de una provia.
         public static DataTable getMunicipiosPorProvincia(int idProvincia)
         {
@@ -413,5 +415,51 @@ namespace Seguros.Models
             return table;
 
         }
+
+        // Obtengo el nombre de la provincia
+        public static string getNombresProvincia(int idProvincia)
+        {
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+            // Consulta SQL para obtener el nombre de la provincia
+            string sql = "SELECT provincia FROM provincias WHERE id = @idProvincia";
+          
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@idProvincia", idProvincia);
+
+            // Ejecuta la consulta y obtiene el nombre de la provincia
+            object resultado = comando.ExecuteScalar();
+            // Obtengo nombre   
+            string nombreProvincia = resultado.ToString();
+
+            // Devuelvo dato
+            return nombreProvincia;
+
+        }
+
+        // Obtengo el nombre del municipio
+        public static string getNombresMunicipio(int idMunicipio)
+        {
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+            // Consulta SQL 
+            string sql = "SELECT municipio FROM municipios WHERE id = @idMunicipio";
+            
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@idMunicipio", idMunicipio);
+
+            // Ejecuta la consulta y obtiene el nombre de la provincia
+            object resultado = comando.ExecuteScalar();
+            // Obtengo nombre   
+            string nombreMunicipio = resultado.ToString();
+
+            // Devuelvo dato
+            return nombreMunicipio;
+
+        }
+
+
     }
 }

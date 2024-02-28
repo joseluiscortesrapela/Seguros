@@ -50,9 +50,17 @@
             this.pbBuscador = new System.Windows.Forms.PictureBox();
             this.pbMostrarBuscador = new System.Windows.Forms.PictureBox();
             this.pbInicio = new System.Windows.Forms.PictureBox();
-            this.panelCrud = new System.Windows.Forms.Panel();
+            this.panelCrudClientes = new System.Windows.Forms.Panel();
             this.pbDetalle = new System.Windows.Forms.PictureBox();
             this.panelCrear = new System.Windows.Forms.Panel();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.lbMensajeCrear = new System.Windows.Forms.Label();
+            this.tbContraseñaCrear = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.btnCrearCliente = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
@@ -86,36 +94,34 @@
             this.tbNombreCrear = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelDetalle = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.cbTipoDetalle = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.cbMunicipios = new System.Windows.Forms.ComboBox();
-            this.cbProvinciasDetalle = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.tbContraseñaDetalle = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.btnRegresar = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.cbTipoDetalle = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.tbCorreoDetalle = new System.Windows.Forms.TextBox();
             this.tbTelefonoDetalle = new System.Windows.Forms.TextBox();
             this.tbDniDetalle = new System.Windows.Forms.TextBox();
             this.tbApellidosDetalle = new System.Windows.Forms.TextBox();
             this.tbNombreDetalle = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
             this.panelEditar = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
@@ -147,11 +153,8 @@
             this.tbApellidosEditar = new System.Windows.Forms.TextBox();
             this.tbNombreEditar = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.tbContraseñaCrear = new System.Windows.Forms.TextBox();
-            this.lbMensajeCrear = new System.Windows.Forms.Label();
+            this.tbProvincia = new System.Windows.Forms.TextBox();
+            this.tbMunicipio = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCrear)).BeginInit();
@@ -166,9 +169,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrarBuscador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
-            this.panelCrud.SuspendLayout();
+            this.panelCrudClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDetalle)).BeginInit();
             this.panelCrear.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -186,6 +190,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.panelEditar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
@@ -195,7 +200,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -216,6 +220,7 @@
             this.pbEditar.Size = new System.Drawing.Size(34, 38);
             this.pbEditar.TabIndex = 11;
             this.pbEditar.TabStop = false;
+            this.pbEditar.Visible = false;
             this.pbEditar.Click += new System.EventHandler(this.pbMostrarPanelEditar_Click);
             // 
             // pbEliminar
@@ -226,6 +231,7 @@
             this.pbEliminar.Size = new System.Drawing.Size(34, 36);
             this.pbEliminar.TabIndex = 10;
             this.pbEliminar.TabStop = false;
+            this.pbEliminar.Visible = false;
             this.pbEliminar.Click += new System.EventHandler(this.pbEliminar_Click);
             // 
             // pbCrear
@@ -414,24 +420,24 @@
             this.pbInicio.TabIndex = 1;
             this.pbInicio.TabStop = false;
             // 
-            // panelCrud
+            // panelCrudClientes
             // 
-            this.panelCrud.BackColor = System.Drawing.Color.Snow;
-            this.panelCrud.Controls.Add(this.dgvClientes);
-            this.panelCrud.Controls.Add(this.pbCrear);
-            this.panelCrud.Controls.Add(this.lbMensajeEstado);
-            this.panelCrud.Controls.Add(this.pbOn);
-            this.panelCrud.Controls.Add(this.pbEliminar);
-            this.panelCrud.Controls.Add(this.pbEditar);
-            this.panelCrud.Controls.Add(this.label4);
-            this.panelCrud.Controls.Add(this.label1);
-            this.panelCrud.Controls.Add(this.dgvPolizas);
-            this.panelCrud.Controls.Add(this.pbOff);
-            this.panelCrud.Controls.Add(this.pbDetalle);
-            this.panelCrud.Location = new System.Drawing.Point(0, 99);
-            this.panelCrud.Name = "panelCrud";
-            this.panelCrud.Size = new System.Drawing.Size(1127, 611);
-            this.panelCrud.TabIndex = 33;
+            this.panelCrudClientes.BackColor = System.Drawing.Color.Snow;
+            this.panelCrudClientes.Controls.Add(this.dgvClientes);
+            this.panelCrudClientes.Controls.Add(this.pbCrear);
+            this.panelCrudClientes.Controls.Add(this.lbMensajeEstado);
+            this.panelCrudClientes.Controls.Add(this.pbOn);
+            this.panelCrudClientes.Controls.Add(this.pbEliminar);
+            this.panelCrudClientes.Controls.Add(this.pbEditar);
+            this.panelCrudClientes.Controls.Add(this.label4);
+            this.panelCrudClientes.Controls.Add(this.label1);
+            this.panelCrudClientes.Controls.Add(this.dgvPolizas);
+            this.panelCrudClientes.Controls.Add(this.pbOff);
+            this.panelCrudClientes.Controls.Add(this.pbDetalle);
+            this.panelCrudClientes.Location = new System.Drawing.Point(0, 99);
+            this.panelCrudClientes.Name = "panelCrudClientes";
+            this.panelCrudClientes.Size = new System.Drawing.Size(1127, 611);
+            this.panelCrudClientes.TabIndex = 33;
             // 
             // pbDetalle
             // 
@@ -441,11 +447,15 @@
             this.pbDetalle.Size = new System.Drawing.Size(34, 35);
             this.pbDetalle.TabIndex = 35;
             this.pbDetalle.TabStop = false;
+            this.pbDetalle.Visible = false;
             this.pbDetalle.Click += new System.EventHandler(this.pbMostrarPanelDetalle_Click);
             // 
             // panelCrear
             // 
             this.panelCrear.BackColor = System.Drawing.Color.Transparent;
+            this.panelCrear.Controls.Add(this.label48);
+            this.panelCrear.Controls.Add(this.label47);
+            this.panelCrear.Controls.Add(this.label46);
             this.panelCrear.Controls.Add(this.lbMensajeCrear);
             this.panelCrear.Controls.Add(this.tbContraseñaCrear);
             this.panelCrear.Controls.Add(this.label45);
@@ -489,17 +499,97 @@
             this.panelCrear.TabIndex = 32;
             this.panelCrear.Visible = false;
             // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(828, 397);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(109, 13);
+            this.label48.TabIndex = 45;
+            this.label48.Text = "No puede estar vacio";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(502, 398);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(109, 13);
+            this.label47.TabIndex = 44;
+            this.label47.Text = "No puede estar vacio";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(167, 397);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(109, 13);
+            this.label46.TabIndex = 43;
+            this.label46.Text = "No puede estar vacio";
+            // 
+            // lbMensajeCrear
+            // 
+            this.lbMensajeCrear.AutoSize = true;
+            this.lbMensajeCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMensajeCrear.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.lbMensajeCrear.Location = new System.Drawing.Point(430, 445);
+            this.lbMensajeCrear.Name = "lbMensajeCrear";
+            this.lbMensajeCrear.Size = new System.Drawing.Size(0, 22);
+            this.lbMensajeCrear.TabIndex = 42;
+            // 
+            // tbContraseñaCrear
+            // 
+            this.tbContraseñaCrear.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbContraseñaCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbContraseñaCrear.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbContraseñaCrear.Location = new System.Drawing.Point(881, 249);
+            this.tbContraseñaCrear.MaxLength = 4;
+            this.tbContraseñaCrear.Name = "tbContraseñaCrear";
+            this.tbContraseñaCrear.Size = new System.Drawing.Size(111, 26);
+            this.tbContraseñaCrear.TabIndex = 41;
+            this.tbContraseñaCrear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(843, 278);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(85, 13);
+            this.label45.TabIndex = 40;
+            this.label45.Text = "Maximo 4 digitos";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label32.Location = new System.Drawing.Point(842, 226);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(102, 20);
+            this.label32.TabIndex = 39;
+            this.label32.Text = "Contraseña";
+            // 
+            // pictureBox25
+            // 
+            this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox25.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox25.Image")));
+            this.pictureBox25.Location = new System.Drawing.Point(846, 249);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox25.TabIndex = 38;
+            this.pictureBox25.TabStop = false;
+            // 
             // btnCrearCliente
             // 
             this.btnCrearCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCrearCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearCliente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCrearCliente.Location = new System.Drawing.Point(580, 522);
+            this.btnCrearCliente.Location = new System.Drawing.Point(596, 533);
             this.btnCrearCliente.Name = "btnCrearCliente";
             this.btnCrearCliente.Size = new System.Drawing.Size(192, 35);
             this.btnCrearCliente.TabIndex = 36;
-            this.btnCrearCliente.Text = "Aceptar";
+            this.btnCrearCliente.Text = "Crear";
             this.btnCrearCliente.UseVisualStyleBackColor = false;
             this.btnCrearCliente.Click += new System.EventHandler(this.btnCrear_Click);
             // 
@@ -509,7 +599,7 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnVolver.Location = new System.Drawing.Point(324, 522);
+            this.btnVolver.Location = new System.Drawing.Point(340, 533);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(192, 35);
             this.btnVolver.TabIndex = 35;
@@ -858,369 +948,382 @@
             // panelDetalle
             // 
             this.panelDetalle.BackColor = System.Drawing.Color.Transparent;
-            this.panelDetalle.Controls.Add(this.label3);
-            this.panelDetalle.Controls.Add(this.pictureBox9);
-            this.panelDetalle.Controls.Add(this.cbTipoDetalle);
-            this.panelDetalle.Controls.Add(this.label5);
-            this.panelDetalle.Controls.Add(this.pictureBox10);
-            this.panelDetalle.Controls.Add(this.pictureBox11);
-            this.panelDetalle.Controls.Add(this.label19);
-            this.panelDetalle.Controls.Add(this.cbMunicipios);
-            this.panelDetalle.Controls.Add(this.cbProvinciasDetalle);
+            this.panelDetalle.Controls.Add(this.tbMunicipio);
+            this.panelDetalle.Controls.Add(this.tbProvincia);
             this.panelDetalle.Controls.Add(this.label20);
-            this.panelDetalle.Controls.Add(this.label21);
+            this.panelDetalle.Controls.Add(this.tbContraseñaDetalle);
             this.panelDetalle.Controls.Add(this.label22);
+            this.panelDetalle.Controls.Add(this.pictureBox9);
+            this.panelDetalle.Controls.Add(this.btnRegresar);
             this.panelDetalle.Controls.Add(this.label23);
+            this.panelDetalle.Controls.Add(this.pictureBox10);
+            this.panelDetalle.Controls.Add(this.cbTipoDetalle);
             this.panelDetalle.Controls.Add(this.label24);
-            this.panelDetalle.Controls.Add(this.label25);
-            this.panelDetalle.Controls.Add(this.label26);
+            this.panelDetalle.Controls.Add(this.pictureBox11);
             this.panelDetalle.Controls.Add(this.pictureBox12);
+            this.panelDetalle.Controls.Add(this.label25);
+            this.panelDetalle.Controls.Add(this.label50);
+            this.panelDetalle.Controls.Add(this.label51);
             this.panelDetalle.Controls.Add(this.pictureBox13);
             this.panelDetalle.Controls.Add(this.pictureBox14);
-            this.panelDetalle.Controls.Add(this.label27);
-            this.panelDetalle.Controls.Add(this.label28);
-            this.panelDetalle.Controls.Add(this.label29);
             this.panelDetalle.Controls.Add(this.pictureBox15);
+            this.panelDetalle.Controls.Add(this.label52);
+            this.panelDetalle.Controls.Add(this.label53);
+            this.panelDetalle.Controls.Add(this.label54);
             this.panelDetalle.Controls.Add(this.pictureBox16);
+            this.panelDetalle.Controls.Add(this.pictureBox26);
             this.panelDetalle.Controls.Add(this.tbCorreoDetalle);
             this.panelDetalle.Controls.Add(this.tbTelefonoDetalle);
             this.panelDetalle.Controls.Add(this.tbDniDetalle);
             this.panelDetalle.Controls.Add(this.tbApellidosDetalle);
             this.panelDetalle.Controls.Add(this.tbNombreDetalle);
-            this.panelDetalle.Controls.Add(this.label30);
+            this.panelDetalle.Controls.Add(this.label55);
             this.panelDetalle.Location = new System.Drawing.Point(0, 55);
             this.panelDetalle.Name = "panelDetalle";
             this.panelDetalle.Size = new System.Drawing.Size(1127, 654);
             this.panelDetalle.TabIndex = 35;
             this.panelDetalle.Visible = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label3.Location = new System.Drawing.Point(748, 307);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 20);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Tipo ";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(759, 333);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(25, 26);
-            this.pictureBox9.TabIndex = 33;
-            this.pictureBox9.TabStop = false;
-            // 
-            // cbTipoDetalle
-            // 
-            this.cbTipoDetalle.BackColor = System.Drawing.Color.AliceBlue;
-            this.cbTipoDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTipoDetalle.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cbTipoDetalle.FormattingEnabled = true;
-            this.cbTipoDetalle.Location = new System.Drawing.Point(790, 333);
-            this.cbTipoDetalle.Name = "cbTipoDetalle";
-            this.cbTipoDetalle.Size = new System.Drawing.Size(134, 28);
-            this.cbTipoDetalle.TabIndex = 32;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label5.Location = new System.Drawing.Point(487, 307);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 20);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "Municipios";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(487, 335);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(29, 26);
-            this.pictureBox10.TabIndex = 30;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(194, 333);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(29, 26);
-            this.pictureBox11.TabIndex = 29;
-            this.pictureBox11.TabStop = false;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label19.Location = new System.Drawing.Point(190, 307);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(90, 20);
-            this.label19.TabIndex = 28;
-            this.label19.Text = "Provincias";
-            // 
-            // cbMunicipios
-            // 
-            this.cbMunicipios.BackColor = System.Drawing.Color.AliceBlue;
-            this.cbMunicipios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMunicipios.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cbMunicipios.FormattingEnabled = true;
-            this.cbMunicipios.Location = new System.Drawing.Point(529, 333);
-            this.cbMunicipios.Name = "cbMunicipios";
-            this.cbMunicipios.Size = new System.Drawing.Size(207, 28);
-            this.cbMunicipios.TabIndex = 27;
-            this.cbMunicipios.Text = "Selecciona una localidad";
-            // 
-            // cbProvinciasDetalle
-            // 
-            this.cbProvinciasDetalle.BackColor = System.Drawing.Color.AliceBlue;
-            this.cbProvinciasDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbProvinciasDetalle.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.cbProvinciasDetalle.FormattingEnabled = true;
-            this.cbProvinciasDetalle.Location = new System.Drawing.Point(229, 333);
-            this.cbProvinciasDetalle.Name = "cbProvinciasDetalle";
-            this.cbProvinciasDetalle.Size = new System.Drawing.Size(207, 28);
-            this.cbProvinciasDetalle.TabIndex = 26;
-            this.cbProvinciasDetalle.Text = "Selecciona una provincia";
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(727, 245);
+            this.label20.Enabled = false;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.label20.Location = new System.Drawing.Point(432, 458);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(85, 13);
-            this.label20.TabIndex = 23;
-            this.label20.Text = "Maximo 9 digitos";
+            this.label20.Size = new System.Drawing.Size(0, 22);
+            this.label20.TabIndex = 82;
             // 
-            // label21
+            // tbContraseñaDetalle
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(473, 245);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(85, 13);
-            this.label21.TabIndex = 22;
-            this.label21.Text = "Maximo 9 digitos";
+            this.tbContraseñaDetalle.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbContraseñaDetalle.Enabled = false;
+            this.tbContraseñaDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbContraseñaDetalle.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbContraseñaDetalle.Location = new System.Drawing.Point(883, 262);
+            this.tbContraseñaDetalle.MaxLength = 4;
+            this.tbContraseñaDetalle.Name = "tbContraseñaDetalle";
+            this.tbContraseñaDetalle.Size = new System.Drawing.Size(111, 26);
+            this.tbContraseñaDetalle.TabIndex = 81;
+            this.tbContraseñaDetalle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(226, 245);
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Enabled = false;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label22.Location = new System.Drawing.Point(844, 239);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(137, 13);
-            this.label22.TabIndex = 21;
-            this.label22.Text = "Maximo 8 digitos y una letra";
+            this.label22.Size = new System.Drawing.Size(102, 20);
+            this.label22.TabIndex = 79;
+            this.label22.Text = "Contraseña";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.Enabled = false;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(848, 262);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox9.TabIndex = 78;
+            this.pictureBox9.TabStop = false;
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.BackColor = System.Drawing.Color.Violet;
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnRegresar.Location = new System.Drawing.Point(463, 551);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(192, 35);
+            this.btnRegresar.TabIndex = 76;
+            this.btnRegresar.Text = "Volver";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(588, 134);
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Enabled = false;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label23.Location = new System.Drawing.Point(789, 356);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(132, 13);
-            this.label23.TabIndex = 20;
-            this.label23.Text = "Solo puede contener texto";
+            this.label23.Size = new System.Drawing.Size(48, 20);
+            this.label23.TabIndex = 75;
+            this.label23.Text = "Tipo ";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Enabled = false;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(793, 382);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox10.TabIndex = 74;
+            this.pictureBox10.TabStop = false;
+            // 
+            // cbTipoDetalle
+            // 
+            this.cbTipoDetalle.BackColor = System.Drawing.Color.AliceBlue;
+            this.cbTipoDetalle.Enabled = false;
+            this.cbTipoDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipoDetalle.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.cbTipoDetalle.FormattingEnabled = true;
+            this.cbTipoDetalle.Items.AddRange(new object[] {
+            "Particular",
+            "Autonomo"});
+            this.cbTipoDetalle.Location = new System.Drawing.Point(831, 382);
+            this.cbTipoDetalle.Name = "cbTipoDetalle";
+            this.cbTipoDetalle.Size = new System.Drawing.Size(163, 28);
+            this.cbTipoDetalle.TabIndex = 73;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(226, 134);
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Enabled = false;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label24.Location = new System.Drawing.Point(465, 354);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(132, 13);
-            this.label24.TabIndex = 19;
-            this.label24.Text = "Solo puede contener texto";
+            this.label24.Size = new System.Drawing.Size(93, 20);
+            this.label24.TabIndex = 72;
+            this.label24.Text = "Municipios";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Enabled = false;
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(465, 382);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox11.TabIndex = 71;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.Enabled = false;
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(137, 379);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox12.TabIndex = 70;
+            this.pictureBox12.TabStop = false;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Enabled = false;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label25.Location = new System.Drawing.Point(687, 193);
+            this.label25.Location = new System.Drawing.Point(133, 353);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(63, 20);
-            this.label25.TabIndex = 18;
-            this.label25.Text = "Correo";
+            this.label25.Size = new System.Drawing.Size(90, 20);
+            this.label25.TabIndex = 69;
+            this.label25.Text = "Provincias";
             // 
-            // label26
+            // label50
             // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label26.Location = new System.Drawing.Point(437, 193);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(79, 20);
-            this.label26.TabIndex = 17;
-            this.label26.Text = "Telefono";
+            this.label50.AutoSize = true;
+            this.label50.BackColor = System.Drawing.Color.Transparent;
+            this.label50.Enabled = false;
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label50.Location = new System.Drawing.Point(578, 239);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(68, 20);
+            this.label50.TabIndex = 61;
+            this.label50.Text = "Correo ";
             // 
-            // pictureBox12
+            // label51
             // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(691, 216);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(29, 26);
-            this.pictureBox12.TabIndex = 16;
-            this.pictureBox12.TabStop = false;
+            this.label51.AutoSize = true;
+            this.label51.BackColor = System.Drawing.Color.Transparent;
+            this.label51.Enabled = false;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label51.Location = new System.Drawing.Point(338, 239);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(79, 20);
+            this.label51.TabIndex = 60;
+            this.label51.Text = "Telefono";
             // 
             // pictureBox13
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.Enabled = false;
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(441, 216);
+            this.pictureBox13.Location = new System.Drawing.Point(582, 262);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(29, 26);
-            this.pictureBox13.TabIndex = 15;
+            this.pictureBox13.TabIndex = 59;
             this.pictureBox13.TabStop = false;
             // 
             // pictureBox14
             // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox14.Enabled = false;
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(192, 216);
+            this.pictureBox14.Location = new System.Drawing.Point(342, 262);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(29, 26);
-            this.pictureBox14.TabIndex = 14;
+            this.pictureBox14.TabIndex = 58;
             this.pictureBox14.TabStop = false;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label27.Location = new System.Drawing.Point(188, 193);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(36, 20);
-            this.label27.TabIndex = 13;
-            this.label27.Text = "Dni";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label28.Location = new System.Drawing.Point(541, 82);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(82, 20);
-            this.label28.TabIndex = 12;
-            this.label28.Text = "Apellidos";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label29.Location = new System.Drawing.Point(188, 82);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(71, 20);
-            this.label29.TabIndex = 11;
-            this.label29.Text = "Nombre";
             // 
             // pictureBox15
             // 
-            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox15.Enabled = false;
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(549, 105);
+            this.pictureBox15.Location = new System.Drawing.Point(135, 262);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(29, 26);
-            this.pictureBox15.TabIndex = 10;
+            this.pictureBox15.TabIndex = 57;
             this.pictureBox15.TabStop = false;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.BackColor = System.Drawing.Color.Transparent;
+            this.label52.Enabled = false;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label52.Location = new System.Drawing.Point(131, 239);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(36, 20);
+            this.label52.TabIndex = 56;
+            this.label52.Text = "Dni";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.BackColor = System.Drawing.Color.Transparent;
+            this.label53.Enabled = false;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label53.Location = new System.Drawing.Point(578, 128);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(82, 20);
+            this.label53.TabIndex = 55;
+            this.label53.Text = "Apellidos";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.BackColor = System.Drawing.Color.Transparent;
+            this.label54.Enabled = false;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label54.Location = new System.Drawing.Point(131, 128);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(71, 20);
+            this.label54.TabIndex = 54;
+            this.label54.Text = "Nombre";
             // 
             // pictureBox16
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox16.Enabled = false;
             this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(192, 105);
+            this.pictureBox16.Location = new System.Drawing.Point(584, 151);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(29, 26);
-            this.pictureBox16.TabIndex = 9;
+            this.pictureBox16.TabIndex = 53;
             this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox26
+            // 
+            this.pictureBox26.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox26.Enabled = false;
+            this.pictureBox26.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox26.Image")));
+            this.pictureBox26.Location = new System.Drawing.Point(135, 151);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox26.TabIndex = 52;
+            this.pictureBox26.TabStop = false;
             // 
             // tbCorreoDetalle
             // 
             this.tbCorreoDetalle.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbCorreoDetalle.Enabled = false;
             this.tbCorreoDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCorreoDetalle.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbCorreoDetalle.Location = new System.Drawing.Point(726, 216);
+            this.tbCorreoDetalle.Location = new System.Drawing.Point(617, 262);
             this.tbCorreoDetalle.Name = "tbCorreoDetalle";
             this.tbCorreoDetalle.Size = new System.Drawing.Size(198, 26);
-            this.tbCorreoDetalle.TabIndex = 6;
-            this.tbCorreoDetalle.Text = "Introduce el correo";
+            this.tbCorreoDetalle.TabIndex = 51;
             this.tbCorreoDetalle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbTelefonoDetalle
             // 
             this.tbTelefonoDetalle.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbTelefonoDetalle.Enabled = false;
             this.tbTelefonoDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTelefonoDetalle.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbTelefonoDetalle.Location = new System.Drawing.Point(476, 216);
+            this.tbTelefonoDetalle.Location = new System.Drawing.Point(377, 262);
             this.tbTelefonoDetalle.MaxLength = 9;
             this.tbTelefonoDetalle.Name = "tbTelefonoDetalle";
             this.tbTelefonoDetalle.Size = new System.Drawing.Size(168, 26);
-            this.tbTelefonoDetalle.TabIndex = 5;
-            this.tbTelefonoDetalle.Text = "Introduce el telefono";
+            this.tbTelefonoDetalle.TabIndex = 50;
             this.tbTelefonoDetalle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbDniDetalle
             // 
             this.tbDniDetalle.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbDniDetalle.Enabled = false;
             this.tbDniDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbDniDetalle.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbDniDetalle.Location = new System.Drawing.Point(229, 216);
+            this.tbDniDetalle.Location = new System.Drawing.Point(172, 262);
             this.tbDniDetalle.MaxLength = 9;
             this.tbDniDetalle.Name = "tbDniDetalle";
-            this.tbDniDetalle.Size = new System.Drawing.Size(168, 26);
-            this.tbDniDetalle.TabIndex = 3;
-            this.tbDniDetalle.Text = "Introdcue el dni";
+            this.tbDniDetalle.Size = new System.Drawing.Size(134, 26);
+            this.tbDniDetalle.TabIndex = 49;
             this.tbDniDetalle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbApellidosDetalle
             // 
             this.tbApellidosDetalle.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbApellidosDetalle.Enabled = false;
             this.tbApellidosDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbApellidosDetalle.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbApellidosDetalle.Location = new System.Drawing.Point(584, 105);
+            this.tbApellidosDetalle.Location = new System.Drawing.Point(621, 151);
             this.tbApellidosDetalle.Name = "tbApellidosDetalle";
-            this.tbApellidosDetalle.Size = new System.Drawing.Size(340, 26);
-            this.tbApellidosDetalle.TabIndex = 2;
-            this.tbApellidosDetalle.Text = "Introduce los apellidos";
+            this.tbApellidosDetalle.Size = new System.Drawing.Size(373, 26);
+            this.tbApellidosDetalle.TabIndex = 48;
             this.tbApellidosDetalle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbNombreDetalle
             // 
             this.tbNombreDetalle.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbNombreDetalle.Enabled = false;
             this.tbNombreDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombreDetalle.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbNombreDetalle.Location = new System.Drawing.Point(229, 105);
+            this.tbNombreDetalle.Location = new System.Drawing.Point(170, 150);
             this.tbNombreDetalle.Name = "tbNombreDetalle";
-            this.tbNombreDetalle.Size = new System.Drawing.Size(270, 26);
-            this.tbNombreDetalle.TabIndex = 1;
-            this.tbNombreDetalle.Text = "Introduce el nombre";
+            this.tbNombreDetalle.Size = new System.Drawing.Size(375, 26);
+            this.tbNombreDetalle.TabIndex = 47;
             this.tbNombreDetalle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label30
+            // label55
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.DimGray;
-            this.label30.Location = new System.Drawing.Point(481, 3);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(166, 29);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "Detalle cliente";
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.Color.DimGray;
+            this.label55.Location = new System.Drawing.Point(488, 28);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(166, 29);
+            this.label55.TabIndex = 46;
+            this.label55.Text = "Detalle cliente";
             // 
             // panelEditar
             // 
@@ -1582,68 +1685,41 @@
             this.label44.TabIndex = 0;
             this.label44.Text = "Editar cliente";
             // 
-            // label32
+            // tbProvincia
             // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label32.Location = new System.Drawing.Point(842, 226);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(102, 20);
-            this.label32.TabIndex = 39;
-            this.label32.Text = "Contraseña";
+            this.tbProvincia.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbProvincia.Enabled = false;
+            this.tbProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbProvincia.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbProvincia.Location = new System.Drawing.Point(172, 379);
+            this.tbProvincia.MaxLength = 9;
+            this.tbProvincia.Name = "tbProvincia";
+            this.tbProvincia.Size = new System.Drawing.Size(260, 26);
+            this.tbProvincia.TabIndex = 86;
+            this.tbProvincia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pictureBox25
+            // tbMunicipio
             // 
-            this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox25.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox25.Image")));
-            this.pictureBox25.Location = new System.Drawing.Point(846, 249);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(29, 26);
-            this.pictureBox25.TabIndex = 38;
-            this.pictureBox25.TabStop = false;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(843, 278);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(85, 13);
-            this.label45.TabIndex = 40;
-            this.label45.Text = "Maximo 4 digitos";
-            // 
-            // tbContraseñaCrear
-            // 
-            this.tbContraseñaCrear.BackColor = System.Drawing.Color.AliceBlue;
-            this.tbContraseñaCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbContraseñaCrear.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbContraseñaCrear.Location = new System.Drawing.Point(881, 249);
-            this.tbContraseñaCrear.MaxLength = 4;
-            this.tbContraseñaCrear.Name = "tbContraseñaCrear";
-            this.tbContraseñaCrear.Size = new System.Drawing.Size(111, 26);
-            this.tbContraseñaCrear.TabIndex = 41;
-            this.tbContraseñaCrear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lbMensajeCrear
-            // 
-            this.lbMensajeCrear.AutoSize = true;
-            this.lbMensajeCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMensajeCrear.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.lbMensajeCrear.Location = new System.Drawing.Point(430, 445);
-            this.lbMensajeCrear.Name = "lbMensajeCrear";
-            this.lbMensajeCrear.Size = new System.Drawing.Size(0, 22);
-            this.lbMensajeCrear.TabIndex = 42;
+            this.tbMunicipio.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbMunicipio.Enabled = false;
+            this.tbMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMunicipio.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbMunicipio.Location = new System.Drawing.Point(505, 379);
+            this.tbMunicipio.MaxLength = 9;
+            this.tbMunicipio.Name = "tbMunicipio";
+            this.tbMunicipio.Size = new System.Drawing.Size(260, 26);
+            this.tbMunicipio.TabIndex = 87;
+            this.tbMunicipio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // UC_CrudClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.Controls.Add(this.panelCrear);
             this.Controls.Add(this.panelDetalle);
+            this.Controls.Add(this.panelCrudClientes);
+            this.Controls.Add(this.panelCrear);
             this.Controls.Add(this.panelEditar);
-            this.Controls.Add(this.panelCrud);
             this.Controls.Add(this.panelFlSuperior);
             this.Controls.Add(this.lbNombreCliente);
             this.Name = "UC_CrudClientes";
@@ -1663,11 +1739,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrarBuscador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).EndInit();
-            this.panelCrud.ResumeLayout(false);
-            this.panelCrud.PerformLayout();
+            this.panelCrudClientes.ResumeLayout(false);
+            this.panelCrudClientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDetalle)).EndInit();
             this.panelCrear.ResumeLayout(false);
             this.panelCrear.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -1686,6 +1763,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.panelEditar.ResumeLayout(false);
             this.panelEditar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
@@ -1696,7 +1774,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1722,7 +1799,7 @@
         private System.Windows.Forms.PictureBox pbMostrarBuscador;
         private System.Windows.Forms.PictureBox pbInicio;
         private System.Windows.Forms.PictureBox pbExit;
-        private System.Windows.Forms.Panel panelCrud;
+        private System.Windows.Forms.Panel panelCrudClientes;
         private System.Windows.Forms.Panel panelCrear;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pbDetalle;
@@ -1787,36 +1864,6 @@
         private System.Windows.Forms.TextBox tbNombreEditar;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Panel panelDetalle;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.ComboBox cbTipoDetalle;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox cbMunicipios;
-        private System.Windows.Forms.ComboBox cbProvinciasDetalle;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.TextBox tbCorreoDetalle;
-        private System.Windows.Forms.TextBox tbTelefonoDetalle;
-        private System.Windows.Forms.TextBox tbDniDetalle;
-        private System.Windows.Forms.TextBox tbApellidosDetalle;
-        private System.Windows.Forms.TextBox tbNombreDetalle;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button btnCrearCliente;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label label32;
@@ -1824,5 +1871,38 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.TextBox tbContraseñaCrear;
         private System.Windows.Forms.Label lbMensajeCrear;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox tbContraseñaDetalle;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.ComboBox cbTipoDetalle;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.PictureBox pictureBox26;
+        private System.Windows.Forms.TextBox tbCorreoDetalle;
+        private System.Windows.Forms.TextBox tbTelefonoDetalle;
+        private System.Windows.Forms.TextBox tbDniDetalle;
+        private System.Windows.Forms.TextBox tbApellidosDetalle;
+        private System.Windows.Forms.TextBox tbNombreDetalle;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.TextBox tbMunicipio;
+        private System.Windows.Forms.TextBox tbProvincia;
     }
 }
