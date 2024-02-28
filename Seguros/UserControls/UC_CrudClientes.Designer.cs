@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudClientes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.pbEditar = new System.Windows.Forms.PictureBox();
             this.pbEliminar = new System.Windows.Forms.PictureBox();
@@ -243,8 +243,8 @@
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Location = new System.Drawing.Point(36, 18);
             this.dgvClientes.Name = "dgvClientes";
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClientes.Size = new System.Drawing.Size(1049, 291);
             this.dgvClientes.TabIndex = 8;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
@@ -262,8 +262,8 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(36, 361);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPolizas.Size = new System.Drawing.Size(1049, 217);
             this.dgvPolizas.TabIndex = 26;
             // 
@@ -437,7 +437,8 @@
             // 
             // panelCrear
             // 
-            this.panelCrear.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelCrear.BackColor = System.Drawing.Color.Transparent;
+            this.panelCrear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCrear.BackgroundImage")));
             this.panelCrear.Controls.Add(this.label18);
             this.panelCrear.Controls.Add(this.pictureBox8);
             this.panelCrear.Controls.Add(this.comboBox3);
@@ -468,9 +469,9 @@
             this.panelCrear.Controls.Add(this.textBox2);
             this.panelCrear.Controls.Add(this.textBox1);
             this.panelCrear.Controls.Add(this.label2);
-            this.panelCrear.Location = new System.Drawing.Point(0, 99);
+            this.panelCrear.Location = new System.Drawing.Point(0, 158);
             this.panelCrear.Name = "panelCrear";
-            this.panelCrear.Size = new System.Drawing.Size(1127, 614);
+            this.panelCrear.Size = new System.Drawing.Size(1127, 555);
             this.panelCrear.TabIndex = 32;
             this.panelCrear.Visible = false;
             // 
@@ -628,9 +629,9 @@
             this.label10.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label10.Location = new System.Drawing.Point(687, 193);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 20);
+            this.label10.Size = new System.Drawing.Size(68, 20);
             this.label10.TabIndex = 18;
-            this.label10.Text = "Telefono";
+            this.label10.Text = "Correo ";
             // 
             // label9
             // 
@@ -804,7 +805,8 @@
             // 
             // panelDetalle
             // 
-            this.panelDetalle.BackColor = System.Drawing.Color.Turquoise;
+            this.panelDetalle.BackColor = System.Drawing.Color.Transparent;
+            this.panelDetalle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelDetalle.BackgroundImage")));
             this.panelDetalle.Controls.Add(this.label3);
             this.panelDetalle.Controls.Add(this.pictureBox9);
             this.panelDetalle.Controls.Add(this.comboBox4);
@@ -835,9 +837,9 @@
             this.panelDetalle.Controls.Add(this.textBox9);
             this.panelDetalle.Controls.Add(this.textBox10);
             this.panelDetalle.Controls.Add(this.label30);
-            this.panelDetalle.Location = new System.Drawing.Point(0, 96);
+            this.panelDetalle.Location = new System.Drawing.Point(0, 158);
             this.panelDetalle.Name = "panelDetalle";
-            this.panelDetalle.Size = new System.Drawing.Size(1127, 613);
+            this.panelDetalle.Size = new System.Drawing.Size(1127, 551);
             this.panelDetalle.TabIndex = 35;
             this.panelDetalle.Visible = false;
             // 
@@ -1171,7 +1173,8 @@
             // 
             // panelEditar
             // 
-            this.panelEditar.BackColor = System.Drawing.Color.Wheat;
+            this.panelEditar.BackColor = System.Drawing.Color.Transparent;
+            this.panelEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelEditar.BackgroundImage")));
             this.panelEditar.Controls.Add(this.label31);
             this.panelEditar.Controls.Add(this.pictureBox17);
             this.panelEditar.Controls.Add(this.comboBox7);
@@ -1202,9 +1205,9 @@
             this.panelEditar.Controls.Add(this.textBox14);
             this.panelEditar.Controls.Add(this.textBox15);
             this.panelEditar.Controls.Add(this.label44);
-            this.panelEditar.Location = new System.Drawing.Point(3, 96);
+            this.panelEditar.Location = new System.Drawing.Point(0, 158);
             this.panelEditar.Name = "panelEditar";
-            this.panelEditar.Size = new System.Drawing.Size(1127, 614);
+            this.panelEditar.Size = new System.Drawing.Size(1130, 552);
             this.panelEditar.TabIndex = 36;
             this.panelEditar.Visible = false;
             // 
@@ -1362,9 +1365,9 @@
             this.label39.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label39.Location = new System.Drawing.Point(687, 193);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(79, 20);
+            this.label39.Size = new System.Drawing.Size(63, 20);
             this.label39.TabIndex = 18;
-            this.label39.Text = "Telefono";
+            this.label39.Text = "Correo";
             // 
             // label40
             // 
@@ -1542,8 +1545,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.Controls.Add(this.panelEditar);
-            this.Controls.Add(this.panelDetalle);
             this.Controls.Add(this.panelCrear);
+            this.Controls.Add(this.panelDetalle);
             this.Controls.Add(this.panelCrud);
             this.Controls.Add(this.panelFlSuperior);
             this.Controls.Add(this.lbNombreCliente);
