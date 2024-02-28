@@ -158,6 +158,51 @@ namespace Seguros.Models
 
         }
 
+        // Actualiza datos del cliente
+        public static int editarCliente(Cliente cliente)
+        {
+            // Creo la conexion con la base de datos.
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+
+            // Consulta sql
+            // Consulta SQL para realizar un UPDATE en lugar de un INSERT
+            string sql = "UPDATE clientes SET nombre = @nombre, apellidos = @apellidos, dni = @dni, telefono = @telefono, " +
+                         "correo = @correo, contraseña = @contraseña, provincia = @provincia, municipio = @municipio, tipo = @tipo " +
+                         "WHERE idCliente = @idCliente"; // Ajusta la condición WHERE según la estructura de tu tabla y el nombre de la columna que identifica al cliente (id en este caso)
+
+            // Preparo la consulta
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            // Le paso el pago
+            comando.Parameters.AddWithValue("@nombre", cliente.Nombre);
+            comando.Parameters.AddWithValue("@apellidos", cliente.Apellidos);
+            comando.Parameters.AddWithValue("@dni", cliente.Dni);
+            comando.Parameters.AddWithValue("@telefono", cliente.Telefono);
+            comando.Parameters.AddWithValue("@correo", cliente.Correo);
+            comando.Parameters.AddWithValue("@contraseña", cliente.Contraseña);
+            comando.Parameters.AddWithValue("@provincia", cliente.IdProvincia);
+            comando.Parameters.AddWithValue("@municipio", cliente.IdMuncipio);
+            comando.Parameters.AddWithValue("@tipo", cliente.Tipo);
+            comando.Parameters.AddWithValue("@idCliente", cliente.IdCliente);
+
+            int creado;
+
+            try
+            {
+                // Return value is the number of rows affected by the SQL statement.
+                creado = comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                creado = 0;
+                MessageBox.Show(ex.Message);
+            }
+
+            return creado;
+
+        }
+
         // Filtra la busqueda de los jugadores que coincidan por nombre.
         public static DataTable buscar(string tabla, string texto)
         {
@@ -387,8 +432,6 @@ namespace Seguros.Models
             return table;
         }
 
-
-
         // Obtengo los muncipios de una provia.
         public static DataTable getMunicipiosPorProvincia(int idProvincia)
         {
@@ -396,7 +439,7 @@ namespace Seguros.Models
             // la abro.
             conexion.Open();
             // Consulta sql
-            string sql = "SELECT * FROM municipios WHERE provincia =  " + idProvincia;
+            string sql = "SELECT * FROM municipios WHERE provincia = " + idProvincia;
 
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conexion);
             DataTable table = new DataTable();
@@ -424,7 +467,7 @@ namespace Seguros.Models
             conexion.Open();
             // Consulta SQL para obtener el nombre de la provincia
             string sql = "SELECT provincia FROM provincias WHERE id = @idProvincia";
-          
+
             MySqlCommand comando = new MySqlCommand(sql, conexion);
             comando.Parameters.AddWithValue("@idProvincia", idProvincia);
 
@@ -446,7 +489,7 @@ namespace Seguros.Models
             conexion.Open();
             // Consulta SQL 
             string sql = "SELECT municipio FROM municipios WHERE id = @idMunicipio";
-            
+
             MySqlCommand comando = new MySqlCommand(sql, conexion);
             comando.Parameters.AddWithValue("@idMunicipio", idMunicipio);
 

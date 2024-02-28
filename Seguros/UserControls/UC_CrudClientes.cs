@@ -61,7 +61,7 @@ namespace Seguros.UserControls
                 string tipo = filaCliente.Cells["tipo"].Value.ToString();
 
                 // Instancio e inicializo un nuevo objeto de tipo Cliente
-                cliente = new Cliente(nombre, apellidos, dni, telefono, correo, contraseña, idProvincia, idMunicipio, tipo);
+                cliente = new Cliente( idCliente ,nombre, apellidos, dni, telefono, correo, contraseña, idProvincia, idMunicipio, tipo);
 
                 // Muestro botones de accion del crud clientes.
                 mostrarBotonesAccion();
@@ -93,7 +93,6 @@ namespace Seguros.UserControls
 
         }
 
-
         // Muestra formulario para crear un nuevo cliente.
         private void pbMostrarPanelCrear_Click(object sender, EventArgs e)
         {
@@ -102,10 +101,8 @@ namespace Seguros.UserControls
             panelEditar.Visible = false;
             panelDetalle.Visible = false;
 
-            // Obtengo las provincias y las cargo en el combobox
-            cbProvinciasCrear.DisplayMember = "provincia";
-            cbProvinciasCrear.ValueMember = "id";
-            cbProvinciasCrear.DataSource = AdminModel.getProvincias();
+            // Añado las provincias al select
+            cargarProvincias(cbProvinciasCrear);
 
             // Muestro el pandel con el formulario
             panelCrear.Visible = true;
@@ -148,18 +145,31 @@ namespace Seguros.UserControls
             panelCrear.Visible = false;
             panelDetalle.Visible = false;
 
+            // Cargo el formulario con los datos del cliente
+            tbNombreEditar.Text = cliente.Nombre;
+            tbApellidosEditar.Text = cliente.Apellidos;
+            tbDniEditar.Text = cliente.Dni;
+            tbTelefonoEditar.Text = cliente.Telefono;
+            tbCorreoEditar.Text = cliente.Correo;
+            tbContraseñaEditar.Text = cliente.Contraseña;
+            cbTipoEditar.Text = cliente.Tipo;
 
-            tbNombreEditar.Text = "Serena";
-            tbApellidosEditar.Text = "Agina";
-            tbTelefonoEditar.Text = "555665544";
-            tbDniEditar.Text = "7856677T";
-            tbCorreoEditar.Text = "serena@hotmail.com";
+            // Recupero ids de provincia y municipio
+            int idProvincia = cliente.IdProvincia;
+            int idMunicipio = cliente.IdMuncipio;
 
+            Console.WriteLine("idProvincia: " + idProvincia + " municipio: " + idMunicipio);
 
+            // Añado las provincias al compbo que esta en el panel editar cliente.
+            cargarProvincias(cbProvinciasEditar);
+            cargarMunicipios(idProvincia, cbMunicipiosEditar);
+          
 
+            // Selecciono por defecto la provincia del cliente
+           // cbProvinciasEditar.SelectedIndex = idProvincia - 1;
+
+            // Muestro panel que contiene el formulario
             panelEditar.Visible = true;
-
-
 
             Console.WriteLine("Muestro panel para Editar cliente");
         }
@@ -297,23 +307,76 @@ namespace Seguros.UserControls
         private void cbProvinciasCrear_SelectedIndexChanged(object sender, EventArgs e)
         {
             int idProvincia = Convert.ToInt32(cbProvinciasCrear.SelectedValue);
-            CargarMunicipios(idProvincia, cbMunicipiosCrear);
+            cargarMunicipios(idProvincia, cbMunicipiosCrear);
         }
 
         // Carga las provincias en el combbox que le indiquemos
-        private void CargarMunicipios(int idProvincia, ComboBox cbMunicipios)
+        private void cargarMunicipios(int idProvincia, ComboBox cbMunicipios)
         {
-            // Obtener los municipios correspondientes al ID de la provincia seleccionada
-            DataTable municipios = AdminModel.getMunicipiosPorProvincia(idProvincia);
+            DataTable tablaMunicipios = AdminModel.getMunicipiosPorProvincia(idProvincia);
 
-            // Asignar los municipios al ComboBox cbMunicipios
-            cbMunicipios.DataSource = municipios;
+            // Recorre cada fila en el DataTable
+            foreach (DataRow row in tablaMunicipios.Rows)
+            {
+                // Accede a cada columna de la fila actual por su nombre o índice
+                // Por ejemplo, para acceder al nombre del municipio (columna "nombre"):
+                string nombreMunicipio = row["municipio"].ToString(); // Ajusta el nombre de la columna según la estructura de tu tabla
+                                                                   // Para acceder al ID del municipio (columna "id"):
+                int idMunicipio = Convert.ToInt32(row["id"]); // Ajusta el nombre de la columna según la estructura de tu tabla
+
+                // Aquí puedes hacer lo que necesites con los datos de cada municipio
+                // Por ejemplo, imprimirlos en la consola o mostrarlos en un MessageBox
+                Console.WriteLine("Nombre: " + nombreMunicipio + ", ID: " + idMunicipio);
+            }
+
+
+            // Asignar los municipios al ComboBox cbMunicipios   
             cbMunicipios.DisplayMember = "municipio"; // Suponiendo que el nombre de los municipios está en una columna llamada "nombre"
             cbMunicipios.ValueMember = "id"; // Suponiendo que el ID de los municipios está en una columna llamada "id"
+            cbMunicipios.DataSource = tablaMunicipios;
         }
 
+        // Carga las provincias en el combbox que le indiquemos
+        private void cargarProvincias(ComboBox cbProvincias)
+        {
+            // Obtengo las provincias y las cargo en el combobox
+            cbProvincias.DisplayMember = "provincia";
+            cbProvincias.ValueMember = "id";
+            cbProvincias.DataSource = AdminModel.getProvincias();
+        }
+
+        // Editar datos del cliente
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            // Obtengo datos formulario
+            int idCliente = cliente.IdCliente;
+            string nombre = tbNombreEditar.Text;
+            string apellidos = tbApellidosEditar.Text;
+            string dni = tbDniEditar.Text;
+            string telefono = tbTelefonoEditar.Text;
+            string correo = tbCorreoEditar.Text;
+            string contraseña = tbContraseñaEditar.Text;
+            int idProvincia = int.Parse(cbProvinciasEditar.SelectedValue.ToString());
+            int idMunicipio = int.Parse(cbMunicipiosEditar.SelectedValue.ToString());
+            string tipo = cbTipoEditar.Text;
+
+            // Instancio e inicializo un nuevo objeto de tipo Cliente
+            Cliente nuevoCliente = new Cliente(idCliente, nombre, apellidos, dni, telefono, correo, contraseña, idProvincia, idMunicipio, tipo);
+
+            // Actualizo datos base datos del cliente
+            if ( AdminModel.editarCliente( nuevoCliente ) == 1 )
+            {
+                lbMensajeEditar.Text = "Acabas de actualizar datos cliente";
+            }
 
 
+        }
+
+        private void cbProvinciasEditar_SelectedIndexChanged(object sender, EventArgs e)
+        {   // Obtengo el indice de la provincia
+            int idProvincia = Convert.ToInt32(cbProvinciasEditar.SelectedValue);
+            cargarMunicipios(idProvincia, cbMunicipiosEditar);
+        }
     }
 
 
