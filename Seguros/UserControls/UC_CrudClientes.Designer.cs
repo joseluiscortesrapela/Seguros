@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudClientes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.pbEditar = new System.Windows.Forms.PictureBox();
             this.pbEliminar = new System.Windows.Forms.PictureBox();
@@ -50,6 +50,14 @@
             this.pbBuscador = new System.Windows.Forms.PictureBox();
             this.pbMostrarBuscador = new System.Windows.Forms.PictureBox();
             this.pbInicio = new System.Windows.Forms.PictureBox();
+            this.panelCrud = new System.Windows.Forms.Panel();
+            this.panelDetalle = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panelEditar = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panelCrear = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pbDetalle = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCrear)).BeginInit();
@@ -64,13 +72,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrarBuscador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
+            this.panelCrud.SuspendLayout();
+            this.panelDetalle.SuspendLayout();
+            this.panelEditar.SuspendLayout();
+            this.panelCrear.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDetalle)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 122);
+            this.label1.Location = new System.Drawing.Point(33, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 12;
@@ -79,31 +92,29 @@
             // pbEditar
             // 
             this.pbEditar.Image = ((System.Drawing.Image)(resources.GetObject("pbEditar.Image")));
-            this.pbEditar.Location = new System.Drawing.Point(1089, 183);
+            this.pbEditar.Location = new System.Drawing.Point(1090, 100);
             this.pbEditar.Name = "pbEditar";
             this.pbEditar.Size = new System.Drawing.Size(34, 38);
             this.pbEditar.TabIndex = 11;
             this.pbEditar.TabStop = false;
-            this.pbEditar.Visible = false;
             this.pbEditar.Click += new System.EventHandler(this.pbEditar_Click);
             // 
             // pbEliminar
             // 
             this.pbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("pbEliminar.Image")));
-            this.pbEliminar.Location = new System.Drawing.Point(1089, 227);
+            this.pbEliminar.Location = new System.Drawing.Point(1090, 144);
             this.pbEliminar.Name = "pbEliminar";
             this.pbEliminar.Size = new System.Drawing.Size(34, 36);
             this.pbEliminar.TabIndex = 10;
             this.pbEliminar.TabStop = false;
-            this.pbEliminar.Visible = false;
             this.pbEliminar.Click += new System.EventHandler(this.pbEliminar_Click);
             // 
             // pbCrear
             // 
             this.pbCrear.Image = ((System.Drawing.Image)(resources.GetObject("pbCrear.Image")));
-            this.pbCrear.Location = new System.Drawing.Point(1088, 142);
+            this.pbCrear.Location = new System.Drawing.Point(1090, 18);
             this.pbCrear.Name = "pbCrear";
-            this.pbCrear.Size = new System.Drawing.Size(35, 35);
+            this.pbCrear.Size = new System.Drawing.Size(34, 35);
             this.pbCrear.TabIndex = 9;
             this.pbCrear.TabStop = false;
             this.pbCrear.Click += new System.EventHandler(this.pbCrear_Click);
@@ -119,11 +130,11 @@
             this.dgvClientes.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(36, 142);
+            this.dgvClientes.Location = new System.Drawing.Point(36, 18);
             this.dgvClientes.Name = "dgvClientes";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvClientes.Size = new System.Drawing.Size(1047, 295);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvClientes.Size = new System.Drawing.Size(1049, 291);
             this.dgvClientes.TabIndex = 8;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
@@ -138,18 +149,18 @@
             this.dgvPolizas.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvPolizas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPolizas.Location = new System.Drawing.Point(36, 489);
+            this.dgvPolizas.Location = new System.Drawing.Point(36, 361);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvPolizas.Size = new System.Drawing.Size(1047, 217);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPolizas.Size = new System.Drawing.Size(1049, 217);
             this.dgvPolizas.TabIndex = 26;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(450, 122);
+            this.label4.Location = new System.Drawing.Point(431, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 17);
             this.label4.TabIndex = 29;
@@ -158,9 +169,9 @@
             // pbOn
             // 
             this.pbOn.Image = ((System.Drawing.Image)(resources.GetObject("pbOn.Image")));
-            this.pbOn.Location = new System.Drawing.Point(637, 116);
+            this.pbOn.Location = new System.Drawing.Point(617, -10);
             this.pbOn.Name = "pbOn";
-            this.pbOn.Size = new System.Drawing.Size(48, 23);
+            this.pbOn.Size = new System.Drawing.Size(70, 27);
             this.pbOn.TabIndex = 27;
             this.pbOn.TabStop = false;
             this.pbOn.Click += new System.EventHandler(this.pbMostrarPolizasCliente_Click);
@@ -168,7 +179,7 @@
             // pbOff
             // 
             this.pbOff.Image = ((System.Drawing.Image)(resources.GetObject("pbOff.Image")));
-            this.pbOff.Location = new System.Drawing.Point(637, 116);
+            this.pbOff.Location = new System.Drawing.Point(617, -10);
             this.pbOff.Name = "pbOff";
             this.pbOff.Size = new System.Drawing.Size(39, 23);
             this.pbOff.TabIndex = 28;
@@ -189,7 +200,7 @@
             this.lbMensajeEstado.AutoSize = true;
             this.lbMensajeEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMensajeEstado.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbMensajeEstado.Location = new System.Drawing.Point(410, 443);
+            this.lbMensajeEstado.Location = new System.Drawing.Point(412, 315);
             this.lbMensajeEstado.Name = "lbMensajeEstado";
             this.lbMensajeEstado.Size = new System.Drawing.Size(260, 17);
             this.lbMensajeEstado.TabIndex = 31;
@@ -226,6 +237,7 @@
             this.pbExit.Size = new System.Drawing.Size(21, 21);
             this.pbExit.TabIndex = 7;
             this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click);
             // 
             // panelBuscador
             // 
@@ -283,23 +295,106 @@
             this.pbInicio.TabIndex = 1;
             this.pbInicio.TabStop = false;
             // 
+            // panelCrud
+            // 
+            this.panelCrud.BackColor = System.Drawing.Color.Snow;
+            this.panelCrud.Controls.Add(this.dgvClientes);
+            this.panelCrud.Controls.Add(this.pbCrear);
+            this.panelCrud.Controls.Add(this.lbMensajeEstado);
+            this.panelCrud.Controls.Add(this.pbOn);
+            this.panelCrud.Controls.Add(this.pbEliminar);
+            this.panelCrud.Controls.Add(this.pbEditar);
+            this.panelCrud.Controls.Add(this.label4);
+            this.panelCrud.Controls.Add(this.label1);
+            this.panelCrud.Controls.Add(this.dgvPolizas);
+            this.panelCrud.Controls.Add(this.pbOff);
+            this.panelCrud.Controls.Add(this.pbDetalle);
+            this.panelCrud.Location = new System.Drawing.Point(0, 99);
+            this.panelCrud.Name = "panelCrud";
+            this.panelCrud.Size = new System.Drawing.Size(1127, 611);
+            this.panelCrud.TabIndex = 33;
+            // 
+            // panelDetalle
+            // 
+            this.panelDetalle.BackColor = System.Drawing.Color.SlateGray;
+            this.panelDetalle.Controls.Add(this.label5);
+            this.panelDetalle.Location = new System.Drawing.Point(0, 81);
+            this.panelDetalle.Name = "panelDetalle";
+            this.panelDetalle.Size = new System.Drawing.Size(1127, 516);
+            this.panelDetalle.TabIndex = 33;
+            this.panelDetalle.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(457, 4);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(127, 24);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Detalle cliente";
+            // 
+            // panelEditar
+            // 
+            this.panelEditar.BackColor = System.Drawing.Color.SlateBlue;
+            this.panelEditar.Controls.Add(this.label3);
+            this.panelEditar.Location = new System.Drawing.Point(0, 84);
+            this.panelEditar.Name = "panelEditar";
+            this.panelEditar.Size = new System.Drawing.Size(1127, 534);
+            this.panelEditar.TabIndex = 34;
+            this.panelEditar.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(457, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 24);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Editar cliente";
+            // 
+            // panelCrear
+            // 
+            this.panelCrear.BackColor = System.Drawing.Color.SpringGreen;
+            this.panelCrear.Controls.Add(this.label2);
+            this.panelCrear.Location = new System.Drawing.Point(0, 81);
+            this.panelCrear.Name = "panelCrear";
+            this.panelCrear.Size = new System.Drawing.Size(1127, 537);
+            this.panelCrear.TabIndex = 32;
+            this.panelCrear.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(479, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Crear cliente";
+            // 
+            // pbDetalle
+            // 
+            this.pbDetalle.Image = ((System.Drawing.Image)(resources.GetObject("pbDetalle.Image")));
+            this.pbDetalle.Location = new System.Drawing.Point(1090, 59);
+            this.pbDetalle.Name = "pbDetalle";
+            this.pbDetalle.Size = new System.Drawing.Size(34, 35);
+            this.pbDetalle.TabIndex = 35;
+            this.pbDetalle.TabStop = false;
+            this.pbDetalle.Click += new System.EventHandler(this.pbDetalle_Click);
+            // 
             // UC_CrudClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
+            this.Controls.Add(this.panelCrear);
+            this.Controls.Add(this.panelEditar);
+            this.Controls.Add(this.panelCrud);
+            this.Controls.Add(this.panelDetalle);
             this.Controls.Add(this.panelFlSuperior);
-            this.Controls.Add(this.lbMensajeEstado);
             this.Controls.Add(this.lbNombreCliente);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.pbOn);
-            this.Controls.Add(this.pbOff);
-            this.Controls.Add(this.dgvPolizas);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pbEditar);
-            this.Controls.Add(this.pbEliminar);
-            this.Controls.Add(this.pbCrear);
-            this.Controls.Add(this.dgvClientes);
             this.Name = "UC_CrudClientes";
             this.Size = new System.Drawing.Size(1127, 713);
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).EndInit();
@@ -317,6 +412,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbBuscador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrarBuscador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).EndInit();
+            this.panelCrud.ResumeLayout(false);
+            this.panelCrud.PerformLayout();
+            this.panelDetalle.ResumeLayout(false);
+            this.panelDetalle.PerformLayout();
+            this.panelEditar.ResumeLayout(false);
+            this.panelEditar.PerformLayout();
+            this.panelCrear.ResumeLayout(false);
+            this.panelCrear.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDetalle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,5 +446,13 @@
         private System.Windows.Forms.PictureBox pbMostrarBuscador;
         private System.Windows.Forms.PictureBox pbInicio;
         private System.Windows.Forms.PictureBox pbExit;
+        private System.Windows.Forms.Panel panelCrud;
+        private System.Windows.Forms.Panel panelCrear;
+        private System.Windows.Forms.Panel panelDetalle;
+        private System.Windows.Forms.Panel panelEditar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pbDetalle;
     }
 }

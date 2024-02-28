@@ -1,14 +1,7 @@
-﻿using Seguros.Forms;
-using Seguros.Helper;
+﻿using Seguros.Helper;
 using Seguros.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Seguros.UserControls
@@ -23,7 +16,7 @@ namespace Seguros.UserControls
         {
             InitializeComponent();
             // Obtengo todos los clientes  y los guardo en el dgv
-            dgvClientes.DataSource = AdminModel.getClientes();        
+            dgvClientes.DataSource = AdminModel.getClientes();
         }
 
         // Constructor que recibe el id del agente
@@ -78,22 +71,41 @@ namespace Seguros.UserControls
         }
 
 
+        // Muestra formulario para crear un nuevo cliente.
         private void pbCrear_Click(object sender, EventArgs e)
         {
+            panelCrud.Visible = false;
+
+            panelEditar.Visible = false;
+            panelDetalle.Visible = false;
+            panelCrear.Visible = true;
             Console.WriteLine("Crear cliente");
         }
 
+        // Muestra formulario con los datos del cliente
+        private void pbDetalle_Click(object sender, EventArgs e)
+        {
+            panelCrud.Visible = false;
+            panelCrear.Visible = false;
+            panelEditar.Visible = false;
+            panelDetalle.Visible = true;
+        }
+
+        // Muestra formulario para editar cliente
         private void pbEditar_Click(object sender, EventArgs e)
         {
+            panelCrud.Visible = false;  
+            panelCrear.Visible = false;
+            panelDetalle.Visible = false;
+            panelEditar.Visible = true;
             Console.WriteLine("Editar cliente");
         }
 
+        // Muestra ventan emergente para eliminar cliente
         private void pbEliminar_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Eliminar cliente");
         }
-
-
 
         private void limpiarDgvPolizas()
         {
@@ -158,6 +170,14 @@ namespace Seguros.UserControls
         {
             tbBuscar.Text = "";
         }
+
+        private void pbExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+     
     }
 
 
