@@ -96,7 +96,7 @@ namespace Seguros.Forms
 
 
         // Método para mostrar un UserControl en el panel contenedor
-        private void mostrarUserControl(UserControl userControl)
+        private  void mostrarUserControl(UserControl userControl)
         {
             // Limpiar el panel contenedor antes de agregar un nuevo control
             panelContenedor.Controls.Clear();

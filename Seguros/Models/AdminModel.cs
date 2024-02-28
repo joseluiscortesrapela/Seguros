@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using Seguros.Conexion;
+using Seguros.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -114,6 +115,47 @@ namespace Seguros.Models
 
 
             return table;
+        }
+
+        // Registra un nuevo usuario
+        public static int registrarCliente(Cliente cliente)
+        {
+            // Creo la conexion con la base de datos.
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+
+            // Consulta sql
+            string sql = "INSERT INTO clientes ( nombre, apellidos, dni, telefono, correo, contraseña, provincia, municipio, tipo ) " +
+                                      "VALUES ( @nombre, @apellidos, @dni, @telefono, @correo, @contraseña, @provincia, @municipio, @tipo )";
+            // Preparo la consulta
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            // Le paso el pago
+            comando.Parameters.AddWithValue("@nombre", cliente.Nombre);
+            comando.Parameters.AddWithValue("@apellidos", cliente.Apellidos);
+            comando.Parameters.AddWithValue("@dni", cliente.Dni);
+            comando.Parameters.AddWithValue("@telefono", cliente.Telefono);
+            comando.Parameters.AddWithValue("@correo", cliente.Correo);
+            comando.Parameters.AddWithValue("@contraseña", cliente.Contraseña);
+            comando.Parameters.AddWithValue("@provincia", cliente.IdProvincia);
+            comando.Parameters.AddWithValue("@municipio", cliente.IdMuncipio);
+            comando.Parameters.AddWithValue("@tipo", cliente.Tipo);
+
+            int creado;
+
+            try
+            {
+                // Return value is the number of rows affected by the SQL statement.
+                creado = comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                creado = 0;
+                MessageBox.Show(ex.Message);
+            }
+
+            return creado;
+
         }
 
         // Filtra la busqueda de los jugadores que coincidan por nombre.
@@ -319,5 +361,57 @@ namespace Seguros.Models
 
         }
 
+        // Obtengo todos las provincias
+        public static DataTable getProvincias()
+        {
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+            // Consulta sql
+            string sql = "SELECT * FROM provincias";
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conexion);
+            DataTable table = new DataTable();
+
+            try
+            {
+                adapter.Fill(table);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+            return table;
+        }
+
+        // Obtengo los muncipios de una provia.
+        public static DataTable getMunicipiosPorProvincia(int idProvincia)
+        {
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+            // Consulta sql
+            string sql = "SELECT * FROM municipios WHERE provincia =  " + idProvincia;
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conexion);
+            DataTable table = new DataTable();
+
+            try
+            {
+                adapter.Fill(table);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+            return table;
+
+        }
     }
 }
