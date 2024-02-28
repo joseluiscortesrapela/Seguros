@@ -12,7 +12,7 @@ namespace Seguros.UserControls
         private DataGridViewRow filaCliente;
         private Cliente cliente;
         private bool estado;
-        
+
 
         // Contruc por por defecto,
         public UC_CrudClientes()
@@ -62,7 +62,7 @@ namespace Seguros.UserControls
 
                 // Instancio e inicializo un nuevo objeto de tipo Cliente
                 cliente = new Cliente(nombre, apellidos, dni, telefono, correo, contraseña, idProvincia, idMunicipio, tipo);
-               
+
                 // Muestro botones de accion del crud clientes.
                 mostrarBotonesAccion();
 
@@ -125,14 +125,14 @@ namespace Seguros.UserControls
             tbNombreDetalle.Text = cliente.Nombre;
             tbApellidosDetalle.Text = cliente.Apellidos;
             tbDniDetalle.Text = cliente.Dni;
-            tbTelefonoDetalle.Text = cliente.Telefono; 
+            tbTelefonoDetalle.Text = cliente.Telefono;
             tbCorreoDetalle.Text = cliente.Correo;
             tbContraseñaDetalle.Text = cliente.Contraseña;
             cbTipoDetalle.Text = cliente.Tipo;
             // Obtengo de la base de datos el nombre de la provincia y lo guardo en el campo de texto
-            tbProvincia.Text = AdminModel.getNombresProvincia( cliente.IdProvincia );
+            tbProvincia.Text = AdminModel.getNombresProvincia(cliente.IdProvincia);
             // Obtengo de la base de datos el nombre del municipio y lo guardo en el campo de texto
-            tbMunicipio.Text = AdminModel.getNombresMunicipio(cliente.IdMuncipio );
+            tbMunicipio.Text = AdminModel.getNombresMunicipio(cliente.IdMuncipio);
 
             // Muestro el panel que contiene el formulario
             panelDetalle.Visible = true;
@@ -280,9 +280,9 @@ namespace Seguros.UserControls
 
             // Instancio e inicializo un nuevo objeto de tipo Cliente
             Cliente cliente = new Cliente(nombre, apellidos, dni, telefono, correo, contraseña, idProvincia, idMunicipio, tipo);
-            
+
             // Si consigie guardar al cliente en la base de datos
-            if( AdminModel.registrarCliente(cliente) == 1 )
+            if (AdminModel.registrarCliente(cliente) == 1)
             {   // Muestro mensaje
                 lbMensajeCrear.Text = "Acabas de crear un nuevo cliente";
             }
