@@ -203,6 +203,15 @@ namespace Seguros.Models
 
         }
 
+        // Elimina un jugador y todas sus partidas
+        public static void eliminarCliente(int idCliente)
+        {
+            
+
+             
+        }
+
+
         // Filtra la busqueda de los jugadores que coincidan por nombre.
         public static DataTable buscar(string tabla, string texto)
         {

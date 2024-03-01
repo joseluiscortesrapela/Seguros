@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudClientes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.pbEditar = new System.Windows.Forms.PictureBox();
             this.pbEliminar = new System.Windows.Forms.PictureBox();
@@ -269,8 +269,8 @@
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Location = new System.Drawing.Point(36, 18);
             this.dgvClientes.Name = "dgvClientes";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvClientes.Size = new System.Drawing.Size(1049, 291);
             this.dgvClientes.TabIndex = 8;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
@@ -288,8 +288,8 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(36, 361);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPolizas.Size = new System.Drawing.Size(1049, 217);
             this.dgvPolizas.TabIndex = 26;
             // 
@@ -1859,7 +1859,7 @@
             this.lbMensajeEditar.AutoSize = true;
             this.lbMensajeEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMensajeEditar.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.lbMensajeEditar.Location = new System.Drawing.Point(457, 472);
+            this.lbMensajeEditar.Location = new System.Drawing.Point(422, 470);
             this.lbMensajeEditar.Name = "lbMensajeEditar";
             this.lbMensajeEditar.Size = new System.Drawing.Size(0, 22);
             this.lbMensajeEditar.TabIndex = 85;
@@ -1869,10 +1869,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
+            this.Controls.Add(this.panelCrudClientes);
             this.Controls.Add(this.panelEditar);
             this.Controls.Add(this.panelCrear);
             this.Controls.Add(this.panelDetalle);
-            this.Controls.Add(this.panelCrudClientes);
             this.Controls.Add(this.panelFlSuperior);
             this.Controls.Add(this.lbNombreCliente);
             this.Name = "UC_CrudClientes";

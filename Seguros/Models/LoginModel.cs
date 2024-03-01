@@ -44,7 +44,7 @@ namespace Seguros.Models
             MySqlDataReader reader = comando.ExecuteReader();
             // Si el numero de filas es false, no se ha encontrado el usuario.
             bool existe = reader.HasRows;
-        
+
             // Si existe el usuario
             if (existe)
             {
@@ -57,18 +57,18 @@ namespace Seguros.Models
         }
 
         // Compruebo si existe el usuario
-        public bool isUserExist(string jugador)
+        public bool isUserExist(string correo)
         {
             // Creo la conexion con la base de datos.
             MySqlConnection conexion = ConexionBaseDatos.getConexion();
             // la abro.
             conexion.Open();
             // Consulta sql
-            string sql = "SELECT * FROM jugadores WHERE jugador = @jugador";
+            string sql = "SELECT * FROM clientes WHERE correo = @correo";
             // Preparo la consulta
             MySqlCommand comando = new MySqlCommand(sql, conexion);
             // Le paso como parametro el nombre del jugador o de la palabra
-            comando.Parameters.AddWithValue("@jugador", jugador);
+            comando.Parameters.AddWithValue("@correo", correo);
             // Obtengo los resultado de la consulta
             MySqlDataReader reader = comando.ExecuteReader();
             // Si el numero de filas es false, no se ha encontrado el usuario.
@@ -80,7 +80,7 @@ namespace Seguros.Models
         }
 
         // Registra un nuevo usuario
-        public int registrarJugador(string jugador, string contraseña)
+        public int registrarJugador(string nombre, string correo, string contraseña)
         {
             // Creo la conexion con la base de datos.
             MySqlConnection conexion = ConexionBaseDatos.getConexion();
@@ -88,14 +88,17 @@ namespace Seguros.Models
             conexion.Open();
 
             // Consulta sql
-            string sql = "INSERT INTO jugadores ( jugador, contraseña ) VALUES ( @jugador, @contraseña )";
+            string sql = "INSERT INTO clientes (  nombre, correo, contraseña ) VALUES ( @nombre, @correo, @contraseña  )";
             // Preparo la consulta
             MySqlCommand comando = new MySqlCommand(sql, conexion);
 
-            // Le paso como parametro el nombre del usuario.
-            comando.Parameters.AddWithValue("@jugador", jugador);
+            // Le como parametro el nombre del cliente
+            comando.Parameters.AddWithValue("@nombre", nombre);
+            // Le paso como parametro el correo
+            comando.Parameters.AddWithValue("@correo", correo);
             // Le como parametro la contraseña
             comando.Parameters.AddWithValue("@contraseña", contraseña);
+
 
 
             int creado;
@@ -122,17 +125,15 @@ namespace Seguros.Models
             while (reader.Read())
             {
                 // Obtengo datos usuario 
-                int id = reader.GetInt32("id");         
+                int id = reader.GetInt32("id");
                 string nombre = reader.GetString("nombre");
-                string apellidos = reader.GetString("apellidos");
                 string tipo = reader.GetString("tipo");
 
-                Console.WriteLine("id: " + id + " nombre: " + nombre + " apellidos: " + apellidos + " tipo: " + tipo);
+                Console.WriteLine("id: " + id + " nombre: " + nombre + " tipo: " + tipo);
 
                 // Creo la sesion con los datos basico del usaurio que se acaba de logear con exito.
                 SesionUsuario.Id = id;
                 SesionUsuario.Nombre = nombre;
-                SesionUsuario.Apellidos = apellidos;
                 SesionUsuario.Tipo = tipo;
 
             }

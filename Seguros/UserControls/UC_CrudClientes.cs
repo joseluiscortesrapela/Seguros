@@ -178,6 +178,20 @@ namespace Seguros.UserControls
         private void pbEliminar_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Eliminar cliente");
+
+            int idCliente = cliente.IdCliente;
+            // Mensaje que vera el usuario
+            String message = "estas seguro de que quieres eliminar a " + cliente.Nombre + " ?";
+            // Titulo de la ventana emergente.
+            String caption = "Eliminar cliente"; 
+            // Obtengo el resultado
+            var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                 // Eliminar cliente en cascada con sus polizas.
+            }
+
         }
 
         private void limpiarDgvPolizas()
@@ -365,12 +379,12 @@ namespace Seguros.UserControls
 
             // Actualizo datos base datos del cliente
             if ( AdminModel.editarCliente( nuevoCliente ) == 1 )
-            {
+            {   // Muestro mensaje 
                 lbMensajeEditar.Text = "Acabas de actualizar datos cliente";
             }
 
-
         }
+
 
         private void cbProvinciasEditar_SelectedIndexChanged(object sender, EventArgs e)
         {   // Obtengo el indice de la provincia

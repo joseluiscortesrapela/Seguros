@@ -9,7 +9,7 @@ namespace Seguros
     public partial class Login : Form
     {
         private LoginModel loginModel;
-
+    
 
         public Login()
         {
@@ -28,7 +28,7 @@ namespace Seguros
             string contraseña = tbContraseña.Text;
 
             // Si el formulario es valido    
-            if (siValidarFormularioLogin(correo, contraseña))
+            if (siValidarFormularioLogin( correo, contraseña ) )
             {
                 // Compruebo si existe el usaurio
                 bool existe = loginModel.login(correo, contraseña);
@@ -53,33 +53,36 @@ namespace Seguros
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             // Obtengo nombre y le quito los espacios en blanco a derecha e izquierda
-            string email = tbEmail.Text.Trim();
+            string  correo = tbEmail.Text.Trim();
             // Obtengo la contraseña
             string contraseña = tbPassword.Text;
+            // Nombre usuario
+            string nombre = tbNombre.Text;
 
             // Si datos formulario son correctos
-            if (siValidarFormularioRegistro(email, contraseña))
+            if (siValidarFormularioRegistro( nombre, correo, contraseña ))
             {
                 // Guardo un nuevo usuario en la base de datos.
-                loginModel.registrarJugador(email, contraseña);
+                loginModel.registrarJugador(nombre, correo, contraseña );
                 // Muestro mensaje al usuario
                 lbMensajeRegistro.Text = "Acabas de registrarte.";
                 // Limpio los campos del formulario de registro
                 resetearFormulario();
             }
+
         }
 
         // Valida los campos del formulario de login
-        private bool siValidarFormularioLogin(string nombre, string contraseña)
+        private bool siValidarFormularioLogin( string correo, string contraseña)
         {
 
             bool valido = true;
 
             // Si el nombre de usuario no esta vacio
-            if (nombre.Length == 0)
+            if (correo.Length == 0)
             {
                 valido = false;
-                error.SetError(tbCorreo, "El nombre del usuario no puede estar vacio.");
+                error.SetError(tbCorreo, "El correo no puede estar vacio.");
             }
             else
             {
@@ -104,27 +107,27 @@ namespace Seguros
         }
 
         // Valida los campos del formulario de registro
-        private bool siValidarFormularioRegistro(string nombre, string contraseña)
+        private bool siValidarFormularioRegistro( string nombre, string correo, string contraseña )
         {
 
             bool valido = true;
 
             // Si el nombre de usuario no esta vacio o tiene un valor nulo.
-            if (nombre.Length == 0 || string.IsNullOrWhiteSpace(nombre))
+            if (correo.Length == 0 || string.IsNullOrWhiteSpace(correo))
             {
                 valido = false;
-                error.SetError(tbEmail, "El nombre del usuario no puede estar vacio.");
+                error.SetError(tbEmail, "El correo no puede estar vacio.");
             }
             else
             { // Si el campo nombre no esta vacio
 
                 error.SetError(tbEmail, "");
 
-                // Compruebo si existe un usuario con el mismo nombre en la base de datos.
-                if (loginModel.isUserExist(nombre))
+                // Compruebo si existe un usuario con el mismo correo en la base de datos.
+                if (loginModel.isUserExist(correo))
                 {
                     valido = false;
-                    error.SetError(tbEmail, "El nombre " + nombre + " ya existe."); // Muestro error al usuario
+                    error.SetError(tbEmail, "El correo " + correo + " ya existe."); // Muestro error al usuario
                 }
                 else
                 {
@@ -144,7 +147,18 @@ namespace Seguros
                 error.SetError(tbPassword, "");
             }
 
+            // Si el campo nombre esta vacio
+            if (nombre.Length == 0)
+            {
+                valido = false;
+                error.SetError(tbNombre, "El campo nombre no puede estar vacia.");
+            }
+            else
+            {
+                error.SetError(tbNombre, "");
+            }
 
+     
             return valido;
 
         }
@@ -163,21 +177,20 @@ namespace Seguros
             panelLogin.Visible = true;
         }
 
-
+        // Limpia el contenido de los campos formualario de registro
         private void resetearFormulario()
         {
-            tbCorreo.Text = "";
-            tbContraseña.Text = "";
+            tbNombre.Text = "";
+            tbEmail.Text = "";
+            tbPassword.Text = "";
         }
 
         // Se cierra el programa
-        private void pbExit_Click(object sender, EventArgs e)
+        private void pbExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
 
         }
-
-
     } // Final clase Login
 
 
