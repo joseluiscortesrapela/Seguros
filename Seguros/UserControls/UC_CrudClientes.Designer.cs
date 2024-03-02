@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudClientes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.pbEditar = new System.Windows.Forms.PictureBox();
             this.pbEliminar = new System.Windows.Forms.PictureBox();
@@ -281,8 +281,8 @@
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Location = new System.Drawing.Point(36, 23);
             this.dgvClientes.Name = "dgvClientes";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvClientes.Size = new System.Drawing.Size(1049, 286);
             this.dgvClientes.TabIndex = 8;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
@@ -300,8 +300,8 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(36, 361);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPolizas.Size = new System.Drawing.Size(1049, 217);
             this.dgvPolizas.TabIndex = 26;
             // 
@@ -516,6 +516,7 @@
             // panelCrearCliente
             // 
             this.panelCrearCliente.BackColor = System.Drawing.Color.Transparent;
+            this.panelCrearCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCrearCliente.BackgroundImage")));
             this.panelCrearCliente.Controls.Add(this.pictureBox28);
             this.panelCrearCliente.Controls.Add(this.label48);
             this.panelCrearCliente.Controls.Add(this.label47);
@@ -1021,6 +1022,7 @@
             // panelDetalleCliente
             // 
             this.panelDetalleCliente.BackColor = System.Drawing.Color.Transparent;
+            this.panelDetalleCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelDetalleCliente.BackgroundImage")));
             this.panelDetalleCliente.Controls.Add(this.pictureBox29);
             this.panelDetalleCliente.Controls.Add(this.tbMunicipio);
             this.panelDetalleCliente.Controls.Add(this.tbProvincia);
@@ -1063,7 +1065,7 @@
             this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
             this.pictureBox29.Location = new System.Drawing.Point(414, 3);
             this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(78, 74);
+            this.pictureBox29.Size = new System.Drawing.Size(78, 66);
             this.pictureBox29.TabIndex = 88;
             this.pictureBox29.TabStop = false;
             // 
@@ -1428,7 +1430,7 @@
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.DimGray;
-            this.label55.Location = new System.Drawing.Point(500, 33);
+            this.label55.Location = new System.Drawing.Point(488, 33);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(232, 39);
             this.label55.TabIndex = 46;
@@ -1437,6 +1439,7 @@
             // panelEditarCliente
             // 
             this.panelEditarCliente.BackColor = System.Drawing.Color.Transparent;
+            this.panelEditarCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelEditarCliente.BackgroundImage")));
             this.panelEditarCliente.Controls.Add(this.pictureBox30);
             this.panelEditarCliente.Controls.Add(this.lbMensajeEditar);
             this.panelEditarCliente.Controls.Add(this.label3);
@@ -1956,9 +1959,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.Controls.Add(this.panelEditarCliente);
-            this.Controls.Add(this.panelCrudClientes);
-            this.Controls.Add(this.panelCrearCliente);
             this.Controls.Add(this.panelDetalleCliente);
+            this.Controls.Add(this.panelCrearCliente);
+            this.Controls.Add(this.panelCrudClientes);
             this.Controls.Add(this.panelFlSuperior);
             this.Name = "UC_CrudClientes";
             this.Size = new System.Drawing.Size(1127, 713);

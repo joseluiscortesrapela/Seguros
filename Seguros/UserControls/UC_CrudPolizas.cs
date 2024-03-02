@@ -20,7 +20,7 @@ namespace Seguros.UserControls
         {
             InitializeComponent();
             // Obtengo todas las polizas y las muestro en el dgv
-            dgvPolizas.DataSource = AdminModel.getPolizas();
+            cargarPolizasDGV();
         }
 
         // Sobrecarga del constructor, recibe el id del cliente
@@ -101,7 +101,6 @@ namespace Seguros.UserControls
             CambiarColorFilas();
         }
 
-
         // Muestra el panel que contiene el formulario para crear una nueva poliza.
         private void pbMostrarFormularioCrearPoliza_Click_1(object sender, EventArgs e)
         {
@@ -109,8 +108,6 @@ namespace Seguros.UserControls
             mostrarFormulario("CrearPoliza");
             // Cargo la lista de clientes en el select
             cargarClientes();
-
-
         }
 
         private void cargarClientes()
@@ -138,7 +135,6 @@ namespace Seguros.UserControls
             }
 
         }
-
 
         // Muestra el panel que contiene el formulario para editar una nueva poliza.
         private void pbMostrarFormularioEditarPoliza_Click(object sender, EventArgs e)
@@ -281,11 +277,21 @@ namespace Seguros.UserControls
 
         }
 
+        private void cargarPolizasDGV()
+        {
+            // Obtengo todas las polizas y las muestro en el dgv
+            dgvPolizas.DataSource = AdminModel.getPolizas();
+        }
+
         // Vuelve al crud principal de polizas, contenedor principal
         private void btnVolver_Click(object sender, EventArgs e)
         {
+            // Oculto los paneles  para editar y crear polizas.
             panelCrearPoliza.Visible = false;
             panelEditarPoliza.Visible = false;
+            // Actualizo, me traigo todas las polizas de la base de datos.
+            cargarPolizasDGV();
+            // Muestro el contenedor 
             panelContenedor.Visible = true;
         }
 
