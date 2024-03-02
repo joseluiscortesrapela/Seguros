@@ -13,6 +13,7 @@ namespace Seguros.Models
 {
     public class AdminModel
     {
+        private static bool estado;
 
         // Obtengo todas las polizas
         public static DataTable getPolizas()
@@ -204,13 +205,71 @@ namespace Seguros.Models
         }
 
         // Elimina un jugador y todas sus partidas
-        public static void eliminarCliente(int idCliente)
+        public static bool eliminarCliente(int idCliente)
         {
-            
+            // Creo la conexion con la base de datos.
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
 
-             
+            bool eliminado;
+
+            // Inicio una transacción
+            MySqlTransaction transaccion = null;
+
+            try
+            {
+                // Mi transaccion
+                transaccion = conexion.BeginTransaction();
+
+                // Consulta sql para eliminar todas las polizas del cliente
+                string sql = "DELETE FROM polizas WHERE idCliente = @idCliente";
+                // Mi sql y conexon
+                MySqlCommand comandoEliminarPolizas = new MySqlCommand(sql, conexion);
+                // Le paso como parametro el id del cliente a eliminar
+                comandoEliminarPolizas.Parameters.AddWithValue("@idCliente", idCliente);
+                // Preparo la transaccion.
+                comandoEliminarPolizas.Transaction = transaccion;
+
+                // Ejecutar la transaccion.
+                comandoEliminarPolizas.ExecuteNonQuery();
+
+                // Consulta sql para eliminar al cliente
+                sql = "DELETE FROM clientes WHERE idCliente = @idCliente";
+                // Mi sql y conexon
+                MySqlCommand comandoEliminarCliente = new MySqlCommand(sql, conexion);
+                // Le paso como parametros el id del cliente
+                comandoEliminarCliente.Parameters.AddWithValue("@idCliente", idCliente);
+                // Preparo la transaccion.
+                comandoEliminarCliente.Transaction = transaccion;
+
+                // Ejecutar la consulta para eliminar al jugador y obtengo un 1 si se ha realizado con exito y 0 en caso contrario
+                int estado = comandoEliminarCliente.ExecuteNonQuery();
+
+                // Convierto el int a bool
+                eliminado = (estado != 0);
+
+                // Confirmar la transacción
+                transaccion.Commit();
+            }
+            catch (Exception ex)
+            {
+                // Si ocurre algún error, se realiza un rollback de la transacción
+                if (transaccion != null)
+                {
+                    transaccion.Rollback();
+                }
+                eliminado = false;
+            }
+            finally
+            {
+                // Cierro la conexión
+                conexion.Close();
+            }
+
+            return eliminado;
+
         }
-
 
         // Filtra la busqueda de los jugadores que coincidan por nombre.
         public static DataTable buscar(string tabla, string texto)
@@ -345,6 +404,49 @@ namespace Seguros.Models
 
             return table;
         }
+
+        // Registra un nuevo usuario
+        public static bool registrarPoliza(Poliza poliza)
+        {
+            // Creo la conexion con la base de datos.
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+
+            // Consulta sql
+            string sql = "INSERT INTO polizas (importe, tipo, estado, observaciones, fecha, idCliente) VALUES (@importe, @tipo, @estado, @observaciones, @fecha, @idCliente)";
+
+            // Preparo la consulta
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            // Le paso el pago
+
+            // Agregar los parámetros para importe, estado, fecha y ID del cliente
+            comando.Parameters.AddWithValue("@importe", poliza.Importe);
+            comando.Parameters.AddWithValue("@tipo", poliza.Tipo);
+            comando.Parameters.AddWithValue("@estado", poliza.Estado);
+            comando.Parameters.AddWithValue("@observaciones", poliza.Observaciones);
+            comando.Parameters.AddWithValue("@fecha", poliza.Fecha);
+            comando.Parameters.AddWithValue("@idCliente", poliza.IdCliente);
+
+            bool creado;
+
+            try
+            {
+                // Return value is the number of rows affected by the SQL statement.
+                int estado = comando.ExecuteNonQuery();
+                // Convierto el int a bool
+                creado = (estado != 0);
+            }
+            catch (Exception ex)
+            {
+                creado = false;
+                Console.WriteLine(ex.Message);
+            }
+
+            return creado;
+
+        }
+
 
         // Registra un nuevo usuario
         public static int pagarPoliza(decimal pago, int idPoliza)

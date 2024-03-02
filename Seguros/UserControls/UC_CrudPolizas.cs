@@ -1,4 +1,5 @@
-﻿using Seguros.Helper;
+﻿using Seguros.Entidades;
+using Seguros.Helper;
 using Seguros.Models;
 using System;
 using System.Data;
@@ -9,6 +10,7 @@ namespace Seguros.UserControls
 {
     public partial class UC_CrudPolizas : UserControl
     {
+        private Poliza poliza;
         private int idPoliza;
         private DataGridViewRow filaPoliza;
         private int importe, totalPagado, deboPagar;
@@ -34,7 +36,8 @@ namespace Seguros.UserControls
         {
             // Obtengo la fila que ha sido seleccionada en el dataGridView
             if (e.RowIndex >= 0)
-            {   // Obtengo la que ha sido seleccionada en el dgv
+            {
+                // Obtengo la que ha sido seleccionada en el dgv
                 filaPoliza = dgvPolizas.Rows[e.RowIndex];
                 // Obtengo el id del usuario.
                 idPoliza = int.Parse(filaPoliza.Cells["idPoliza"].Value.ToString());
@@ -42,8 +45,18 @@ namespace Seguros.UserControls
                 string estado = filaPoliza.Cells["estado"].Value.ToString();
                 // Obtengo el importe 
                 importe = int.Parse(filaPoliza.Cells["importe"].Value.ToString());
+                // Fecha de la poliza
+                DateTime fechaPôliza = DateTime.Parse(filaPoliza.Cells["fecha"].Value.ToString());
+                // Tipo de poliza
+                string tipo = filaPoliza.Cells["tipo"].Value.ToString();
+                // Obtengo el comentario
+                string observaciones = filaPoliza.Cells["observaciones"].Value.ToString();
                 // Obtengo el id del cliente de esta poliza.
                 int idCliente = int.Parse(filaPoliza.Cells["idCliente"].Value.ToString());
+
+                // Encapsulo los datos de la poliza en un objeto 
+                poliza = new Poliza(idPoliza, importe, tipo, estado, fechaPôliza, observaciones, idCliente);
+
                 // Obtengo el cliente de la poliza.
                 DataTable clienteData = AdminModel.getClienteById(idCliente);
                 // Obtengo el nobmre
@@ -51,7 +64,7 @@ namespace Seguros.UserControls
                 // Obtengo los apellidos
                 string apellidos = clienteData.Rows[0]["apellidos"].ToString();
 
-                // Obtengo los pagos de la poliza seleccionada.
+                // Obtengo los pagos de la poliza seleccionada
                 dgvPagos.DataSource = AdminModel.getPagosByPoliza(idPoliza);
 
                 // Si aun queda por pagar
@@ -83,22 +96,62 @@ namespace Seguros.UserControls
 
         }
 
-
-        private void pbCrear_Click(object sender, EventArgs e)
+        private void UC_CrudPolizas_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("Crear poliza");
+            CambiarColorFilas();
         }
 
-        private void pbEditar_Click(object sender, EventArgs e)
+
+        // Muestra el panel que contiene el formulario para crear una nueva poliza.
+        private void pbMostrarFormularioCrearPoliza_Click_1(object sender, EventArgs e)
         {
-            Console.WriteLine("Editar poliza " + idPoliza);
+            // Muestro formulario
+            mostrarFormulario("CrearPoliza");
+            // Cargo la lista de clientes en el select
+            cargarClientes();
+
+
         }
 
+        private void cargarClientes()
+        {
+            // Obtengo los clientes y los guardo en select
+            cbClientes.DisplayMember = "nombre";
+            cbClientes.ValueMember = "idCliente";
+            cbClientes.DataSource = AdminModel.getClientes();
+        }
+
+        // Muestra el panel y formulario que necesite
+        private void mostrarFormulario(string formulario)
+        {
+            if (formulario == "CrearPoliza")
+            {
+                panelContenedor.Visible = false;
+                panelEditarPoliza.Visible = false;
+                panelCrearPoliza.Visible = true;
+            }
+            else if (formulario == "EditarPoliza")
+            {
+                panelCrearPoliza.Visible = false;
+                panelContenedor.Visible = false;
+                panelEditarPoliza.Visible = true;
+            }
+
+        }
+
+
+        // Muestra el panel que contiene el formulario para editar una nueva poliza.
+        private void pbMostrarFormularioEditarPoliza_Click(object sender, EventArgs e)
+        {
+            mostrarFormulario("EditarPoliza");
+
+        }
+
+        // Eliminar poliza
         private void pbEliminar_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Eliminar poliza " + idPoliza);
         }
-
 
         // Calcula lo que se ha pagado
         private int calcularTotalPagado()
@@ -117,7 +170,6 @@ namespace Seguros.UserControls
             return total;
         }
 
-
         // Estado de las polizas por colores, cambia el color de fondo de la fila segun su estado.
         private void cambiarColorPolizas()
         {
@@ -128,19 +180,10 @@ namespace Seguros.UserControls
         // Muestra botones de accion
         private void mostrarBotonesAccion()
         {
-            pbEditarPoliza.Visible = true;
+            pbMostrarFormularioEditarPoliza.Visible = true;
             pbEliminarPoliza.Visible = true;
         }
 
-        private void UC_CrudPolizas_Load(object sender, EventArgs e)
-        {
-            CambiarColorFilas();
-        }
-
-        private void CambiarColorFilas()
-        {
-            GestorInterfaz.CambiarColorFilas(dgvPolizas);
-        }
         // Realiza el pago 
         private void pbPagar_Click(object sender, EventArgs e)
         {
@@ -183,6 +226,67 @@ namespace Seguros.UserControls
                 error.SetError(tbPago, "La cantidad introducida es mayor que lo que debe");
             }
 
+        }
+
+        private void btnCrearPoliza_Click(object sender, EventArgs e)
+        {
+
+            // Obtengo datos del formulario
+            int importe = int.Parse(tbImporte.Text.ToString());
+            string tipo = cbTipo.Text.ToString();
+            string estado = cbEstados.Text.ToString();
+            int idCliente = int.Parse(cbClientes.SelectedValue.ToString());
+            DateTime fecha = dtpFecha.Value;
+            string observaciones = tbObservaciones.Text.ToString();
+
+            // Encapsulo los datos en un objeto del tipo Poliza.
+            Poliza poliza = new Poliza(importe, tipo, estado, fecha, observaciones, idCliente);
+
+            // Si la poliza se ha registrado correctamente en la base de datos.
+            if ( AdminModel.registrarPoliza(poliza) )
+            {   // Muestro mensaje
+                lbMenasjeCrearPoliza.Text = "Acabas de crear una nueva poliza";
+            }
+
+            Console.WriteLine("Crear poliza: importe: " + importe + " tipo: " + tipo + " estado: " + estado + "idCliente: " + idCliente + " fecha " + fecha + " obsevaciones: " + observaciones);
+
+        }
+
+        private void btnEditarPoliza_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Editar poliza");
+        }
+
+        // Cambia el color de las polizas segun su estado.
+        private void CambiarColorFilas()
+        {
+            GestorInterfaz.CambiarColorFilas(dgvPolizas);
+        }
+
+        private void cbClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Obtengo el indice de la provincia
+            int idCliente = Convert.ToInt32(cbClientes.SelectedValue);
+            Console.WriteLine("Cliente " + idCliente + "  seleccionado añadir a la poliza");
+        }
+
+        private void limpiarPlaceholder(object sender, EventArgs e)
+        {
+            // Limpia el texto del TextBox que desencadenó el evento
+            TextBox textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                textBox.Text = string.Empty;
+            }
+
+        }
+
+        // Vuelve al crud principal de polizas, contenedor principal
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            panelCrearPoliza.Visible = false;
+            panelEditarPoliza.Visible = false;
+            panelContenedor.Visible = true;
         }
 
         // Cierro la aplicacion

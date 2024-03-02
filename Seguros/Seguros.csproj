@@ -100,6 +100,7 @@
   <ItemGroup>
     <Compile Include="Conexion\ConexionBaseDatos.cs" />
     <Compile Include="Entidades\Cliente.cs" />
+    <Compile Include="Entidades\Poliza.cs" />
     <Compile Include="Forms\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +150,12 @@
     <Compile Include="UserControls\UC_CrudPolizas.Designer.cs">
       <DependentUpon>UC_CrudPolizas.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Contenedor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Contenedor.Designer.cs">
+      <DependentUpon>Contenedor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_CrudPolizas.resx">
       <DependentUpon>UC_CrudPolizas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Contenedor.resx">
+      <DependentUpon>Contenedor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

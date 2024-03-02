@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudClientes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.pbEditar = new System.Windows.Forms.PictureBox();
             this.pbEliminar = new System.Windows.Forms.PictureBox();
@@ -40,8 +41,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pbOn = new System.Windows.Forms.PictureBox();
             this.pbOff = new System.Windows.Forms.PictureBox();
-            this.lbNombreCliente = new System.Windows.Forms.Label();
-            this.lbMensajeEstado = new System.Windows.Forms.Label();
+            this.lbTotalPolizas = new System.Windows.Forms.Label();
+            this.lbMensajeGeneral = new System.Windows.Forms.Label();
             this.panelFlSuperior = new System.Windows.Forms.FlowLayoutPanel();
             this.panelNavegacionSuperior = new System.Windows.Forms.Panel();
             this.pbExit = new System.Windows.Forms.PictureBox();
@@ -51,8 +52,12 @@
             this.pbMostrarBuscador = new System.Windows.Forms.PictureBox();
             this.pbInicio = new System.Windows.Forms.PictureBox();
             this.panelCrudClientes = new System.Windows.Forms.Panel();
+            this.lbNombreCliente = new System.Windows.Forms.Label();
+            this.lbTotalClientes = new System.Windows.Forms.Label();
+            this.lbMensajeInterruptor = new System.Windows.Forms.Label();
             this.pbDetalle = new System.Windows.Forms.PictureBox();
-            this.panelCrear = new System.Windows.Forms.Panel();
+            this.panelCrearCliente = new System.Windows.Forms.Panel();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
@@ -93,7 +98,8 @@
             this.tbApellidosCrear = new System.Windows.Forms.TextBox();
             this.tbNombreCrear = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.panelDetalle = new System.Windows.Forms.Panel();
+            this.panelDetalleCliente = new System.Windows.Forms.Panel();
+            this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.tbMunicipio = new System.Windows.Forms.TextBox();
             this.tbProvincia = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -124,8 +130,9 @@
             this.tbApellidosDetalle = new System.Windows.Forms.TextBox();
             this.tbNombreDetalle = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
-            this.panelEditar = new System.Windows.Forms.Panel();
-            this.label44 = new System.Windows.Forms.Label();
+            this.panelEditarCliente = new System.Windows.Forms.Panel();
+            this.pictureBox30 = new System.Windows.Forms.PictureBox();
+            this.lbMensajeEditar = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -165,7 +172,8 @@
             this.tbDniEditar = new System.Windows.Forms.TextBox();
             this.tbApellidosEditar = new System.Windows.Forms.TextBox();
             this.tbNombreEditar = new System.Windows.Forms.TextBox();
-            this.lbMensajeEditar = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.timerOcultarMensaje = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCrear)).BeginInit();
@@ -182,7 +190,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
             this.panelCrudClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDetalle)).BeginInit();
-            this.panelCrear.SuspendLayout();
+            this.panelCrearCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -192,7 +201,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelDetalle.SuspendLayout();
+            this.panelDetalleCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -202,7 +212,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
-            this.panelEditar.SuspendLayout();
+            this.panelEditarCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -217,10 +228,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label1.Location = new System.Drawing.Point(33, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 17);
+            this.label1.Size = new System.Drawing.Size(77, 24);
             this.label1.TabIndex = 12;
             this.label1.Text = "Clientes";
             // 
@@ -267,11 +279,11 @@
             this.dgvClientes.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(36, 18);
+            this.dgvClientes.Location = new System.Drawing.Point(36, 23);
             this.dgvClientes.Name = "dgvClientes";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvClientes.Size = new System.Drawing.Size(1049, 291);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvClientes.Size = new System.Drawing.Size(1049, 286);
             this.dgvClientes.TabIndex = 8;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
@@ -288,8 +300,8 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(36, 361);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPolizas.Size = new System.Drawing.Size(1049, 217);
             this.dgvPolizas.TabIndex = 26;
             // 
@@ -308,7 +320,7 @@
             this.pbOn.Image = ((System.Drawing.Image)(resources.GetObject("pbOn.Image")));
             this.pbOn.Location = new System.Drawing.Point(617, -10);
             this.pbOn.Name = "pbOn";
-            this.pbOn.Size = new System.Drawing.Size(70, 27);
+            this.pbOn.Size = new System.Drawing.Size(45, 27);
             this.pbOn.TabIndex = 27;
             this.pbOn.TabStop = false;
             this.pbOn.Click += new System.EventHandler(this.pbMostrarPolizasCliente_Click);
@@ -323,25 +335,27 @@
             this.pbOff.TabStop = false;
             this.pbOff.Click += new System.EventHandler(this.pbOcultarPolizasCliente_Click);
             // 
-            // lbNombreCliente
+            // lbTotalPolizas
             // 
-            this.lbNombreCliente.AutoSize = true;
-            this.lbNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombreCliente.Location = new System.Drawing.Point(21, 469);
-            this.lbNombreCliente.Name = "lbNombreCliente";
-            this.lbNombreCliente.Size = new System.Drawing.Size(0, 17);
-            this.lbNombreCliente.TabIndex = 30;
+            this.lbTotalPolizas.AutoSize = true;
+            this.lbTotalPolizas.BackColor = System.Drawing.Color.Snow;
+            this.lbTotalPolizas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalPolizas.ForeColor = System.Drawing.Color.DeepPink;
+            this.lbTotalPolizas.Location = new System.Drawing.Point(36, 334);
+            this.lbTotalPolizas.Name = "lbTotalPolizas";
+            this.lbTotalPolizas.Size = new System.Drawing.Size(0, 24);
+            this.lbTotalPolizas.TabIndex = 30;
             // 
-            // lbMensajeEstado
+            // lbMensajeGeneral
             // 
-            this.lbMensajeEstado.AutoSize = true;
-            this.lbMensajeEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMensajeEstado.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbMensajeEstado.Location = new System.Drawing.Point(412, 315);
-            this.lbMensajeEstado.Name = "lbMensajeEstado";
-            this.lbMensajeEstado.Size = new System.Drawing.Size(260, 17);
-            this.lbMensajeEstado.TabIndex = 31;
-            this.lbMensajeEstado.Text = "Deactivado enlazado de datos dinamico";
+            this.lbMensajeGeneral.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbMensajeGeneral.AutoSize = true;
+            this.lbMensajeGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMensajeGeneral.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbMensajeGeneral.Location = new System.Drawing.Point(373, 317);
+            this.lbMensajeGeneral.Name = "lbMensajeGeneral";
+            this.lbMensajeGeneral.Size = new System.Drawing.Size(0, 20);
+            this.lbMensajeGeneral.TabIndex = 31;
             // 
             // panelFlSuperior
             // 
@@ -435,9 +449,13 @@
             // panelCrudClientes
             // 
             this.panelCrudClientes.BackColor = System.Drawing.Color.Snow;
+            this.panelCrudClientes.Controls.Add(this.lbNombreCliente);
+            this.panelCrudClientes.Controls.Add(this.lbTotalClientes);
+            this.panelCrudClientes.Controls.Add(this.lbMensajeInterruptor);
             this.panelCrudClientes.Controls.Add(this.dgvClientes);
             this.panelCrudClientes.Controls.Add(this.pbCrear);
-            this.panelCrudClientes.Controls.Add(this.lbMensajeEstado);
+            this.panelCrudClientes.Controls.Add(this.lbMensajeGeneral);
+            this.panelCrudClientes.Controls.Add(this.lbTotalPolizas);
             this.panelCrudClientes.Controls.Add(this.pbOn);
             this.panelCrudClientes.Controls.Add(this.pbEliminar);
             this.panelCrudClientes.Controls.Add(this.pbEditar);
@@ -451,6 +469,39 @@
             this.panelCrudClientes.Size = new System.Drawing.Size(1127, 611);
             this.panelCrudClientes.TabIndex = 33;
             // 
+            // lbNombreCliente
+            // 
+            this.lbNombreCliente.AutoSize = true;
+            this.lbNombreCliente.BackColor = System.Drawing.Color.Snow;
+            this.lbNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombreCliente.ForeColor = System.Drawing.Color.DarkGray;
+            this.lbNombreCliente.Location = new System.Drawing.Point(62, 334);
+            this.lbNombreCliente.Name = "lbNombreCliente";
+            this.lbNombreCliente.Size = new System.Drawing.Size(0, 24);
+            this.lbNombreCliente.TabIndex = 38;
+            // 
+            // lbTotalClientes
+            // 
+            this.lbTotalClientes.AutoSize = true;
+            this.lbTotalClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalClientes.Location = new System.Drawing.Point(116, 1);
+            this.lbTotalClientes.Name = "lbTotalClientes";
+            this.lbTotalClientes.Size = new System.Drawing.Size(20, 24);
+            this.lbTotalClientes.TabIndex = 37;
+            this.lbTotalClientes.Text = "0";
+            // 
+            // lbMensajeInterruptor
+            // 
+            this.lbMensajeInterruptor.AutoSize = true;
+            this.lbMensajeInterruptor.BackColor = System.Drawing.Color.Snow;
+            this.lbMensajeInterruptor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMensajeInterruptor.ForeColor = System.Drawing.Color.Coral;
+            this.lbMensajeInterruptor.Location = new System.Drawing.Point(668, -2);
+            this.lbMensajeInterruptor.Name = "lbMensajeInterruptor";
+            this.lbMensajeInterruptor.Size = new System.Drawing.Size(94, 17);
+            this.lbMensajeInterruptor.TabIndex = 36;
+            this.lbMensajeInterruptor.Text = "Deshabilitado";
+            // 
             // pbDetalle
             // 
             this.pbDetalle.Image = ((System.Drawing.Image)(resources.GetObject("pbDetalle.Image")));
@@ -462,54 +513,64 @@
             this.pbDetalle.Visible = false;
             this.pbDetalle.Click += new System.EventHandler(this.pbMostrarPanelDetalle_Click);
             // 
-            // panelCrear
+            // panelCrearCliente
             // 
-            this.panelCrear.BackColor = System.Drawing.Color.Transparent;
-            this.panelCrear.Controls.Add(this.label48);
-            this.panelCrear.Controls.Add(this.label47);
-            this.panelCrear.Controls.Add(this.label46);
-            this.panelCrear.Controls.Add(this.lbMensajeCrear);
-            this.panelCrear.Controls.Add(this.tbContraseñaCrear);
-            this.panelCrear.Controls.Add(this.label45);
-            this.panelCrear.Controls.Add(this.label32);
-            this.panelCrear.Controls.Add(this.pictureBox25);
-            this.panelCrear.Controls.Add(this.btnCrearCliente);
-            this.panelCrear.Controls.Add(this.btnVolver);
-            this.panelCrear.Controls.Add(this.label18);
-            this.panelCrear.Controls.Add(this.pictureBox8);
-            this.panelCrear.Controls.Add(this.cbTipoCrear);
-            this.panelCrear.Controls.Add(this.label17);
-            this.panelCrear.Controls.Add(this.pictureBox7);
-            this.panelCrear.Controls.Add(this.pictureBox6);
-            this.panelCrear.Controls.Add(this.label16);
-            this.panelCrear.Controls.Add(this.cbMunicipiosCrear);
-            this.panelCrear.Controls.Add(this.cbProvinciasCrear);
-            this.panelCrear.Controls.Add(this.label15);
-            this.panelCrear.Controls.Add(this.label14);
-            this.panelCrear.Controls.Add(this.label13);
-            this.panelCrear.Controls.Add(this.label12);
-            this.panelCrear.Controls.Add(this.label11);
-            this.panelCrear.Controls.Add(this.label10);
-            this.panelCrear.Controls.Add(this.label9);
-            this.panelCrear.Controls.Add(this.pictureBox5);
-            this.panelCrear.Controls.Add(this.pictureBox4);
-            this.panelCrear.Controls.Add(this.pictureBox3);
-            this.panelCrear.Controls.Add(this.label8);
-            this.panelCrear.Controls.Add(this.label7);
-            this.panelCrear.Controls.Add(this.label6);
-            this.panelCrear.Controls.Add(this.pictureBox2);
-            this.panelCrear.Controls.Add(this.pictureBox1);
-            this.panelCrear.Controls.Add(this.tbCorreoCrear);
-            this.panelCrear.Controls.Add(this.tbTelefonoCrear);
-            this.panelCrear.Controls.Add(this.tbDniCrear);
-            this.panelCrear.Controls.Add(this.tbApellidosCrear);
-            this.panelCrear.Controls.Add(this.tbNombreCrear);
-            this.panelCrear.Controls.Add(this.label2);
-            this.panelCrear.Location = new System.Drawing.Point(0, 55);
-            this.panelCrear.Name = "panelCrear";
-            this.panelCrear.Size = new System.Drawing.Size(1127, 658);
-            this.panelCrear.TabIndex = 32;
-            this.panelCrear.Visible = false;
+            this.panelCrearCliente.BackColor = System.Drawing.Color.Transparent;
+            this.panelCrearCliente.Controls.Add(this.pictureBox28);
+            this.panelCrearCliente.Controls.Add(this.label48);
+            this.panelCrearCliente.Controls.Add(this.label47);
+            this.panelCrearCliente.Controls.Add(this.label46);
+            this.panelCrearCliente.Controls.Add(this.lbMensajeCrear);
+            this.panelCrearCliente.Controls.Add(this.tbContraseñaCrear);
+            this.panelCrearCliente.Controls.Add(this.label45);
+            this.panelCrearCliente.Controls.Add(this.label32);
+            this.panelCrearCliente.Controls.Add(this.pictureBox25);
+            this.panelCrearCliente.Controls.Add(this.btnCrearCliente);
+            this.panelCrearCliente.Controls.Add(this.btnVolver);
+            this.panelCrearCliente.Controls.Add(this.label18);
+            this.panelCrearCliente.Controls.Add(this.pictureBox8);
+            this.panelCrearCliente.Controls.Add(this.cbTipoCrear);
+            this.panelCrearCliente.Controls.Add(this.label17);
+            this.panelCrearCliente.Controls.Add(this.pictureBox7);
+            this.panelCrearCliente.Controls.Add(this.pictureBox6);
+            this.panelCrearCliente.Controls.Add(this.label16);
+            this.panelCrearCliente.Controls.Add(this.cbMunicipiosCrear);
+            this.panelCrearCliente.Controls.Add(this.cbProvinciasCrear);
+            this.panelCrearCliente.Controls.Add(this.label15);
+            this.panelCrearCliente.Controls.Add(this.label14);
+            this.panelCrearCliente.Controls.Add(this.label13);
+            this.panelCrearCliente.Controls.Add(this.label12);
+            this.panelCrearCliente.Controls.Add(this.label11);
+            this.panelCrearCliente.Controls.Add(this.label10);
+            this.panelCrearCliente.Controls.Add(this.label9);
+            this.panelCrearCliente.Controls.Add(this.pictureBox5);
+            this.panelCrearCliente.Controls.Add(this.pictureBox4);
+            this.panelCrearCliente.Controls.Add(this.pictureBox3);
+            this.panelCrearCliente.Controls.Add(this.label8);
+            this.panelCrearCliente.Controls.Add(this.label7);
+            this.panelCrearCliente.Controls.Add(this.label6);
+            this.panelCrearCliente.Controls.Add(this.pictureBox2);
+            this.panelCrearCliente.Controls.Add(this.pictureBox1);
+            this.panelCrearCliente.Controls.Add(this.tbCorreoCrear);
+            this.panelCrearCliente.Controls.Add(this.tbTelefonoCrear);
+            this.panelCrearCliente.Controls.Add(this.tbDniCrear);
+            this.panelCrearCliente.Controls.Add(this.tbApellidosCrear);
+            this.panelCrearCliente.Controls.Add(this.tbNombreCrear);
+            this.panelCrearCliente.Controls.Add(this.label2);
+            this.panelCrearCliente.Location = new System.Drawing.Point(0, 55);
+            this.panelCrearCliente.Name = "panelCrearCliente";
+            this.panelCrearCliente.Size = new System.Drawing.Size(1127, 658);
+            this.panelCrearCliente.TabIndex = 32;
+            this.panelCrearCliente.Visible = false;
+            // 
+            // pictureBox28
+            // 
+            this.pictureBox28.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox28.Image")));
+            this.pictureBox28.Location = new System.Drawing.Point(414, 6);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(68, 66);
+            this.pictureBox28.TabIndex = 46;
+            this.pictureBox28.TabStop = false;
             // 
             // label48
             // 
@@ -949,52 +1010,62 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(500, 12);
+            this.label2.Location = new System.Drawing.Point(478, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 29);
+            this.label2.Size = new System.Drawing.Size(210, 39);
             this.label2.TabIndex = 0;
             this.label2.Text = "Crear cliente";
             // 
-            // panelDetalle
+            // panelDetalleCliente
             // 
-            this.panelDetalle.BackColor = System.Drawing.Color.Transparent;
-            this.panelDetalle.Controls.Add(this.tbMunicipio);
-            this.panelDetalle.Controls.Add(this.tbProvincia);
-            this.panelDetalle.Controls.Add(this.label20);
-            this.panelDetalle.Controls.Add(this.tbContraseñaDetalle);
-            this.panelDetalle.Controls.Add(this.label22);
-            this.panelDetalle.Controls.Add(this.pictureBox9);
-            this.panelDetalle.Controls.Add(this.btnRegresar);
-            this.panelDetalle.Controls.Add(this.label23);
-            this.panelDetalle.Controls.Add(this.pictureBox10);
-            this.panelDetalle.Controls.Add(this.cbTipoDetalle);
-            this.panelDetalle.Controls.Add(this.label24);
-            this.panelDetalle.Controls.Add(this.pictureBox11);
-            this.panelDetalle.Controls.Add(this.pictureBox12);
-            this.panelDetalle.Controls.Add(this.label25);
-            this.panelDetalle.Controls.Add(this.label50);
-            this.panelDetalle.Controls.Add(this.label51);
-            this.panelDetalle.Controls.Add(this.pictureBox13);
-            this.panelDetalle.Controls.Add(this.pictureBox14);
-            this.panelDetalle.Controls.Add(this.pictureBox15);
-            this.panelDetalle.Controls.Add(this.label52);
-            this.panelDetalle.Controls.Add(this.label53);
-            this.panelDetalle.Controls.Add(this.label54);
-            this.panelDetalle.Controls.Add(this.pictureBox16);
-            this.panelDetalle.Controls.Add(this.pictureBox26);
-            this.panelDetalle.Controls.Add(this.tbCorreoDetalle);
-            this.panelDetalle.Controls.Add(this.tbTelefonoDetalle);
-            this.panelDetalle.Controls.Add(this.tbDniDetalle);
-            this.panelDetalle.Controls.Add(this.tbApellidosDetalle);
-            this.panelDetalle.Controls.Add(this.tbNombreDetalle);
-            this.panelDetalle.Controls.Add(this.label55);
-            this.panelDetalle.Location = new System.Drawing.Point(0, 55);
-            this.panelDetalle.Name = "panelDetalle";
-            this.panelDetalle.Size = new System.Drawing.Size(1127, 654);
-            this.panelDetalle.TabIndex = 35;
-            this.panelDetalle.Visible = false;
+            this.panelDetalleCliente.BackColor = System.Drawing.Color.Transparent;
+            this.panelDetalleCliente.Controls.Add(this.pictureBox29);
+            this.panelDetalleCliente.Controls.Add(this.tbMunicipio);
+            this.panelDetalleCliente.Controls.Add(this.tbProvincia);
+            this.panelDetalleCliente.Controls.Add(this.label20);
+            this.panelDetalleCliente.Controls.Add(this.tbContraseñaDetalle);
+            this.panelDetalleCliente.Controls.Add(this.label22);
+            this.panelDetalleCliente.Controls.Add(this.pictureBox9);
+            this.panelDetalleCliente.Controls.Add(this.btnRegresar);
+            this.panelDetalleCliente.Controls.Add(this.label23);
+            this.panelDetalleCliente.Controls.Add(this.pictureBox10);
+            this.panelDetalleCliente.Controls.Add(this.cbTipoDetalle);
+            this.panelDetalleCliente.Controls.Add(this.label24);
+            this.panelDetalleCliente.Controls.Add(this.pictureBox11);
+            this.panelDetalleCliente.Controls.Add(this.pictureBox12);
+            this.panelDetalleCliente.Controls.Add(this.label25);
+            this.panelDetalleCliente.Controls.Add(this.label50);
+            this.panelDetalleCliente.Controls.Add(this.label51);
+            this.panelDetalleCliente.Controls.Add(this.pictureBox13);
+            this.panelDetalleCliente.Controls.Add(this.pictureBox14);
+            this.panelDetalleCliente.Controls.Add(this.pictureBox15);
+            this.panelDetalleCliente.Controls.Add(this.label52);
+            this.panelDetalleCliente.Controls.Add(this.label53);
+            this.panelDetalleCliente.Controls.Add(this.label54);
+            this.panelDetalleCliente.Controls.Add(this.pictureBox16);
+            this.panelDetalleCliente.Controls.Add(this.pictureBox26);
+            this.panelDetalleCliente.Controls.Add(this.tbCorreoDetalle);
+            this.panelDetalleCliente.Controls.Add(this.tbTelefonoDetalle);
+            this.panelDetalleCliente.Controls.Add(this.tbDniDetalle);
+            this.panelDetalleCliente.Controls.Add(this.tbApellidosDetalle);
+            this.panelDetalleCliente.Controls.Add(this.tbNombreDetalle);
+            this.panelDetalleCliente.Controls.Add(this.label55);
+            this.panelDetalleCliente.Location = new System.Drawing.Point(0, 55);
+            this.panelDetalleCliente.Name = "panelDetalleCliente";
+            this.panelDetalleCliente.Size = new System.Drawing.Size(1127, 654);
+            this.panelDetalleCliente.TabIndex = 35;
+            this.panelDetalleCliente.Visible = false;
+            // 
+            // pictureBox29
+            // 
+            this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
+            this.pictureBox29.Location = new System.Drawing.Point(414, 3);
+            this.pictureBox29.Name = "pictureBox29";
+            this.pictureBox29.Size = new System.Drawing.Size(78, 74);
+            this.pictureBox29.TabIndex = 88;
+            this.pictureBox29.TabStop = false;
             // 
             // tbMunicipio
             // 
@@ -1355,74 +1426,83 @@
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.DimGray;
-            this.label55.Location = new System.Drawing.Point(488, 28);
+            this.label55.Location = new System.Drawing.Point(500, 33);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(166, 29);
+            this.label55.Size = new System.Drawing.Size(232, 39);
             this.label55.TabIndex = 46;
             this.label55.Text = "Detalle cliente";
             // 
-            // panelEditar
+            // panelEditarCliente
             // 
-            this.panelEditar.BackColor = System.Drawing.Color.Transparent;
-            this.panelEditar.Controls.Add(this.lbMensajeEditar);
-            this.panelEditar.Controls.Add(this.label3);
-            this.panelEditar.Controls.Add(this.label5);
-            this.panelEditar.Controls.Add(this.label19);
-            this.panelEditar.Controls.Add(this.label21);
-            this.panelEditar.Controls.Add(this.tbContraseñaEditar);
-            this.panelEditar.Controls.Add(this.label26);
-            this.panelEditar.Controls.Add(this.label27);
-            this.panelEditar.Controls.Add(this.pictureBox17);
-            this.panelEditar.Controls.Add(this.btnEditar);
-            this.panelEditar.Controls.Add(this.button2);
-            this.panelEditar.Controls.Add(this.label28);
-            this.panelEditar.Controls.Add(this.pictureBox18);
-            this.panelEditar.Controls.Add(this.cbTipoEditar);
-            this.panelEditar.Controls.Add(this.label29);
-            this.panelEditar.Controls.Add(this.pictureBox19);
-            this.panelEditar.Controls.Add(this.pictureBox20);
-            this.panelEditar.Controls.Add(this.label30);
-            this.panelEditar.Controls.Add(this.cbMunicipiosEditar);
-            this.panelEditar.Controls.Add(this.cbProvinciasEditar);
-            this.panelEditar.Controls.Add(this.label31);
-            this.panelEditar.Controls.Add(this.label33);
-            this.panelEditar.Controls.Add(this.label34);
-            this.panelEditar.Controls.Add(this.label35);
-            this.panelEditar.Controls.Add(this.label36);
-            this.panelEditar.Controls.Add(this.label37);
-            this.panelEditar.Controls.Add(this.label38);
-            this.panelEditar.Controls.Add(this.pictureBox21);
-            this.panelEditar.Controls.Add(this.pictureBox22);
-            this.panelEditar.Controls.Add(this.pictureBox23);
-            this.panelEditar.Controls.Add(this.label39);
-            this.panelEditar.Controls.Add(this.label40);
-            this.panelEditar.Controls.Add(this.label41);
-            this.panelEditar.Controls.Add(this.pictureBox24);
-            this.panelEditar.Controls.Add(this.pictureBox27);
-            this.panelEditar.Controls.Add(this.tbCorreoEditar);
-            this.panelEditar.Controls.Add(this.tbTelefonoEditar);
-            this.panelEditar.Controls.Add(this.tbDniEditar);
-            this.panelEditar.Controls.Add(this.tbApellidosEditar);
-            this.panelEditar.Controls.Add(this.tbNombreEditar);
-            this.panelEditar.Controls.Add(this.label44);
-            this.panelEditar.Location = new System.Drawing.Point(0, 55);
-            this.panelEditar.Name = "panelEditar";
-            this.panelEditar.Size = new System.Drawing.Size(1130, 655);
-            this.panelEditar.TabIndex = 36;
-            this.panelEditar.Visible = false;
+            this.panelEditarCliente.BackColor = System.Drawing.Color.Transparent;
+            this.panelEditarCliente.Controls.Add(this.pictureBox30);
+            this.panelEditarCliente.Controls.Add(this.lbMensajeEditar);
+            this.panelEditarCliente.Controls.Add(this.label3);
+            this.panelEditarCliente.Controls.Add(this.label5);
+            this.panelEditarCliente.Controls.Add(this.label19);
+            this.panelEditarCliente.Controls.Add(this.label21);
+            this.panelEditarCliente.Controls.Add(this.tbContraseñaEditar);
+            this.panelEditarCliente.Controls.Add(this.label26);
+            this.panelEditarCliente.Controls.Add(this.label27);
+            this.panelEditarCliente.Controls.Add(this.pictureBox17);
+            this.panelEditarCliente.Controls.Add(this.btnEditar);
+            this.panelEditarCliente.Controls.Add(this.button2);
+            this.panelEditarCliente.Controls.Add(this.label28);
+            this.panelEditarCliente.Controls.Add(this.pictureBox18);
+            this.panelEditarCliente.Controls.Add(this.cbTipoEditar);
+            this.panelEditarCliente.Controls.Add(this.label29);
+            this.panelEditarCliente.Controls.Add(this.pictureBox19);
+            this.panelEditarCliente.Controls.Add(this.pictureBox20);
+            this.panelEditarCliente.Controls.Add(this.label30);
+            this.panelEditarCliente.Controls.Add(this.cbMunicipiosEditar);
+            this.panelEditarCliente.Controls.Add(this.cbProvinciasEditar);
+            this.panelEditarCliente.Controls.Add(this.label31);
+            this.panelEditarCliente.Controls.Add(this.label33);
+            this.panelEditarCliente.Controls.Add(this.label34);
+            this.panelEditarCliente.Controls.Add(this.label35);
+            this.panelEditarCliente.Controls.Add(this.label36);
+            this.panelEditarCliente.Controls.Add(this.label37);
+            this.panelEditarCliente.Controls.Add(this.label38);
+            this.panelEditarCliente.Controls.Add(this.pictureBox21);
+            this.panelEditarCliente.Controls.Add(this.pictureBox22);
+            this.panelEditarCliente.Controls.Add(this.pictureBox23);
+            this.panelEditarCliente.Controls.Add(this.label39);
+            this.panelEditarCliente.Controls.Add(this.label40);
+            this.panelEditarCliente.Controls.Add(this.label41);
+            this.panelEditarCliente.Controls.Add(this.pictureBox24);
+            this.panelEditarCliente.Controls.Add(this.pictureBox27);
+            this.panelEditarCliente.Controls.Add(this.tbCorreoEditar);
+            this.panelEditarCliente.Controls.Add(this.tbTelefonoEditar);
+            this.panelEditarCliente.Controls.Add(this.tbDniEditar);
+            this.panelEditarCliente.Controls.Add(this.tbApellidosEditar);
+            this.panelEditarCliente.Controls.Add(this.tbNombreEditar);
+            this.panelEditarCliente.Controls.Add(this.label44);
+            this.panelEditarCliente.Location = new System.Drawing.Point(0, 55);
+            this.panelEditarCliente.Name = "panelEditarCliente";
+            this.panelEditarCliente.Size = new System.Drawing.Size(1130, 655);
+            this.panelEditarCliente.TabIndex = 36;
+            this.panelEditarCliente.Visible = false;
             // 
-            // label44
+            // pictureBox30
             // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.DimGray;
-            this.label44.Location = new System.Drawing.Point(479, 15);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(153, 29);
-            this.label44.TabIndex = 0;
-            this.label44.Text = "Editar cliente";
+            this.pictureBox30.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox30.Image")));
+            this.pictureBox30.Location = new System.Drawing.Point(414, 3);
+            this.pictureBox30.Name = "pictureBox30";
+            this.pictureBox30.Size = new System.Drawing.Size(68, 70);
+            this.pictureBox30.TabIndex = 86;
+            this.pictureBox30.TabStop = false;
+            // 
+            // lbMensajeEditar
+            // 
+            this.lbMensajeEditar.AutoSize = true;
+            this.lbMensajeEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMensajeEditar.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.lbMensajeEditar.Location = new System.Drawing.Point(422, 470);
+            this.lbMensajeEditar.Name = "lbMensajeEditar";
+            this.lbMensajeEditar.Size = new System.Drawing.Size(0, 22);
+            this.lbMensajeEditar.TabIndex = 85;
             // 
             // label3
             // 
@@ -1854,27 +1934,32 @@
             this.tbNombreEditar.Text = "Introduce el nombre";
             this.tbNombreEditar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lbMensajeEditar
+            // label44
             // 
-            this.lbMensajeEditar.AutoSize = true;
-            this.lbMensajeEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMensajeEditar.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.lbMensajeEditar.Location = new System.Drawing.Point(422, 470);
-            this.lbMensajeEditar.Name = "lbMensajeEditar";
-            this.lbMensajeEditar.Size = new System.Drawing.Size(0, 22);
-            this.lbMensajeEditar.TabIndex = 85;
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.DimGray;
+            this.label44.Location = new System.Drawing.Point(480, 34);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(214, 39);
+            this.label44.TabIndex = 0;
+            this.label44.Text = "Editar cliente";
+            // 
+            // timerOcultarMensaje
+            // 
+            this.timerOcultarMensaje.Interval = 8000;
+            this.timerOcultarMensaje.Tick += new System.EventHandler(this.timerOcultarMensaje_Tick);
             // 
             // UC_CrudClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
+            this.Controls.Add(this.panelEditarCliente);
             this.Controls.Add(this.panelCrudClientes);
-            this.Controls.Add(this.panelEditar);
-            this.Controls.Add(this.panelCrear);
-            this.Controls.Add(this.panelDetalle);
+            this.Controls.Add(this.panelCrearCliente);
+            this.Controls.Add(this.panelDetalleCliente);
             this.Controls.Add(this.panelFlSuperior);
-            this.Controls.Add(this.lbNombreCliente);
             this.Name = "UC_CrudClientes";
             this.Size = new System.Drawing.Size(1127, 713);
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).EndInit();
@@ -1895,8 +1980,9 @@
             this.panelCrudClientes.ResumeLayout(false);
             this.panelCrudClientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDetalle)).EndInit();
-            this.panelCrear.ResumeLayout(false);
-            this.panelCrear.PerformLayout();
+            this.panelCrearCliente.ResumeLayout(false);
+            this.panelCrearCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -1906,8 +1992,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelDetalle.ResumeLayout(false);
-            this.panelDetalle.PerformLayout();
+            this.panelDetalleCliente.ResumeLayout(false);
+            this.panelDetalleCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -1917,8 +2004,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
-            this.panelEditar.ResumeLayout(false);
-            this.panelEditar.PerformLayout();
+            this.panelEditarCliente.ResumeLayout(false);
+            this.panelEditarCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
@@ -1929,7 +2017,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1943,8 +2030,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pbOn;
         private System.Windows.Forms.PictureBox pbOff;
-        private System.Windows.Forms.Label lbNombreCliente;
-        private System.Windows.Forms.Label lbMensajeEstado;
+        private System.Windows.Forms.Label lbTotalPolizas;
+        private System.Windows.Forms.Label lbMensajeGeneral;
         private System.Windows.Forms.FlowLayoutPanel panelFlSuperior;
         private System.Windows.Forms.Panel panelNavegacionSuperior;
         private System.Windows.Forms.Panel panelBuscador;
@@ -1954,7 +2041,7 @@
         private System.Windows.Forms.PictureBox pbInicio;
         private System.Windows.Forms.PictureBox pbExit;
         private System.Windows.Forms.Panel panelCrudClientes;
-        private System.Windows.Forms.Panel panelCrear;
+        private System.Windows.Forms.Panel panelCrearCliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pbDetalle;
         private System.Windows.Forms.TextBox tbDniCrear;
@@ -1986,8 +2073,8 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.ComboBox cbTipoCrear;
-        private System.Windows.Forms.Panel panelEditar;
-        private System.Windows.Forms.Panel panelDetalle;
+        private System.Windows.Forms.Panel panelEditarCliente;
+        private System.Windows.Forms.Panel panelDetalleCliente;
         private System.Windows.Forms.Button btnCrearCliente;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label label32;
@@ -2069,5 +2156,12 @@
         private System.Windows.Forms.TextBox tbNombreEditar;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label lbMensajeEditar;
+        private System.Windows.Forms.Label lbMensajeInterruptor;
+        private System.Windows.Forms.Timer timerOcultarMensaje;
+        private System.Windows.Forms.Label lbTotalClientes;
+        private System.Windows.Forms.Label lbNombreCliente;
+        private System.Windows.Forms.PictureBox pictureBox28;
+        private System.Windows.Forms.PictureBox pictureBox29;
+        private System.Windows.Forms.PictureBox pictureBox30;
     }
 }

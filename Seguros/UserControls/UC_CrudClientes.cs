@@ -19,7 +19,7 @@ namespace Seguros.UserControls
         {
             InitializeComponent();
             // Obtengo todos los clientes  y los guardo en el dgv
-            dgvClientes.DataSource = AdminModel.getClientes();
+            actualizarDgvClientes();
         }
 
         // Constructor que recibe el id del agente
@@ -28,8 +28,7 @@ namespace Seguros.UserControls
             InitializeComponent();
             // Obtengo solo los clientes del agente de seguros
             dgvClientes.DataSource = AdminModel.getCarteraClientes(idAgente);
-        }
-
+        }  
 
         // Obtengo el cliente seleccionado.
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -61,10 +60,13 @@ namespace Seguros.UserControls
                 string tipo = filaCliente.Cells["tipo"].Value.ToString();
 
                 // Instancio e inicializo un nuevo objeto de tipo Cliente
-                cliente = new Cliente( idCliente ,nombre, apellidos, dni, telefono, correo, contraseña, idProvincia, idMunicipio, tipo);
+                cliente = new Cliente(idCliente, nombre, apellidos, dni, telefono, correo, contraseña, idProvincia, idMunicipio, tipo);
 
                 // Muestro botones de accion del crud clientes.
                 mostrarBotonesAccion();
+                // Elimina mensajes general
+                ocultarMensaje();
+
 
                 // si se ha habilitado
                 if (estado)
@@ -79,8 +81,10 @@ namespace Seguros.UserControls
                         dgvPolizas.DataSource = tablaPolizas;
                         // Cambio color a las filas segun su estado
                         GestorInterfaz.CambiarColorFilas(dgvPolizas);
-                        // Muestro nombre cliente
-                        lbNombreCliente.Text = nombre;
+                        // Muestro un mensaje con el numero de polizas que tiene el cliente
+                        lbTotalPolizas.Text = dgvPolizas.RowCount.ToString();
+                        // Muestro nombre del cliente
+                        lbNombreCliente.Text = "polizas tiene " + apellidos + ", " + nombre;
                     }
                     else
                     {
@@ -93,19 +97,33 @@ namespace Seguros.UserControls
 
         }
 
+       
+
+        private void ocultarMensaje()
+        {
+            timerOcultarMensaje.Start();
+        }
+
+        // Obtengo todos los clietnes de la base de datos y los guardo en el dgv
+        private void actualizarDgvClientes()
+        {
+            // Obtengo todos los clientes  y los guardo en el dgv
+            dgvClientes.DataSource = AdminModel.getClientes();
+        }
+
         // Muestra formulario para crear un nuevo cliente.
         private void pbMostrarPanelCrear_Click(object sender, EventArgs e)
         {
             // Oculto los paneles
             panelCrudClientes.Visible = false;
-            panelEditar.Visible = false;
-            panelDetalle.Visible = false;
+            panelEditarCliente.Visible = false;
+            panelDetalleCliente.Visible = false;
 
             // Añado las provincias al select
             cargarProvincias(cbProvinciasCrear);
 
             // Muestro el pandel con el formulario
-            panelCrear.Visible = true;
+            panelCrearCliente.Visible = true;
 
             Console.WriteLine("Muestro panel Crear cliente");
         }
@@ -115,8 +133,8 @@ namespace Seguros.UserControls
         {
             // Oculto paneles
             panelCrudClientes.Visible = false;
-            panelCrear.Visible = false;
-            panelEditar.Visible = false;
+            panelCrearCliente.Visible = false;
+            panelEditarCliente.Visible = false;
 
             // Cargo el formulario con los datos del cliente
             tbNombreDetalle.Text = cliente.Nombre;
@@ -132,7 +150,7 @@ namespace Seguros.UserControls
             tbMunicipio.Text = AdminModel.getNombresMunicipio(cliente.IdMuncipio);
 
             // Muestro el panel que contiene el formulario
-            panelDetalle.Visible = true;
+            panelDetalleCliente.Visible = true;
 
             Console.WriteLine("Muestro panel detalle cliente");
 
@@ -142,8 +160,8 @@ namespace Seguros.UserControls
         private void pbMostrarPanelEditar_Click(object sender, EventArgs e)
         {
             panelCrudClientes.Visible = false;
-            panelCrear.Visible = false;
-            panelDetalle.Visible = false;
+            panelCrearCliente.Visible = false;
+            panelDetalleCliente.Visible = false;
 
             // Cargo el formulario con los datos del cliente
             tbNombreEditar.Text = cliente.Nombre;
@@ -163,13 +181,13 @@ namespace Seguros.UserControls
             // Añado las provincias al compbo que esta en el panel editar cliente.
             cargarProvincias(cbProvinciasEditar);
             cargarMunicipios(idProvincia, cbMunicipiosEditar);
-          
+
 
             // Selecciono por defecto la provincia del cliente
-           // cbProvinciasEditar.SelectedIndex = idProvincia - 1;
+            // cbProvinciasEditar.SelectedIndex = idProvincia - 1;
 
             // Muestro panel que contiene el formulario
-            panelEditar.Visible = true;
+            panelEditarCliente.Visible = true;
 
             Console.WriteLine("Muestro panel para Editar cliente");
         }
@@ -177,26 +195,48 @@ namespace Seguros.UserControls
         // Muestra ventan emergente para eliminar cliente
         private void pbEliminar_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Eliminar cliente");
 
             int idCliente = cliente.IdCliente;
             // Mensaje que vera el usuario
-            String message = "estas seguro de que quieres eliminar a " + cliente.Nombre + " ?";
+            String message = "Quieres eliminar a " + cliente.Nombre + " con id " + cliente.IdCliente + " ?";
             // Titulo de la ventana emergente.
-            String caption = "Eliminar cliente"; 
-            // Obtengo el resultado
+            String caption = "Eliminar cliente";
+            // Muestro mensaje y obtengo el boton que ha seleccionado
             var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
+            // Quiere eliminar cliente
             if (result == DialogResult.Yes)
             {
-                 // Eliminar cliente en cascada con sus polizas.
+                // Eliminar cliente en cascada con sus polizas.
+                if (AdminModel.eliminarCliente(idCliente))
+                {
+                    // Actualizo el dgv
+                    actualizarDgvClientes();
+                    // Elimino las polizas del dgv
+                    resetearDgvPolizas(); 
+                    // Muestro mensaje 
+                    lbMensajeGeneral.Text = "Se acaba de eliminar al cliente junto con sus polizas";                
+                }
+                else
+                {
+                    // Sino se ha podido elimianr muestro mensaje
+                    lbMensajeGeneral.Text = "Error al eliminar al cliente";
+                }
+
             }
 
+        }
+
+        // Resetea los valores del dgv
+        private void resetearDgvPolizas()
+        {   // Elimina todo el contenido 
+            dgvPolizas.DataSource = null;
         }
 
         private void limpiarDgvPolizas()
         {
             dgvPolizas.DataSource = null;
+            lbTotalPolizas.Text = "";
             lbNombreCliente.Text = "";
         }
 
@@ -214,7 +254,7 @@ namespace Seguros.UserControls
             estado = true;
             pbOn.Visible = false;
             pbOff.Visible = true;
-            lbMensajeEstado.Text = "Acabas de activar el enlazado de datos dinamico, ahora seleccione un cliente";
+            lbMensajeInterruptor.Text = "Habilitado!";
             Console.WriteLine("On");
         }
 
@@ -225,7 +265,7 @@ namespace Seguros.UserControls
             pbOn.Visible = true;
             pbOff.Visible = false;
             dgvPolizas.DataSource = null;
-            lbMensajeEstado.Text = "Acabas de deshabilitar el enlazado de datos dinamico";
+            lbMensajeInterruptor.Text = "Deshabilitado";
             Console.WriteLine("off");
         }
 
@@ -278,9 +318,9 @@ namespace Seguros.UserControls
         // Vuelve al crud de clientes
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            panelEditar.Visible = false;
-            panelCrear.Visible = false;
-            panelDetalle.Visible = false;
+            panelEditarCliente.Visible = false;
+            panelCrearCliente.Visible = false;
+            panelDetalleCliente.Visible = false;
             panelCrudClientes.Visible = true;
         }
 
@@ -335,7 +375,7 @@ namespace Seguros.UserControls
                 // Accede a cada columna de la fila actual por su nombre o índice
                 // Por ejemplo, para acceder al nombre del municipio (columna "nombre"):
                 string nombreMunicipio = row["municipio"].ToString(); // Ajusta el nombre de la columna según la estructura de tu tabla
-                                                                   // Para acceder al ID del municipio (columna "id"):
+                                                                      // Para acceder al ID del municipio (columna "id"):
                 int idMunicipio = Convert.ToInt32(row["id"]); // Ajusta el nombre de la columna según la estructura de tu tabla
 
                 // Aquí puedes hacer lo que necesites con los datos de cada municipio
@@ -378,7 +418,7 @@ namespace Seguros.UserControls
             Cliente nuevoCliente = new Cliente(idCliente, nombre, apellidos, dni, telefono, correo, contraseña, idProvincia, idMunicipio, tipo);
 
             // Actualizo datos base datos del cliente
-            if ( AdminModel.editarCliente( nuevoCliente ) == 1 )
+            if (AdminModel.editarCliente(nuevoCliente) == 1)
             {   // Muestro mensaje 
                 lbMensajeEditar.Text = "Acabas de actualizar datos cliente";
             }
@@ -390,6 +430,13 @@ namespace Seguros.UserControls
         {   // Obtengo el indice de la provincia
             int idProvincia = Convert.ToInt32(cbProvinciasEditar.SelectedValue);
             cargarMunicipios(idProvincia, cbMunicipiosEditar);
+        }
+
+        private void timerOcultarMensaje_Tick(object sender, EventArgs e)
+        {
+            Console.WriteLine("timer fin");
+            lbMensajeGeneral.Text = "";
+            timerOcultarMensaje.Stop();
         }
     }
 
