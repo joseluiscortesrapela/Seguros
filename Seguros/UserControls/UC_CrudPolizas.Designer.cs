@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudPolizas));
             this.lbPagos = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
@@ -112,16 +112,11 @@
             this.pbMostraFormularioDetallePoliza = new System.Windows.Forms.PictureBox();
             this.panelDetallePoliza = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
-            this.lbIdDetallePoliza = new System.Windows.Forms.Label();
+            this.lbIdPolizaDetalle = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.cbTipoDetalle = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label38 = new System.Windows.Forms.Label();
             this.tbObservacionesDetalle = new System.Windows.Forms.TextBox();
@@ -135,7 +130,6 @@
             this.label43 = new System.Windows.Forms.Label();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.cbClientesDetalle = new System.Windows.Forms.ComboBox();
-            this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.tbImporteDetalle = new System.Windows.Forms.TextBox();
@@ -288,8 +282,8 @@
             this.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPagos.Location = new System.Drawing.Point(36, 412);
             this.dgvPagos.Name = "dgvPagos";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPagos.Size = new System.Drawing.Size(1047, 140);
             this.dgvPagos.TabIndex = 43;
             // 
@@ -347,8 +341,8 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(36, 50);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPolizas.Size = new System.Drawing.Size(1047, 310);
             this.dgvPolizas.TabIndex = 37;
             this.dgvPolizas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPolizas_CellClick);
@@ -1141,16 +1135,11 @@
             this.panelDetallePoliza.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelDetallePoliza.BackgroundImage")));
             this.panelDetallePoliza.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelDetallePoliza.Controls.Add(this.label27);
-            this.panelDetallePoliza.Controls.Add(this.lbIdDetallePoliza);
+            this.panelDetallePoliza.Controls.Add(this.lbIdPolizaDetalle);
             this.panelDetallePoliza.Controls.Add(this.label30);
-            this.panelDetallePoliza.Controls.Add(this.label31);
             this.panelDetallePoliza.Controls.Add(this.label32);
             this.panelDetallePoliza.Controls.Add(this.pictureBox10);
             this.panelDetallePoliza.Controls.Add(this.cbTipoDetalle);
-            this.panelDetallePoliza.Controls.Add(this.label33);
-            this.panelDetallePoliza.Controls.Add(this.label34);
-            this.panelDetallePoliza.Controls.Add(this.label35);
-            this.panelDetallePoliza.Controls.Add(this.label37);
             this.panelDetallePoliza.Controls.Add(this.pictureBox11);
             this.panelDetallePoliza.Controls.Add(this.label38);
             this.panelDetallePoliza.Controls.Add(this.tbObservacionesDetalle);
@@ -1164,7 +1153,6 @@
             this.panelDetallePoliza.Controls.Add(this.label43);
             this.panelDetallePoliza.Controls.Add(this.pictureBox14);
             this.panelDetallePoliza.Controls.Add(this.cbClientesDetalle);
-            this.panelDetallePoliza.Controls.Add(this.label44);
             this.panelDetallePoliza.Controls.Add(this.label45);
             this.panelDetallePoliza.Controls.Add(this.pictureBox15);
             this.panelDetallePoliza.Controls.Add(this.tbImporteDetalle);
@@ -1187,16 +1175,16 @@
             this.label27.TabIndex = 142;
             this.label27.Text = "Numero:";
             // 
-            // lbIdDetallePoliza
+            // lbIdPolizaDetalle
             // 
-            this.lbIdDetallePoliza.AutoSize = true;
-            this.lbIdDetallePoliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIdDetallePoliza.ForeColor = System.Drawing.Color.Silver;
-            this.lbIdDetallePoliza.Location = new System.Drawing.Point(587, 6);
-            this.lbIdDetallePoliza.Name = "lbIdDetallePoliza";
-            this.lbIdDetallePoliza.Size = new System.Drawing.Size(23, 25);
-            this.lbIdDetallePoliza.TabIndex = 141;
-            this.lbIdDetallePoliza.Text = "0";
+            this.lbIdPolizaDetalle.AutoSize = true;
+            this.lbIdPolizaDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIdPolizaDetalle.ForeColor = System.Drawing.Color.Silver;
+            this.lbIdPolizaDetalle.Location = new System.Drawing.Point(587, 6);
+            this.lbIdPolizaDetalle.Name = "lbIdPolizaDetalle";
+            this.lbIdPolizaDetalle.Size = new System.Drawing.Size(23, 25);
+            this.lbIdPolizaDetalle.TabIndex = 141;
+            this.lbIdPolizaDetalle.Text = "0";
             // 
             // label30
             // 
@@ -1208,16 +1196,6 @@
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(0, 24);
             this.label30.TabIndex = 140;
-            // 
-            // label31
-            // 
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.ForeColor = System.Drawing.Color.Coral;
-            this.label31.Location = new System.Drawing.Point(226, 160);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(109, 13);
-            this.label31.TabIndex = 139;
-            this.label31.Text = "No puede estar vacio";
             // 
             // label32
             // 
@@ -1244,6 +1222,7 @@
             // cbTipoDetalle
             // 
             this.cbTipoDetalle.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.cbTipoDetalle.Enabled = false;
             this.cbTipoDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTipoDetalle.ForeColor = System.Drawing.SystemColors.Info;
             this.cbTipoDetalle.FormattingEnabled = true;
@@ -1256,48 +1235,6 @@
             this.cbTipoDetalle.Name = "cbTipoDetalle";
             this.cbTipoDetalle.Size = new System.Drawing.Size(108, 28);
             this.cbTipoDetalle.TabIndex = 136;
-            this.cbTipoDetalle.Text = "Tipo";
-            // 
-            // label33
-            // 
-            this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.Coral;
-            this.label33.Location = new System.Drawing.Point(59, 461);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(299, 13);
-            this.label33.TabIndex = 135;
-            this.label33.Text = "Limite su comentario  a un máximo de 5000 caracteres";
-            // 
-            // label34
-            // 
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.ForeColor = System.Drawing.Color.Coral;
-            this.label34.Location = new System.Drawing.Point(945, 161);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(109, 13);
-            this.label34.TabIndex = 134;
-            this.label34.Text = "No puede estar vacio";
-            // 
-            // label35
-            // 
-            this.label35.BackColor = System.Drawing.Color.Transparent;
-            this.label35.ForeColor = System.Drawing.Color.Coral;
-            this.label35.Location = new System.Drawing.Point(628, 159);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(109, 13);
-            this.label35.TabIndex = 133;
-            this.label35.Text = "No puede estar vacio";
-            // 
-            // label37
-            // 
-            this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.ForeColor = System.Drawing.Color.Coral;
-            this.label37.Location = new System.Drawing.Point(403, 160);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(116, 13);
-            this.label37.TabIndex = 132;
-            this.label37.Text = "No puede estar vacio";
             // 
             // pictureBox11
             // 
@@ -1324,12 +1261,14 @@
             // tbObservacionesDetalle
             // 
             this.tbObservacionesDetalle.BackColor = System.Drawing.Color.PapayaWhip;
+            this.tbObservacionesDetalle.Enabled = false;
             this.tbObservacionesDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbObservacionesDetalle.ForeColor = System.Drawing.Color.Teal;
             this.tbObservacionesDetalle.Location = new System.Drawing.Point(48, 244);
             this.tbObservacionesDetalle.MaxLength = 5000;
             this.tbObservacionesDetalle.Multiline = true;
             this.tbObservacionesDetalle.Name = "tbObservacionesDetalle";
+            this.tbObservacionesDetalle.ReadOnly = true;
             this.tbObservacionesDetalle.Size = new System.Drawing.Size(1034, 214);
             this.tbObservacionesDetalle.TabIndex = 129;
             this.tbObservacionesDetalle.Text = resources.GetString("tbObservacionesDetalle.Text");
@@ -1350,6 +1289,7 @@
             // dtpFechaDetalle
             // 
             this.dtpFechaDetalle.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
+            this.dtpFechaDetalle.Enabled = false;
             this.dtpFechaDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDetalle.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaDetalle.Location = new System.Drawing.Point(946, 134);
@@ -1382,6 +1322,7 @@
             // cbEstadoDetalle
             // 
             this.cbEstadoDetalle.BackColor = System.Drawing.Color.CadetBlue;
+            this.cbEstadoDetalle.Enabled = false;
             this.cbEstadoDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstadoDetalle.ForeColor = System.Drawing.SystemColors.Info;
             this.cbEstadoDetalle.FormattingEnabled = true;
@@ -1394,7 +1335,6 @@
             this.cbEstadoDetalle.Name = "cbEstadoDetalle";
             this.cbEstadoDetalle.Size = new System.Drawing.Size(155, 28);
             this.cbEstadoDetalle.TabIndex = 124;
-            this.cbEstadoDetalle.Text = "Selecciona estado";
             // 
             // pictureBox13
             // 
@@ -1423,9 +1363,9 @@
             this.label43.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label43.Location = new System.Drawing.Point(588, 109);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(74, 20);
+            this.label43.Size = new System.Drawing.Size(81, 20);
             this.label43.TabIndex = 121;
-            this.label43.Text = "Clientes";
+            this.label43.Text = "IdCliente";
             // 
             // pictureBox14
             // 
@@ -1440,6 +1380,7 @@
             // cbClientesDetalle
             // 
             this.cbClientesDetalle.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.cbClientesDetalle.Enabled = false;
             this.cbClientesDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbClientesDetalle.ForeColor = System.Drawing.SystemColors.Info;
             this.cbClientesDetalle.FormattingEnabled = true;
@@ -1450,17 +1391,6 @@
             this.cbClientesDetalle.Name = "cbClientesDetalle";
             this.cbClientesDetalle.Size = new System.Drawing.Size(249, 28);
             this.cbClientesDetalle.TabIndex = 119;
-            this.cbClientesDetalle.Text = "Selecciona un cliente";
-            // 
-            // label44
-            // 
-            this.label44.BackColor = System.Drawing.Color.Transparent;
-            this.label44.ForeColor = System.Drawing.Color.Coral;
-            this.label44.Location = new System.Drawing.Point(79, 159);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(132, 13);
-            this.label44.TabIndex = 118;
-            this.label44.Text = "Solo numericos";
             // 
             // label45
             // 
@@ -1487,6 +1417,7 @@
             // tbImporteDetalle
             // 
             this.tbImporteDetalle.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbImporteDetalle.Enabled = false;
             this.tbImporteDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbImporteDetalle.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbImporteDetalle.Location = new System.Drawing.Point(82, 131);
@@ -1502,7 +1433,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(462, 550);
+            this.button3.Location = new System.Drawing.Point(477, 558);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(192, 35);
             this.button3.TabIndex = 113;
@@ -1660,16 +1591,11 @@
         private System.Windows.Forms.PictureBox pbMostraFormularioDetallePoliza;
         private System.Windows.Forms.Panel panelDetallePoliza;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label lbIdDetallePoliza;
+        private System.Windows.Forms.Label lbIdPolizaDetalle;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.ComboBox cbTipoDetalle;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label37;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.TextBox tbObservacionesDetalle;
@@ -1683,7 +1609,6 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.ComboBox cbClientesDetalle;
-        private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.TextBox tbImporteDetalle;

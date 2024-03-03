@@ -112,6 +112,26 @@ namespace Seguros.UserControls
             cargarSelectConLosClientes(cbClientes);
         }
 
+        // Muestra ventana con el formulario con los datos del cliente
+        private void pbMostraFormularioDetallePoliza_Click(object sender, EventArgs e)
+        {
+            // Muestro formulario para editar una poliza
+            mostrarFormulario("DetallePoliza");
+
+            // Cargo la lista de clientes en el select
+            cargarSelectConLosClientes(cbClientesDetalle);
+            lbIdPolizaDetalle.Text = polizaSeleccinada.Id.ToString();
+            tbImporteDetalle.Text = polizaSeleccinada.Importe.ToString();
+            cbTipoDetalle.Text = polizaSeleccinada.Tipo;
+            cbEstadoDetalle.Text = polizaSeleccinada.Estado;
+           
+            cbClientesDetalle.Text =  polizaSeleccinada.IdCliente.ToString();
+            
+            tbObservacionesDetalle.Text = polizaSeleccinada.Observaciones;
+            dtpFechaDetalle.Value = polizaSeleccinada.Fecha;
+
+            Console.WriteLine("Muestro formulario detalle poliza: ");
+        }
 
         // Muestra el panel que contiene el formulario para editar una nueva poliza.
         private void pbMostrarFormularioEditarPoliza_Click(object sender, EventArgs e)
@@ -144,19 +164,33 @@ namespace Seguros.UserControls
         // Muestra el panel y formulario que necesite
         private void mostrarFormulario(string formulario)
         {
-            if (formulario == "CrearPoliza")
-            {
-                panelCrudPolizas.Visible = false;
-                panelEditarPoliza.Visible = false;
-                panelCrearPoliza.Visible = true;
-            }
-            else if (formulario == "EditarPoliza")
-            {
-                panelCrearPoliza.Visible = false;
-                panelCrudPolizas.Visible = false;
-                panelEditarPoliza.Visible = true;
-            }
 
+            switch (formulario)
+            {
+                case "CrearPoliza":
+                    // Muestra panel con el formulario para crear poliza
+                    panelCrudPolizas.Visible = false;
+                    panelDetallePoliza.Visible = false;
+                    panelEditarPoliza.Visible = false;
+                    panelCrearPoliza.Visible = true;
+                    break;
+                case " EditarPoliza":
+                    // Muestra el panel con el formulario para editar poliza
+                    panelCrudPolizas.Visible = false;
+                    panelCrearPoliza.Visible = false;
+                    panelDetallePoliza.Visible = false;
+                    panelEditarPoliza.Visible = true;
+                    break;
+                case "DetallePoliza":
+                    // Muestra panel con el formulario para ver detalle de la poliza
+                    panelCrudPolizas.Visible = false;
+                    panelCrearPoliza.Visible = false;               
+                    panelEditarPoliza.Visible = false;
+                    panelDetallePoliza.Visible = true;
+                    break;
+
+            }
+            Console.WriteLine("Muestro formulario: " + formulario);
         }
 
         // Eliminar poliza
@@ -191,7 +225,8 @@ namespace Seguros.UserControls
 
         // Muestra botones de accion
         private void mostrarBotonesAccion()
-        {
+        {   // Muestro los botones detalle, editar y eliminar
+            pbMostraFormularioDetallePoliza.Visible = true;
             pbMostrarFormularioEditarPoliza.Visible = true;
             pbEliminarPoliza.Visible = true;
         }
@@ -347,17 +382,13 @@ namespace Seguros.UserControls
             cambiarColorPolizas();
         }
 
-        private void pbMostraFormularioDetallePoliza_Click(object sender, EventArgs e)
-        {
-
-        }
-
         // Vuelve al crud principal de polizas, contenedor principal
         private void btnVolver_Click(object sender, EventArgs e)
         {
             // Oculto los paneles  para editar y crear polizas.
             panelCrearPoliza.Visible = false;
             panelEditarPoliza.Visible = false;
+            panelDetallePoliza.Visible = false;
             // Actualizo, me traigo todas las polizas de la base de datos.
             cargarPolizasDGV();
             // Muestro el contenedor 
