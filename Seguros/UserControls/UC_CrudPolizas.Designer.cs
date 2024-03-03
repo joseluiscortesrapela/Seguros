@@ -29,27 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudPolizas));
             this.lbPagos = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelNavegacionSuperior = new System.Windows.Forms.Panel();
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.pbInicio = new System.Windows.Forms.PictureBox();
-            this.panelContenedor = new System.Windows.Forms.Panel();
+            this.panelCrudPolizas = new System.Windows.Forms.Panel();
             this.panelPago = new System.Windows.Forms.Panel();
             this.pbPagar = new System.Windows.Forms.PictureBox();
             this.tbPago = new System.Windows.Forms.TextBox();
             this.lbPago = new System.Windows.Forms.Label();
             this.dgvPagos = new System.Windows.Forms.DataGridView();
-            this.lbMensajeCrearPoliza = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pbMostrarFormularioEditarPoliza = new System.Windows.Forms.PictureBox();
             this.pbEliminarPoliza = new System.Windows.Forms.PictureBox();
             this.pbMostrarFormularioCrearPoliza = new System.Windows.Forms.PictureBox();
             this.dgvPolizas = new System.Windows.Forms.DataGridView();
+            this.lbMensajeCrearPoliza = new System.Windows.Forms.Label();
             this.panelEditarPoliza = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.lbIdPolizaEditar = new System.Windows.Forms.Label();
+            this.lbMensajeEdtiarPoliza = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -106,14 +109,43 @@
             this.btnCrearPoliza = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbMensajeEdtiarPoliza = new System.Windows.Forms.Label();
-            this.lbIdPolizaEditar = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.pbMostraFormularioDetallePoliza = new System.Windows.Forms.PictureBox();
+            this.panelDetallePoliza = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.lbIdDetallePoliza = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.cbTipoDetalle = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.tbObservacionesDetalle = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.dtpFechaDetalle = new System.Windows.Forms.DateTimePicker();
+            this.label40 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.cbEstadoDetalle = new System.Windows.Forms.ComboBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.cbClientesDetalle = new System.Windows.Forms.ComboBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.tbImporteDetalle = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label46 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.panelNavegacionSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
-            this.panelContenedor.SuspendLayout();
+            this.panelCrudPolizas.SuspendLayout();
             this.panelPago.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPagar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).BeginInit();
@@ -135,6 +167,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMostraFormularioDetallePoliza)).BeginInit();
+            this.panelDetallePoliza.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.SuspendLayout();
             // 
             // lbPagos
@@ -181,21 +221,22 @@
             this.pbInicio.TabIndex = 1;
             this.pbInicio.TabStop = false;
             // 
-            // panelContenedor
+            // panelCrudPolizas
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.Snow;
-            this.panelContenedor.Controls.Add(this.panelPago);
-            this.panelContenedor.Controls.Add(this.lbPago);
-            this.panelContenedor.Controls.Add(this.dgvPagos);
-            this.panelContenedor.Controls.Add(this.label1);
-            this.panelContenedor.Controls.Add(this.pbMostrarFormularioEditarPoliza);
-            this.panelContenedor.Controls.Add(this.pbEliminarPoliza);
-            this.panelContenedor.Controls.Add(this.pbMostrarFormularioCrearPoliza);
-            this.panelContenedor.Controls.Add(this.dgvPolizas);
-            this.panelContenedor.Location = new System.Drawing.Point(3, 61);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1124, 651);
-            this.panelContenedor.TabIndex = 39;
+            this.panelCrudPolizas.BackColor = System.Drawing.Color.Snow;
+            this.panelCrudPolizas.Controls.Add(this.pbMostraFormularioDetallePoliza);
+            this.panelCrudPolizas.Controls.Add(this.panelPago);
+            this.panelCrudPolizas.Controls.Add(this.lbPago);
+            this.panelCrudPolizas.Controls.Add(this.dgvPagos);
+            this.panelCrudPolizas.Controls.Add(this.label1);
+            this.panelCrudPolizas.Controls.Add(this.pbMostrarFormularioEditarPoliza);
+            this.panelCrudPolizas.Controls.Add(this.pbEliminarPoliza);
+            this.panelCrudPolizas.Controls.Add(this.pbMostrarFormularioCrearPoliza);
+            this.panelCrudPolizas.Controls.Add(this.dgvPolizas);
+            this.panelCrudPolizas.Location = new System.Drawing.Point(3, 61);
+            this.panelCrudPolizas.Name = "panelCrudPolizas";
+            this.panelCrudPolizas.Size = new System.Drawing.Size(1124, 651);
+            this.panelCrudPolizas.TabIndex = 39;
             // 
             // panelPago
             // 
@@ -247,21 +288,10 @@
             this.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPagos.Location = new System.Drawing.Point(36, 412);
             this.dgvPagos.Name = "dgvPagos";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPagos.Size = new System.Drawing.Size(1047, 140);
             this.dgvPagos.TabIndex = 43;
-            // 
-            // lbMensajeCrearPoliza
-            // 
-            this.lbMensajeCrearPoliza.AutoSize = true;
-            this.lbMensajeCrearPoliza.BackColor = System.Drawing.Color.Transparent;
-            this.lbMensajeCrearPoliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMensajeCrearPoliza.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbMensajeCrearPoliza.Location = new System.Drawing.Point(445, 470);
-            this.lbMensajeCrearPoliza.Name = "lbMensajeCrearPoliza";
-            this.lbMensajeCrearPoliza.Size = new System.Drawing.Size(0, 24);
-            this.lbMensajeCrearPoliza.TabIndex = 42;
             // 
             // label1
             // 
@@ -276,7 +306,7 @@
             // pbMostrarFormularioEditarPoliza
             // 
             this.pbMostrarFormularioEditarPoliza.Image = ((System.Drawing.Image)(resources.GetObject("pbMostrarFormularioEditarPoliza.Image")));
-            this.pbMostrarFormularioEditarPoliza.Location = new System.Drawing.Point(1089, 91);
+            this.pbMostrarFormularioEditarPoliza.Location = new System.Drawing.Point(1089, 163);
             this.pbMostrarFormularioEditarPoliza.Name = "pbMostrarFormularioEditarPoliza";
             this.pbMostrarFormularioEditarPoliza.Size = new System.Drawing.Size(35, 38);
             this.pbMostrarFormularioEditarPoliza.TabIndex = 40;
@@ -287,7 +317,7 @@
             // pbEliminarPoliza
             // 
             this.pbEliminarPoliza.Image = ((System.Drawing.Image)(resources.GetObject("pbEliminarPoliza.Image")));
-            this.pbEliminarPoliza.Location = new System.Drawing.Point(1089, 135);
+            this.pbEliminarPoliza.Location = new System.Drawing.Point(1089, 207);
             this.pbEliminarPoliza.Name = "pbEliminarPoliza";
             this.pbEliminarPoliza.Size = new System.Drawing.Size(35, 34);
             this.pbEliminarPoliza.TabIndex = 39;
@@ -317,11 +347,22 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(36, 50);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPolizas.Size = new System.Drawing.Size(1047, 310);
             this.dgvPolizas.TabIndex = 37;
             this.dgvPolizas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPolizas_CellClick);
+            // 
+            // lbMensajeCrearPoliza
+            // 
+            this.lbMensajeCrearPoliza.AutoSize = true;
+            this.lbMensajeCrearPoliza.BackColor = System.Drawing.Color.Transparent;
+            this.lbMensajeCrearPoliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMensajeCrearPoliza.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lbMensajeCrearPoliza.Location = new System.Drawing.Point(445, 470);
+            this.lbMensajeCrearPoliza.Name = "lbMensajeCrearPoliza";
+            this.lbMensajeCrearPoliza.Size = new System.Drawing.Size(0, 24);
+            this.lbMensajeCrearPoliza.TabIndex = 42;
             // 
             // panelEditarPoliza
             // 
@@ -364,6 +405,39 @@
             this.panelEditarPoliza.Size = new System.Drawing.Size(1127, 648);
             this.panelEditarPoliza.TabIndex = 46;
             this.panelEditarPoliza.Visible = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Silver;
+            this.label26.Location = new System.Drawing.Point(506, 6);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(87, 25);
+            this.label26.TabIndex = 142;
+            this.label26.Text = "Numero:";
+            // 
+            // lbIdPolizaEditar
+            // 
+            this.lbIdPolizaEditar.AutoSize = true;
+            this.lbIdPolizaEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIdPolizaEditar.ForeColor = System.Drawing.Color.Silver;
+            this.lbIdPolizaEditar.Location = new System.Drawing.Point(587, 6);
+            this.lbIdPolizaEditar.Name = "lbIdPolizaEditar";
+            this.lbIdPolizaEditar.Size = new System.Drawing.Size(23, 25);
+            this.lbIdPolizaEditar.TabIndex = 141;
+            this.lbIdPolizaEditar.Text = "0";
+            // 
+            // lbMensajeEdtiarPoliza
+            // 
+            this.lbMensajeEdtiarPoliza.AutoSize = true;
+            this.lbMensajeEdtiarPoliza.BackColor = System.Drawing.Color.Transparent;
+            this.lbMensajeEdtiarPoliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMensajeEdtiarPoliza.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lbMensajeEdtiarPoliza.Location = new System.Drawing.Point(445, 461);
+            this.lbMensajeEdtiarPoliza.Name = "lbMensajeEdtiarPoliza";
+            this.lbMensajeEdtiarPoliza.Size = new System.Drawing.Size(0, 24);
+            this.lbMensajeEdtiarPoliza.TabIndex = 140;
             // 
             // label3
             // 
@@ -1050,47 +1124,412 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Crear poliza";
             // 
-            // lbMensajeEdtiarPoliza
+            // pbMostraFormularioDetallePoliza
             // 
-            this.lbMensajeEdtiarPoliza.AutoSize = true;
-            this.lbMensajeEdtiarPoliza.BackColor = System.Drawing.Color.Transparent;
-            this.lbMensajeEdtiarPoliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMensajeEdtiarPoliza.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbMensajeEdtiarPoliza.Location = new System.Drawing.Point(445, 461);
-            this.lbMensajeEdtiarPoliza.Name = "lbMensajeEdtiarPoliza";
-            this.lbMensajeEdtiarPoliza.Size = new System.Drawing.Size(0, 24);
-            this.lbMensajeEdtiarPoliza.TabIndex = 140;
+            this.pbMostraFormularioDetallePoliza.Image = ((System.Drawing.Image)(resources.GetObject("pbMostraFormularioDetallePoliza.Image")));
+            this.pbMostraFormularioDetallePoliza.Location = new System.Drawing.Point(1087, 124);
+            this.pbMostraFormularioDetallePoliza.Name = "pbMostraFormularioDetallePoliza";
+            this.pbMostraFormularioDetallePoliza.Size = new System.Drawing.Size(34, 35);
+            this.pbMostraFormularioDetallePoliza.TabIndex = 46;
+            this.pbMostraFormularioDetallePoliza.TabStop = false;
+            this.pbMostraFormularioDetallePoliza.Visible = false;
+            this.pbMostraFormularioDetallePoliza.Click += new System.EventHandler(this.pbMostraFormularioDetallePoliza_Click);
             // 
-            // lbIdPolizaEditar
+            // panelDetallePoliza
             // 
-            this.lbIdPolizaEditar.AutoSize = true;
-            this.lbIdPolizaEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIdPolizaEditar.ForeColor = System.Drawing.Color.Silver;
-            this.lbIdPolizaEditar.Location = new System.Drawing.Point(587, 6);
-            this.lbIdPolizaEditar.Name = "lbIdPolizaEditar";
-            this.lbIdPolizaEditar.Size = new System.Drawing.Size(23, 25);
-            this.lbIdPolizaEditar.TabIndex = 141;
-            this.lbIdPolizaEditar.Text = "0";
+            this.panelDetallePoliza.BackColor = System.Drawing.Color.Transparent;
+            this.panelDetallePoliza.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelDetallePoliza.BackgroundImage")));
+            this.panelDetallePoliza.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDetallePoliza.Controls.Add(this.label27);
+            this.panelDetallePoliza.Controls.Add(this.lbIdDetallePoliza);
+            this.panelDetallePoliza.Controls.Add(this.label30);
+            this.panelDetallePoliza.Controls.Add(this.label31);
+            this.panelDetallePoliza.Controls.Add(this.label32);
+            this.panelDetallePoliza.Controls.Add(this.pictureBox10);
+            this.panelDetallePoliza.Controls.Add(this.cbTipoDetalle);
+            this.panelDetallePoliza.Controls.Add(this.label33);
+            this.panelDetallePoliza.Controls.Add(this.label34);
+            this.panelDetallePoliza.Controls.Add(this.label35);
+            this.panelDetallePoliza.Controls.Add(this.label37);
+            this.panelDetallePoliza.Controls.Add(this.pictureBox11);
+            this.panelDetallePoliza.Controls.Add(this.label38);
+            this.panelDetallePoliza.Controls.Add(this.tbObservacionesDetalle);
+            this.panelDetallePoliza.Controls.Add(this.label39);
+            this.panelDetallePoliza.Controls.Add(this.dtpFechaDetalle);
+            this.panelDetallePoliza.Controls.Add(this.label40);
+            this.panelDetallePoliza.Controls.Add(this.pictureBox12);
+            this.panelDetallePoliza.Controls.Add(this.cbEstadoDetalle);
+            this.panelDetallePoliza.Controls.Add(this.pictureBox13);
+            this.panelDetallePoliza.Controls.Add(this.label42);
+            this.panelDetallePoliza.Controls.Add(this.label43);
+            this.panelDetallePoliza.Controls.Add(this.pictureBox14);
+            this.panelDetallePoliza.Controls.Add(this.cbClientesDetalle);
+            this.panelDetallePoliza.Controls.Add(this.label44);
+            this.panelDetallePoliza.Controls.Add(this.label45);
+            this.panelDetallePoliza.Controls.Add(this.pictureBox15);
+            this.panelDetallePoliza.Controls.Add(this.tbImporteDetalle);
+            this.panelDetallePoliza.Controls.Add(this.button3);
+            this.panelDetallePoliza.Controls.Add(this.label46);
+            this.panelDetallePoliza.Location = new System.Drawing.Point(0, 61);
+            this.panelDetallePoliza.Name = "panelDetallePoliza";
+            this.panelDetallePoliza.Size = new System.Drawing.Size(1127, 648);
+            this.panelDetallePoliza.TabIndex = 143;
+            this.panelDetallePoliza.Visible = false;
             // 
-            // label26
+            // label27
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Silver;
-            this.label26.Location = new System.Drawing.Point(506, 6);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(87, 25);
-            this.label26.TabIndex = 142;
-            this.label26.Text = "Numero:";
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Silver;
+            this.label27.Location = new System.Drawing.Point(506, 6);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(87, 25);
+            this.label27.TabIndex = 142;
+            this.label27.Text = "Numero:";
+            // 
+            // lbIdDetallePoliza
+            // 
+            this.lbIdDetallePoliza.AutoSize = true;
+            this.lbIdDetallePoliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIdDetallePoliza.ForeColor = System.Drawing.Color.Silver;
+            this.lbIdDetallePoliza.Location = new System.Drawing.Point(587, 6);
+            this.lbIdDetallePoliza.Name = "lbIdDetallePoliza";
+            this.lbIdDetallePoliza.Size = new System.Drawing.Size(23, 25);
+            this.lbIdDetallePoliza.TabIndex = 141;
+            this.lbIdDetallePoliza.Text = "0";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label30.Location = new System.Drawing.Point(445, 461);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(0, 24);
+            this.label30.TabIndex = 140;
+            // 
+            // label31
+            // 
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.ForeColor = System.Drawing.Color.Coral;
+            this.label31.Location = new System.Drawing.Point(226, 160);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(109, 13);
+            this.label31.TabIndex = 139;
+            this.label31.Text = "No puede estar vacio";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label32.Location = new System.Drawing.Point(186, 106);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(103, 20);
+            this.label32.TabIndex = 138;
+            this.label32.Text = "Tipo seguro";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(190, 126);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox10.TabIndex = 137;
+            this.pictureBox10.TabStop = false;
+            // 
+            // cbTipoDetalle
+            // 
+            this.cbTipoDetalle.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.cbTipoDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipoDetalle.ForeColor = System.Drawing.SystemColors.Info;
+            this.cbTipoDetalle.FormattingEnabled = true;
+            this.cbTipoDetalle.Items.AddRange(new object[] {
+            "Vida",
+            "Coche",
+            "Hogar",
+            "Salud"});
+            this.cbTipoDetalle.Location = new System.Drawing.Point(227, 129);
+            this.cbTipoDetalle.Name = "cbTipoDetalle";
+            this.cbTipoDetalle.Size = new System.Drawing.Size(108, 28);
+            this.cbTipoDetalle.TabIndex = 136;
+            this.cbTipoDetalle.Text = "Tipo";
+            // 
+            // label33
+            // 
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.Coral;
+            this.label33.Location = new System.Drawing.Point(59, 461);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(299, 13);
+            this.label33.TabIndex = 135;
+            this.label33.Text = "Limite su comentario  a un máximo de 5000 caracteres";
+            // 
+            // label34
+            // 
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.ForeColor = System.Drawing.Color.Coral;
+            this.label34.Location = new System.Drawing.Point(945, 161);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(109, 13);
+            this.label34.TabIndex = 134;
+            this.label34.Text = "No puede estar vacio";
+            // 
+            // label35
+            // 
+            this.label35.BackColor = System.Drawing.Color.Transparent;
+            this.label35.ForeColor = System.Drawing.Color.Coral;
+            this.label35.Location = new System.Drawing.Point(628, 159);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(109, 13);
+            this.label35.TabIndex = 133;
+            this.label35.Text = "No puede estar vacio";
+            // 
+            // label37
+            // 
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.ForeColor = System.Drawing.Color.Coral;
+            this.label37.Location = new System.Drawing.Point(403, 160);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(116, 13);
+            this.label37.TabIndex = 132;
+            this.label37.Text = "No puede estar vacio";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(909, 135);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(33, 34);
+            this.pictureBox11.TabIndex = 131;
+            this.pictureBox11.TabStop = false;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label38.Location = new System.Drawing.Point(57, 221);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(127, 20);
+            this.label38.TabIndex = 130;
+            this.label38.Text = "Observaciones";
+            // 
+            // tbObservacionesDetalle
+            // 
+            this.tbObservacionesDetalle.BackColor = System.Drawing.Color.PapayaWhip;
+            this.tbObservacionesDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbObservacionesDetalle.ForeColor = System.Drawing.Color.Teal;
+            this.tbObservacionesDetalle.Location = new System.Drawing.Point(48, 244);
+            this.tbObservacionesDetalle.MaxLength = 5000;
+            this.tbObservacionesDetalle.Multiline = true;
+            this.tbObservacionesDetalle.Name = "tbObservacionesDetalle";
+            this.tbObservacionesDetalle.Size = new System.Drawing.Size(1034, 214);
+            this.tbObservacionesDetalle.TabIndex = 129;
+            this.tbObservacionesDetalle.Text = resources.GetString("tbObservacionesDetalle.Text");
+            this.tbObservacionesDetalle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label39.Location = new System.Drawing.Point(905, 112);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(132, 20);
+            this.label39.TabIndex = 128;
+            this.label39.Text = "Fecha creación";
+            // 
+            // dtpFechaDetalle
+            // 
+            this.dtpFechaDetalle.CalendarMonthBackground = System.Drawing.SystemColors.HotTrack;
+            this.dtpFechaDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaDetalle.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaDetalle.Location = new System.Drawing.Point(946, 134);
+            this.dtpFechaDetalle.Name = "dtpFechaDetalle";
+            this.dtpFechaDetalle.Size = new System.Drawing.Size(136, 27);
+            this.dtpFechaDetalle.TabIndex = 127;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label40.Location = new System.Drawing.Point(363, 106);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(75, 20);
+            this.label40.TabIndex = 126;
+            this.label40.Text = "Estados";
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(367, 126);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox12.TabIndex = 125;
+            this.pictureBox12.TabStop = false;
+            // 
+            // cbEstadoDetalle
+            // 
+            this.cbEstadoDetalle.BackColor = System.Drawing.Color.CadetBlue;
+            this.cbEstadoDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstadoDetalle.ForeColor = System.Drawing.SystemColors.Info;
+            this.cbEstadoDetalle.FormattingEnabled = true;
+            this.cbEstadoDetalle.Items.AddRange(new object[] {
+            "Cobrada",
+            "A cuenta",
+            "Liquidada",
+            "Anulada"});
+            this.cbEstadoDetalle.Location = new System.Drawing.Point(404, 129);
+            this.cbEstadoDetalle.Name = "cbEstadoDetalle";
+            this.cbEstadoDetalle.Size = new System.Drawing.Size(155, 28);
+            this.cbEstadoDetalle.TabIndex = 124;
+            this.cbEstadoDetalle.Text = "Selecciona estado";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
+            this.pictureBox13.Location = new System.Drawing.Point(443, 3);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(55, 67);
+            this.pictureBox13.TabIndex = 123;
+            this.pictureBox13.TabStop = false;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label42.Location = new System.Drawing.Point(445, 501);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(0, 20);
+            this.label42.TabIndex = 122;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.Color.Transparent;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label43.Location = new System.Drawing.Point(588, 109);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(74, 20);
+            this.label43.TabIndex = 121;
+            this.label43.Text = "Clientes";
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
+            this.pictureBox14.Location = new System.Drawing.Point(592, 132);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox14.TabIndex = 120;
+            this.pictureBox14.TabStop = false;
+            // 
+            // cbClientesDetalle
+            // 
+            this.cbClientesDetalle.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.cbClientesDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbClientesDetalle.ForeColor = System.Drawing.SystemColors.Info;
+            this.cbClientesDetalle.FormattingEnabled = true;
+            this.cbClientesDetalle.Items.AddRange(new object[] {
+            "Particular",
+            "Autonomo"});
+            this.cbClientesDetalle.Location = new System.Drawing.Point(629, 131);
+            this.cbClientesDetalle.Name = "cbClientesDetalle";
+            this.cbClientesDetalle.Size = new System.Drawing.Size(249, 28);
+            this.cbClientesDetalle.TabIndex = 119;
+            this.cbClientesDetalle.Text = "Selecciona un cliente";
+            // 
+            // label44
+            // 
+            this.label44.BackColor = System.Drawing.Color.Transparent;
+            this.label44.ForeColor = System.Drawing.Color.Coral;
+            this.label44.Location = new System.Drawing.Point(79, 159);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(132, 13);
+            this.label44.TabIndex = 118;
+            this.label44.Text = "Solo numericos";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.Color.Transparent;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label45.Location = new System.Drawing.Point(44, 107);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(71, 20);
+            this.label45.TabIndex = 117;
+            this.label45.Text = "Importe";
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
+            this.pictureBox15.Location = new System.Drawing.Point(48, 130);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(29, 28);
+            this.pictureBox15.TabIndex = 116;
+            this.pictureBox15.TabStop = false;
+            // 
+            // tbImporteDetalle
+            // 
+            this.tbImporteDetalle.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbImporteDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbImporteDetalle.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbImporteDetalle.Location = new System.Drawing.Point(82, 131);
+            this.tbImporteDetalle.Name = "tbImporteDetalle";
+            this.tbImporteDetalle.Size = new System.Drawing.Size(76, 26);
+            this.tbImporteDetalle.TabIndex = 115;
+            this.tbImporteDetalle.Text = "0";
+            this.tbImporteDetalle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Violet;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Location = new System.Drawing.Point(462, 550);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(192, 35);
+            this.button3.TabIndex = 113;
+            this.button3.Text = "Volver";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label46.Location = new System.Drawing.Point(500, 31);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(223, 39);
+            this.label46.TabIndex = 112;
+            this.label46.Text = "Detalle poliza";
             // 
             // UC_CrudPolizas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.Controls.Add(this.panelEditarPoliza);
+            this.Controls.Add(this.panelDetallePoliza);
             this.Controls.Add(this.panelCrearPoliza);
-            this.Controls.Add(this.panelContenedor);
+            this.Controls.Add(this.panelEditarPoliza);
+            this.Controls.Add(this.panelCrudPolizas);
             this.Controls.Add(this.panelNavegacionSuperior);
             this.Controls.Add(this.lbPagos);
             this.Name = "UC_CrudPolizas";
@@ -1100,8 +1539,8 @@
             this.panelNavegacionSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).EndInit();
-            this.panelContenedor.ResumeLayout(false);
-            this.panelContenedor.PerformLayout();
+            this.panelCrudPolizas.ResumeLayout(false);
+            this.panelCrudPolizas.PerformLayout();
             this.panelPago.ResumeLayout(false);
             this.panelPago.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPagar)).EndInit();
@@ -1126,6 +1565,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMostraFormularioDetallePoliza)).EndInit();
+            this.panelDetallePoliza.ResumeLayout(false);
+            this.panelDetallePoliza.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1137,7 +1585,7 @@
         private System.Windows.Forms.Panel panelNavegacionSuperior;
         private System.Windows.Forms.PictureBox pbInicio;
         private System.Windows.Forms.PictureBox pbExit;
-        private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.Panel panelCrudPolizas;
         private System.Windows.Forms.Panel panelPago;
         private System.Windows.Forms.PictureBox pbPagar;
         private System.Windows.Forms.TextBox tbPago;
@@ -1209,5 +1657,37 @@
         private System.Windows.Forms.Label lbMensajeEdtiarPoliza;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label lbIdPolizaEditar;
+        private System.Windows.Forms.PictureBox pbMostraFormularioDetallePoliza;
+        private System.Windows.Forms.Panel panelDetallePoliza;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label lbIdDetallePoliza;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.ComboBox cbTipoDetalle;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox tbObservacionesDetalle;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.DateTimePicker dtpFechaDetalle;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.ComboBox cbEstadoDetalle;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.ComboBox cbClientesDetalle;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.TextBox tbImporteDetalle;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label46;
     }
 }

@@ -28,7 +28,7 @@ namespace Seguros.UserControls
             InitializeComponent();
             // Obtengo solo los clientes del agente de seguros
             dgvClientes.DataSource = AdminModel.getCarteraClientes(idAgente);
-        }  
+        }
 
         // Obtengo el cliente seleccionado.
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -97,7 +97,7 @@ namespace Seguros.UserControls
 
         }
 
-       
+
 
         private void ocultarMensaje()
         {
@@ -114,16 +114,10 @@ namespace Seguros.UserControls
         // Muestra formulario para crear un nuevo cliente.
         private void pbMostrarPanelCrear_Click(object sender, EventArgs e)
         {
-            // Oculto los paneles
-            panelCrudClientes.Visible = false;
-            panelEditarCliente.Visible = false;
-            panelDetalleCliente.Visible = false;
-
+            // Muestro formulario para crear un nuevo cliente.
+            mostrarFormulario("Crear");
             // Añado las provincias al select
             cargarProvincias(cbProvinciasCrear);
-
-            // Muestro el pandel con el formulario
-            panelCrearCliente.Visible = true;
 
             Console.WriteLine("Muestro panel Crear cliente");
         }
@@ -131,12 +125,10 @@ namespace Seguros.UserControls
         // Muestra formulario con los datos del cliente
         private void pbMostrarPanelDetalle_Click(object sender, EventArgs e)
         {
-            // Oculto paneles
-            panelCrudClientes.Visible = false;
-            panelCrearCliente.Visible = false;
-            panelEditarCliente.Visible = false;
-
+            // Muestra formulario para ver detalles del cliente
+            mostrarFormulario("Detalle");
             // Cargo el formulario con los datos del cliente
+            lbIdDetalleCliente.Text = cliente.IdCliente.ToString();
             tbNombreDetalle.Text = cliente.Nombre;
             tbApellidosDetalle.Text = cliente.Apellidos;
             tbDniDetalle.Text = cliente.Dni;
@@ -149,21 +141,46 @@ namespace Seguros.UserControls
             // Obtengo de la base de datos el nombre del municipio y lo guardo en el campo de texto
             tbMunicipio.Text = AdminModel.getNombresMunicipio(cliente.IdMuncipio);
 
-            // Muestro el panel que contiene el formulario
-            panelDetalleCliente.Visible = true;
-
             Console.WriteLine("Muestro panel detalle cliente");
+        }
+
+        // Muestro la ventana que contiene el formulario crear, editar o detalle de un cliente.
+        private void mostrarFormulario(string nombreFormulario)
+        {
+
+            switch (nombreFormulario)
+            {
+                case "Crear": // Muestra ventana crrear cliente
+                    panelCrudClientes.Visible = false;
+                    panelEditarCliente.Visible = false;
+                    panelDetalleCliente.Visible = false;
+                    panelCrearCliente.Visible = true;
+                    break;
+                case "Editar": // Muestra ventana para editar cliente
+                    panelCrudClientes.Visible = false;
+                    panelCrearCliente.Visible = false;
+                    panelDetalleCliente.Visible = false;
+                    panelEditarCliente.Visible = true;
+                    break;
+                case "Detalle": // Muestra ventana para ver detalles cliente.
+                    panelCrudClientes.Visible = false;
+                    panelCrearCliente.Visible = false;
+                    panelEditarCliente.Visible = false;
+                    panelDetalleCliente.Visible = true;
+                    break;
+
+            }
 
         }
 
         // Muestra formulario para editar cliente
         private void pbMostrarPanelEditar_Click(object sender, EventArgs e)
         {
-            panelCrudClientes.Visible = false;
-            panelCrearCliente.Visible = false;
-            panelDetalleCliente.Visible = false;
+            // Muestro formulario para editar datos de un cliente
+            mostrarFormulario("Editar");
 
-            // Cargo el formulario con los datos del cliente
+            // Relleno formulario con los datos del cliente
+            lbIdClienteEditar.Text = cliente.IdCliente.ToString();
             tbNombreEditar.Text = cliente.Nombre;
             tbApellidosEditar.Text = cliente.Apellidos;
             tbDniEditar.Text = cliente.Dni;
@@ -182,14 +199,9 @@ namespace Seguros.UserControls
             cargarProvincias(cbProvinciasEditar);
             cargarMunicipios(idProvincia, cbMunicipiosEditar);
 
+            // Selecciona el municipio del cliente en el select
 
-            // Selecciono por defecto la provincia del cliente
-            // cbProvinciasEditar.SelectedIndex = idProvincia - 1;
-
-            // Muestro panel que contiene el formulario
-            panelEditarCliente.Visible = true;
-
-            Console.WriteLine("Muestro panel para Editar cliente");
+            Console.WriteLine("Muestro formulario para Editar cliente");
         }
 
         // Muestra ventan emergente para eliminar cliente
@@ -213,9 +225,9 @@ namespace Seguros.UserControls
                     // Actualizo el dgv
                     actualizarDgvClientes();
                     // Elimino las polizas del dgv
-                    resetearDgvPolizas(); 
+                    resetearDgvPolizas();
                     // Muestro mensaje 
-                    lbMensajeGeneral.Text = "Se acaba de eliminar al cliente junto con sus polizas";                
+                    lbMensajeGeneral.Text = "Se acaba de eliminar al cliente junto con sus polizas";
                 }
                 else
                 {

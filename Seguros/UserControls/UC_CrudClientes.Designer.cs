@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudClientes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.pbEditar = new System.Windows.Forms.PictureBox();
             this.pbEliminar = new System.Windows.Forms.PictureBox();
@@ -99,6 +99,8 @@
             this.tbNombreCrear = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelDetalleCliente = new System.Windows.Forms.Panel();
+            this.label43 = new System.Windows.Forms.Label();
+            this.lbIdDetalleCliente = new System.Windows.Forms.Label();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.tbMunicipio = new System.Windows.Forms.TextBox();
             this.tbProvincia = new System.Windows.Forms.TextBox();
@@ -131,6 +133,8 @@
             this.tbNombreDetalle = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
             this.panelEditarCliente = new System.Windows.Forms.Panel();
+            this.label42 = new System.Windows.Forms.Label();
+            this.lbIdClienteEditar = new System.Windows.Forms.Label();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.lbMensajeEditar = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -281,8 +285,8 @@
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Location = new System.Drawing.Point(36, 23);
             this.dgvClientes.Name = "dgvClientes";
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClientes.Size = new System.Drawing.Size(1049, 286);
             this.dgvClientes.TabIndex = 8;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
@@ -300,8 +304,8 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(36, 361);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPolizas.Size = new System.Drawing.Size(1049, 217);
             this.dgvPolizas.TabIndex = 26;
             // 
@@ -1023,6 +1027,8 @@
             // 
             this.panelDetalleCliente.BackColor = System.Drawing.Color.Transparent;
             this.panelDetalleCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelDetalleCliente.BackgroundImage")));
+            this.panelDetalleCliente.Controls.Add(this.label43);
+            this.panelDetalleCliente.Controls.Add(this.lbIdDetalleCliente);
             this.panelDetalleCliente.Controls.Add(this.pictureBox29);
             this.panelDetalleCliente.Controls.Add(this.tbMunicipio);
             this.panelDetalleCliente.Controls.Add(this.tbProvincia);
@@ -1060,12 +1066,34 @@
             this.panelDetalleCliente.TabIndex = 35;
             this.panelDetalleCliente.Visible = false;
             // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.Silver;
+            this.label43.Location = new System.Drawing.Point(490, 8);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(87, 25);
+            this.label43.TabIndex = 146;
+            this.label43.Text = "Numero:";
+            // 
+            // lbIdDetalleCliente
+            // 
+            this.lbIdDetalleCliente.AutoSize = true;
+            this.lbIdDetalleCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIdDetalleCliente.ForeColor = System.Drawing.Color.Silver;
+            this.lbIdDetalleCliente.Location = new System.Drawing.Point(571, 8);
+            this.lbIdDetalleCliente.Name = "lbIdDetalleCliente";
+            this.lbIdDetalleCliente.Size = new System.Drawing.Size(23, 25);
+            this.lbIdDetalleCliente.TabIndex = 145;
+            this.lbIdDetalleCliente.Text = "0";
+            // 
             // pictureBox29
             // 
             this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
-            this.pictureBox29.Location = new System.Drawing.Point(414, 3);
+            this.pictureBox29.Location = new System.Drawing.Point(424, 3);
             this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(78, 66);
+            this.pictureBox29.Size = new System.Drawing.Size(68, 66);
             this.pictureBox29.TabIndex = 88;
             this.pictureBox29.TabStop = false;
             // 
@@ -1440,6 +1468,8 @@
             // 
             this.panelEditarCliente.BackColor = System.Drawing.Color.Transparent;
             this.panelEditarCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelEditarCliente.BackgroundImage")));
+            this.panelEditarCliente.Controls.Add(this.label42);
+            this.panelEditarCliente.Controls.Add(this.lbIdClienteEditar);
             this.panelEditarCliente.Controls.Add(this.pictureBox30);
             this.panelEditarCliente.Controls.Add(this.lbMensajeEditar);
             this.panelEditarCliente.Controls.Add(this.label3);
@@ -1487,6 +1517,28 @@
             this.panelEditarCliente.Size = new System.Drawing.Size(1130, 655);
             this.panelEditarCliente.TabIndex = 36;
             this.panelEditarCliente.Visible = false;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Silver;
+            this.label42.Location = new System.Drawing.Point(488, 9);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(87, 25);
+            this.label42.TabIndex = 144;
+            this.label42.Text = "Numero:";
+            // 
+            // lbIdClienteEditar
+            // 
+            this.lbIdClienteEditar.AutoSize = true;
+            this.lbIdClienteEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIdClienteEditar.ForeColor = System.Drawing.Color.Silver;
+            this.lbIdClienteEditar.Location = new System.Drawing.Point(569, 9);
+            this.lbIdClienteEditar.Name = "lbIdClienteEditar";
+            this.lbIdClienteEditar.Size = new System.Drawing.Size(23, 25);
+            this.lbIdClienteEditar.TabIndex = 143;
+            this.lbIdClienteEditar.Text = "0";
             // 
             // pictureBox30
             // 
@@ -1958,10 +2010,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
+            this.Controls.Add(this.panelCrudClientes);
             this.Controls.Add(this.panelEditarCliente);
             this.Controls.Add(this.panelDetalleCliente);
             this.Controls.Add(this.panelCrearCliente);
-            this.Controls.Add(this.panelCrudClientes);
             this.Controls.Add(this.panelFlSuperior);
             this.Name = "UC_CrudClientes";
             this.Size = new System.Drawing.Size(1127, 713);
@@ -2166,5 +2218,9 @@
         private System.Windows.Forms.PictureBox pictureBox28;
         private System.Windows.Forms.PictureBox pictureBox29;
         private System.Windows.Forms.PictureBox pictureBox30;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label lbIdClienteEditar;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label lbIdDetalleCliente;
     }
 }

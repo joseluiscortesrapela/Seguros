@@ -11,7 +11,7 @@ namespace Seguros.UserControls
 {
     public partial class UC_CrudPolizas : UserControl
     {
-        private Poliza poliza;
+        private Poliza polizaSeleccinada;
         private int idPoliza;
         private DataGridViewRow filaPoliza;
         private int importe, totalPagado, deboPagar;
@@ -62,7 +62,7 @@ namespace Seguros.UserControls
                 int idCliente = int.Parse(filaPoliza.Cells["idCliente"].Value.ToString());
 
                 // Encapsulo los datos de la poliza en un objeto tipo Poliza
-                poliza = new Poliza(idPoliza, importe, tipo, estado, fechaPôliza, observaciones, idCliente);
+                polizaSeleccinada = new Poliza(idPoliza, importe, tipo, estado, fechaPôliza, observaciones, idCliente);
 
                 // Obtengo el cliente de la poliza.
                 DataTable clienteData = AdminModel.getClienteById(idCliente);
@@ -121,16 +121,13 @@ namespace Seguros.UserControls
 
             // Cargo la lista de clientes en el select
             cargarSelectConLosClientes(cbClientesEditar);
-            lbIdPolizaEditar.Text = poliza.Id.ToString();
-            tbImporteEditar.Text = poliza.Importe.ToString();
-            cbTipoEditar.Text = poliza.Tipo;
-            cbEstadosEditar.Text = poliza.Estado;
-
-
+            lbIdPolizaEditar.Text = polizaSeleccinada.Id.ToString();
+            tbImporteEditar.Text = polizaSeleccinada.Importe.ToString();
+            cbTipoEditar.Text = polizaSeleccinada.Tipo;
+            cbEstadosEditar.Text = polizaSeleccinada.Estado;
             //cbClientesEditar.SelectedIndex = 8;
-            tbObservacionesEdiitar.Text = poliza.Observaciones;
-            dtpFechaEditar.Value = poliza.Fecha;
-
+            tbObservacionesEdiitar.Text = polizaSeleccinada.Observaciones;
+            dtpFechaEditar.Value = polizaSeleccinada.Fecha;
 
             Console.WriteLine("Muestro formulario editar poliza: ");
         }
@@ -149,14 +146,14 @@ namespace Seguros.UserControls
         {
             if (formulario == "CrearPoliza")
             {
-                panelContenedor.Visible = false;
+                panelCrudPolizas.Visible = false;
                 panelEditarPoliza.Visible = false;
                 panelCrearPoliza.Visible = true;
             }
             else if (formulario == "EditarPoliza")
             {
                 panelCrearPoliza.Visible = false;
-                panelContenedor.Visible = false;
+                panelCrudPolizas.Visible = false;
                 panelEditarPoliza.Visible = true;
             }
 
@@ -259,7 +256,10 @@ namespace Seguros.UserControls
 
             // Si la poliza se ha registrado correctamente en la base de datos.
             if (AdminModel.registrarPoliza(poliza))
-            {   // Muestro mensaje
+            {
+                // Limpio el formulario
+                limpiarFormularioCrearPoliza();
+                // Muestro mensaje
                 lbMensajeCrearPoliza.Text = "Acabas de crear una nueva poliza";
             }
 
@@ -267,10 +267,22 @@ namespace Seguros.UserControls
 
         }
 
+        // Limpia contendio del fomulario para crear una poliza
+        private void limpiarFormularioCrearPoliza()
+        {
+            tbImporte.Text = "0";
+            cbTipo.Text = "tipo";
+            cbEstados.Text = "Selecciona estado";
+            cbClientes.Text = "Selecciona cliente";
+            dtpFecha.Text = "";
+            lbMensajeCrearPoliza.Text = "";
+        }
+
         private void btnEditarPoliza_Click(object sender, EventArgs e)
         {
-
-            // Obtengo datos del formulario
+            // Obtengo el id de la poliza que fue seleccionada
+            int idPoliza = polizaSeleccinada.Id;
+            // Obtengo valores formulario editar poliza
             int importe = int.Parse(tbImporteEditar.Text.ToString());
             string tipo = cbTipoEditar.Text.ToString();
             string estado = cbEstadosEditar.Text.ToString();
@@ -279,7 +291,7 @@ namespace Seguros.UserControls
             string observaciones = tbObservacionesEdiitar.Text.ToString();
 
             // Encapsulo los datos en un objeto del tipo Poliza.
-            Poliza poliza = new Poliza(importe, tipo, estado, fecha, observaciones, idCliente);
+            Poliza poliza = new Poliza(idPoliza, importe, tipo, estado, fecha, observaciones, idCliente);
 
             // Si ha actualizado la poliza en la basde de datos
             if (AdminModel.editarPoliza(poliza))
@@ -335,6 +347,10 @@ namespace Seguros.UserControls
             cambiarColorPolizas();
         }
 
+        private void pbMostraFormularioDetallePoliza_Click(object sender, EventArgs e)
+        {
+
+        }
 
         // Vuelve al crud principal de polizas, contenedor principal
         private void btnVolver_Click(object sender, EventArgs e)
@@ -345,7 +361,7 @@ namespace Seguros.UserControls
             // Actualizo, me traigo todas las polizas de la base de datos.
             cargarPolizasDGV();
             // Muestro el contenedor 
-            panelContenedor.Visible = true;
+            panelCrudPolizas.Visible = true;
         }
 
         // Cierro la aplicacion
