@@ -447,6 +447,48 @@ namespace Seguros.Models
 
         }
 
+        // Registra un nuevo usuario
+        public static bool editarPoliza(Poliza poliza)
+        {
+            // Creo la conexion con la base de datos.
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+
+            // Consulta sql
+            string sql = "UPDATE polizas SET importe = @importe, tipo = @tipo, estado = @estado, observaciones = @observaciones, fecha = @fecha WHERE idCliente = @idCliente";
+
+            // Preparo la consulta
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            // Le paso el pago
+
+            // Agregar los parámetros para importe, estado, fecha y ID del cliente
+            comando.Parameters.AddWithValue("@importe", poliza.Importe);
+            comando.Parameters.AddWithValue("@tipo", poliza.Tipo);
+            comando.Parameters.AddWithValue("@estado", poliza.Estado);
+            comando.Parameters.AddWithValue("@observaciones", poliza.Observaciones);
+            comando.Parameters.AddWithValue("@fecha", poliza.Fecha);
+            comando.Parameters.AddWithValue("@idCliente", poliza.IdCliente);
+
+            bool creado;
+
+            try
+            {
+                // Return value is the number of rows affected by the SQL statement.
+                int estado = comando.ExecuteNonQuery();
+                // Convierto el int a bool
+                creado = (estado != 0);
+            }
+            catch (Exception ex)
+            {
+                creado = false;
+                Console.WriteLine(ex.Message);
+            }
+
+            return creado;
+
+        }
+
 
         // Registra un nuevo usuario
         public static int pagarPoliza(decimal pago, int idPoliza)

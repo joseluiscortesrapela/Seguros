@@ -5,6 +5,7 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Seguros.UserControls
 {
@@ -31,7 +32,13 @@ namespace Seguros.UserControls
             dgvPolizas.DataSource = AdminModel.getPolizasByClientID(idCliente);
         }
 
-        // Obtengo la poliza que ha sido seleccionada
+        // Autoload ventana polizas
+        private void UC_CrudPolizas_Load(object sender, EventArgs e)
+        {   // Cambia color filas del dgv de polizas segun su estado
+            CambiarColorFilas();
+        }
+
+        // Obtengo la poliza que ha sido seleccionada en el dgv de polizas.
         private void dgvPolizas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Obtengo la fila que ha sido seleccionada en el dataGridView
@@ -54,7 +61,7 @@ namespace Seguros.UserControls
                 // Obtengo el id del cliente de esta poliza.
                 int idCliente = int.Parse(filaPoliza.Cells["idCliente"].Value.ToString());
 
-                // Encapsulo los datos de la poliza en un objeto 
+                // Encapsulo los datos de la poliza en un objeto tipo Poliza
                 poliza = new Poliza(idPoliza, importe, tipo, estado, fechaPôliza, observaciones, idCliente);
 
                 // Obtengo el cliente de la poliza.
@@ -96,26 +103,45 @@ namespace Seguros.UserControls
 
         }
 
-        private void UC_CrudPolizas_Load(object sender, EventArgs e)
-        {
-            CambiarColorFilas();
-        }
-
         // Muestra el panel que contiene el formulario para crear una nueva poliza.
-        private void pbMostrarFormularioCrearPoliza_Click_1(object sender, EventArgs e)
+        private void pbMostrarFormularioCrearPoliza_Click(object sender, EventArgs e)
         {
-            // Muestro formulario
+            // Muestro formulario para crear una poliza.
             mostrarFormulario("CrearPoliza");
             // Cargo la lista de clientes en el select
-            cargarClientes();
+            cargarSelectConLosClientes(cbClientes);
         }
 
-        private void cargarClientes()
+
+        // Muestra el panel que contiene el formulario para editar una nueva poliza.
+        private void pbMostrarFormularioEditarPoliza_Click(object sender, EventArgs e)
+        {
+            // Muestro formulario para editar una poliza
+            mostrarFormulario("EditarPoliza");
+
+            // Cargo la lista de clientes en el select
+            cargarSelectConLosClientes(cbClientesEditar);
+            lbIdPolizaEditar.Text = poliza.Id.ToString();
+            tbImporteEditar.Text = poliza.Importe.ToString();
+            cbTipoEditar.Text = poliza.Tipo;
+            cbEstadosEditar.Text = poliza.Estado;
+
+
+            //cbClientesEditar.SelectedIndex = 8;
+            tbObservacionesEdiitar.Text = poliza.Observaciones;
+            dtpFechaEditar.Value = poliza.Fecha;
+
+
+            Console.WriteLine("Muestro formulario editar poliza: ");
+        }
+
+        // Añade los clietnes al select
+        private void cargarSelectConLosClientes(System.Windows.Forms.ComboBox select)
         {
             // Obtengo los clientes y los guardo en select
-            cbClientes.DisplayMember = "nombre";
-            cbClientes.ValueMember = "idCliente";
-            cbClientes.DataSource = AdminModel.getClientes();
+            select.DisplayMember = "nombre";
+            select.ValueMember = "idCliente";
+            select.DataSource = AdminModel.getClientes();
         }
 
         // Muestra el panel y formulario que necesite
@@ -133,13 +159,6 @@ namespace Seguros.UserControls
                 panelContenedor.Visible = false;
                 panelEditarPoliza.Visible = true;
             }
-
-        }
-
-        // Muestra el panel que contiene el formulario para editar una nueva poliza.
-        private void pbMostrarFormularioEditarPoliza_Click(object sender, EventArgs e)
-        {
-            mostrarFormulario("EditarPoliza");
 
         }
 
@@ -199,7 +218,7 @@ namespace Seguros.UserControls
                         // Muestro las filas de las polizas por color segun su estado
                         cambiarColorPolizas();
                         // Muestro mensaje
-                        lbMensaje.Text = "Acabas de pagar el importe total de tu poliza";
+                        lbMensajeCrearPoliza.Text = "Acabas de pagar el importe total de tu poliza";
                     }
 
                 }
@@ -214,7 +233,7 @@ namespace Seguros.UserControls
                     // Actualizo los pagos de la poliza y los muestro en el dgv
                     dgvPagos.DataSource = AdminModel.getPagosByPoliza(idPoliza);
                     // Muestro mensaje
-                    lbMensaje.Text = "El pago se ha realizado con exito";
+                    lbMensajeCrearPoliza.Text = "El pago se ha realizado con exito";
                 }
             }
             else
@@ -239,9 +258,9 @@ namespace Seguros.UserControls
             Poliza poliza = new Poliza(importe, tipo, estado, fecha, observaciones, idCliente);
 
             // Si la poliza se ha registrado correctamente en la base de datos.
-            if ( AdminModel.registrarPoliza(poliza) )
+            if (AdminModel.registrarPoliza(poliza))
             {   // Muestro mensaje
-                lbMenasjeCrearPoliza.Text = "Acabas de crear una nueva poliza";
+                lbMensajeCrearPoliza.Text = "Acabas de crear una nueva poliza";
             }
 
             Console.WriteLine("Crear poliza: importe: " + importe + " tipo: " + tipo + " estado: " + estado + "idCliente: " + idCliente + " fecha " + fecha + " obsevaciones: " + observaciones);
@@ -250,7 +269,36 @@ namespace Seguros.UserControls
 
         private void btnEditarPoliza_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Editar poliza");
+
+            // Obtengo datos del formulario
+            int importe = int.Parse(tbImporteEditar.Text.ToString());
+            string tipo = cbTipoEditar.Text.ToString();
+            string estado = cbEstadosEditar.Text.ToString();
+            int idCliente = int.Parse(cbClientesEditar.SelectedValue.ToString());
+            DateTime fecha = dtpFechaEditar.Value;
+            string observaciones = tbObservacionesEdiitar.Text.ToString();
+
+            // Encapsulo los datos en un objeto del tipo Poliza.
+            Poliza poliza = new Poliza(importe, tipo, estado, fecha, observaciones, idCliente);
+
+            // Si ha actualizado la poliza en la basde de datos
+            if (AdminModel.editarPoliza(poliza))
+            {
+                // Muestro mensaje
+                lbMensajeEdtiarPoliza.Text = "Acaba de actualizar la poliza";
+            }
+
+
+            /*
+            // Si la poliza se ha registrado correctamente en la base de datos.
+            if (AdminModel.registrarPoliza(poliza))
+            {   // Muestro mensaje
+                lbMenasjeCrearPoliza.Text = "Acabas de crear una nueva poliza";
+            }
+            */
+            Console.WriteLine("Editar poliza: idPoliza: " + poliza.Id + " importe: " + importe + " tipo: " + tipo + " estado: " + estado +
+                "idCliente: " + idCliente + " fecha " + fecha + " observaciones: " + observaciones);
+
         }
 
         // Cambia el color de las polizas segun su estado.
@@ -266,10 +314,11 @@ namespace Seguros.UserControls
             Console.WriteLine("Cliente " + idCliente + "  seleccionado añadir a la poliza");
         }
 
+        // Limpia mensaje placeholder de los campos del formulario una vez que haces click sobre uno
         private void limpiarPlaceholder(object sender, EventArgs e)
         {
             // Limpia el texto del TextBox que desencadenó el evento
-            TextBox textBox = sender as TextBox;
+            System.Windows.Forms.TextBox textBox = sender as System.Windows.Forms.TextBox;
             if (textBox != null)
             {
                 textBox.Text = string.Empty;
@@ -277,11 +326,15 @@ namespace Seguros.UserControls
 
         }
 
+        // Carga el dgv con las polizas y las muestra de colores
         private void cargarPolizasDGV()
         {
             // Obtengo todas las polizas y las muestro en el dgv
             dgvPolizas.DataSource = AdminModel.getPolizas();
+            // Cambio color polizas segun su estado
+            cambiarColorPolizas();
         }
+
 
         // Vuelve al crud principal de polizas, contenedor principal
         private void btnVolver_Click(object sender, EventArgs e)
