@@ -68,11 +68,11 @@
             this.dgvAdministradores.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvAdministradores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAdministradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAdministradores.Location = new System.Drawing.Point(34, 163);
+            this.dgvAdministradores.Location = new System.Drawing.Point(34, 122);
             this.dgvAdministradores.Name = "dgvAdministradores";
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvAdministradores.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAdministradores.Size = new System.Drawing.Size(1046, 233);
+            this.dgvAdministradores.Size = new System.Drawing.Size(1046, 339);
             this.dgvAdministradores.TabIndex = 2;
             // 
             // pbCrear
@@ -108,18 +108,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 140);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Tomato;
+            this.label1.Location = new System.Drawing.Point(28, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 17);
+            this.label1.Size = new System.Drawing.Size(210, 31);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Adinistradores";
+            this.label1.Text = "Administradores";
             // 
             // lbMensaje
             // 
             this.lbMensaje.AutoSize = true;
             this.lbMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMensaje.Location = new System.Drawing.Point(479, 559);
+            this.lbMensaje.Location = new System.Drawing.Point(526, 631);
             this.lbMensaje.Name = "lbMensaje";
             this.lbMensaje.Size = new System.Drawing.Size(0, 17);
             this.lbMensaje.TabIndex = 7;

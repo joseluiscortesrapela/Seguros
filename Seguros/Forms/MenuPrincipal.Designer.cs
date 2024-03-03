@@ -31,24 +31,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.paneLaterallNavegacion = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbUsuario = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbTipo = new System.Windows.Forms.Label();
+            this.panelContenedor = new System.Windows.Forms.Panel();
+            this.pbExit = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAdministradores = new System.Windows.Forms.Button();
             this.btnAgentes = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
-            this.btnMisClientes = new System.Windows.Forms.Button();
             this.btnPolizas = new System.Windows.Forms.Button();
+            this.btnInformes = new System.Windows.Forms.Button();
+            this.btnMisClientes = new System.Windows.Forms.Button();
             this.btnMisPolizas = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.panelContenedor = new System.Windows.Forms.Panel();
-            this.pbExit = new System.Windows.Forms.PictureBox();
             this.paneLaterallNavegacion.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // paneLaterallNavegacion
@@ -58,8 +59,9 @@
             this.paneLaterallNavegacion.Controls.Add(this.btnAdministradores);
             this.paneLaterallNavegacion.Controls.Add(this.btnAgentes);
             this.paneLaterallNavegacion.Controls.Add(this.btnClientes);
-            this.paneLaterallNavegacion.Controls.Add(this.btnMisClientes);
             this.paneLaterallNavegacion.Controls.Add(this.btnPolizas);
+            this.paneLaterallNavegacion.Controls.Add(this.btnInformes);
+            this.paneLaterallNavegacion.Controls.Add(this.btnMisClientes);
             this.paneLaterallNavegacion.Controls.Add(this.btnMisPolizas);
             this.paneLaterallNavegacion.Controls.Add(this.btnCerrarSesion);
             this.paneLaterallNavegacion.Dock = System.Windows.Forms.DockStyle.Left;
@@ -79,15 +81,6 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(239, 113);
             this.panelLogo.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 70);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // lbUsuario
             // 
@@ -121,6 +114,35 @@
             this.lbTipo.Size = new System.Drawing.Size(34, 13);
             this.lbTipo.TabIndex = 10;
             this.lbTipo.Text = "Tipo: ";
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.BackColor = System.Drawing.Color.Snow;
+            this.panelContenedor.Controls.Add(this.pbExit);
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(246, 0);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1127, 704);
+            this.panelContenedor.TabIndex = 5;
+            // 
+            // pbExit
+            // 
+            this.pbExit.Image = ((System.Drawing.Image)(resources.GetObject("pbExit.Image")));
+            this.pbExit.Location = new System.Drawing.Point(1103, 3);
+            this.pbExit.Name = "pbExit";
+            this.pbExit.Size = new System.Drawing.Size(21, 21);
+            this.pbExit.TabIndex = 6;
+            this.pbExit.TabStop = false;
+            this.pbExit.Click += new System.EventHandler(this.pbExit_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 70);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // btnAdministradores
             // 
@@ -173,23 +195,6 @@
             this.btnClientes.Visible = false;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
-            // btnMisClientes
-            // 
-            this.btnMisClientes.FlatAppearance.BorderSize = 0;
-            this.btnMisClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMisClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMisClientes.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.btnMisClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnMisClientes.Image")));
-            this.btnMisClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMisClientes.Location = new System.Drawing.Point(3, 302);
-            this.btnMisClientes.Name = "btnMisClientes";
-            this.btnMisClientes.Size = new System.Drawing.Size(239, 45);
-            this.btnMisClientes.TabIndex = 18;
-            this.btnMisClientes.Text = "Mis clientes";
-            this.btnMisClientes.UseVisualStyleBackColor = true;
-            this.btnMisClientes.Visible = false;
-            this.btnMisClientes.Click += new System.EventHandler(this.btnMisClientes_Click);
-            // 
             // btnPolizas
             // 
             this.btnPolizas.FlatAppearance.BorderSize = 0;
@@ -198,7 +203,7 @@
             this.btnPolizas.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnPolizas.Image = ((System.Drawing.Image)(resources.GetObject("btnPolizas.Image")));
             this.btnPolizas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPolizas.Location = new System.Drawing.Point(3, 353);
+            this.btnPolizas.Location = new System.Drawing.Point(3, 302);
             this.btnPolizas.Name = "btnPolizas";
             this.btnPolizas.Size = new System.Drawing.Size(239, 45);
             this.btnPolizas.TabIndex = 16;
@@ -206,6 +211,40 @@
             this.btnPolizas.UseVisualStyleBackColor = true;
             this.btnPolizas.Visible = false;
             this.btnPolizas.Click += new System.EventHandler(this.btnPolizas_Click);
+            // 
+            // btnInformes
+            // 
+            this.btnInformes.FlatAppearance.BorderSize = 0;
+            this.btnInformes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInformes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformes.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnInformes.Image = ((System.Drawing.Image)(resources.GetObject("btnInformes.Image")));
+            this.btnInformes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInformes.Location = new System.Drawing.Point(3, 353);
+            this.btnInformes.Name = "btnInformes";
+            this.btnInformes.Size = new System.Drawing.Size(239, 45);
+            this.btnInformes.TabIndex = 15;
+            this.btnInformes.Text = "Informes";
+            this.btnInformes.UseVisualStyleBackColor = true;
+            this.btnInformes.Visible = false;
+            this.btnInformes.Click += new System.EventHandler(this.btnInformes_Click);
+            // 
+            // btnMisClientes
+            // 
+            this.btnMisClientes.FlatAppearance.BorderSize = 0;
+            this.btnMisClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMisClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMisClientes.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.btnMisClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnMisClientes.Image")));
+            this.btnMisClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMisClientes.Location = new System.Drawing.Point(3, 404);
+            this.btnMisClientes.Name = "btnMisClientes";
+            this.btnMisClientes.Size = new System.Drawing.Size(239, 45);
+            this.btnMisClientes.TabIndex = 18;
+            this.btnMisClientes.Text = "Mis clientes";
+            this.btnMisClientes.UseVisualStyleBackColor = true;
+            this.btnMisClientes.Visible = false;
+            this.btnMisClientes.Click += new System.EventHandler(this.btnMisClientes_Click);
             // 
             // btnMisPolizas
             // 
@@ -215,7 +254,7 @@
             this.btnMisPolizas.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.btnMisPolizas.Image = ((System.Drawing.Image)(resources.GetObject("btnMisPolizas.Image")));
             this.btnMisPolizas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMisPolizas.Location = new System.Drawing.Point(3, 404);
+            this.btnMisPolizas.Location = new System.Drawing.Point(3, 455);
             this.btnMisPolizas.Name = "btnMisPolizas";
             this.btnMisPolizas.Size = new System.Drawing.Size(239, 45);
             this.btnMisPolizas.TabIndex = 17;
@@ -233,7 +272,7 @@
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.DarkGray;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 622);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 673);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 170, 3, 20);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(239, 82);
@@ -242,26 +281,6 @@
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // panelContenedor
-            // 
-            this.panelContenedor.BackColor = System.Drawing.Color.Snow;
-            this.panelContenedor.Controls.Add(this.pbExit);
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(246, 0);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1127, 704);
-            this.panelContenedor.TabIndex = 5;
-            // 
-            // pbExit
-            // 
-            this.pbExit.Image = ((System.Drawing.Image)(resources.GetObject("pbExit.Image")));
-            this.pbExit.Location = new System.Drawing.Point(1103, 3);
-            this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(21, 21);
-            this.pbExit.TabIndex = 6;
-            this.pbExit.TabStop = false;
-            this.pbExit.Click += new System.EventHandler(this.pbExit_Click_1);
             // 
             // MenuPrincipal
             // 
@@ -279,9 +298,9 @@
             this.paneLaterallNavegacion.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -303,5 +322,6 @@
         private System.Windows.Forms.Button btnMisClientes;
         private System.Windows.Forms.Button btnMisPolizas;
         private System.Windows.Forms.PictureBox pbExit;
+        private System.Windows.Forms.Button btnInformes;
     }
 }

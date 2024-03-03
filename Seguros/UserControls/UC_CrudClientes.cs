@@ -81,10 +81,8 @@ namespace Seguros.UserControls
                         dgvPolizas.DataSource = tablaPolizas;
                         // Cambio color a las filas segun su estado
                         GestorInterfaz.CambiarColorFilas(dgvPolizas);
-                        // Muestro un mensaje con el numero de polizas que tiene el cliente
-                        lbTotalPolizas.Text = dgvPolizas.RowCount.ToString();
                         // Muestro nombre del cliente
-                        lbNombreCliente.Text = "polizas tiene " + apellidos + ", " + nombre;
+                        lbClienteSelecionado.Text = "El cliente/a " +  nombre + ", " + apellidos + " tiene contratada/s " + dgvPolizas.RowCount + " polizas.";
                     }
                     else
                     {
@@ -96,8 +94,6 @@ namespace Seguros.UserControls
             }
 
         }
-
-
 
         private void ocultarMensaje()
         {
@@ -248,8 +244,7 @@ namespace Seguros.UserControls
         private void limpiarDgvPolizas()
         {
             dgvPolizas.DataSource = null;
-            lbTotalPolizas.Text = "";
-            lbNombreCliente.Text = "";
+            lbClienteSelecionado.Text = "";
         }
 
         // Muestra botones de accion ver, editar y elimianr
@@ -266,7 +261,7 @@ namespace Seguros.UserControls
             estado = true;
             pbOn.Visible = false;
             pbOff.Visible = true;
-            lbMensajeInterruptor.Text = "Habilitado!";
+            lbMensajeInterruptor.Text = "Habilitado! seleccione un cliente";
             Console.WriteLine("On");
         }
 
@@ -278,6 +273,7 @@ namespace Seguros.UserControls
             pbOff.Visible = false;
             dgvPolizas.DataSource = null;
             lbMensajeInterruptor.Text = "Deshabilitado";
+            lbClienteSelecionado.Text = "";
             Console.WriteLine("off");
         }
 

@@ -132,7 +132,7 @@ namespace Seguros.UserControls
             pbOn.Visible = false;
             pbOff.Visible = true;
             panelCarteraClientes.Visible = true;
-            lbMensajeEstado.Text = "Acabas de activar el enlazado de datos dinamico, ahora seleccione un agente";
+            lbMensajeInterruptor.Text = "Habilitado! seleccione un agente";
             lbNombreCliente.Text = "";
             lbNombreAgente.Text = "";
             Console.WriteLine("On");
@@ -145,7 +145,7 @@ namespace Seguros.UserControls
             pbOn.Visible = true;
             pbOff.Visible = false;
             panelCarteraClientes.Visible = false;
-            lbMensajeEstado.Text = "Acabas de destivar el enlazado de datos dinamico";
+            lbMensajeInterruptor.Text = "Desactivado";
             dgvClientes.DataSource = null;
             dgvPolizas.DataSource = null;
             Console.WriteLine("off");

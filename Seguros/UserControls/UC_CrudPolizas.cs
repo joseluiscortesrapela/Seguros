@@ -71,8 +71,19 @@ namespace Seguros.UserControls
                 // Obtengo los apellidos
                 string apellidos = clienteData.Rows[0]["apellidos"].ToString();
 
-                // Obtengo los pagos de la poliza seleccionada
-                dgvPagos.DataSource = AdminModel.getPagosByPoliza(idPoliza);
+                // Obtengo los posibles pagos que pudiera tener la poliza
+                DataTable pagosRealizados = AdminModel.getPagosByPoliza(idPoliza);
+
+                // Si se ha realizado algun pago
+                if (pagosRealizados.Rows.Count > 0)
+                {
+                    // Obtengo los pagos de la poliza seleccionada
+                    dgvPagos.DataSource = pagosRealizados;
+                }
+                else
+                {
+                    dgvPagos.DataSource = null;
+                }
 
                 // Si aun queda por pagar
                 if (estado == "A cuenta")
@@ -81,8 +92,10 @@ namespace Seguros.UserControls
                     totalPagado = calcularTotalPagado();
                     // Calculo el importe total que debo
                     deboPagar = importe - totalPagado;
+                    // Muestro icono 
+                    pbIconoPolizaSelecionada.Visible = true;
                     // Muestro mensaje al usuario del total que ha pagado hasta el momento
-                    lbPago.Text = "Póliza nº " + idPoliza + " del cliente " + nombre + ",  " + apellidos + " lleva pagado " + totalPagado + " € y aun debe un importe de " + deboPagar + " €";
+                    lbPolizaSelecionada.Text = "Póliza nº " + idPoliza + " del cliente " + nombre + ",  " + apellidos + " lleva pagado " + totalPagado + " € y aun debe un importe de ";
                     // Le doy el valor al campo de pago lo que aun debe de la poliza.
                     tbPago.Text = deboPagar.ToString();
                     // Muestro formulario
@@ -92,9 +105,10 @@ namespace Seguros.UserControls
                 else
                 {
                     // Muestro mensaje al usuario de que no es necesario pago alguno.
-                    lbPago.Text = "La poliza nº " + idPoliza + " al encontrarse " + estado + " no require ningun pago adicional.";
+                    lbPolizaSelecionada.Text = "La poliza nº " + idPoliza + " al encontrarse " + estado + " no require ningun pago adicional.";
                     // Oculto panel de pago
                     panelPago.Visible = false;
+
                 }
 
                 // Muestro botones editar y eliminar.
@@ -124,9 +138,9 @@ namespace Seguros.UserControls
             tbImporteDetalle.Text = polizaSeleccinada.Importe.ToString();
             cbTipoDetalle.Text = polizaSeleccinada.Tipo;
             cbEstadoDetalle.Text = polizaSeleccinada.Estado;
-           
-            cbClientesDetalle.Text =  polizaSeleccinada.IdCliente.ToString();
-            
+
+            cbClientesDetalle.Text = polizaSeleccinada.IdCliente.ToString();
+
             tbObservacionesDetalle.Text = polizaSeleccinada.Observaciones;
             dtpFechaDetalle.Value = polizaSeleccinada.Fecha;
 
@@ -174,7 +188,7 @@ namespace Seguros.UserControls
                     panelEditarPoliza.Visible = false;
                     panelCrearPoliza.Visible = true;
                     break;
-                case " EditarPoliza":
+                case "EditarPoliza":
                     // Muestra el panel con el formulario para editar poliza
                     panelCrudPolizas.Visible = false;
                     panelCrearPoliza.Visible = false;
@@ -184,7 +198,7 @@ namespace Seguros.UserControls
                 case "DetallePoliza":
                     // Muestra panel con el formulario para ver detalle de la poliza
                     panelCrudPolizas.Visible = false;
-                    panelCrearPoliza.Visible = false;               
+                    panelCrearPoliza.Visible = false;
                     panelEditarPoliza.Visible = false;
                     panelDetallePoliza.Visible = true;
                     break;

@@ -4,6 +4,7 @@ using Seguros.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -654,6 +655,51 @@ namespace Seguros.Models
 
             // Devuelvo dato
             return nombreMunicipio;
+
+        }
+
+
+
+        public static DataTable generarInforme(int idClienteMin, int idClienteMax, DateTime fechaDesde, DateTime fechaHasta)
+        {
+
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+
+            DataTable dataTable = new DataTable();
+
+            // Construir la consulta SQL
+            string sql = @"
+                            SELECT 
+                                c.idCliente,
+                                c.nombre AS nombreCliente,
+                                p.idPoliza,
+                                p.importe,
+                                p.fecha,
+                                p.estado
+                            FROM 
+                                clientes c
+                            INNER JOIN 
+                                polizas p ON c.idCliente = p.idCliente
+                            WHERE 
+                                c.idCliente BETWEEN @idClienteMin AND @idClienteMax
+                                AND p.fecha BETWEEN @fechaDesde AND @fechaHasta";
+
+
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@idClienteMin", idClienteMin);
+            comando.Parameters.AddWithValue("@idClienteMax", idClienteMax);
+            comando.Parameters.AddWithValue("@fechaDesde", fechaDesde);
+            comando.Parameters.AddWithValue("@fechaHasta", fechaHasta);
+            // Creo el adapatador
+            MySqlDataAdapter adapter = new MySqlDataAdapter(comando);
+            adapter.Fill(dataTable);
+
+            // Cerrar la conexión manualmente
+            conexion.Close();
+
+            return dataTable;
 
         }
 

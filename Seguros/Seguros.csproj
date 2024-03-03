@@ -156,6 +156,12 @@
     <Compile Include="UserControls\Contenedor.Designer.cs">
       <DependentUpon>Contenedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_Informes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Informes.Designer.cs">
+      <DependentUpon>UC_Informes.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Contenedor.resx">
       <DependentUpon>Contenedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Informes.resx">
+      <DependentUpon>UC_Informes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

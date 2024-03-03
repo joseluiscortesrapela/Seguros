@@ -29,19 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudPolizas));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudPolizas));
             this.lbPagos = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelNavegacionSuperior = new System.Windows.Forms.Panel();
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.pbInicio = new System.Windows.Forms.PictureBox();
             this.panelCrudPolizas = new System.Windows.Forms.Panel();
+            this.pbIconoPolizaSelecionada = new System.Windows.Forms.PictureBox();
+            this.pbMostraFormularioDetallePoliza = new System.Windows.Forms.PictureBox();
             this.panelPago = new System.Windows.Forms.Panel();
             this.pbPagar = new System.Windows.Forms.PictureBox();
             this.tbPago = new System.Windows.Forms.TextBox();
-            this.lbPago = new System.Windows.Forms.Label();
+            this.lbPolizaSelecionada = new System.Windows.Forms.Label();
             this.dgvPagos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.pbMostrarFormularioEditarPoliza = new System.Windows.Forms.PictureBox();
@@ -109,7 +111,6 @@
             this.btnCrearPoliza = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.pbMostraFormularioDetallePoliza = new System.Windows.Forms.PictureBox();
             this.panelDetallePoliza = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
             this.lbIdPolizaDetalle = new System.Windows.Forms.Label();
@@ -140,6 +141,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
             this.panelCrudPolizas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIconoPolizaSelecionada)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMostraFormularioDetallePoliza)).BeginInit();
             this.panelPago.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPagar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).BeginInit();
@@ -161,7 +164,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMostraFormularioDetallePoliza)).BeginInit();
             this.panelDetallePoliza.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -218,9 +220,10 @@
             // panelCrudPolizas
             // 
             this.panelCrudPolizas.BackColor = System.Drawing.Color.Snow;
+            this.panelCrudPolizas.Controls.Add(this.pbIconoPolizaSelecionada);
             this.panelCrudPolizas.Controls.Add(this.pbMostraFormularioDetallePoliza);
             this.panelCrudPolizas.Controls.Add(this.panelPago);
-            this.panelCrudPolizas.Controls.Add(this.lbPago);
+            this.panelCrudPolizas.Controls.Add(this.lbPolizaSelecionada);
             this.panelCrudPolizas.Controls.Add(this.dgvPagos);
             this.panelCrudPolizas.Controls.Add(this.label1);
             this.panelCrudPolizas.Controls.Add(this.pbMostrarFormularioEditarPoliza);
@@ -232,20 +235,41 @@
             this.panelCrudPolizas.Size = new System.Drawing.Size(1124, 651);
             this.panelCrudPolizas.TabIndex = 39;
             // 
+            // pbIconoPolizaSelecionada
+            // 
+            this.pbIconoPolizaSelecionada.Image = ((System.Drawing.Image)(resources.GetObject("pbIconoPolizaSelecionada.Image")));
+            this.pbIconoPolizaSelecionada.Location = new System.Drawing.Point(36, 457);
+            this.pbIconoPolizaSelecionada.Name = "pbIconoPolizaSelecionada";
+            this.pbIconoPolizaSelecionada.Size = new System.Drawing.Size(28, 34);
+            this.pbIconoPolizaSelecionada.TabIndex = 47;
+            this.pbIconoPolizaSelecionada.TabStop = false;
+            this.pbIconoPolizaSelecionada.Visible = false;
+            // 
+            // pbMostraFormularioDetallePoliza
+            // 
+            this.pbMostraFormularioDetallePoliza.Image = ((System.Drawing.Image)(resources.GetObject("pbMostraFormularioDetallePoliza.Image")));
+            this.pbMostraFormularioDetallePoliza.Location = new System.Drawing.Point(1089, 72);
+            this.pbMostraFormularioDetallePoliza.Name = "pbMostraFormularioDetallePoliza";
+            this.pbMostraFormularioDetallePoliza.Size = new System.Drawing.Size(34, 35);
+            this.pbMostraFormularioDetallePoliza.TabIndex = 46;
+            this.pbMostraFormularioDetallePoliza.TabStop = false;
+            this.pbMostraFormularioDetallePoliza.Visible = false;
+            this.pbMostraFormularioDetallePoliza.Click += new System.EventHandler(this.pbMostraFormularioDetallePoliza_Click);
+            // 
             // panelPago
             // 
             this.panelPago.Controls.Add(this.pbPagar);
             this.panelPago.Controls.Add(this.tbPago);
-            this.panelPago.Location = new System.Drawing.Point(871, 366);
+            this.panelPago.Location = new System.Drawing.Point(906, 451);
             this.panelPago.Name = "panelPago";
-            this.panelPago.Size = new System.Drawing.Size(211, 34);
+            this.panelPago.Size = new System.Drawing.Size(215, 40);
             this.panelPago.TabIndex = 45;
             this.panelPago.Visible = false;
             // 
             // pbPagar
             // 
             this.pbPagar.Image = ((System.Drawing.Image)(resources.GetObject("pbPagar.Image")));
-            this.pbPagar.Location = new System.Drawing.Point(176, 3);
+            this.pbPagar.Location = new System.Drawing.Point(186, 8);
             this.pbPagar.Name = "pbPagar";
             this.pbPagar.Size = new System.Drawing.Size(29, 26);
             this.pbPagar.TabIndex = 38;
@@ -254,20 +278,23 @@
             // 
             // tbPago
             // 
-            this.tbPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPago.Location = new System.Drawing.Point(27, 3);
+            this.tbPago.BackColor = System.Drawing.Color.Wheat;
+            this.tbPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPago.ForeColor = System.Drawing.Color.Violet;
+            this.tbPago.Location = new System.Drawing.Point(3, 3);
             this.tbPago.Name = "tbPago";
-            this.tbPago.Size = new System.Drawing.Size(122, 26);
+            this.tbPago.Size = new System.Drawing.Size(146, 32);
             this.tbPago.TabIndex = 1;
             // 
-            // lbPago
+            // lbPolizaSelecionada
             // 
-            this.lbPago.AutoSize = true;
-            this.lbPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPago.Location = new System.Drawing.Point(18, 380);
-            this.lbPago.Name = "lbPago";
-            this.lbPago.Size = new System.Drawing.Size(0, 20);
-            this.lbPago.TabIndex = 44;
+            this.lbPolizaSelecionada.AutoSize = true;
+            this.lbPolizaSelecionada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPolizaSelecionada.ForeColor = System.Drawing.Color.SlateGray;
+            this.lbPolizaSelecionada.Location = new System.Drawing.Point(82, 461);
+            this.lbPolizaSelecionada.Name = "lbPolizaSelecionada";
+            this.lbPolizaSelecionada.Size = new System.Drawing.Size(0, 24);
+            this.lbPolizaSelecionada.TabIndex = 44;
             // 
             // dgvPagos
             // 
@@ -280,7 +307,7 @@
             this.dgvPagos.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvPagos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPagos.Location = new System.Drawing.Point(36, 412);
+            this.dgvPagos.Location = new System.Drawing.Point(36, 497);
             this.dgvPagos.Name = "dgvPagos";
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -290,17 +317,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 30);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label1.Location = new System.Drawing.Point(30, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 17);
+            this.label1.Size = new System.Drawing.Size(102, 31);
             this.label1.TabIndex = 41;
             this.label1.Text = "Polizas";
             // 
             // pbMostrarFormularioEditarPoliza
             // 
             this.pbMostrarFormularioEditarPoliza.Image = ((System.Drawing.Image)(resources.GetObject("pbMostrarFormularioEditarPoliza.Image")));
-            this.pbMostrarFormularioEditarPoliza.Location = new System.Drawing.Point(1089, 163);
+            this.pbMostrarFormularioEditarPoliza.Location = new System.Drawing.Point(1089, 112);
             this.pbMostrarFormularioEditarPoliza.Name = "pbMostrarFormularioEditarPoliza";
             this.pbMostrarFormularioEditarPoliza.Size = new System.Drawing.Size(35, 38);
             this.pbMostrarFormularioEditarPoliza.TabIndex = 40;
@@ -311,7 +339,7 @@
             // pbEliminarPoliza
             // 
             this.pbEliminarPoliza.Image = ((System.Drawing.Image)(resources.GetObject("pbEliminarPoliza.Image")));
-            this.pbEliminarPoliza.Location = new System.Drawing.Point(1089, 207);
+            this.pbEliminarPoliza.Location = new System.Drawing.Point(1089, 175);
             this.pbEliminarPoliza.Name = "pbEliminarPoliza";
             this.pbEliminarPoliza.Size = new System.Drawing.Size(35, 34);
             this.pbEliminarPoliza.TabIndex = 39;
@@ -322,7 +350,7 @@
             // pbMostrarFormularioCrearPoliza
             // 
             this.pbMostrarFormularioCrearPoliza.Image = ((System.Drawing.Image)(resources.GetObject("pbMostrarFormularioCrearPoliza.Image")));
-            this.pbMostrarFormularioCrearPoliza.Location = new System.Drawing.Point(1089, 50);
+            this.pbMostrarFormularioCrearPoliza.Location = new System.Drawing.Point(1087, 31);
             this.pbMostrarFormularioCrearPoliza.Name = "pbMostrarFormularioCrearPoliza";
             this.pbMostrarFormularioCrearPoliza.Size = new System.Drawing.Size(35, 35);
             this.pbMostrarFormularioCrearPoliza.TabIndex = 38;
@@ -339,11 +367,11 @@
             this.dgvPolizas.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvPolizas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPolizas.Location = new System.Drawing.Point(36, 50);
+            this.dgvPolizas.Location = new System.Drawing.Point(36, 31);
             this.dgvPolizas.Name = "dgvPolizas";
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPolizas.Size = new System.Drawing.Size(1047, 310);
+            this.dgvPolizas.Size = new System.Drawing.Size(1047, 414);
             this.dgvPolizas.TabIndex = 37;
             this.dgvPolizas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPolizas_CellClick);
             // 
@@ -924,7 +952,6 @@
             this.tbObservaciones.TabIndex = 101;
             this.tbObservaciones.Text = resources.GetString("tbObservaciones.Text");
             this.tbObservaciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbObservaciones.Click += new System.EventHandler(this.limpiarPlaceholder);
             // 
             // label6
             // 
@@ -1117,17 +1144,6 @@
             this.label2.Size = new System.Drawing.Size(201, 39);
             this.label2.TabIndex = 0;
             this.label2.Text = "Crear poliza";
-            // 
-            // pbMostraFormularioDetallePoliza
-            // 
-            this.pbMostraFormularioDetallePoliza.Image = ((System.Drawing.Image)(resources.GetObject("pbMostraFormularioDetallePoliza.Image")));
-            this.pbMostraFormularioDetallePoliza.Location = new System.Drawing.Point(1087, 124);
-            this.pbMostraFormularioDetallePoliza.Name = "pbMostraFormularioDetallePoliza";
-            this.pbMostraFormularioDetallePoliza.Size = new System.Drawing.Size(34, 35);
-            this.pbMostraFormularioDetallePoliza.TabIndex = 46;
-            this.pbMostraFormularioDetallePoliza.TabStop = false;
-            this.pbMostraFormularioDetallePoliza.Visible = false;
-            this.pbMostraFormularioDetallePoliza.Click += new System.EventHandler(this.pbMostraFormularioDetallePoliza_Click);
             // 
             // panelDetallePoliza
             // 
@@ -1341,7 +1357,7 @@
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
             this.pictureBox13.Location = new System.Drawing.Point(443, 3);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(55, 67);
+            this.pictureBox13.Size = new System.Drawing.Size(66, 67);
             this.pictureBox13.TabIndex = 123;
             this.pictureBox13.TabStop = false;
             // 
@@ -1457,10 +1473,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.Controls.Add(this.panelDetallePoliza);
+            this.Controls.Add(this.panelCrudPolizas);
             this.Controls.Add(this.panelCrearPoliza);
             this.Controls.Add(this.panelEditarPoliza);
-            this.Controls.Add(this.panelCrudPolizas);
+            this.Controls.Add(this.panelDetallePoliza);
             this.Controls.Add(this.panelNavegacionSuperior);
             this.Controls.Add(this.lbPagos);
             this.Name = "UC_CrudPolizas";
@@ -1472,6 +1488,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).EndInit();
             this.panelCrudPolizas.ResumeLayout(false);
             this.panelCrudPolizas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIconoPolizaSelecionada)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMostraFormularioDetallePoliza)).EndInit();
             this.panelPago.ResumeLayout(false);
             this.panelPago.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPagar)).EndInit();
@@ -1496,7 +1514,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMostraFormularioDetallePoliza)).EndInit();
             this.panelDetallePoliza.ResumeLayout(false);
             this.panelDetallePoliza.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -1520,7 +1537,7 @@
         private System.Windows.Forms.Panel panelPago;
         private System.Windows.Forms.PictureBox pbPagar;
         private System.Windows.Forms.TextBox tbPago;
-        private System.Windows.Forms.Label lbPago;
+        private System.Windows.Forms.Label lbPolizaSelecionada;
         private System.Windows.Forms.DataGridView dgvPagos;
         private System.Windows.Forms.Label lbMensajeCrearPoliza;
         private System.Windows.Forms.Label label1;
@@ -1614,5 +1631,6 @@
         private System.Windows.Forms.TextBox tbImporteDetalle;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.PictureBox pbIconoPolizaSelecionada;
     }
 }

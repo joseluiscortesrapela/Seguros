@@ -36,9 +36,11 @@ namespace Seguros.Forms
                     btnAgentes.Visible = true;
                     btnClientes.Visible = true;
                     btnPolizas.Visible = true;
+                    btnInformes.Visible = true;
                     break;
                 case "agentes":
                     btnMisClientes.Visible = true;
+                    btnInformes.Visible = true;
                     break;
                 case "clientes":
                     btnMisPolizas.Visible = true;
@@ -125,15 +127,23 @@ namespace Seguros.Forms
             mostrarUserControl(new UC_CrudPolizas(idUsuario));
         }
 
+        // Muestro ventana clientes
         private void btnMisClientes_Click(object sender, EventArgs e)
         {
             mostrarUserControl(new UC_CrudClientes(idUsuario));
 
         }
 
+        // Cierro programa
         private void pbExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        // Muestro ventana informes
+        private void btnInformes_Click(object sender, EventArgs e)
+        {
+            mostrarUserControl(new UC_Informes());
         }
     }
 }

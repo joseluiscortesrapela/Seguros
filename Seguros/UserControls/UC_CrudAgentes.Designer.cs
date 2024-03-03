@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudAgentes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbMensaje = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pbEditar = new System.Windows.Forms.PictureBox();
@@ -46,7 +46,6 @@
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.pbOff = new System.Windows.Forms.PictureBox();
-            this.lbMensajeEstado = new System.Windows.Forms.Label();
             this.panelFlSuperior = new System.Windows.Forms.FlowLayoutPanel();
             this.panelNavegacionSuperior = new System.Windows.Forms.Panel();
             this.panelBuscador = new System.Windows.Forms.Panel();
@@ -55,6 +54,7 @@
             this.pbExit = new System.Windows.Forms.PictureBox();
             this.pbMostrarBuscador = new System.Windows.Forms.PictureBox();
             this.pbInicio = new System.Windows.Forms.PictureBox();
+            this.lbMensajeInterruptor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCrear)).BeginInit();
@@ -85,10 +85,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 130);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Brown;
+            this.label1.Location = new System.Drawing.Point(29, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 17);
+            this.label1.Size = new System.Drawing.Size(114, 31);
             this.label1.TabIndex = 18;
             this.label1.Text = "Agentes";
             // 
@@ -135,18 +136,18 @@
             this.dgvAgentes.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvAgentes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAgentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAgentes.Location = new System.Drawing.Point(40, 152);
+            this.dgvAgentes.Location = new System.Drawing.Point(35, 93);
             this.dgvAgentes.Name = "dgvAgentes";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAgentes.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAgentes.Size = new System.Drawing.Size(1047, 133);
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAgentes.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvAgentes.Size = new System.Drawing.Size(1047, 180);
             this.dgvAgentes.TabIndex = 14;
             this.dgvAgentes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgentes_CellClick);
             // 
             // pbOn
             // 
             this.pbOn.Image = ((System.Drawing.Image)(resources.GetObject("pbOn.Image")));
-            this.pbOn.Location = new System.Drawing.Point(647, 126);
+            this.pbOn.Location = new System.Drawing.Point(640, 63);
             this.pbOn.Name = "pbOn";
             this.pbOn.Size = new System.Drawing.Size(48, 23);
             this.pbOn.TabIndex = 20;
@@ -188,8 +189,8 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(35, 246);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPolizas.Size = new System.Drawing.Size(1047, 165);
             this.dgvPolizas.TabIndex = 25;
             // 
@@ -215,8 +216,8 @@
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Location = new System.Drawing.Point(40, 22);
             this.dgvClientes.Name = "dgvClientes";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvClientes.Size = new System.Drawing.Size(1042, 195);
             this.dgvClientes.TabIndex = 23;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
@@ -225,7 +226,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(446, 132);
+            this.label4.Location = new System.Drawing.Point(441, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(193, 17);
             this.label4.TabIndex = 23;
@@ -234,24 +235,12 @@
             // pbOff
             // 
             this.pbOff.Image = ((System.Drawing.Image)(resources.GetObject("pbOff.Image")));
-            this.pbOff.Location = new System.Drawing.Point(647, 124);
+            this.pbOff.Location = new System.Drawing.Point(642, 63);
             this.pbOff.Name = "pbOff";
             this.pbOff.Size = new System.Drawing.Size(39, 23);
             this.pbOff.TabIndex = 21;
             this.pbOff.TabStop = false;
             this.pbOff.Click += new System.EventHandler(this.pbOcultarCarteraClientes_Click);
-            // 
-            // lbMensajeEstado
-            // 
-            this.lbMensajeEstado.AutoSize = true;
-            this.lbMensajeEstado.BackColor = System.Drawing.Color.Snow;
-            this.lbMensajeEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMensajeEstado.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbMensajeEstado.Location = new System.Drawing.Point(433, 294);
-            this.lbMensajeEstado.Name = "lbMensajeEstado";
-            this.lbMensajeEstado.Size = new System.Drawing.Size(271, 17);
-            this.lbMensajeEstado.TabIndex = 28;
-            this.lbMensajeEstado.Text = "Desactivado enlazado de datos dinamico.";
             // 
             // panelFlSuperior
             // 
@@ -342,13 +331,25 @@
             this.pbInicio.TabIndex = 1;
             this.pbInicio.TabStop = false;
             // 
+            // lbMensajeInterruptor
+            // 
+            this.lbMensajeInterruptor.AutoSize = true;
+            this.lbMensajeInterruptor.BackColor = System.Drawing.Color.Snow;
+            this.lbMensajeInterruptor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMensajeInterruptor.ForeColor = System.Drawing.Color.Coral;
+            this.lbMensajeInterruptor.Location = new System.Drawing.Point(696, 71);
+            this.lbMensajeInterruptor.Name = "lbMensajeInterruptor";
+            this.lbMensajeInterruptor.Size = new System.Drawing.Size(94, 17);
+            this.lbMensajeInterruptor.TabIndex = 37;
+            this.lbMensajeInterruptor.Text = "Deshabilitado";
+            // 
             // UC_CrudAgentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
+            this.Controls.Add(this.lbMensajeInterruptor);
             this.Controls.Add(this.panelFlSuperior);
-            this.Controls.Add(this.lbMensajeEstado);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panelCarteraClientes);
             this.Controls.Add(this.pbOn);
@@ -400,7 +401,6 @@
         private System.Windows.Forms.Label lbNombreCliente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pbOff;
-        private System.Windows.Forms.Label lbMensajeEstado;
         private System.Windows.Forms.FlowLayoutPanel panelFlSuperior;
         private System.Windows.Forms.Panel panelNavegacionSuperior;
         private System.Windows.Forms.Panel panelBuscador;
@@ -409,5 +409,6 @@
         private System.Windows.Forms.PictureBox pbMostrarBuscador;
         private System.Windows.Forms.PictureBox pbInicio;
         private System.Windows.Forms.PictureBox pbExit;
+        private System.Windows.Forms.Label lbMensajeInterruptor;
     }
 }

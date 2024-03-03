@@ -30,9 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudClientes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pbEditar = new System.Windows.Forms.PictureBox();
             this.pbEliminar = new System.Windows.Forms.PictureBox();
             this.pbCrear = new System.Windows.Forms.PictureBox();
@@ -41,7 +40,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pbOn = new System.Windows.Forms.PictureBox();
             this.pbOff = new System.Windows.Forms.PictureBox();
-            this.lbTotalPolizas = new System.Windows.Forms.Label();
             this.lbMensajeGeneral = new System.Windows.Forms.Label();
             this.panelFlSuperior = new System.Windows.Forms.FlowLayoutPanel();
             this.panelNavegacionSuperior = new System.Windows.Forms.Panel();
@@ -52,9 +50,9 @@
             this.pbMostrarBuscador = new System.Windows.Forms.PictureBox();
             this.pbInicio = new System.Windows.Forms.PictureBox();
             this.panelCrudClientes = new System.Windows.Forms.Panel();
-            this.lbNombreCliente = new System.Windows.Forms.Label();
-            this.lbTotalClientes = new System.Windows.Forms.Label();
+            this.lbClienteSelecionado = new System.Windows.Forms.Label();
             this.lbMensajeInterruptor = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pbDetalle = new System.Windows.Forms.PictureBox();
             this.panelCrearCliente = new System.Windows.Forms.Panel();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
@@ -229,17 +227,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label1.Location = new System.Drawing.Point(33, 1);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 24);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Clientes";
-            // 
             // pbEditar
             // 
             this.pbEditar.Image = ((System.Drawing.Image)(resources.GetObject("pbEditar.Image")));
@@ -283,11 +270,11 @@
             this.dgvClientes.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(36, 23);
+            this.dgvClientes.Location = new System.Drawing.Point(36, 35);
             this.dgvClientes.Name = "dgvClientes";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvClientes.Size = new System.Drawing.Size(1049, 286);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvClientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvClientes.Size = new System.Drawing.Size(1049, 338);
             this.dgvClientes.TabIndex = 8;
             this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
@@ -302,18 +289,18 @@
             this.dgvPolizas.BackgroundColor = System.Drawing.Color.Snow;
             this.dgvPolizas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPolizas.Location = new System.Drawing.Point(36, 361);
+            this.dgvPolizas.Location = new System.Drawing.Point(36, 430);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPolizas.Size = new System.Drawing.Size(1049, 217);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvPolizas.Size = new System.Drawing.Size(1049, 165);
             this.dgvPolizas.TabIndex = 26;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(431, 0);
+            this.label4.Location = new System.Drawing.Point(429, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 17);
             this.label4.TabIndex = 29;
@@ -322,9 +309,9 @@
             // pbOn
             // 
             this.pbOn.Image = ((System.Drawing.Image)(resources.GetObject("pbOn.Image")));
-            this.pbOn.Location = new System.Drawing.Point(617, -10);
+            this.pbOn.Location = new System.Drawing.Point(617, 3);
             this.pbOn.Name = "pbOn";
-            this.pbOn.Size = new System.Drawing.Size(45, 27);
+            this.pbOn.Size = new System.Drawing.Size(38, 27);
             this.pbOn.TabIndex = 27;
             this.pbOn.TabStop = false;
             this.pbOn.Click += new System.EventHandler(this.pbMostrarPolizasCliente_Click);
@@ -332,23 +319,12 @@
             // pbOff
             // 
             this.pbOff.Image = ((System.Drawing.Image)(resources.GetObject("pbOff.Image")));
-            this.pbOff.Location = new System.Drawing.Point(617, -10);
+            this.pbOff.Location = new System.Drawing.Point(615, 4);
             this.pbOff.Name = "pbOff";
             this.pbOff.Size = new System.Drawing.Size(39, 23);
             this.pbOff.TabIndex = 28;
             this.pbOff.TabStop = false;
             this.pbOff.Click += new System.EventHandler(this.pbOcultarPolizasCliente_Click);
-            // 
-            // lbTotalPolizas
-            // 
-            this.lbTotalPolizas.AutoSize = true;
-            this.lbTotalPolizas.BackColor = System.Drawing.Color.Snow;
-            this.lbTotalPolizas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalPolizas.ForeColor = System.Drawing.Color.DeepPink;
-            this.lbTotalPolizas.Location = new System.Drawing.Point(36, 334);
-            this.lbTotalPolizas.Name = "lbTotalPolizas";
-            this.lbTotalPolizas.Size = new System.Drawing.Size(0, 24);
-            this.lbTotalPolizas.TabIndex = 30;
             // 
             // lbMensajeGeneral
             // 
@@ -356,7 +332,7 @@
             this.lbMensajeGeneral.AutoSize = true;
             this.lbMensajeGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMensajeGeneral.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbMensajeGeneral.Location = new System.Drawing.Point(373, 317);
+            this.lbMensajeGeneral.Location = new System.Drawing.Point(369, 425);
             this.lbMensajeGeneral.Name = "lbMensajeGeneral";
             this.lbMensajeGeneral.Size = new System.Drawing.Size(0, 20);
             this.lbMensajeGeneral.TabIndex = 31;
@@ -453,13 +429,11 @@
             // panelCrudClientes
             // 
             this.panelCrudClientes.BackColor = System.Drawing.Color.Snow;
-            this.panelCrudClientes.Controls.Add(this.lbNombreCliente);
-            this.panelCrudClientes.Controls.Add(this.lbTotalClientes);
+            this.panelCrudClientes.Controls.Add(this.lbClienteSelecionado);
             this.panelCrudClientes.Controls.Add(this.lbMensajeInterruptor);
             this.panelCrudClientes.Controls.Add(this.dgvClientes);
             this.panelCrudClientes.Controls.Add(this.pbCrear);
             this.panelCrudClientes.Controls.Add(this.lbMensajeGeneral);
-            this.panelCrudClientes.Controls.Add(this.lbTotalPolizas);
             this.panelCrudClientes.Controls.Add(this.pbOn);
             this.panelCrudClientes.Controls.Add(this.pbEliminar);
             this.panelCrudClientes.Controls.Add(this.pbEditar);
@@ -468,31 +442,21 @@
             this.panelCrudClientes.Controls.Add(this.dgvPolizas);
             this.panelCrudClientes.Controls.Add(this.pbOff);
             this.panelCrudClientes.Controls.Add(this.pbDetalle);
-            this.panelCrudClientes.Location = new System.Drawing.Point(0, 99);
+            this.panelCrudClientes.Location = new System.Drawing.Point(0, 55);
             this.panelCrudClientes.Name = "panelCrudClientes";
-            this.panelCrudClientes.Size = new System.Drawing.Size(1127, 611);
+            this.panelCrudClientes.Size = new System.Drawing.Size(1127, 655);
             this.panelCrudClientes.TabIndex = 33;
             // 
-            // lbNombreCliente
+            // lbClienteSelecionado
             // 
-            this.lbNombreCliente.AutoSize = true;
-            this.lbNombreCliente.BackColor = System.Drawing.Color.Snow;
-            this.lbNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombreCliente.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbNombreCliente.Location = new System.Drawing.Point(62, 334);
-            this.lbNombreCliente.Name = "lbNombreCliente";
-            this.lbNombreCliente.Size = new System.Drawing.Size(0, 24);
-            this.lbNombreCliente.TabIndex = 38;
-            // 
-            // lbTotalClientes
-            // 
-            this.lbTotalClientes.AutoSize = true;
-            this.lbTotalClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalClientes.Location = new System.Drawing.Point(116, 1);
-            this.lbTotalClientes.Name = "lbTotalClientes";
-            this.lbTotalClientes.Size = new System.Drawing.Size(20, 24);
-            this.lbTotalClientes.TabIndex = 37;
-            this.lbTotalClientes.Text = "0";
+            this.lbClienteSelecionado.AutoSize = true;
+            this.lbClienteSelecionado.BackColor = System.Drawing.Color.Snow;
+            this.lbClienteSelecionado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbClienteSelecionado.ForeColor = System.Drawing.Color.SlateGray;
+            this.lbClienteSelecionado.Location = new System.Drawing.Point(32, 401);
+            this.lbClienteSelecionado.Name = "lbClienteSelecionado";
+            this.lbClienteSelecionado.Size = new System.Drawing.Size(0, 24);
+            this.lbClienteSelecionado.TabIndex = 38;
             // 
             // lbMensajeInterruptor
             // 
@@ -500,11 +464,22 @@
             this.lbMensajeInterruptor.BackColor = System.Drawing.Color.Snow;
             this.lbMensajeInterruptor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMensajeInterruptor.ForeColor = System.Drawing.Color.Coral;
-            this.lbMensajeInterruptor.Location = new System.Drawing.Point(668, -2);
+            this.lbMensajeInterruptor.Location = new System.Drawing.Point(666, 12);
             this.lbMensajeInterruptor.Name = "lbMensajeInterruptor";
             this.lbMensajeInterruptor.Size = new System.Drawing.Size(94, 17);
             this.lbMensajeInterruptor.TabIndex = 36;
             this.lbMensajeInterruptor.Text = "Deshabilitado";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label1.Location = new System.Drawing.Point(30, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 31);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Clientes";
             // 
             // pbDetalle
             // 
@@ -2076,7 +2051,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbEditar;
         private System.Windows.Forms.PictureBox pbEliminar;
         private System.Windows.Forms.PictureBox pbCrear;
@@ -2085,7 +2059,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pbOn;
         private System.Windows.Forms.PictureBox pbOff;
-        private System.Windows.Forms.Label lbTotalPolizas;
         private System.Windows.Forms.Label lbMensajeGeneral;
         private System.Windows.Forms.FlowLayoutPanel panelFlSuperior;
         private System.Windows.Forms.Panel panelNavegacionSuperior;
@@ -2213,8 +2186,7 @@
         private System.Windows.Forms.Label lbMensajeEditar;
         private System.Windows.Forms.Label lbMensajeInterruptor;
         private System.Windows.Forms.Timer timerOcultarMensaje;
-        private System.Windows.Forms.Label lbTotalClientes;
-        private System.Windows.Forms.Label lbNombreCliente;
+        private System.Windows.Forms.Label lbClienteSelecionado;
         private System.Windows.Forms.PictureBox pictureBox28;
         private System.Windows.Forms.PictureBox pictureBox29;
         private System.Windows.Forms.PictureBox pictureBox30;
@@ -2222,5 +2194,6 @@
         private System.Windows.Forms.Label lbIdClienteEditar;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label lbIdDetalleCliente;
+        private System.Windows.Forms.Label label1;
     }
 }
