@@ -185,19 +185,16 @@ namespace Seguros.UserControls
             tbContraseñaEditar.Text = cliente.Contraseña;
             cbTipoEditar.Text = cliente.Tipo;
 
-            // Recupero ids de provincia y municipio
-            int idProvincia = cliente.IdProvincia;
-            int idMunicipio = cliente.IdMuncipio;
-
-            Console.WriteLine("idProvincia: " + idProvincia + " municipio: " + idMunicipio);
-
+ 
             // Añado las provincias al compbo que esta en el panel editar cliente.
             cargarProvincias(cbProvinciasEditar);
-            cargarMunicipios(idProvincia, cbMunicipiosEditar);
 
-            // Selecciona el municipio del cliente en el select
+            // Obtengo de la base de datos el nombre de la provincia y lo guardo en el campo de texto
+            cbProvinciasEditar.Text = AdminModel.getNombresProvincia(cliente.IdProvincia);
+            // Obtengo de la base de datos el nombre del municipio y lo guardo en el campo de texto
+            cbMunicipiosEditar.Text = AdminModel.getNombresMunicipio(cliente.IdMuncipio);
+            // cargarMunicipios(idProvincia, cbMunicipiosEditar);
 
-            Console.WriteLine("Muestro formulario para Editar cliente");
         }
 
         // Muestra ventan emergente para eliminar cliente
@@ -431,6 +428,7 @@ namespace Seguros.UserControls
                 lbMensajeEditar.Text = "Acabas de actualizar datos cliente";
             }
 
+            Console.WriteLine("Editar cliente id : " + idCliente + " idProvincia: " + idProvincia + " idMunicipio " + idMunicipio);
         }
 
 

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Informes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label39 = new System.Windows.Forms.Label();
             this.dtpFechaDetalle = new System.Windows.Forms.DateTimePicker();
@@ -52,9 +52,9 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.cbEstadosInforme = new System.Windows.Forms.ComboBox();
             this.dgvInformePorCliente = new System.Windows.Forms.DataGridView();
-            this.lbMensajeInforme = new System.Windows.Forms.Label();
             this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbMensajeInforme = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -102,7 +102,7 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(440, 1);
+            this.pictureBox13.Location = new System.Drawing.Point(445, 13);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(66, 67);
             this.pictureBox13.TabIndex = 133;
@@ -113,7 +113,7 @@
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label46.Location = new System.Drawing.Point(501, 33);
+            this.label46.Location = new System.Drawing.Point(506, 45);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(149, 39);
             this.label46.TabIndex = 132;
@@ -230,8 +230,8 @@
             this.dgvInformePolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInformePolizas.Location = new System.Drawing.Point(24, 168);
             this.dgvInformePolizas.Name = "dgvInformePolizas";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvInformePolizas.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvInformePolizas.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInformePolizas.Size = new System.Drawing.Size(1080, 244);
             this.dgvInformePolizas.TabIndex = 146;
             // 
@@ -318,22 +318,11 @@
             this.Total});
             this.dgvInformePorCliente.Location = new System.Drawing.Point(24, 438);
             this.dgvInformePorCliente.Name = "dgvInformePorCliente";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvInformePorCliente.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvInformePorCliente.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInformePorCliente.Size = new System.Drawing.Size(1080, 222);
             this.dgvInformePorCliente.TabIndex = 152;
             this.dgvInformePorCliente.Visible = false;
-            // 
-            // lbMensajeInforme
-            // 
-            this.lbMensajeInforme.AutoSize = true;
-            this.lbMensajeInforme.BackColor = System.Drawing.Color.Transparent;
-            this.lbMensajeInforme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMensajeInforme.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbMensajeInforme.Location = new System.Drawing.Point(20, 415);
-            this.lbMensajeInforme.Name = "lbMensajeInforme";
-            this.lbMensajeInforme.Size = new System.Drawing.Size(0, 20);
-            this.lbMensajeInforme.TabIndex = 153;
             // 
             // idCliente
             // 
@@ -346,6 +335,17 @@
             this.Total.HeaderText = "Total";
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
+            // 
+            // lbMensajeInforme
+            // 
+            this.lbMensajeInforme.AutoSize = true;
+            this.lbMensajeInforme.BackColor = System.Drawing.Color.Transparent;
+            this.lbMensajeInforme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMensajeInforme.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbMensajeInforme.Location = new System.Drawing.Point(20, 415);
+            this.lbMensajeInforme.Name = "lbMensajeInforme";
+            this.lbMensajeInforme.Size = new System.Drawing.Size(0, 20);
+            this.lbMensajeInforme.TabIndex = 153;
             // 
             // UC_Informes
             // 
