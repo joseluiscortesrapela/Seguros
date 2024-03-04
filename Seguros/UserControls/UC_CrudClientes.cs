@@ -193,7 +193,9 @@ namespace Seguros.UserControls
             cbProvinciasEditar.Text = AdminModel.getNombresProvincia(cliente.IdProvincia);
             // Obtengo de la base de datos el nombre del municipio y lo guardo en el campo de texto
             cbMunicipiosEditar.Text = AdminModel.getNombresMunicipio(cliente.IdMuncipio);
-            // cargarMunicipios(idProvincia, cbMunicipiosEditar);
+            
+            // Quito mensaje
+            lbMensajeEditar.Text = "";
 
         }
 
@@ -424,7 +426,10 @@ namespace Seguros.UserControls
 
             // Actualizo datos base datos del cliente
             if (AdminModel.editarCliente(nuevoCliente) == 1)
-            {   // Muestro mensaje 
+            {
+                // Actualizo el dgv de clientes con los nuevos cambios
+                actualizarDgvClientes();
+                // Muestro mensaje 
                 lbMensajeEditar.Text = "Acabas de actualizar datos cliente";
             }
 
