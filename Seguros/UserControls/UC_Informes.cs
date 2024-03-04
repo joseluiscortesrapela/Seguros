@@ -1,4 +1,5 @@
-﻿using Seguros.Models;
+﻿using Microsoft.Reporting.WinForms;
+using Seguros.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,80 +29,42 @@ namespace Seguros.UserControls
             DateTime fechaHasta = dtpFechaHasta.Value;
             string estado = cbEstadosInforme.Text;
 
-            // Si estado de la poliza es 
+            // Decalro una bariable del tipo DataTable donde guardare los resultado de mi consulta a la base de datos.
+            DataTable dataTableResultados = new DataTable();
+
+            // Si quiere ver todas las polizas
             if (estado == "Todas")
-            {   // Obtengo todas las polizas independientemente de su estado
-                dgvInformePolizas.DataSource = AdminModel.generarInformes(desdeIdeCliente, hastaIdCliente, fechaDesde, fechaHasta);
+            {   // Obtengo todas las polizas
+                dataTableResultados = AdminModel.generarInformes(desdeIdeCliente, hastaIdCliente, fechaDesde, fechaHasta);
+                Console.WriteLine("Muestro polizas por estado");
             }
             else
             {
-                // Obtengo las polizas por su estado
-                dgvInformePolizas.DataSource = AdminModel.generarInformePorEstado(desdeIdeCliente, hastaIdCliente, fechaDesde, fechaHasta, estado);
+                // Obtengo las polizas por estado
+                dataTableResultados = AdminModel.generarInformePorEstado(desdeIdeCliente, hastaIdCliente, fechaDesde, fechaHasta, estado);
+                // Sino solo muestro las polizas por estado
+                Console.WriteLine("Muestro polizas por estado");
             }
 
-            // Resaltar las pólizas no liquidadas en rojo
-            foreach (DataGridViewRow fila in dgvInformePolizas.Rows)
-            {
-                string estadoPoliza = fila.Cells["estado"].Value.ToString();
-                if (estadoPoliza != "Liquidada" )
-                {
-                    fila.DefaultCellStyle.BackColor = Color.Red;
-                }
-                
-            }
-
-
-
-            // Crear un diccionario para almacenar los totales por cliente
-            Dictionary<int, decimal> totalesPorCliente = new Dictionary<int, decimal>();
-
-            // Recorrer las filas del DataGridView
-            foreach (DataGridViewRow fila in dgvInformePolizas.Rows)
-            {
-                // Obtener el IdCliente y el importe de la fila actual
-                int idCliente = Convert.ToInt32(fila.Cells["idCliente"].Value);
-                decimal importe = Convert.ToDecimal(fila.Cells["importe"].Value);
-
-                // Verificar si el IdCliente ya está en el diccionario
-                if (totalesPorCliente.ContainsKey(idCliente))
-                {
-                    // Muestro mensaje
-                    lbMensajeInforme.Text = "Importe total por clientes";
-                    // Si el IdCliente ya existe, sumar el importe al total existente
-                    totalesPorCliente[idCliente] += importe;
-
-                }
-                else
-                {   // Quito mensaje
-                    lbMensajeInforme.Text = "";
-                    // Si el IdCliente no existe, agregar una nueva entrada en el diccionario con el importe
-                    totalesPorCliente.Add(idCliente, importe);
-                }
-            }
-
-            // Limpiar el DataGridView antes de agregar los nuevos datos
-            dgvInformePorCliente.Rows.Clear();
-
-            // Agregar los totales por cliente al DataGridView
-            foreach (var totalPorCliente in totalesPorCliente)
-            {
-                dgvInformePorCliente.Rows.Add(totalPorCliente.Key, totalPorCliente.Value);
-            }
-
-            // Si tiene resultados que mosrar
-            if (dgvInformePorCliente.RowCount > 0)
-            {   // Muestro la tabla
-                dgvInformePorCliente.Visible = true;
-            }
-            else
-            {   // Sino hay resultados no muestro nada.
-                dgvInformePorCliente.Visible = false;
-            }
-
+            // Borra cualquier origen de datos existente del ReportViewer para limpiarlo
+            reportViewerInforme.LocalReport.DataSources.Clear();
+            // Crea un nuevo ReportDataSource utilizando el DataTable que contiene los resultados de la consulta
+            ReportDataSource reportDataSource = new ReportDataSource("DataSetInforme", dataTableResultados);
+            // Agrega el nuevo ReportDataSource al ReportViewer para que los datos se muestren en el informe
+            reportViewerInforme.LocalReport.DataSources.Add(reportDataSource);
+            // Refresca el informe para que se actualicen los cambios y se muestren los nuevos datos
+            reportViewerInforme.RefreshReport();
 
         }
 
         private void pbExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        // Cierro la aplicacion
+        private void btnVolver_Click(object sender, EventArgs e)
         {
             Application.Exit();
 

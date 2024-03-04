@@ -674,6 +674,8 @@ namespace Seguros.Models
                                 c.nombre AS nombreCliente,
                                 p.idPoliza,
                                 p.importe,
+                                p.tipo,
+                                p.observaciones,
                                 p.fecha,
                                 p.estado
                             FROM 
@@ -720,6 +722,8 @@ namespace Seguros.Models
                                 c.nombre AS nombreCliente,
                                 p.idPoliza,
                                 p.importe,
+                                p.tipo,
+                                p.observaciones,
                                 p.fecha,
                                 p.estado
                             FROM 

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Informes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label39 = new System.Windows.Forms.Label();
             this.dtpFechaDetalle = new System.Windows.Forms.DateTimePicker();
@@ -45,16 +43,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.idCliente1 = new System.Windows.Forms.NumericUpDown();
-            this.dgvInformePolizas = new System.Windows.Forms.DataGridView();
             this.btnGenerarInforme = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.cbEstadosInforme = new System.Windows.Forms.ComboBox();
-            this.dgvInformePorCliente = new System.Windows.Forms.DataGridView();
-            this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbMensajeInforme = new System.Windows.Forms.Label();
+            this.reportViewerInforme = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,9 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idCliente1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformePolizas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformePorCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox11
@@ -217,31 +209,13 @@
             this.idCliente1.TabIndex = 143;
             this.idCliente1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // dgvInformePolizas
-            // 
-            this.dgvInformePolizas.AllowUserToAddRows = false;
-            this.dgvInformePolizas.AllowUserToDeleteRows = false;
-            this.dgvInformePolizas.AllowUserToOrderColumns = true;
-            this.dgvInformePolizas.AllowUserToResizeColumns = false;
-            this.dgvInformePolizas.AllowUserToResizeRows = false;
-            this.dgvInformePolizas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInformePolizas.BackgroundColor = System.Drawing.Color.Snow;
-            this.dgvInformePolizas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvInformePolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInformePolizas.Location = new System.Drawing.Point(24, 168);
-            this.dgvInformePolizas.Name = "dgvInformePolizas";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvInformePolizas.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvInformePolizas.Size = new System.Drawing.Size(1080, 244);
-            this.dgvInformePolizas.TabIndex = 146;
-            // 
             // btnGenerarInforme
             // 
             this.btnGenerarInforme.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnGenerarInforme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarInforme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarInforme.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnGenerarInforme.Location = new System.Drawing.Point(608, 666);
+            this.btnGenerarInforme.Location = new System.Drawing.Point(599, 631);
             this.btnGenerarInforme.Name = "btnGenerarInforme";
             this.btnGenerarInforme.Size = new System.Drawing.Size(192, 35);
             this.btnGenerarInforme.TabIndex = 148;
@@ -255,12 +229,13 @@
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnVolver.Location = new System.Drawing.Point(353, 666);
+            this.btnVolver.Location = new System.Drawing.Point(344, 631);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(192, 35);
             this.btnVolver.TabIndex = 147;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label5
             // 
@@ -302,64 +277,30 @@
             this.cbEstadosInforme.TabIndex = 149;
             this.cbEstadosInforme.Text = "Selecciona estado";
             // 
-            // dgvInformePorCliente
+            // reportViewerInforme
             // 
-            this.dgvInformePorCliente.AllowUserToAddRows = false;
-            this.dgvInformePorCliente.AllowUserToDeleteRows = false;
-            this.dgvInformePorCliente.AllowUserToOrderColumns = true;
-            this.dgvInformePorCliente.AllowUserToResizeColumns = false;
-            this.dgvInformePorCliente.AllowUserToResizeRows = false;
-            this.dgvInformePorCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInformePorCliente.BackgroundColor = System.Drawing.Color.Snow;
-            this.dgvInformePorCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvInformePorCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInformePorCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idCliente,
-            this.Total});
-            this.dgvInformePorCliente.Location = new System.Drawing.Point(24, 438);
-            this.dgvInformePorCliente.Name = "dgvInformePorCliente";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvInformePorCliente.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvInformePorCliente.Size = new System.Drawing.Size(1080, 222);
-            this.dgvInformePorCliente.TabIndex = 152;
-            this.dgvInformePorCliente.Visible = false;
-            // 
-            // idCliente
-            // 
-            this.idCliente.HeaderText = "idCliente";
-            this.idCliente.Name = "idCliente";
-            this.idCliente.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // lbMensajeInforme
-            // 
-            this.lbMensajeInforme.AutoSize = true;
-            this.lbMensajeInforme.BackColor = System.Drawing.Color.Transparent;
-            this.lbMensajeInforme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMensajeInforme.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbMensajeInforme.Location = new System.Drawing.Point(20, 415);
-            this.lbMensajeInforme.Name = "lbMensajeInforme";
-            this.lbMensajeInforme.Size = new System.Drawing.Size(0, 20);
-            this.lbMensajeInforme.TabIndex = 153;
+            this.reportViewerInforme.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.reportViewerInforme.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.reportViewerInforme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportViewerInforme.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.reportViewerInforme.LocalReport.ReportEmbeddedResource = "Seguros.ReportInforme.rdlc";
+            this.reportViewerInforme.Location = new System.Drawing.Point(19, 186);
+            this.reportViewerInforme.Name = "reportViewerInforme";
+            this.reportViewerInforme.ServerReport.BearerToken = null;
+            this.reportViewerInforme.Size = new System.Drawing.Size(1085, 350);
+            this.reportViewerInforme.TabIndex = 152;
             // 
             // UC_Informes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.Controls.Add(this.lbMensajeInforme);
-            this.Controls.Add(this.dgvInformePorCliente);
+            this.Controls.Add(this.reportViewerInforme);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.cbEstadosInforme);
             this.Controls.Add(this.btnGenerarInforme);
             this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.dgvInformePolizas);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.idCliente1);
@@ -383,9 +324,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idCliente1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformePolizas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformePorCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,15 +345,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.NumericUpDown idCliente1;
-        private System.Windows.Forms.DataGridView dgvInformePolizas;
         private System.Windows.Forms.Button btnGenerarInforme;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ComboBox cbEstadosInforme;
-        private System.Windows.Forms.DataGridView dgvInformePorCliente;
-        private System.Windows.Forms.Label lbMensajeInforme;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerInforme;
     }
 }
