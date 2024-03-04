@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudPolizas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbPagos = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelNavegacionSuperior = new System.Windows.Forms.Panel();
@@ -136,6 +136,9 @@
             this.tbImporteDetalle = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label46 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.tbIdCliente = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.panelNavegacionSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
@@ -171,6 +174,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.SuspendLayout();
             // 
             // lbPagos
@@ -309,8 +313,8 @@
             this.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPagos.Location = new System.Drawing.Point(36, 497);
             this.dgvPagos.Name = "dgvPagos";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPagos.Size = new System.Drawing.Size(1047, 140);
             this.dgvPagos.TabIndex = 43;
             // 
@@ -369,8 +373,8 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(36, 31);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPolizas.Size = new System.Drawing.Size(1047, 414);
             this.dgvPolizas.TabIndex = 37;
             this.dgvPolizas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPolizas_CellClick);
@@ -391,6 +395,9 @@
             this.panelEditarPoliza.BackColor = System.Drawing.Color.Snow;
             this.panelEditarPoliza.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelEditarPoliza.BackgroundImage")));
             this.panelEditarPoliza.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelEditarPoliza.Controls.Add(this.label29);
+            this.panelEditarPoliza.Controls.Add(this.pictureBox16);
+            this.panelEditarPoliza.Controls.Add(this.tbIdCliente);
             this.panelEditarPoliza.Controls.Add(this.label26);
             this.panelEditarPoliza.Controls.Add(this.lbIdPolizaEditar);
             this.panelEditarPoliza.Controls.Add(this.lbMensajeEdtiarPoliza);
@@ -479,17 +486,17 @@
             this.label13.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label13.Location = new System.Drawing.Point(186, 106);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(103, 20);
+            this.label13.Size = new System.Drawing.Size(43, 20);
             this.label13.TabIndex = 138;
-            this.label13.Text = "Tipo seguro";
+            this.label13.Text = "Tipo";
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(190, 126);
+            this.pictureBox3.Location = new System.Drawing.Point(190, 132);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox3.Size = new System.Drawing.Size(31, 29);
             this.pictureBox3.TabIndex = 137;
             this.pictureBox3.TabStop = false;
             // 
@@ -625,9 +632,9 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(367, 126);
+            this.pictureBox6.Location = new System.Drawing.Point(367, 132);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox6.Size = new System.Drawing.Size(31, 26);
             this.pictureBox6.TabIndex = 125;
             this.pictureBox6.TabStop = false;
             // 
@@ -1468,14 +1475,48 @@
             this.label46.TabIndex = 112;
             this.label46.Text = "Detalle poliza";
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label29.Location = new System.Drawing.Point(973, 11);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(81, 20);
+            this.label29.TabIndex = 145;
+            this.label29.Text = "IdCliente";
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
+            this.pictureBox16.Location = new System.Drawing.Point(977, 34);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(29, 28);
+            this.pictureBox16.TabIndex = 144;
+            this.pictureBox16.TabStop = false;
+            // 
+            // tbIdCliente
+            // 
+            this.tbIdCliente.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbIdCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbIdCliente.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbIdCliente.Location = new System.Drawing.Point(1011, 35);
+            this.tbIdCliente.Name = "tbIdCliente";
+            this.tbIdCliente.Size = new System.Drawing.Size(76, 26);
+            this.tbIdCliente.TabIndex = 143;
+            this.tbIdCliente.Text = "0";
+            this.tbIdCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // UC_CrudPolizas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
+            this.Controls.Add(this.panelEditarPoliza);
             this.Controls.Add(this.panelCrearPoliza);
             this.Controls.Add(this.panelCrudPolizas);
-            this.Controls.Add(this.panelEditarPoliza);
             this.Controls.Add(this.panelDetallePoliza);
             this.Controls.Add(this.panelNavegacionSuperior);
             this.Controls.Add(this.lbPagos);
@@ -1522,6 +1563,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1632,5 +1674,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.PictureBox pbIconoPolizaSelecionada;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.TextBox tbIdCliente;
     }
 }

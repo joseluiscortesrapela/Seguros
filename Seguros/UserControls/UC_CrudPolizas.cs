@@ -152,16 +152,19 @@ namespace Seguros.UserControls
         {
             // Muestro formulario para editar una poliza
             mostrarFormulario("EditarPoliza");
+           
+            // Muestro el id de la poliza
+            lbIdPolizaEditar.Text = polizaSeleccinada.Id.ToString();
+            // Relleno el formulario con los datos de la poliza.
+            tbImporteEditar.Text = polizaSeleccinada.Importe.ToString();
+            cbTipoEditar.Text = polizaSeleccinada.Tipo;
+            cbEstadosEditar.Text = polizaSeleccinada.Estado;         
+            dtpFechaEditar.Value = polizaSeleccinada.Fecha;
+            tbObservacionesEdiitar.Text = polizaSeleccinada.Observaciones;
+            tbIdCliente.Text = polizaSeleccinada.IdCliente.ToString();
 
             // Cargo la lista de clientes en el select
             cargarSelectConLosClientes(cbClientesEditar);
-            lbIdPolizaEditar.Text = polizaSeleccinada.Id.ToString();
-            tbImporteEditar.Text = polizaSeleccinada.Importe.ToString();
-            cbTipoEditar.Text = polizaSeleccinada.Tipo;
-            cbEstadosEditar.Text = polizaSeleccinada.Estado;
-            //cbClientesEditar.SelectedIndex = 8;
-            tbObservacionesEdiitar.Text = polizaSeleccinada.Observaciones;
-            dtpFechaEditar.Value = polizaSeleccinada.Fecha;
 
             Console.WriteLine("Muestro formulario editar poliza: ");
         }
@@ -327,17 +330,19 @@ namespace Seguros.UserControls
             lbMensajeCrearPoliza.Text = "";
         }
 
+        // Editar los datos de una poliza
         private void btnEditarPoliza_Click(object sender, EventArgs e)
         {
-            // Obtengo el id de la poliza que fue seleccionada
-            int idPoliza = polizaSeleccinada.Id;
-            // Obtengo valores formulario editar poliza
-            int importe = int.Parse(tbImporteEditar.Text.ToString());
-            string tipo = cbTipoEditar.Text.ToString();
-            string estado = cbEstadosEditar.Text.ToString();
-            int idCliente = int.Parse(cbClientesEditar.SelectedValue.ToString());
+            // El id de la poliza que quiero actualizar
+            int idPoliza = polizaSeleccinada.Id;     
+           
+            // Obtengo valor campos formulario editar
+            int importe = int.Parse(tbImporteEditar.Text);
+            string tipo = cbTipoEditar.Text;
+            string estado = cbEstadosEditar.Text;
             DateTime fecha = dtpFechaEditar.Value;
-            string observaciones = tbObservacionesEdiitar.Text.ToString();
+            string observaciones = tbObservacionesEdiitar.Text;
+            int idCliente = int.Parse(tbIdCliente.Text);
 
             // Encapsulo los datos en un objeto del tipo Poliza.
             Poliza poliza = new Poliza(idPoliza, importe, tipo, estado, fecha, observaciones, idCliente);
