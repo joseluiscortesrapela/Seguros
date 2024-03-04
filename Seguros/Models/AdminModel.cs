@@ -658,9 +658,7 @@ namespace Seguros.Models
 
         }
 
-
-
-        public static DataTable generarInforme(int idClienteMin, int idClienteMax, DateTime fechaDesde, DateTime fechaHasta)
+        public static DataTable generarInformes(int idClienteMin, int idClienteMax, DateTime fechaDesde, DateTime fechaHasta )
         {
 
             MySqlConnection conexion = ConexionBaseDatos.getConexion();
@@ -692,6 +690,55 @@ namespace Seguros.Models
             comando.Parameters.AddWithValue("@idClienteMax", idClienteMax);
             comando.Parameters.AddWithValue("@fechaDesde", fechaDesde);
             comando.Parameters.AddWithValue("@fechaHasta", fechaHasta);
+
+            // Creo el adapatador
+            MySqlDataAdapter adapter = new MySqlDataAdapter(comando);
+            adapter.Fill(dataTable);
+
+            // Cerrar la conexión manualmente
+            conexion.Close();
+
+            return dataTable;
+
+        }
+
+
+        // Genera informa por id clientes, fecha y ademas el esatdo de la poliza.
+        public static DataTable generarInformePorEstado(int idClienteMin, int idClienteMax, DateTime fechaDesde, DateTime fechaHasta, string estado)
+        {
+
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+
+            DataTable dataTable = new DataTable();
+
+            // Construir la consulta SQL
+            string sql = @"
+                            SELECT 
+                                c.idCliente,
+                                c.nombre AS nombreCliente,
+                                p.idPoliza,
+                                p.importe,
+                                p.fecha,
+                                p.estado
+                            FROM 
+                                clientes c
+                            INNER JOIN 
+                                polizas p ON c.idCliente = p.idCliente
+                            WHERE 
+                                c.idCliente BETWEEN @idClienteMin AND @idClienteMax
+                                AND p.fecha BETWEEN @fechaDesde AND @fechaHasta
+                                AND p.estado = @estadoPoliza";
+
+
+            MySqlCommand comando = new MySqlCommand(sql, conexion);
+            comando.Parameters.AddWithValue("@idClienteMin", idClienteMin);
+            comando.Parameters.AddWithValue("@idClienteMax", idClienteMax);
+            comando.Parameters.AddWithValue("@fechaDesde", fechaDesde);
+            comando.Parameters.AddWithValue("@fechaHasta", fechaHasta);
+            comando.Parameters.AddWithValue("@estadoPoliza", estado);
+
             // Creo el adapatador
             MySqlDataAdapter adapter = new MySqlDataAdapter(comando);
             adapter.Fill(dataTable);

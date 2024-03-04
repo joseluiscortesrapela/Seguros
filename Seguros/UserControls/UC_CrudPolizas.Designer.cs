@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudPolizas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbPagos = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelNavegacionSuperior = new System.Windows.Forms.Panel();
@@ -309,8 +309,8 @@
             this.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPagos.Location = new System.Drawing.Point(36, 497);
             this.dgvPagos.Name = "dgvPagos";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPagos.Size = new System.Drawing.Size(1047, 140);
             this.dgvPagos.TabIndex = 43;
             // 
@@ -339,7 +339,7 @@
             // pbEliminarPoliza
             // 
             this.pbEliminarPoliza.Image = ((System.Drawing.Image)(resources.GetObject("pbEliminarPoliza.Image")));
-            this.pbEliminarPoliza.Location = new System.Drawing.Point(1089, 175);
+            this.pbEliminarPoliza.Location = new System.Drawing.Point(1089, 156);
             this.pbEliminarPoliza.Name = "pbEliminarPoliza";
             this.pbEliminarPoliza.Size = new System.Drawing.Size(35, 34);
             this.pbEliminarPoliza.TabIndex = 39;
@@ -369,8 +369,8 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(36, 31);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPolizas.Size = new System.Drawing.Size(1047, 414);
             this.dgvPolizas.TabIndex = 37;
             this.dgvPolizas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPolizas_CellClick);
@@ -1473,8 +1473,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.Controls.Add(this.panelCrudPolizas);
             this.Controls.Add(this.panelCrearPoliza);
+            this.Controls.Add(this.panelCrudPolizas);
             this.Controls.Add(this.panelEditarPoliza);
             this.Controls.Add(this.panelDetallePoliza);
             this.Controls.Add(this.panelNavegacionSuperior);
