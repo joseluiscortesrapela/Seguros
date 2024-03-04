@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudPolizas));
             this.lbPagos = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
@@ -313,8 +313,8 @@
             this.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPagos.Location = new System.Drawing.Point(36, 497);
             this.dgvPagos.Name = "dgvPagos";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPagos.Size = new System.Drawing.Size(1047, 140);
             this.dgvPagos.TabIndex = 43;
             // 
@@ -373,8 +373,8 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(36, 31);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPolizas.Size = new System.Drawing.Size(1047, 414);
             this.dgvPolizas.TabIndex = 37;
             this.dgvPolizas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPolizas_CellClick);
@@ -860,9 +860,9 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(190, 126);
+            this.pictureBox4.Location = new System.Drawing.Point(190, 131);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox4.Size = new System.Drawing.Size(31, 27);
             this.pictureBox4.TabIndex = 109;
             this.pictureBox4.TabStop = false;
             // 
@@ -998,9 +998,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(367, 126);
+            this.pictureBox1.Location = new System.Drawing.Point(376, 132);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(22, 26);
             this.pictureBox1.TabIndex = 97;
             this.pictureBox1.TabStop = false;
             // 
@@ -1236,9 +1236,9 @@
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(190, 126);
+            this.pictureBox10.Location = new System.Drawing.Point(190, 129);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox10.Size = new System.Drawing.Size(31, 29);
             this.pictureBox10.TabIndex = 137;
             this.pictureBox10.TabStop = false;
             // 
@@ -1336,9 +1336,9 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(367, 126);
+            this.pictureBox12.Location = new System.Drawing.Point(367, 131);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox12.Size = new System.Drawing.Size(31, 27);
             this.pictureBox12.TabIndex = 125;
             this.pictureBox12.TabStop = false;
             // 
@@ -1514,10 +1514,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.Controls.Add(this.panelEditarPoliza);
             this.Controls.Add(this.panelCrearPoliza);
-            this.Controls.Add(this.panelCrudPolizas);
             this.Controls.Add(this.panelDetallePoliza);
+            this.Controls.Add(this.panelEditarPoliza);
+            this.Controls.Add(this.panelCrudPolizas);
             this.Controls.Add(this.panelNavegacionSuperior);
             this.Controls.Add(this.lbPagos);
             this.Name = "UC_CrudPolizas";
