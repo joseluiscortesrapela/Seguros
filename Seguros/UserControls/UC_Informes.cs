@@ -34,13 +34,70 @@ namespace Seguros.UserControls
                 dgvInformePolizas.DataSource = AdminModel.generarInformes(desdeIdeCliente, hastaIdCliente, fechaDesde, fechaHasta);
             }
             else
-            {   
+            {
                 // Obtengo las polizas por su estado
                 dgvInformePolizas.DataSource = AdminModel.generarInformePorEstado(desdeIdeCliente, hastaIdCliente, fechaDesde, fechaHasta, estado);
             }
 
+            // Resaltar las pólizas no liquidadas en rojo
+            foreach (DataGridViewRow fila in dgvInformePolizas.Rows)
+            {
+                string estadoPoliza = fila.Cells["estado"].Value.ToString();
+                if (estadoPoliza != "Liquidada" )
+                {
+                    fila.DefaultCellStyle.BackColor = Color.Red;
+                }
+                
+            }
 
-            Console.WriteLine("idDesde: " + desdeIdeCliente + " idHasta: " + hastaIdCliente + " fecha desde: " + fechaDesde + " fecha hasta: " + fechaHasta + " estado: " + estado);
+
+
+            // Crear un diccionario para almacenar los totales por cliente
+            Dictionary<int, decimal> totalesPorCliente = new Dictionary<int, decimal>();
+
+            // Recorrer las filas del DataGridView
+            foreach (DataGridViewRow fila in dgvInformePolizas.Rows)
+            {
+                // Obtener el IdCliente y el importe de la fila actual
+                int idCliente = Convert.ToInt32(fila.Cells["idCliente"].Value);
+                decimal importe = Convert.ToDecimal(fila.Cells["importe"].Value);
+
+                // Verificar si el IdCliente ya está en el diccionario
+                if (totalesPorCliente.ContainsKey(idCliente))
+                {
+                    // Muestro mensaje
+                    lbMensajeInforme.Text = "Importe total por clientes";
+                    // Si el IdCliente ya existe, sumar el importe al total existente
+                    totalesPorCliente[idCliente] += importe;
+
+                }
+                else
+                {   // Quito mensaje
+                    lbMensajeInforme.Text = "";
+                    // Si el IdCliente no existe, agregar una nueva entrada en el diccionario con el importe
+                    totalesPorCliente.Add(idCliente, importe);
+                }
+            }
+
+            // Limpiar el DataGridView antes de agregar los nuevos datos
+            dgvInformePorCliente.Rows.Clear();
+
+            // Agregar los totales por cliente al DataGridView
+            foreach (var totalPorCliente in totalesPorCliente)
+            {
+                dgvInformePorCliente.Rows.Add(totalPorCliente.Key, totalPorCliente.Value);
+            }
+
+            // Si tiene resultados que mosrar
+            if (dgvInformePorCliente.RowCount > 0)
+            {   // Muestro la tabla
+                dgvInformePorCliente.Visible = true;
+            }
+            else
+            {   // Sino hay resultados no muestro nada.
+                dgvInformePorCliente.Visible = false;
+            }
+
 
         }
 
