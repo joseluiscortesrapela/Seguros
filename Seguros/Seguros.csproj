@@ -177,12 +177,6 @@
     <Compile Include="UserControls\UC_CrudPolizas.Designer.cs">
       <DependentUpon>UC_CrudPolizas.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Contenedor.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\Contenedor.Designer.cs">
-      <DependentUpon>Contenedor.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UC_Informes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -220,9 +214,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_CrudPolizas.resx">
       <DependentUpon>UC_CrudPolizas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\Contenedor.resx">
-      <DependentUpon>Contenedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Informes.resx">
       <DependentUpon>UC_Informes.cs</DependentUpon>

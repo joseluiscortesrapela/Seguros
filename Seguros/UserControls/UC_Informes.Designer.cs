@@ -44,7 +44,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.idCliente1 = new System.Windows.Forms.NumericUpDown();
             this.btnGenerarInforme = new System.Windows.Forms.Button();
-            this.btnVolver = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.cbEstadosInforme = new System.Windows.Forms.ComboBox();
@@ -208,6 +207,11 @@
             this.idCliente1.Size = new System.Drawing.Size(106, 26);
             this.idCliente1.TabIndex = 143;
             this.idCliente1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.idCliente1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btnGenerarInforme
             // 
@@ -215,27 +219,13 @@
             this.btnGenerarInforme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarInforme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarInforme.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnGenerarInforme.Location = new System.Drawing.Point(599, 631);
+            this.btnGenerarInforme.Location = new System.Drawing.Point(458, 623);
             this.btnGenerarInforme.Name = "btnGenerarInforme";
             this.btnGenerarInforme.Size = new System.Drawing.Size(192, 35);
             this.btnGenerarInforme.TabIndex = 148;
             this.btnGenerarInforme.Text = "Generar";
             this.btnGenerarInforme.UseVisualStyleBackColor = false;
             this.btnGenerarInforme.Click += new System.EventHandler(this.btnGenerarInforme_Click);
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.BackColor = System.Drawing.Color.Violet;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnVolver.Location = new System.Drawing.Point(344, 631);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(192, 35);
-            this.btnVolver.TabIndex = 147;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.UseVisualStyleBackColor = false;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label5
             // 
@@ -275,7 +265,7 @@
             this.cbEstadosInforme.Name = "cbEstadosInforme";
             this.cbEstadosInforme.Size = new System.Drawing.Size(155, 28);
             this.cbEstadosInforme.TabIndex = 149;
-            this.cbEstadosInforme.Text = "Selecciona estado";
+            this.cbEstadosInforme.Text = "Todas";
             // 
             // reportViewerInforme
             // 
@@ -300,7 +290,6 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.cbEstadosInforme);
             this.Controls.Add(this.btnGenerarInforme);
-            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.idCliente1);
@@ -346,7 +335,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.NumericUpDown idCliente1;
         private System.Windows.Forms.Button btnGenerarInforme;
-        private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ComboBox cbEstadosInforme;

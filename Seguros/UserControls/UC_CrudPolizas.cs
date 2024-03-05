@@ -1,4 +1,5 @@
-﻿using Seguros.Entidades;
+﻿using MySqlX.XDevAPI;
+using Seguros.Entidades;
 using Seguros.Helper;
 using Seguros.Models;
 using System;
@@ -152,13 +153,13 @@ namespace Seguros.UserControls
         {
             // Muestro formulario para editar una poliza
             mostrarFormulario("EditarPoliza");
-           
+
             // Muestro el id de la poliza
             lbIdPolizaEditar.Text = polizaSeleccinada.Id.ToString();
             // Relleno el formulario con los datos de la poliza.
             tbImporteEditar.Text = polizaSeleccinada.Importe.ToString();
             cbTipoEditar.Text = polizaSeleccinada.Tipo;
-            cbEstadosEditar.Text = polizaSeleccinada.Estado;         
+            cbEstadosEditar.Text = polizaSeleccinada.Estado;
             dtpFechaEditar.Value = polizaSeleccinada.Fecha;
             tbObservacionesEdiitar.Text = polizaSeleccinada.Observaciones;
             tbIdCliente.Text = polizaSeleccinada.IdCliente.ToString();
@@ -210,10 +211,32 @@ namespace Seguros.UserControls
             Console.WriteLine("Muestro formulario: " + formulario);
         }
 
-        // Eliminar poliza
+        // Eliminar una poliza junto con sus pagos
         private void pbEliminar_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Eliminar poliza " + idPoliza);
+            // Mensaje que vera el usuario
+            String message = "Quieres eliminar la poliza nº " + idPoliza + " de " + polizaSeleccinada.Tipo + " por un importe de " + polizaSeleccinada.Importe + " del cliente " + polizaSeleccinada.IdCliente + " ?";
+            // Titulo de la ventana emergente.
+            String caption = "Eliminar poliza";
+            // Muestro mensaje y obtengo el boton que ha seleccionado
+            var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            // Si quiere eliminar
+            if (result == DialogResult.Yes)
+            {
+                // Si se ha conseguido eliminar de la baae de datos
+                if (AdminModel.eliminarPoliza(idPoliza))
+                {
+                    // Actualizo el dgv con las nuevas polizas desde el base de datos
+                    cargarPolizasDGV();
+                    // Muestro mensaje
+                    lbPolizaSelecionada.Text = "Acabas de eliminar la poliza junto con sus pagos";
+                    // Vacio el dgv co los pagos
+                    dgvPagos.DataSource = null;
+                }
+
+            }
+
         }
 
         // Calcula lo que se ha pagado
@@ -237,7 +260,6 @@ namespace Seguros.UserControls
         private void cambiarColorPolizas()
         {
             GestorInterfaz.CambiarColorFilas(dgvPolizas);
-            Console.WriteLine("Cambiar color a todas las polizas segun su estado");
         }
 
         // Muestra botones de accion
@@ -269,7 +291,8 @@ namespace Seguros.UserControls
                         // Muestro mensaje
                         lbMensajeCrearPoliza.Text = "Acabas de pagar el importe total de tu poliza";
                     }
-
+                    // Quito mensje del errorProvider
+                    error.SetError(tbPago, "");
                 }
 
             }
@@ -283,10 +306,12 @@ namespace Seguros.UserControls
                     dgvPagos.DataSource = AdminModel.getPagosByPoliza(idPoliza);
                     // Muestro mensaje
                     lbMensajeCrearPoliza.Text = "El pago se ha realizado con exito";
+                    // Quito mensje del errorProvider
+                    error.SetError(tbPago, "");
                 }
             }
             else
-            {   // Cantidad ingresada mayor de lo que debe.
+            {   // Cantidad ingresada no puede ser mayor de lo que debe.
                 error.SetError(tbPago, "La cantidad introducida es mayor que lo que debe");
             }
 
@@ -306,6 +331,8 @@ namespace Seguros.UserControls
             // Encapsulo los datos en un objeto del tipo Poliza.
             Poliza poliza = new Poliza(importe, tipo, estado, fecha, observaciones, idCliente);
 
+
+
             // Si la poliza se ha registrado correctamente en la base de datos.
             if (AdminModel.registrarPoliza(poliza))
             {
@@ -314,6 +341,7 @@ namespace Seguros.UserControls
                 // Muestro mensaje
                 lbMensajeCrearPoliza.Text = "Acabas de crear una nueva poliza";
             }
+
 
             Console.WriteLine("Crear poliza: importe: " + importe + " tipo: " + tipo + " estado: " + estado + "idCliente: " + idCliente + " fecha " + fecha + " obsevaciones: " + observaciones);
 
@@ -334,8 +362,8 @@ namespace Seguros.UserControls
         private void btnEditarPoliza_Click(object sender, EventArgs e)
         {
             // El id de la poliza que quiero actualizar
-            int idPoliza = polizaSeleccinada.Id;     
-           
+            int idPoliza = polizaSeleccinada.Id;
+
             // Obtengo valor campos formulario editar
             int importe = int.Parse(tbImporteEditar.Text);
             string tipo = cbTipoEditar.Text;

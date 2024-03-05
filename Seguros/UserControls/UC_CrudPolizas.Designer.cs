@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_CrudPolizas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbPagos = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelNavegacionSuperior = new System.Windows.Forms.Panel();
@@ -52,6 +52,9 @@
             this.dgvPolizas = new System.Windows.Forms.DataGridView();
             this.lbMensajeCrearPoliza = new System.Windows.Forms.Label();
             this.panelEditarPoliza = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.tbIdCliente = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.lbIdPolizaEditar = new System.Windows.Forms.Label();
             this.lbMensajeEdtiarPoliza = new System.Windows.Forms.Label();
@@ -72,7 +75,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.cbEstadosEditar = new System.Windows.Forms.ComboBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.cbClientesEditar = new System.Windows.Forms.ComboBox();
@@ -136,9 +138,6 @@
             this.tbImporteDetalle = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label46 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.tbIdCliente = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.panelNavegacionSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbExit)).BeginInit();
@@ -154,6 +153,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrarFormularioCrearPoliza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).BeginInit();
             this.panelEditarPoliza.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -174,7 +174,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.SuspendLayout();
             // 
             // lbPagos
@@ -266,14 +265,14 @@
             this.panelPago.Controls.Add(this.tbPago);
             this.panelPago.Location = new System.Drawing.Point(906, 451);
             this.panelPago.Name = "panelPago";
-            this.panelPago.Size = new System.Drawing.Size(215, 40);
+            this.panelPago.Size = new System.Drawing.Size(178, 40);
             this.panelPago.TabIndex = 45;
             this.panelPago.Visible = false;
             // 
             // pbPagar
             // 
             this.pbPagar.Image = ((System.Drawing.Image)(resources.GetObject("pbPagar.Image")));
-            this.pbPagar.Location = new System.Drawing.Point(186, 8);
+            this.pbPagar.Location = new System.Drawing.Point(149, 6);
             this.pbPagar.Name = "pbPagar";
             this.pbPagar.Size = new System.Drawing.Size(29, 26);
             this.pbPagar.TabIndex = 38;
@@ -287,7 +286,7 @@
             this.tbPago.ForeColor = System.Drawing.Color.Violet;
             this.tbPago.Location = new System.Drawing.Point(3, 3);
             this.tbPago.Name = "tbPago";
-            this.tbPago.Size = new System.Drawing.Size(146, 32);
+            this.tbPago.Size = new System.Drawing.Size(94, 32);
             this.tbPago.TabIndex = 1;
             // 
             // lbPolizaSelecionada
@@ -313,8 +312,8 @@
             this.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPagos.Location = new System.Drawing.Point(36, 497);
             this.dgvPagos.Name = "dgvPagos";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPagos.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPagos.Size = new System.Drawing.Size(1047, 140);
             this.dgvPagos.TabIndex = 43;
             // 
@@ -373,8 +372,8 @@
             this.dgvPolizas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPolizas.Location = new System.Drawing.Point(36, 31);
             this.dgvPolizas.Name = "dgvPolizas";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPolizas.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPolizas.Size = new System.Drawing.Size(1047, 414);
             this.dgvPolizas.TabIndex = 37;
             this.dgvPolizas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPolizas_CellClick);
@@ -383,11 +382,11 @@
             // 
             this.lbMensajeCrearPoliza.AutoSize = true;
             this.lbMensajeCrearPoliza.BackColor = System.Drawing.Color.Transparent;
-            this.lbMensajeCrearPoliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMensajeCrearPoliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMensajeCrearPoliza.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbMensajeCrearPoliza.Location = new System.Drawing.Point(445, 470);
+            this.lbMensajeCrearPoliza.Location = new System.Drawing.Point(445, 475);
             this.lbMensajeCrearPoliza.Name = "lbMensajeCrearPoliza";
-            this.lbMensajeCrearPoliza.Size = new System.Drawing.Size(0, 24);
+            this.lbMensajeCrearPoliza.Size = new System.Drawing.Size(0, 26);
             this.lbMensajeCrearPoliza.TabIndex = 42;
             // 
             // panelEditarPoliza
@@ -418,7 +417,6 @@
             this.panelEditarPoliza.Controls.Add(this.pictureBox6);
             this.panelEditarPoliza.Controls.Add(this.cbEstadosEditar);
             this.panelEditarPoliza.Controls.Add(this.pictureBox7);
-            this.panelEditarPoliza.Controls.Add(this.label21);
             this.panelEditarPoliza.Controls.Add(this.label22);
             this.panelEditarPoliza.Controls.Add(this.pictureBox8);
             this.panelEditarPoliza.Controls.Add(this.cbClientesEditar);
@@ -434,6 +432,40 @@
             this.panelEditarPoliza.Size = new System.Drawing.Size(1127, 648);
             this.panelEditarPoliza.TabIndex = 46;
             this.panelEditarPoliza.Visible = false;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label29.Location = new System.Drawing.Point(973, 11);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(81, 20);
+            this.label29.TabIndex = 145;
+            this.label29.Text = "IdCliente";
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
+            this.pictureBox16.Location = new System.Drawing.Point(977, 34);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(29, 28);
+            this.pictureBox16.TabIndex = 144;
+            this.pictureBox16.TabStop = false;
+            // 
+            // tbIdCliente
+            // 
+            this.tbIdCliente.BackColor = System.Drawing.Color.AliceBlue;
+            this.tbIdCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbIdCliente.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.tbIdCliente.Location = new System.Drawing.Point(1011, 35);
+            this.tbIdCliente.Name = "tbIdCliente";
+            this.tbIdCliente.Size = new System.Drawing.Size(76, 26);
+            this.tbIdCliente.TabIndex = 143;
+            this.tbIdCliente.Text = "0";
+            this.tbIdCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label26
             // 
@@ -461,11 +493,11 @@
             // 
             this.lbMensajeEdtiarPoliza.AutoSize = true;
             this.lbMensajeEdtiarPoliza.BackColor = System.Drawing.Color.Transparent;
-            this.lbMensajeEdtiarPoliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMensajeEdtiarPoliza.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbMensajeEdtiarPoliza.Location = new System.Drawing.Point(445, 461);
+            this.lbMensajeEdtiarPoliza.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMensajeEdtiarPoliza.ForeColor = System.Drawing.Color.Teal;
+            this.lbMensajeEdtiarPoliza.Location = new System.Drawing.Point(445, 477);
             this.lbMensajeEdtiarPoliza.Name = "lbMensajeEdtiarPoliza";
-            this.lbMensajeEdtiarPoliza.Size = new System.Drawing.Size(0, 24);
+            this.lbMensajeEdtiarPoliza.Size = new System.Drawing.Size(0, 26);
             this.lbMensajeEdtiarPoliza.TabIndex = 140;
             // 
             // label3
@@ -663,16 +695,6 @@
             this.pictureBox7.Size = new System.Drawing.Size(55, 67);
             this.pictureBox7.TabIndex = 123;
             this.pictureBox7.TabStop = false;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label21.Location = new System.Drawing.Point(445, 501);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(0, 20);
-            this.label21.TabIndex = 122;
             // 
             // label22
             // 
@@ -1475,49 +1497,15 @@
             this.label46.TabIndex = 112;
             this.label46.Text = "Detalle poliza";
             // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label29.Location = new System.Drawing.Point(973, 11);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(81, 20);
-            this.label29.TabIndex = 145;
-            this.label29.Text = "IdCliente";
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(977, 34);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(29, 28);
-            this.pictureBox16.TabIndex = 144;
-            this.pictureBox16.TabStop = false;
-            // 
-            // tbIdCliente
-            // 
-            this.tbIdCliente.BackColor = System.Drawing.Color.AliceBlue;
-            this.tbIdCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbIdCliente.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbIdCliente.Location = new System.Drawing.Point(1011, 35);
-            this.tbIdCliente.Name = "tbIdCliente";
-            this.tbIdCliente.Size = new System.Drawing.Size(76, 26);
-            this.tbIdCliente.TabIndex = 143;
-            this.tbIdCliente.Text = "0";
-            this.tbIdCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // UC_CrudPolizas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
+            this.Controls.Add(this.panelCrudPolizas);
+            this.Controls.Add(this.panelEditarPoliza);
             this.Controls.Add(this.panelCrearPoliza);
             this.Controls.Add(this.panelDetallePoliza);
-            this.Controls.Add(this.panelEditarPoliza);
-            this.Controls.Add(this.panelCrudPolizas);
             this.Controls.Add(this.panelNavegacionSuperior);
             this.Controls.Add(this.lbPagos);
             this.Name = "UC_CrudPolizas";
@@ -1541,6 +1529,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolizas)).EndInit();
             this.panelEditarPoliza.ResumeLayout(false);
             this.panelEditarPoliza.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -1563,7 +1552,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1633,7 +1621,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.ComboBox cbEstadosEditar;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.ComboBox cbClientesEditar;

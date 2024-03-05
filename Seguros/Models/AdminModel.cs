@@ -491,6 +491,73 @@ namespace Seguros.Models
 
         }
 
+        // Elimina un jugador y todas sus partidas
+        public static bool eliminarPoliza(int idPoliza)
+        {
+            // Creo la conexion con la base de datos.
+            MySqlConnection conexion = ConexionBaseDatos.getConexion();
+            // la abro.
+            conexion.Open();
+
+            bool eliminado;
+
+            // Inicio una transacción
+            MySqlTransaction transaccion = null;
+
+            try
+            {
+                // Mi transaccion
+                transaccion = conexion.BeginTransaction();
+
+                // Consulta sql para eliminar todas las polizas del cliente
+                string sql = "DELETE FROM pagos WHERE idPoliza = @idPoliza";
+                // Mi sql y conexon
+                MySqlCommand comandoEliminarPago = new MySqlCommand(sql, conexion);
+                // Le paso como parametro el id del cliente a eliminar
+                comandoEliminarPago.Parameters.AddWithValue("@idPoliza", idPoliza);
+                // Preparo la transaccion.
+                comandoEliminarPago.Transaction = transaccion;
+
+                // Ejecutar la transaccion.
+                comandoEliminarPago.ExecuteNonQuery();
+
+                // Consulta sql para eliminar al cliente
+                sql = "DELETE FROM polizas WHERE idPoliza = @idPoliza";
+                // Mi sql y conexon
+                MySqlCommand comandoEliminarPoliza = new MySqlCommand(sql, conexion);
+                // Le paso como parametros el id del cliente
+                comandoEliminarPoliza.Parameters.AddWithValue("@idPoliza", idPoliza);
+                // Preparo la transaccion.
+                comandoEliminarPoliza.Transaction = transaccion;
+
+                // Ejecutar la consulta para eliminar al jugador y obtengo un 1 si se ha realizado con exito y 0 en caso contrario
+                int estado = comandoEliminarPoliza.ExecuteNonQuery();
+
+                // Convierto el int a bool
+                eliminado = (estado != 0);
+
+                // Confirmar la transacción
+                transaccion.Commit();
+            }
+            catch (Exception ex)
+            {
+                // Si ocurre algún error, se realiza un rollback de la transacción
+                if (transaccion != null)
+                {
+                    transaccion.Rollback();
+                }
+                eliminado = false;
+            }
+            finally
+            {
+                // Cierro la conexión
+                conexion.Close();
+            }
+
+            return eliminado;
+
+        }
+
 
         // Registra un nuevo usuario
         public static int pagarPoliza(decimal pago, int idPoliza)
@@ -703,7 +770,6 @@ namespace Seguros.Models
             return dataTable;
 
         }
-
 
         // Genera informa por id clientes, fecha y ademas el esatdo de la poliza.
         public static DataTable generarInformePorEstado(int idClienteMin, int idClienteMax, DateTime fechaDesde, DateTime fechaHasta, string estado)
